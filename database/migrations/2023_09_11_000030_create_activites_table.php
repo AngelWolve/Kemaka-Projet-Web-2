@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateActualitesTable extends Migration
+class CreateActivitesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,15 @@ class CreateActualitesTable extends Migration
      */
     public function up()
     {
-        Schema::create('actualites', function (Blueprint $table) {
+        Schema::create('activites', function (Blueprint $table) {
             $table->id();
-            $table->string('titre');
-            $table->text('texte');
+            $table->string('nom');
+            $table->text('description');
+            $table->string('image');
+            $table->foreignId('user_id')
+                   ->constrained()
+                   ->onDelete('cascade')
+                   ->onUpdate('cascade');
             $table->timestamps();
         });
     }
@@ -28,6 +33,6 @@ class CreateActualitesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('actualites');
+        Schema::dropIfExists('activites');
     }
 }

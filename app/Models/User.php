@@ -41,4 +41,51 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+     /**
+     * Retourne les activités associés à utilisateur
+     *
+     * Relation un-à-plusieurs
+     *
+     * @return HasMany
+     */
+    public function activites() {
+        return $this->hasMany(Activite::class);
+    }
+
+
+
+     /**
+     * Retourne les actualité associés à utilisateur
+     *
+     * Relation un-à-plusieurs
+     *
+     * @return HasMany
+     */
+    public function actualites() {
+        return $this->hasMany(Actualite::class);
+    }
+
+
+
+     /**
+     * Retourne la role  associé a utilisateur
+     *
+     * @return BelongsTo
+     */
+    public function role() {
+        return $this->belongsTo(Role::class);
+    }
+
+     /**
+     * Retourne les reservations associés à une utilisateur
+     *
+     * Relation un-à-plusieurs
+     *
+     * @return HasMany
+     */
+    public function reservations() {
+        return $this->belongsToMany(Forfait::class, 'reservations');
+    }
 }

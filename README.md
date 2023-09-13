@@ -1,7 +1,6 @@
 # Projet Synthèse
-
-![Logo du festival](https://github.com/AngelWolve/Kemaka-Projet-Web-2/blob/main/public/images/asian-quest-logo.png)
-
+ <img src="https://github.com/AngelWolve/Kemaka-Projet-Web-2/blob/main/public/images/asian-quest-logo.png">
+ 
 ## Kemaka
 
 ### Katie Sabourin

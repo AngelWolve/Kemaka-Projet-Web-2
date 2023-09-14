@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class ActualiteFactory extends Factory
@@ -16,7 +17,7 @@ class ActualiteFactory extends Factory
         return [
             'titre' => $this->faker->sentence(10),
             'description' => $this->faker->text(500),
-            'user_id' => rand(1, 10),
+            'user_id' => User::inRandomOrder()->first()->id,
         ];
     }
 }

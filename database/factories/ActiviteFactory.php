@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class ActiviteFactory extends Factory
@@ -17,7 +18,7 @@ class ActiviteFactory extends Factory
             'nom' => $this->faker->sentence(10),
             'description' => $this->faker->text(500),
             'image' => "https://placekitten.com/400/250?image=" . rand(1, 16),
-            'user_id' => rand(1, 10),
+            'user_id' => User::inRandomOrder()->first()->id,
         ];
     }
 }

@@ -26,6 +26,11 @@
                         <p>
                             {{ $actualite->description }}
                         </p>
+
+                        <p>
+                            {{ $actualite->created_at }}
+                        </p>
+
                         <div>
                             <div>
                                 {{-- MODIFICATION --}}

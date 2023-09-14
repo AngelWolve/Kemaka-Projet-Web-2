@@ -40,3 +40,8 @@ Route::post("/actualites/update", [ActualiteController::class, 'update'])
 Route::post("/actualites/destroy", [ActualiteController::class, 'destroy'])
     ->name('actualites.destroy')
     ->middleware('auth');
+
+
+/**
+ * FORFAIT
+ */

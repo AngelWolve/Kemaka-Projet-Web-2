@@ -37,8 +37,6 @@
                         value="{{ old('description') }}">
                 </div>
             </div>
-
-
             {{-- SUBMIT --}}
             <div>
                 <input type="submit" vlue="Ajouter!">

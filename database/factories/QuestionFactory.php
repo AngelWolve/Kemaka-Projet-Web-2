@@ -14,7 +14,9 @@ class QuestionFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'nom' => $this->faker->firstName() . ' ' . $this->faker->lastName(),
+            'email' => $this->faker->unique()->safeEmail(),
+            'message' => $this->faker->text(500),
         ];
     }
 }

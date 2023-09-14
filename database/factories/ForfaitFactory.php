@@ -14,7 +14,9 @@ class ForfaitFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'nom' => $this->faker->words(3, true),
+            'description' => $this->faker->text(500),
+            'prix' => $this->faker->randomFloat(2, 30, 250),
         ];
     }
 }

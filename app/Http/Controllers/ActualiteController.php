@@ -46,7 +46,7 @@ class ActualiteController extends Controller
         ]);
 
         // Ajouter à la BDD
-        $actualite = new Actualite(); // $actualite contient un objet "vide" du modèle (équivalent à une nouvelle entrée dans la table)
+        $actualite = new Actualite();
         $actualite->titre = $valides["titre"];
         $actualite->titre = $valides["description"];
         $actualite->user_id = auth()->user()->id;

@@ -158,10 +158,51 @@
         -  Interface en ligne de commande et pas idéale pour la gestion des fichiers binaires.
 
 # 4. Présentation de la planification du travail synthèse 
-## Liens
-### Lien vers le logiciel de gestion de projet choisi                    
-## Portrait global 
-### Catégories     
-#### Sous-catégories       
-## Apport au travail synthèse de chaque membre de l’équipe (qui fait quoi et quand ?)                        
-## Rétroaction globale sur le travail d’équipe (motivation, charge de travail, organisation, problèmes, etc.)  
+## 4.1 Liens
+### 4.1.1 Lien vers le logiciel de gestion de projet choisi
+
+#### ClickUp :
+    - https://app.clickup.com/9014035918/v/l/8cmehee-34
+## 4.2 Portrait global 
+### 4.2.1 Planification     
+
+#### - Utlisation de ClickUp :
+    Nous avons choisi d'utiliser ClickUp comme objet de planification du projet, ce qui nous permet de mieux organiser les tâches à faire et de les organiser pour que chaque membre de l'équipe puisse savoir sa charge de travail et quand le faire et le remettre.
+
+#### - Utlisation de GitHub :
+    Nous avons choisi d'utiliser GitHub comme objet de gestion du projet, ce qui nous permet une meilleure collaboration entre les membres de l'équipe et la mise à jour des données qui ont été modifiées/changées pour qu'elles soient toutes au même endroit.
+
+#### - Choix des technologies de développement :
+    Nous avons choisi d'utiliser principalement Laravel, mais aussi d'inclure quelques composants Vue.js pour les sections réactives de notre site Web. 
+#### - Choix de a thématique et de l'identité du site Web :
+    Nous avons déterminé le choix de notre thème après discussion de plusieurs idées de festivals et nous sommes tombé d'accord avec la thématique asiatique des festivals Otaku qui relie bien nos gouts en matière d'art et de culture ainsi que l'énergie vivante qui en ressors.
+
+### 4.2.2 Cconception de la maquette
+
+#### - Conception du logo :
+    Pour que le site Web ai vraiment sa propre identité, nous avons conçu notre propre logo avec des couleurs vivew qui représentent bien la culture Otaku.Celui-ci a été conçu en premier, puisqu'il fait partie de plusieurs composants visuel sur la maquette.
+
+#### - Conception de la maquette :
+    La maquette a été conceptualisée pour visualiser les pages du site Web qui seront affichées à l'utilisateur et pour donner au client une vue d'ensemble au client propriétaire du festival.
+
+### 4.2.3 Conception de la base de données
+#### - Migrations :
+    En premier lieu, une base de données vide a été fait sur PHPMyAdmin pour ensuite utiliser les migrations pour gérer les structure de notre base de données.
+
+#### - Factories et seeders :
+    L'utilisation de seeders pour peupler la base de données à l'aide des factories qui génèrent des informations fictives est essentiel au fonctionnement de la BDD.
+
+### 4.2.4 Développement backend
+    Développer le backend qui gère les fonctionnalités qui ne sont pas directement visible par l'utilisateurs, mais nécessaire au bon fonctionnement du site Web.
+
+### 4.2.5 Développement frontend
+    Développer ensuite le frontend pour donner un interface utilisateur et une expérience utilisateur de bonne qualité en y intégrant le HTML/CSS et Vue.js qui donne la visibilité à l'utilisateur pour qu'il ai un intérêt envers le festival.
+
+### 4.2.6 Présentation et Documentation
+    À la fin de se projet , quand le projet Web aura été remis au professeur avec une mise en ligne, l'équipe devra faire une présentation orale qui décrira le travail qui a été fait et qui a mené au résultat qui sera projeté devant les membres de d'autres équipes. Une capsule vidéo individuelle devra aussi être présenté au professeur selon chaque tâche attribuées à chacun.
+    
+## 4.3 Apport au travail synthèse de chaque membre de l’équipe (qui fait quoi et quand ?)
+
+    Pour la part des choses sur le travail synthèse nous avons séparé les tâches le plus également possible selon nos forces et faiblesses. Kevin a principalement conçu les informations de planification sur le ClickUp. Katie et Masomeh ont travailler à la rédaction du readme. Katie a aussi fait la mise en page du fichier markdown. Nous avons tous participé à la concetion de la maquette, Kevin a fait la page 'À propos' et a apporté des modifications/corrections quand la maquette arrivait à la finalisation. Masomeh a travaillé à la page 'Contact' et fait la base de la page 'Accueil'. Katie a fait le logo, ainsi que les pages 'Activités' et 'Forfaits', ainsi que des modificationscorrection sur l'ensemble des pages. L'avis de tous les membres de l'équipe a été pris en compte à chacune des étapes.
+## 4.4 Rétroaction globale sur le travail d’équipe (motivation, charge de travail, organisation, problèmes, etc.)  
+    

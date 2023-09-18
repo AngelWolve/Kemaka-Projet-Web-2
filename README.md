@@ -1,5 +1,4 @@
 # Projet Synthèse
- <img src="https://github.com/AngelWolve/Kemaka-Projet-Web-2/blob/main/public/images/asian-quest-logo.png">
  
 ## Kemaka
 
@@ -8,74 +7,65 @@
 ### Masomeh Mofidipour
 
 
-# Analyse des besoins
+# 1 .Analyse des besoins
 
-## Clients :
- Le festival Otaku 'Asian Quest', axé sur la culture asiatique, les manga et les anime, est le client principal, par contre les départements (profs, direction, marketing, réservations, activités) ont aussi des besoins spécifiques pour le site web. Nous travaillerons en étroite collaboration avec eux pour comprendre et répondre à leurs demandes.
+## 1.1	Demande globale :
+    Le festival Otaku ‘Asian Quest’, axé sur la culture asiatique, les mangas et les anime, nous a demandé de créer un site web avec une zone d’administration pour gérer les activités, les forfaits et les réservations pour le festival tout en assurant une expérience utilisateur fluide.
 
-### Départements :
-#### Profs :  
-    Ils souhaitent qu'au moins une page du site web soit responsive pour les appareils mobiles. Nous choisirons la page la plus appropriée pour cela en fonction de son contenu.
+### 1.2	Demandes spécifiques des clients :
+    - Création de l’image de marque du festival, le logo, la palette de couleurs, le typographie.
+    -	Création d’un site web avec au moins une page responsive pour les appareils mobiles.
+    -	Il est impératif que le site web ne repose pas sur un CMS préconçu comme WordPress ou autres.
+    -	Le site web doit bénéficier d’un bon référencement pour attirer un public plus large. 
+    -	Intégration de Google Analytics pour suivre les statistiques du nombre de pages vues.
+    -	Intégration d’une carte virtuelle l’emplacement géographique.
+    -	La liste d’administrateurs du site web doit être modifiable, ce qui signifie que les droits de création, de modification et de suppression.
+    -	La liste de clients inscrit doit être modifiable pas les administrateurs.
+    -	La liste d’actualités modifiable avec une zone d’administration permet la gestion des actualités.
+    -	Création une liste de forfaits, en spécifiant les détails inclus dans chaque forfait. 
+    -	Possibilité de réserver un forfait avec une date d’arrivée et une date de départ.
+    -	Création d’une page d’administration pour les employés permettant de visualiser l’ensemble des réservations des clients à venir, ordonnées par date croissante, avec la possibilité d’annuler une réservation depuis cette liste.
+    -	Création une liste d’activités liées à la culture asiatique et Otaku, présenté de manière visuellement attrayant. 
+    -	La liste d’activités doit être modifiable dans la zone d’administration pour permettre une mise à jour facile.
 
-#### Direction : 
-    - Le site doit être terminé et mis en ligne avant le 13 octobre à minuit.
-    - Le site doit bénéficier d'un bon référencement pour attirer un public plus large.
-    - Il est impératif que le site ne repose pas sur un CMS préconçu comme WordPress ou autres.
-    - À la fin du projet, nous fournirons un document de didacticiel pour la zone d'administration, incluant les accès pour se connecter.
-    - La liste d'administrateurs du site doit être modifiable, ce qui signifie que les droits de création, de modification et de suppression seront disponibles.
+### 1.3	Demandes additionnelles :
+    -	Les clients doivent être connectés pour réserver un forfait.
+    -	Les réservations doivent être sauvegarder dans le compte du client avec la possibilité d’annulation avant la date de départ. 
+    -	Respecter la date limite du 13 octobre pour la mise en ligne du site. 
+    -	Il faut fournir un document de didacticiel pour la zone d’administration, incluant les accès pour se connecter. 
 
-#### Marketing :
-    - Nous mettrons en place le suivi des statistiques du nombre de pages vues à l'aide de Google Analytics pour une meilleure compréhension de l'audience.
-    - Une page dédiée aux actualités sera créée, avec une zone d'administration permettant la gestion des actualités.
-    - Nous intégrerons une carte virtuelle de l'emplacement géographique en lien avec le thème Otaku.
 
-#### Réservation :
-    - Nous créerons une liste de forfaits (au minimum 3) liés au thème Otaku, en spécifiant les détails inclus dans chaque forfait.
-    - Les visiteurs pourront réserver un forfait avec une date d'arrivée et une date de départ. Pour cela, ils devront être connectés.
-    - Les réservations seront sauvegardées dans le compte du client, avec la possibilité d'annuler une réservation avant la date de départ.
-    - Nous développerons une page d'administration pour les employés, permettant de visualiser l'ensemble des réservations des clients à venir, ordonnées par date croissante, avec la possibilité d'annuler une réservation depuis cette liste.
+### 1.4 Public cible :
+    -	Le site web du festival Otaku 'Asian Quest' cible plusieurs segments de publics, chacun ayant des besoins spécifiques.
+    -	Visiteurs potentiels : Ils cherchent des informations sur le festival, ses activités, les forfaits disponibles, et souhaitent avoir une expérience conviviale et informative sur le site.
+    -	Clients pour les réservations : Ils veulent réserver des forfaits, annuler des réservations si nécessaire, et avoir accès à des informations claires sur les tarifs et les dates disponibles.
+    -	Employés pour la gestion administrative : Ils auront besoin d'accéder à une zone d'administration pour gérer les réservations, les actualités, et les informations du site.
+    -	Partenaires marketing : Ils souhaitent des statistiques de pages vues pour évaluer l'impact de leur partenariat et peuvent être intéressés par la visibilité sur la page des actualités.
 
-#### Actvités :
-    - Nous concevrons une liste d'activités ou d'attractions liées à la culture asiatique et Otaku, présentée de manière visuellement attrayante.
-    - Bien que le référencement de cette page soit moins crucial, nous mettrons l'accent sur l'interactivité et l'expérience utilisateur.
-    - Cette liste d'activités sera modifiable dans la zone d'administration pour permettre une mise à jour facile.
 
-### Public cible :
-    Le site web du festival Otaku 'Asian Quest' cible plusieurs segments de publics, chacun ayant des besoins spécifiques :
+# 2. Présentation du concept
 
-#### Visiteurs potentiels : 
-    Ils cherchent des informations sur le festival, ses activités, les forfaits disponibles, et souhaitent avoir une expérience conviviale et informative sur le site.
-
-#### Clients pour les réservations : 
-    Ils veulent réserver des forfaits, annuler des réservations si nécessaire, et avoir accès à des informations claires sur les tarifs et les dates disponibles.
-
-#### Employés pour la gestion administrative : 
-    Ils auront besoin d'accéder à une zone d'administration pour gérer les réservations, les actualités, et les informations du site.
-
-#### Partenaires marketing : 
-    Ils souhaitent des statistiques de pages vues pour évaluer l'impact de leur partenariat et peuvent être intéressés par la visibilité sur la page des actualités.
-
-# Présentation du concept
-
-## Nom du festival fictif
+## 2.1 Nom du festival fictif
     Le nom du festival fictif est "Asian Quest"
 
-## Thème
+## 2.2 Thème
     Le thème du festival est centré sur la culture asiatique en lien avec les manga et les anime. Il mettra en avant la passion pour ces formes d'art populaire, avec des éléments tels que des expositions avec dédicaces, des projections de films et séries, des stands de produits dérivés, concours de costplay et bien plus encore.
 
-## Inspiration
+## 2.3 Inspiration
     Pour l'inspiration visuelle du festival, nous puiserons dans l'univers coloré et créatif des manga et des anime. Voici quelques éléments d'inspiration que nous envisageons d'intégrer au design du site web :
         - Des illustrations de personnages emblématiques de manga et d'anime.
         - Des motifs japonais traditionnels comme les motifs de vagues et de fleurs de cerisier.
         - Des couleurs dynamiques pour refléter l'énergie de la culture Otaku.
 
-## Identité visuelle
+## 2.4 Identité visuelle
     L'identité visuelle du festival sera soigneusement conçue pour capturer l'essence de la culture Otaku et attirer notre public cible.
 
-### Le logo
+### 2.4.1 Le logo
+ <img src="https://github.com/AngelWolve/Kemaka-Projet-Web-2/blob/main/public/images/asian-quest-logo.png">
+
     Le logo du "OtakuMania Festival" sera un mélange de caractères japonais stylisés et de symboles emblématiques des manga et des anime. Nous utiliserons des teintes de couleurs vives telles que le rouge, le bleu, le jaune et le noir pour créer un logo dynamique et mémorable comme vu au haut de ce document.
 
-### La palette de couleurs
+### 2.4.2 La palette de couleurs
     La palette de couleurs du site web sera basée sur les couleurs traditionnelles japonaises tout en incorporant des nuances modernes et vibrantes. Voici quelques-unes des couleurs que nous envisageons :
         - Rose Otaku : Cette teinte rose rappelle les fleurs de cerisier emblématiques du Japon, symbolisant la beauté éphémère.
         - Lilas Kawaii : Le lilas doux évoque la douceur de la culture asiatique, ajoutant une touche de charme et d'innocence.
@@ -83,7 +73,7 @@
         - Gris Manga : Le gris manga offre un contraste subtil et neutre, mettant en valeur les autres couleurs de notre palette.
         - Bleu Nihon : Le bleu Nihon représente la profondeur de la culture japonaise, évoquant les océans et la sérénité.
 
-### Les typographies
+### 2.4.3 Les typographies
     Nous utiliserons des typographies modernes et lisibles pour garantir une expérience utilisateur optimale. Deux typographies principales seront sélectionnées pour le site web :
         - Une typographie sans empattement pour le contenu principal, offrant une lisibilité maximale.(Montserat)
         - Une typographie plus stylisée et créative pour les titres et les éléments de design, en accord avec le thème Otaku.(Catseye)
@@ -91,9 +81,9 @@
     L'ensemble de cette identité visuelle contribuera à créer une expérience immersive et passionnante pour les visiteurs du "Asian Quest"
 
 
-# Choix des technologies
+# 3. Choix des technologies
 
-## Technologie de développement
+## 3.1 Choix des technologies de développement :
     Nous utiliserons des technologies adaptées pour le développement du site, telles que HTML, SCSS et des cadriciels Web modernes tels que Laravel et Vue.js. Les choix précis seront déterminés en fonction des besoins spécifiques de chaque département.
 
 ## Forces et faiblesses des technolgies de développement

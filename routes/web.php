@@ -3,6 +3,7 @@
 use App\Http\Controllers\AccueilController;
 use App\Http\Controllers\ActualiteController;
 use App\Http\Controllers\ForfaitController;
+use App\Http\Controllers\ReservationController;
 use Illuminate\Support\Facades\Route;
 
 /**
@@ -53,4 +54,14 @@ Route::post("/actualites/destroy", [ActualiteController::class, 'destroy'])
 //Affiche la page des forfaits
 Route::get("/forfaits", [ForfaitController::class, 'index'])
     ->name('forfaits.index');
+
+
+/**
+ * RÉSERVATION
+ */
+
+//Affiche la page des réservation
+Route::get("/reservations", [ReservationController::class, 'index'])
+    ->name('reservations.index');
+
 

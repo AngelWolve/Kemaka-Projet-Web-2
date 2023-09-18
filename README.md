@@ -86,110 +86,82 @@
 ## 3.1 Choix des technologies de développement :
     Nous utiliserons des technologies adaptées pour le développement du site, telles que HTML, SCSS et des cadriciels Web modernes tels que Laravel et Vue.js. Les choix précis seront déterminés en fonction des besoins spécifiques de chaque département.
 
-## Forces et faiblesses des technolgies de développement
-### Les forces de HTML :
+## 3.1.1 Forces
+### HTML :
     - Le langage de base du web et un choix universel pour la création de pages web.
     - Relativement simple.
     - Extensibilité à l’aide de technologies complémentaires telles que CSS, JavaScript.
 
-### Les faiblesses de HTML :
-    - Statique par nature.
-    - Mise en forme limitée.
-
-### Les forces de CSS :
+### CSS :
     - Permet de séparer la structure HTML du style visuel.
     - Réutilisation du style sur plusieurs pages.
     - Permet de créer des animations et des transitions.
 
-### Les faiblesses de CSS :
-    - Dépendance au JavaScript.
-    - Maintenance difficile.
-
-### Les forces de Laravel :
+### Laravel :
     - Permet une meilleure organisation et maintenabilité des projets.
     - Favorise le travail d’équipe.
     - Offre des systèmes de routage, migration, authentification.
     - Support de la communauté.
 
-### Les faiblesses de Laravel :
-    - Courbe d’apprentissage élevé.
-
-### Les forces de Vue.js :
+### Vue.js :
     - Permet de créer des composants réutilisables qui simplifient la gestion de projets.
     - Facile à apprendre.
 
-### Les faiblesses de Vue.js :
+## 3.1.2 Faiblesses
+### HTML :
+    - Statique par nature.
+    - Mise en forme limitée.
+### CSS :
+    - Dépendance au JavaScript.
+    - Maintenance difficile.
+### Laravel :
+    - Courbe d’apprentissage élevé.
+
+### Vue.js :
     - Flexibilité limitée.
     - Difficulté dans la recherche de solutions à des problèmes en raison de la taille de la communauté.
 
-## Technologies de planification et gestion de projet :
-    Nous utiliserons le logiciel ClickUp pour la planification et la gestion de projet, ainsi que GitHub pour la gestion de dépôt et la collaboration entre des membres de l’équipe, et Git comme système de contrôle de version.
+## 3.2 Choix et organisation des technologies de planification :
+    Nous utiliserons le logiciel ClickUp pour la planification et la gestion de projet.
 
-### Forces et faiblesses des technolgies :
-
-### Les forces de ClickUp :
+### 3.2.1 Forces
     - Flexibilité, polyvalence.
     - Permet de prioriser et attribuer les tâches.
     - Permet d’avoir une vue du projet de plusieurs façons.
 
-### Les faiblesses de ClickUp :
+### 3.2.2 Faiblesses
     - La courbe d’apprentissage de l’interface utilisateur.
     - L’expérience utilisateur est complexe.
 
-### Les forces de Git :
-    - Rapide, gratuit, open source.
-    - Permet de visiter les anciennes versions.
-    - Permet de comparer les versions d’un projet.
-    - Permet de partager et combiner des changements.
+##  3.3 Choix et organisation des technologies de gestion
+    Nous utiliserons GitHub pour la gestion de dépôt et la collaboration entre des membres de l’équipe, et Git comme système de contrôle de version.
 
-### Les faiblesses de Git :
-    - Interface en ligne de commande et pas idéale pour la gestion des fichiers binaires.
-    
-### Les forces de GitHub :
-    - Collaboration en équipe de manière cohérente.
-    - Suivi des problèmes.
-    - Communauté active.
+### 3.3.1 Forces
+    •	GitHub:
+        - Collaboration en équipe de manière cohérente.
+        - Suivi des problèmes.
+        - Communauté active.
 
-### Les faiblesses de GitHub :
-    - Dépendance à une plateforme.
-    - Défis de gestion pour les grands projets.
+    •	Git:
+        - Rapide, gratuit, open source.
+        - Permet de visiter les anciennes versions.
+        - Permet de comparer les versions d’un projet.
+        - Permet de partager et combiner des changements.
 
-# Présentation de la planification du travail synthèse :
+### 3.3.2 Faiblesses
+    •	GitHub:
+        - Dépendance à une plateforme.
+        - Défis de gestion pour les grands projets.
 
-## 1. Gestion de projet
 
-   ### 1.1. Planification
-      - Créer l'espace de ClickUp
-      - Créer l'espace de GitHub
-      - Rédaction du Readme
-   ### 1.2. Suivi et coordination
-      - Assigner des tâches aux membres de l'équipe
-      - Réunion de suivi régulière
-   ### 1.3. Choix de la technologie de développement
-      - Front-End
-      - Back-End
-      - B.D.D
+    •	Git:
+        -  Interface en ligne de commande et pas idéale pour la gestion des fichiers binaires.
 
-## 2. Conception et identité du festival
-   ### 2.1. Thématique et identité
-      - Choix de la thématique du festival
-      - Choix de l'identité visuelle (logo, couleurs, typographie)
-   ### 2.2. Maquette du site web
-      - Conception de la maquette de la page activités
-      - Validation de la maquette avec la directrice artistique
-
-## 3. Développement du site web
-   ### 3.1. Structure du site
-      - Définition de la structure du site (pages, routes, fonctionnalités)
-   ### 3.2. Pages du site
-      - Conception de la base de données
-      - Création des modèles
-      - Factory et seeder
-      - Routes et contrôleurs
-      - Création des pages du site (accueil, À propos, réservation, forfait, activités)
-      - Intégration
-
-## 4. Présentation et Documentation
-   #### 4.1. Mise en ligne du site web
-   #### 4.2. Présentation du projet dans la classe
-   #### 4.3. Création d'une capsule vidéo individuelle
+# 4. Présentation de la planification du travail synthèse 
+## Liens
+### Lien vers le logiciel de gestion de projet choisi                    
+## Portrait global 
+### Catégories     
+#### Sous-catégories       
+## Apport au travail synthèse de chaque membre de l’équipe (qui fait quoi et quand ?)                        
+## Rétroaction globale sur le travail d’équipe (motivation, charge de travail, organisation, problèmes, etc.)  

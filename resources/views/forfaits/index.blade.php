@@ -22,8 +22,19 @@
             <p>
                 {{ $forfait->prix }}
             </p>
+            <p>
+                {{ $forfait->created_at }}
+            </p>
         </li>
+
+        {{-- RÉSERVATION --}}
+        <a href="{{ route('reservations.index') }}">
+            <span>
+                comander
+            </span>
+        </a>
     @endforeach
+
 </body>
 
 </html>

@@ -80,11 +80,17 @@ Le logo d'Asian Quest présente le nom du festival, entouré d'un motif elliptiq
 
 La palette de couleurs du site Web sera basée sur les couleurs traditionnelles japonaises tout en incorporant des nuances modernes et vibrantes. Voici quelques-unes des couleurs que nous envisageons :
 
-- Rose: rappelle les fleurs de cerisier emblématiques du Japon, symbolisant la beauté éphémère.
-- Lilas: évoque la douceur de la culture asiatique, ajoutant une touche de charme et d'innocence.
-- Violet: apporte une touche de passion et d'énergie à notre festival.
-- Gris: offre un contraste subtil et neutre, mettant en valeur les autres couleurs.
+- Rose pâle: rappelle les fleurs de cerisier emblématiques du Japon, symbolisant la beauté éphémère.
+- Lilas foncé: évoque la douceur de la culture asiatique, ajoutant une touche de charme et d'innocence.
+- Violet foncé: apporte une touche de passion et d'énergie à notre festival.
 - Bleu: représente la profondeur de la culture japonaise, évoquant les océans et la sérénité.
+
+<div style="margin-left: 30px;">
+    <div style="display: inline-block; margin: 10px; background-color:#F2B3E0; width:75px; height:75px; text-align: center; color: black; font-size: 16px; line-height: 75px;">#F2B3E0</div>
+    <div style="display: inline-block; margin: 10px; background-color:#A54177; width:75px; height:75px; text-align: center; color: black; font-size: 16px; line-height: 75px;">#A54177</div>
+    <div style="display: inline-block; margin: 10px; background-color:#553873; width:75px; height:75px; text-align: center; color: black; font-size: 16px; line-height: 75px;">#553873</div>
+    <div style="display: inline-block; margin: 10px; background-color:#049DBF; width:75px; height:75px; text-align: center; color: black; font-size: 16px; line-height: 75px;">#049DBF</div>
+</div>
 
 ### 2.4.3 Les typographies
 
@@ -197,63 +203,29 @@ Git:
 
 # 4. Présentation de la planification du travail synthèse
 
-## 4.1 Liens
-
-### 4.1.1 Lien vers le logiciel de gestion de projet choisi
+## 4.1 Lien vers le logiciel de gestion de projet choisi
 
 [ClickUp](https://app.clickup.com/9014035918/v/l/8cmehee-34)
 
 ## 4.2 Portrait global
 
-### 4.2.1 Planification
+Nous avons adopté une approche méthodique pour la planification de notre projet en le divisant en six phases distinctes. Chaque début de semaine, notre équipe se réunit pour procéder à une évaluation minutieuse de notre progression. Ce processus nous permet d'identifier les points forts et les domaines qui nécessitent une attention particulière. En fonction de ces discussions, nous ajustons notre planification de manière à rester en phase avec l'avancement du projet.
 
-#### Utilisation de ClickUp:
+### 4.2.1 Catégories
 
-Nous avons opté pour l'utilisation de ClickUp en tant que logiciel de planification de projet. Cette plateforme nous offre la possibilité d'organiser de manière plus efficace les tâches à accomplir, en les répartissant de manière à ce que chaque membre de l'équipe ait une vision claire de sa charge de travail et des délais à respecter pour chaque livrable.
+- Semaine 1
+- Semaine 2
+- Semaine 3
+- Semaine 4
+- Semaine 5
+- Semaine 6
 
-#### Utilisation de GitHub:
+### 4.2.2 Sous-catégories
 
-Nous avons opté pour l'utilisation de GitHub comme outil de gestion de projet. Cette décision favorise une collaboration plus efficace entre les membres de l'équipe et assure la mise à jour centralisée des données modifiées ou altérées, garantissant ainsi qu'elles se trouvent toutes au même endroit.
-
-#### Choix des technologies de développement:
-
-Nous avons fait le choix principal d'utiliser Laravel, en y intégrant également quelques composants VueJS pour les parties réactives de notre site web.
-
-#### Choix de la thématique et de l'identité du site Web:
-
-Après avoir discuté de plusieurs idées de thèmes de festivals, nous avons finalement opté pour la thématique asiatique des festivals Otaku. Cette dernière correspond parfaitement à nos goûts en matière d'art et de culture, tout en dégageant une énergie vive qui nous enthousiasme particulièrement.
-
-### 4.2.2 Conception de la maquette
-
-#### Conception du logo:
-
-Afin de donner à notre site web une identité distincte, nous avons créé notre propre logo. Ses couleurs vives reflètent parfaitement la culture Otaku qui nous inspire. Ce logo a été conçu en priorité, car il est intégré à plusieurs éléments visuels de la maquette.
-
-#### Conception de la maquette:
-
-La maquette a été conçue pour permettre la visualisation des pages du site web qui seront présentées à l'utilisateur, ainsi que pour offrir une vue d'ensemble au client, propriétaire du festival.
-
-### 4.2.3 Conception de la base de données
-
-#### Migrations:
-
-Initialement, nous avons créé une base de données vide sur "PHPMyAdmin", puis nous avons utilisé les migrations "Laravel" pour gérer la structure de notre base de données.
-
-#### Factories et seeders:
-
-L'utilisation de seeders, grâce aux factories qui génèrent des informations fictives, est essentielle au bon fonctionnement de la base de données.
-
-### 4.2.4 Développement backend
-
-Nous avons développé le "backend" pour gérer les fonctionnalités qui ne sont pas directement visibles par l'utilisateur, mais qui sont essentielles au bon fonctionnement du site web.
-
-### 4.2.5 Développement frontend
-
-Ensuite, nous avons développé le frontend pour fournir une interface utilisateur de haute qualité ainsi qu'une expérience utilisateur optimale. Cela implique l'intégration de HTML/CSS et VueJS, offrant ainsi à l'utilisateur une visibilité qui suscite son intérêt envers le festival.
-
-### 4.2.6 Présentation et Documentation
-
-À la conclusion de ce projet, une fois que le site web aura été remis au professeur et mis en ligne, notre équipe devra effectuer une présentation orale détaillant le travail accompli ainsi que les étapes ayant conduit aux résultats présentés devant les membres des autres équipes. De plus, chaque membre devra fournir une capsule vidéo individuelle décrivant les tâches qui lui ont été attribuées, à présenter au professeur.
+- Planification
+- Design
+- Frontend
+- Backend
 
 ## 4.3 Apport au travail synthèse de chaque membre de l’équipe (qui fait quoi et quand ?)
 
@@ -261,7 +233,7 @@ Kevin a assumé la direction du projet, supervisant pratiquement toutes les face
 
 Masomeh a pris en charge la planification du projet ainsi que la conception de la base de données, en plus d'avoir contribué de manière substantielle tant au "frontend" qu'au "backend". Son implication majeure s'est située au cœur du projet.
 
-Katie a assumé le côté artistique du projet toute en donnant un bon coup de main du coté "frontend" ainsi que "backend", sa charge de travail c'est situé au début du projet ainsi qu'à la fin de celui-ci.
+Katie a assumé le côté artistique du projet toute en donnant un bon coup de main du coté "frontend" ainsi que "backend", sa charge de travail s'est située au début du projet ainsi qu'à la fin de celui-ci.
 
 ## 4.4 Rétroaction globale sur le travail d’équipe (motivation, charge de travail, organisation, problèmes, etc.)
 

@@ -13,6 +13,7 @@ class InfolettreSeeder extends Seeder
      */
     public function run()
     {
-        //
+        // // Ajout d'infolettres fictives
+        // \App\Models\Infolettre::factory(10)->create();
     }
 }

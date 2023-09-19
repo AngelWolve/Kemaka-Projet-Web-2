@@ -13,6 +13,7 @@ class ForfaitSeeder extends Seeder
      */
     public function run()
     {
-        //
+        // // Ajout de forfaits fictifs
+        // \App\Models\Forfait::factory(3)->create();
     }
 }

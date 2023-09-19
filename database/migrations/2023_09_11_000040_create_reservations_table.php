@@ -15,16 +15,16 @@ class CreateReservationsTable extends Migration
     {
         Schema::create('reservations', function (Blueprint $table) {
             $table->id();
-            $table->date('date_arrive');
+            $table->date('date_arrivee');
             $table->date('date_depart');
             $table->foreignId('user_id')
-                    ->constrained()
-                    ->onDelete('cascade')
-                    ->onUpdate('cascade');
+                ->constrained()
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
             $table->foreignId('forfait_id')
-                    ->constrained()
-                    ->onDelete('cascade')
-                    ->onUpdate('cascade');
+                ->constrained()
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
             $table->timestamps();
         });
     }

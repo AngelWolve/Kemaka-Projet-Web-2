@@ -13,6 +13,7 @@ class ReservationSeeder extends Seeder
      */
     public function run()
     {
-        //
+        // // Ajout de réservations fictives
+        // \App\Models\Reservation::factory(10)->create();
     }
 }

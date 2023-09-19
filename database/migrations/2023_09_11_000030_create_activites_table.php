@@ -19,9 +19,9 @@ class CreateActivitesTable extends Migration
             $table->text('description');
             $table->string('image');
             $table->foreignId('user_id')
-                   ->constrained()
-                   ->onDelete('cascade')
-                   ->onUpdate('cascade');
+                ->constrained()
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
             $table->timestamps();
         });
     }

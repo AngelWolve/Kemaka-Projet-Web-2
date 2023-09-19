@@ -85,13 +85,6 @@ La palette de couleurs du site Web sera basée sur les couleurs traditionnelles 
 - Violet foncé: apporte une touche de passion et d'énergie à notre festival.
 - Bleu: représente la profondeur de la culture japonaise, évoquant les océans et la sérénité.
 
-<div style="margin-left: 30px;">
-    <div style="display: inline-block; margin: 10px; background-color:#F2B3E0; width:75px; height:75px; text-align: center; color: black; font-size: 16px; line-height: 75px;">#F2B3E0</div>
-    <div style="display: inline-block; margin: 10px; background-color:#A54177; width:75px; height:75px; text-align: center; color: black; font-size: 16px; line-height: 75px;">#A54177</div>
-    <div style="display: inline-block; margin: 10px; background-color:#553873; width:75px; height:75px; text-align: center; color: black; font-size: 16px; line-height: 75px;">#553873</div>
-    <div style="display: inline-block; margin: 10px; background-color:#049DBF; width:75px; height:75px; text-align: center; color: black; font-size: 16px; line-height: 75px;">#049DBF</div>
-</div>
-
 ### 2.4.3 Les typographies
 
 Nous utiliserons des typographies modernes et lisibles pour garantir une expérience utilisateur optimale. Deux typographies principales seront utilisées pour le site Web:

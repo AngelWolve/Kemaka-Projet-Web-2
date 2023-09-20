@@ -18,32 +18,26 @@ Route::get("/", [AccueilController::class, 'accueil'])
 /*****************
  * ACTUALITÉS
  */
-//Affiche la page des actualités
 Route::get("/actualites", [ActualiteController::class, 'index'])
     ->name('actualites.index')
     ->middleware('auth');
 
-// Affichage du formulaire d'ajout d'une actualité
 Route::get('/actualites/create', [ActualiteController::class, 'create'])
     ->name('actualites.create')
     ->middleware('auth');
 
-// Traitement du formulaire
 Route::post('/actualites', [ActualiteController::class, 'store'])
     ->name('actualites.store')
     ->middleware('auth');
 
-// Affichage du formulaire de modification d'une actualité
 Route::get("/actualites/edit/{id}", [ActualiteController::class, 'edit'])
     ->name('actualites.edit')
     ->middleware('auth');
 
-// Traitement du formulaire de modification
 Route::post("/actualites/update", [ActualiteController::class, 'update'])
     ->name('actualites.update')
     ->middleware('auth');
 
-// Traite la suppression d'une actualité
 Route::post("/actualites/destroy", [ActualiteController::class, 'destroy'])
     ->name('actualites.destroy')
     ->middleware('auth');
@@ -51,49 +45,40 @@ Route::post("/actualites/destroy", [ActualiteController::class, 'destroy'])
 /*****************
  * FORFAITS
  */
-//Affiche la page des forfaits
 Route::get("/forfaits", [ForfaitController::class, 'index'])
     ->name('forfaits.index');
 
 /*****************
  * RÉSERVATIONS
  */
-//Affiche le formulaire d'ajout
 Route::get("/reservations/create/{id}", [ReservationController::class, 'create'])
     ->name('reservations.create');
 
-// Traitement du formulaire
 Route::post('/reservations/store', [ReservationController::class, 'store'])
     ->name('reservations.store');
 
 /*****************
  * ACTIVITÉS
  */
-//Affiche la page des activités
 Route::get("/activites", [ActiviteController::class, 'index'])
     ->name('activites.index');
 
-// Affiche le formulaire d'ajout d'une activité
 Route::get('/activites/create', [ActiviteController::class, 'create'])
     ->name('activites.create')
     ->middleware('auth');
 
-// Traitemele formulaire d'ajout
 Route::post('/activites', [ActiviteController::class, 'store'])
     ->name('activites.store')
     ->middleware('auth');
 
-// Affiche le formulaire de modification d'une activité
 Route::get("/activites/edit/{id}", [ActiviteController::class, 'edit'])
     ->name('activites.edit')
     ->middleware('auth');
 
-// Traite le formulaire de modification
 Route::post("/activites/update", [ActiviteController::class, 'update'])
     ->name('activites.update')
     ->middleware('auth');
 
-// Traite la suppression d'une activité
 Route::post("/activites/destroy", [ActiviteController::class, 'destroy'])
     ->name('activites.destroy')
     ->middleware('auth');

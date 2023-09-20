@@ -11,8 +11,7 @@ use Illuminate\Support\Facades\Route;
 
 //Affiche la page des activités
 Route::get("/activites", [ActiviteController::class, 'index'])
-    ->name('activites.index')
-    ->middleware('auth');
+    ->name('activites.index');
 
 // Affiche le formulaire d'ajout d'une activité
 Route::get('/activites/create', [ActiviteController::class, 'create'])

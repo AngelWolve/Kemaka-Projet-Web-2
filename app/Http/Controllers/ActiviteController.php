@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Activite;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ActiviteController extends Controller
 {
@@ -40,11 +41,14 @@ class ActiviteController extends Controller
         // Valider
         $valides = $request->validate([
             "nom" => "required|min:5|max:150",
-            "description" => "required"
+            "description" => "required",
+            "image" =>  "required|mimes:png,jpg,jpeg",
         ], [
             "nom.max" => "Le nom a un maximum de maximum caractères",
             "nom.min" => "Le nom doit avoir un minimum de  caractères",
-            "description.required" => "La description de l'actualité est obligatoire"
+            "description.required" => "La description de l'activité est obligatoire",
+            "image.required" => "La image de l'activité est obligatoire",
+            "image.mimes" => "L'image de l'activité doit être en format : png,jpg,jpeg",
         ]);
 
         // Ajouter à la BDD
@@ -52,6 +56,14 @@ class ActiviteController extends Controller
         $activite->nom = $valides["nom"];
         $activite->description = $valides["description"];
         $activite->user_id = auth()->user()->id;
+
+        // Traitement de l'image
+        if ($request->hasFile('image')) {
+            // Déplacer
+            Storage::putFile("public/uploads", $request->image);
+            // Sauvegarder le "bon" chemin qui sera inséré dans la BDD et utilisé par le navigateur
+            $activite->image = "/storage/uploads/" . $request->image->hashName();
+        }
 
         $activite->save();
 
@@ -85,12 +97,15 @@ class ActiviteController extends Controller
         $valides = $request->validate([
             "id" => "required",
             "nom" => "required|min:5|max:150",
-            "description" => "required"
+            "description" => "required",
+            "image" =>  "required|mimes:png,jpg,jpeg",
         ], [
             "id.required" => "L'id de l'activité est obligatoire",
             "nom.max" => "Le nom a un maximum de maximum caractères",
             "nom.min" => "Le nom doit avoir un minimum de 5 caractères",
-            "description.required" => "La description de l'activité est obligatoire"
+            "description.required" => "La description de l'activité est obligatoire",
+            "image.required" => "L'image de l'activité est obligatoire",
+            "image.mimes" => "L'image de l'activité doit être en format : png,jpg,jpeg",
         ]);
 
         // Récupération de l'activité a modifier, suivi de la modification et sauvegarde
@@ -98,6 +113,15 @@ class ActiviteController extends Controller
         $activite->nom = $valides["nom"];
         $activite->description = $valides["description"];
         $activite->user_id = auth()->id();
+
+        // Traitement de l'image
+        if ($request->hasFile('image')) {
+            // Déplacer
+            Storage::putFile("public/uploads", $request->image);
+            // Sauvegarder le "bon" chemin qui sera inséré dans la BDD et utilisé par le navigateur
+            $activite->image = "/storage/uploads/" . $request->image->hashName();
+        }
+
         $activite->save();
 
         // Rediriger

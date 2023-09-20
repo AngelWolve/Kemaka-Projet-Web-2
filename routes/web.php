@@ -130,7 +130,7 @@ Route::post("/enregistrement", [EnregistrementController::class, 'store'])
     // ->middleware('guest');
 
 
-/**
+/*****************
  * NOUS JOINDRE
  */
 
@@ -142,11 +142,11 @@ Route::get('/nous_joindre', [NousJoindreController::class, 'index'])
 Route::post('/nous_joindre/store', [NousJoindreController::class, 'store'])
     ->name('nous_joindre.store');
 
-/**
+/*****************
  * EMPLOYÉ
  */
 
 //Affiche la page de l'employé
 Route::get("/employe", [EmployeController::class, 'index'])
-    ->name('employe.index')
-    ->middleware('auth');
+    ->name('employe.index');
+    // ->middleware('auth');

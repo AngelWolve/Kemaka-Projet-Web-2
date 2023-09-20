@@ -9,13 +9,13 @@ use App\Http\Controllers\ConnexionController;
 use App\Http\Controllers\EnregistrementController;
 use Illuminate\Support\Facades\Route;
 
-/**
+/*****************
  * ACCUEIL
  */
 Route::get("/", [AccueilController::class, 'accueil'])
     ->name('accueil');
 
-/**
+/*****************
  * ACTUALITÉS
  */
 //Affiche la page des actualités
@@ -48,16 +48,15 @@ Route::post("/actualites/destroy", [ActualiteController::class, 'destroy'])
     ->name('actualites.destroy')
     ->middleware('auth');
 
-/**
- * FORFAIT
+/*****************
+ * FORFAITS
  */
-
 //Affiche la page des forfaits
 Route::get("/forfaits", [ForfaitController::class, 'index'])
     ->name('forfaits.index');
 
-/**
- * RÉSERVATION
+/*****************
+ * RÉSERVATIONS
  */
 //Affiche le formulaire d'ajout
 Route::get("/reservations/create/{id}", [ReservationController::class, 'create'])
@@ -67,7 +66,7 @@ Route::get("/reservations/create/{id}", [ReservationController::class, 'create']
 Route::post('/reservations/store', [ReservationController::class, 'store'])
     ->name('reservations.store');
 
-/**
+/*****************
  * ACTIVITÉS
  */
 //Affiche la page des activités

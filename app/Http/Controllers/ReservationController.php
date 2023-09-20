@@ -25,11 +25,11 @@ class ReservationController extends Controller
 {
     // Valider les données du formulaire
     $valides = $request->validate([
-        'date_arrive' => 'required|date',
+        'date_arrivee' => 'required|date',
         'date_depart' => 'required|date',
         'forfait_id' => 'required',
     ], [
-        "date_arrive" => "La date d'arrivé est obligatoire",
+        "date_arrivee" => "La date d'arrivé est obligatoire",
         "date_depart" => "La date de départ est obligatoire",
         "forfait_id" => "Id de forfait est obligatoire",
 
@@ -40,7 +40,7 @@ class ReservationController extends Controller
     // $reservation->user_id = auth()->user()->id; // pour avoir un utilisateur connecté
     $reservation->user_id = 11;
     $reservation->forfait_id =$valides["forfait_id"];
-    $reservation->date_arrive = $valides["date_arrive"];
+    $reservation->date_arrivee = $valides["date_arrivee"];
     $reservation->date_depart = $valides["date_depart"];
     $reservation->save();
 

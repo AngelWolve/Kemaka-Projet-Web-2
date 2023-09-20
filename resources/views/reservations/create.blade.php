@@ -13,8 +13,8 @@
         @csrf
         <input type="hidden" name="forfait_id" value="{{ $forfait->id }}">
 
-        <label for="date_arrive">Date d'arrivée :</label>
-        <input type="date" name="date_arrive" required>
+        <label for="date_arrivee">Date d'arrivée :</label>
+        <input type="date" name="date_arrivee" required>
 
         <label for="date_depart">Date de départ :</label>
         <input type="date" name="date_depart" required>

@@ -100,6 +100,12 @@ Route::post("/activites/destroy", [ActiviteController::class, 'destroy'])
     ->middleware('auth');
 
 /*****************
+ * À PROPOS
+ */
+Route::get("/a_propos", [AproposController::class, 'index'])
+    ->name('a_propos');
+
+/*****************
  * CONNEXION ET ENREGISTREMENT
  */
 Route::get("/connexion", [ConnexionController::class, 'create'])

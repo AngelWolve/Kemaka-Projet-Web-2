@@ -15,9 +15,11 @@ class ReservationFactory extends Factory
      */
     public function definition()
     {
+        $date_arrivee = $this->faker->dateTimeBetween('2024-06-14', '2024-06-17');
+
         return [
-            'date_arrive' => $this->faker->dateTimeBetween('now', '+1 years'),
-            'date_depart' => $this->faker->dateTimeBetween('+1 years', '+2 years'),
+            'date_arrivee' => $date_arrivee,
+            'date_depart' => $this->faker->dateTimeBetween($date_arrivee, '2024-06-17'),
             'user_id' => User::inRandomOrder()->first()->id,
             'forfait_id' => Forfait::inRandomOrder()->first()->id,
         ];

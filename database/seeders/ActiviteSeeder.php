@@ -13,6 +13,7 @@ class ActiviteSeeder extends Seeder
      */
     public function run()
     {
-        //
+        // // Ajout d'activités fictives
+        // \App\Models\Activite::factory(5)->create();
     }
 }

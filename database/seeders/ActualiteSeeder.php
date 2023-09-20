@@ -13,6 +13,7 @@ class ActualiteSeeder extends Seeder
      */
     public function run()
     {
-        //
+        // // Ajout d'actualités fictives
+        // \App\Models\Actualite::factory(5)->create();
     }
 }

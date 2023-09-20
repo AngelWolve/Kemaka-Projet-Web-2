@@ -26,13 +26,10 @@ class NousJoindreController extends Controller
     public function store(Request $request)
     {
         $valides = $request->validate([
-            // "prenom" => "required|max:255",
             "nom" => "required|max:255",
             "email" => "required|email|max:255",
             "message" => "required",
         ], [
-            // "prenom.required" => "Le prénom est requis",
-            // "prenom.max" => "Le :attribute doit avoir un maximum de :max caractères",
             "nom.required" => "Le nom est requis",
             "nom.max" => "Le :attribute doit avoir un maximum de :max caractères",
             "email.required" => "Le courriel est requis",
@@ -43,7 +40,6 @@ class NousJoindreController extends Controller
         ]);
 
         $question = new Question();
-        // $question->prenom = $valides["prenom"];
         $question->nom = $valides["nom"];
         $question->email = $valides["email"];
         $question->message = $valides["message"];

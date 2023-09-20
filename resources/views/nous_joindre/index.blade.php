@@ -10,18 +10,18 @@
     <form method="POST" action="{{ route('nous_joindre.store') }}">
         @csrf
         <div class="form-group">
-            <label for="nom">Name</label>
+            <label for="nom">Nom Complet</label>
             <input type="text" name="nom" id="nom" class="form-control" required>
         </div>
         <div class="form-group">
-            <label for="email">Email</label>
+            <label for="email">Courriel</label>
             <input type="email" name="email" id="email" class="form-control" required>
         </div>
         <div class="form-group">
             <label for="message">Message</label>
             <textarea name="message" id="message" class="form-control" rows="5" required></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Envoyer</button>
     </form>
 </body>
 </html>

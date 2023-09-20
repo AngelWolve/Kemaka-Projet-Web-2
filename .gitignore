@@ -2,6 +2,7 @@
 /public/hot
 /public/css/style.css.map
 /public/css/style.css
+/public/css/reset.css
 /public/storage
 /storage/*.key
 /vendor

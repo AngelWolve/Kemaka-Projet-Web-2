@@ -60,8 +60,12 @@ Route::get("/forfaits", [ForfaitController::class, 'index'])
  * RÉSERVATION
  */
 
-//Affiche la page des réservation
-Route::get("/reservations", [ReservationController::class, 'index'])
-    ->name('reservations.index');
+//Affiche le formulaire d'ajout
+Route::get("/reservations/create/{id}", [ReservationController::class, 'create'])
+    ->name('reservations.create');
+
+// Traitement du formulaire
+Route::post('/reservations/store', [ReservationController::class, 'store'])
+    ->name('reservations.store');
 
 

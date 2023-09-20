@@ -28,9 +28,9 @@
         </li>
 
         {{-- RÉSERVATION --}}
-        <a href="{{ route('reservations.index') }}">
+        <a href="{{ route('reservations.create', $forfait)}}">
             <span>
-                comander
+                commander
             </span>
         </a>
     @endforeach

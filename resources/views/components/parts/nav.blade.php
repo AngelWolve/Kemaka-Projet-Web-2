@@ -1,6 +1,6 @@
 <nav>
     <div>
-        <img src="" alt="">
+        <img src="/public/images/logo1.png" alt="">
         <ul>
             <li>ACCUEIL</li>
             <li>ACTIVITÉS</li>

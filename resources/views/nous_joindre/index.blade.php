@@ -1,12 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+<x-client>
+    <div class="contact">
+        <h2>Heures d'ouverture</h2>
+        <div class="date">
+            <div>
+                <p>19 juillet</p>
+                <p>Admissions</p>
+            </div>
+            <div>
+                <p>20 juillet</p>
+                <p>Admissions</p>
+            </div>
+            <div>
+                <p>21 juillet</p>
+                <p>Admissions</p>
+            </div>
+        </div>
+    </div>
     <form method="POST" action="{{ route('nous_joindre.store') }}">
         @csrf
         <div class="form-group">
@@ -23,5 +32,4 @@
         </div>
         <button type="submit" class="btn btn-primary">Envoyer</button>
     </form>
-</body>
-</html>
+</x-client>

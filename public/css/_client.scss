@@ -31,3 +31,40 @@
 /***************
 ** NOUS JOINDRE
 ***************/
+.contact {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 1200px;
+    margin: auto;
+
+    h2 {
+      font-size: 24px;
+      color: #333;
+    }
+
+    .date {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-around;
+
+      div {
+        margin-bottom: 10px;
+
+        p {
+          font-size: 18px;
+          color: #555;
+
+          &:first-child {
+            font-weight: bold;
+            color: #0073e6;
+          }
+
+          &:last-child {
+            color: #888;
+          }
+        }
+      }
+    }
+  }

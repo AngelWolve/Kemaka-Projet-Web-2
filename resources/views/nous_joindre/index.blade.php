@@ -20,7 +20,7 @@
                 <h3>21 juillet</h3>
                 <h4>Admissions</h4>
                 <p class="tx-lg">8:00 - 19:00</h4>
-                <h4>Horaire</p>
+                <h4>Horaire</h4>
                 <p class="tx-lg">10:00 - 24:00</p>
             </div>
         </div>

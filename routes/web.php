@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get("/", [AccueilController::class, 'accueil'])
     ->name('accueil');
 
+
 /*****************
  * ACTUALITÉS
  */

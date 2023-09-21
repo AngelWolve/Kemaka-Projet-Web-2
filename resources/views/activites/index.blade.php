@@ -25,41 +25,9 @@
             <p class="activite">
                 {{ $activite->description }}
             </p>
-            <img src="{{ asset('images/asian-???.png') }}" alt="image" class="activite">
+            <img src="{{ asset('images/???.png') }}" alt="image" class="activite">
         @endforeach
     </div>
-
-    {{-- <div>
-        <div> --}}
-            {{-- MODIFICATION --}}
-            {{-- <a href="{{ route('activites.edit', ['id' => $activite->id]) }}">
-                <span>
-                    Éditer
-                </span>
-            </a> --}}
-            {{-- CRÉATION --}}
-            {{-- <a href="{{ route('activites.create') }}">
-                <span>
-                    Créer
-                </span>
-            </a> --}}
-            {{-- SUPPRESSION --}}
-            {{-- <form action="{{ route('activites.destroy') }}" method="POST">
-                @csrf
-
-                <input type="hidden" name="id" value="{{ $activite->id }}">
-                <button type="submit">
-                    <span>
-                        Supprimer
-                    </span>
-                </button>
-            </form>
-        </div>
-    </div> --}}
-
-
-
-
 
 </body>
 

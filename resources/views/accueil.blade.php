@@ -1,3 +1,3 @@
 <x-client>
-    <x-parts.bouton-primaire route="accueil" texte="Envoyer" />
+    <x-parts.nav />
 </x-client>

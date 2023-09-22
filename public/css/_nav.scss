@@ -1,0 +1,43 @@
+nav {
+    background-color: $violet;
+    width: 100%;
+    height: 120px;
+    padding: 0 30px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    div.conteneur-liens {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        ul {
+            display: flex;
+
+            li {
+                margin-left: 30px;
+                list-style-type: none;
+                font-family: "catseye", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 1.25rem;
+                color: $rose;
+                text-decoration: none;
+                text-align: center;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    color: $bleu;
+                }
+            }
+        }
+    }
+
+    div.conteneur-connexion {
+        display: flex;
+        align-items: center;
+
+
+    }
+}

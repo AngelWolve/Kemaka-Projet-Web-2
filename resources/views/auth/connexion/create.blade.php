@@ -44,7 +44,7 @@
             </form>
         </div>
     </section>
-    <p>
+    <p class="compte">
         Pas de compte?
 
         <a href="{{ route('enregistrement.create') }}">

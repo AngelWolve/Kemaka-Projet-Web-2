@@ -103,7 +103,7 @@
             </form>
         </div>
     </section>
-    <p>
+    <p class="compte">
         Déjà membre?
 
         <a href="{{ route('connexion.create') }}">

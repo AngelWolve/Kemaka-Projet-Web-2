@@ -1,6 +1,8 @@
 <nav>
     <div class="conteneur-liens">
-        <img src="{{ asset('images/logo1.png') }}" alt="Logo Asian Quest">
+        <a href="{{ route('accueil') }}">
+            <img src="{{ asset('images/logo.png') }}" alt="Logo Asian Quest">
+        </a>
         <ul>
             <li>
                 <a href="{{ route('accueil') }}">
@@ -30,11 +32,7 @@
         </ul>
     </div>
     <div class="conteneur-connexion">
-        <div>
-            <a href="#">
-                <img src="{{ asset('images/panier.svg') }}" alt="panier d'achat">
-            </a>
-        </div>
-        {{-- <x-parts.bouton-primaire route="accueil" texte="CONNEXION / S'INSCRIRE"> --}}
+        <i class="fa-solid fa-cart-shopping"></i>
+        <x-parts.bouton-primaire route="accueil" texte="CONNEXION / S'INSCRIRE" />
     </div>
 </nav>

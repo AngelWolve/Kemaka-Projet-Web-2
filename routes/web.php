@@ -5,6 +5,7 @@ use App\Http\Controllers\ActualiteController;
 use App\Http\Controllers\ForfaitController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\ActiviteController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ConnexionController;
 use App\Http\Controllers\EmployeController;
 use App\Http\Controllers\EnregistrementController;
@@ -22,8 +23,8 @@ Route::get("/", [AccueilController::class, 'accueil'])
  * ACTUALITÉS
  */
 Route::get("/actualites", [ActualiteController::class, 'index'])
-    ->name('actualites.index')
-    ->middleware('auth');
+    ->name('actualites.index');
+// ->middleware('auth');
 
 Route::get('/actualites/create', [ActualiteController::class, 'create'])
     ->name('actualites.create')
@@ -113,7 +114,7 @@ Route::get("/enregistrement", [EnregistrementController::class, 'create'])
 
 Route::post("/enregistrement", [EnregistrementController::class, 'store'])
     ->name('enregistrement.store');
-    // ->middleware('guest');
+// ->middleware('guest');
 
 
 /*****************
@@ -122,11 +123,30 @@ Route::post("/enregistrement", [EnregistrementController::class, 'store'])
 
 // Affiche la page nous joindre
 Route::get('/nous_joindre', [NousJoindreController::class, 'index'])
-     ->name('nous_joindre.index');
+    ->name('nous_joindre.index');
 
 // Traitement du formulaire de question
 Route::post('/nous_joindre/store', [NousJoindreController::class, 'store'])
     ->name('nous_joindre.store');
+
+
+
+/*****************
+ * ADMIN
+ */
+
+//Affiche la page de l'admin
+Route::get("/admin", [AdminController::class, 'index'])
+    ->name('admin.index');
+// ->middleware('auth');
+
+Route::get("/admin/activites", [AdminController::class, 'activites'])
+    ->name('admin/activites.index');
+// ->middleware('auth');
+
+Route::get("/admin/activites", [AdminController::class, 'activites'])
+    ->name('admin/activites.index');
+// ->middleware('auth');
 
 /*****************
  * EMPLOYÉ

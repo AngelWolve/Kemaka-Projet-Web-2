@@ -73,7 +73,7 @@ class EnregistrementController extends Controller
         // Redirection
         if (Auth::user()->role_id == 1) {
             return redirect()
-                ->route('administration.index')
+                ->route('admin.index')
                 ->with('succes', 'Le compte a été créé');
         }
 

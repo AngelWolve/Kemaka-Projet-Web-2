@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->foreignId('role_id')
                 ->constrained()
+                ->default(3)
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
             $table->rememberToken();

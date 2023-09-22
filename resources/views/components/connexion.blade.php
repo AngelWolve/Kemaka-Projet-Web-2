@@ -1,4 +1,4 @@
-@props(['titre' => 'Asian Quest | Administration'])
+@props(['titre' => 'Asian Quest'])
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 
-<body>
+<body class="connexion">
     <header>
 
     </header>

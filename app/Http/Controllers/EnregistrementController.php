@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Role;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -16,7 +17,9 @@ class EnregistrementController extends Controller
      */
     public function create()
     {
-        return view('auth.enregistrement.create');
+        return view('auth.enregistrement.create',[
+            "roles"=> Role::all()
+        ]);
     }
 
     /**

@@ -77,6 +77,7 @@ p, a {
     padding: 25px 50px;
     letter-spacing: 0.5px;
     border: 2px solid $rose-fonce;
+    border-radius: 5px;
     font-family: 'Lato', sans-serif;
     width: 500px;
 
@@ -89,7 +90,8 @@ p, a {
         display: block;
         font-size: 1em;
         font-weight: bold;
-        margin-top: 10px;
+        margin-top: 1.2rem;
+        margin-bottom:0.5rem;
     }
 
     .input_groupe_1 {
@@ -99,18 +101,16 @@ p, a {
 
     input {
         display: block;
-        height: 30px;
+        height: 40px;
         width: 100%;
-        border-radius: 10px;
+        border-radius: 5px;
         padding: 0 10px;
-        font-size: 14px;
     }
 
     button {
-        margin: 5px auto;
-        font-size: 14px;
+        margin: 1rem auto;
         font-weight: bold;
-        border-radius: 10px;
+        border-radius: 5px;
     }
 
     a {

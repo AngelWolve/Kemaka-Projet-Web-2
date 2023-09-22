@@ -39,7 +39,7 @@
 
             {{-- SUBMIT --}}
             <div>
-                <input type="submit"  value="Modifier!">
+                <input type="submit" value="Modifier!">
             </div>
         </form>
 

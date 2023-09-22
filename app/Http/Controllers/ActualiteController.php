@@ -24,17 +24,19 @@ class ActualiteController extends Controller
      *
      * @return View
      */
-    public function create() {
+    public function create()
+    {
         return view('actualites.create');
     }
 
- /**
+    /**
      * Traite l'ajout
      *
      * @param Request $request
      * @return RedirectResponse
-    */
-    public function store(Request $request) {
+     */
+    public function store(Request $request)
+    {
         // Valider
         $valides = $request->validate([
             "titre" => "required|min:4|max:150",
@@ -55,8 +57,8 @@ class ActualiteController extends Controller
 
         // Rediriger
         return redirect()
-                ->route('actualites.index')
-                ->with('succes', "L'actualité a été ajoutée avec succès!");
+            ->route('actualites.index')
+            ->with('succes', "L'actualité a été ajoutée avec succès!");
     }
 
 
@@ -106,16 +108,17 @@ class ActualiteController extends Controller
             ->with('succes', "L'actualité a été modifiée avec succès!");
     }
 
-     /**
+    /**
      * Traite la suppression
      *
      * @param Request $request
      * @return RedirectResponse
      */
-    public function destroy(Request $request) {
+    public function destroy(Request $request)
+    {
         Actualite::destroy($request->id);
 
         return redirect()->route('actualites.index')
-                ->with('succes', "L'actualité a été supprimée!");
+            ->with('succes', "L'actualité a été supprimée!");
     }
 }

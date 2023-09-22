@@ -11,6 +11,6 @@
     </div>
     <div>
         <img src="" alt="">
-    <x-parts.bouton texte="CONNEXION / S'INSCRIRE">
+        <x-parts.bouton texte="CONNEXION / S'INSCRIRE">
     </div>
 </nav>

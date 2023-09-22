@@ -39,14 +39,14 @@
                                         edit
                                     </span>
                                 </a>
-                                 {{-- CRÉATION --}}
-                                 <a href="{{ route('actualites.create')}}">
+                                {{-- CRÉATION --}}
+                                <a href="{{ route('actualites.create') }}">
                                     <span>
                                         créer
                                     </span>
                                 </a>
-                                 {{-- SUPPRESSION --}}
-                                 <form action="{{ route('actualites.destroy') }}" method="POST">
+                                {{-- SUPPRESSION --}}
+                                <form action="{{ route('actualites.destroy') }}" method="POST">
                                     @csrf
 
                                     <input type="hidden" name="id" value="{{ $actualite->id }}">

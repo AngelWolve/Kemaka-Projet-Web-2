@@ -2,11 +2,7 @@
 
 @if (session($cle))
     <div class="">
-        <div @class([
-            '',
-            '' => $cle == 'succes',
-            '' => $cle == 'echec',
-        ])>
+        <div @class(['', '' => $cle == 'succes', '' => $cle == 'echec'])>
             <p @class([''])>
                 {{ session($cle) }}
             </p>

@@ -113,7 +113,7 @@ Route::get("/enregistrement", [EnregistrementController::class, 'create'])
 
 Route::post("/enregistrement", [EnregistrementController::class, 'store'])
     ->name('enregistrement.store');
-    // ->middleware('guest');
+// ->middleware('guest');
 
 
 /*****************
@@ -122,7 +122,7 @@ Route::post("/enregistrement", [EnregistrementController::class, 'store'])
 
 // Affiche la page nous joindre
 Route::get('/nous_joindre', [NousJoindreController::class, 'index'])
-     ->name('nous_joindre.index');
+    ->name('nous_joindre.index');
 
 // Traitement du formulaire de question
 Route::post('/nous_joindre/store', [NousJoindreController::class, 'store'])

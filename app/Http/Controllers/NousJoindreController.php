@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class NousJoindreController extends Controller
 {
-     /**
+    /**
      * Affiche la page nous joindre
      *
      * @return View

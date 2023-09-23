@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Actualite;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -34,27 +35,29 @@ class AdminController extends Controller
      */
     public function actualites()
     {
-        return view('admin/actualites.index',[
+        return view('admin/actualites.index', [
             "actualites" => Actualite::all()
         ]);
     }
 
-     /**
+    /**
      * Affiche le formulaire d'ajout
      *
      * @return View
      */
-    public function create() {
+    public function createActualites()
+    {
         return view('admin/actualites.create');
     }
 
- /**
+    /**
      * Traite l'ajout
      *
      * @param Request $request
      * @return RedirectResponse
-    */
-    public function store(Request $request) {
+     */
+    public function storeActualites(Request $request)
+    {
         // Valider
         $valides = $request->validate([
             "titre" => "required|min:4|max:150",
@@ -70,15 +73,15 @@ class AdminController extends Controller
         $actualite->titre = $valides["titre"];
         $actualite->description = $valides["description"];
         // $actualite->user_id = auth()->user()->id ;
-        $actualite->user_id = 1 ;
+        $actualite->user_id = 1;
 
 
         $actualite->save();
 
         // Rediriger
         return redirect()
-                ->route('admin/actualites.index')
-                ->with('succes', "L'actualité a été ajoutée avec succès!");
+            ->route('admin/actualites.index')
+            ->with('succes', "L'actualité a été ajoutée avec succès!");
     }
 
 
@@ -88,7 +91,7 @@ class AdminController extends Controller
      * @param int $id Id de l'actualité à modifier
      * @return View
      */
-    public function edit($id)
+    public function editActualites($id)
     {
         return view('admin/actualites.edit', [
             "actualite" => Actualite::findOrFail($id),
@@ -101,7 +104,7 @@ class AdminController extends Controller
      * @param Request $request Objet qui contient tous les champs reçus dans la requête
      * @return RedirectResponse
      */
-    public function update(Request $request)
+    public function updateActualites(Request $request)
     {
         // Valider
         $valides = $request->validate([
@@ -120,7 +123,7 @@ class AdminController extends Controller
         $actualite->titre = $valides["titre"];
         $actualite->description = $valides["description"];
         // $actualite->user_id = auth()->id();
-        $actualite->user_id = 1 ;
+        $actualite->user_id = 1;
         $actualite->save();
 
         // Rediriger
@@ -129,17 +132,30 @@ class AdminController extends Controller
             ->with('succes', "L'actualité a été modifiée avec succès!");
     }
 
-     /**
+    /**
      * Traite la suppression
      *
      * @param Request $request
      * @return RedirectResponse
      */
-    public function destroy(Request $request) {
+    public function destroyActualites(Request $request)
+    {
         Actualite::destroy($request->id);
 
         return redirect()->route('admin/actualites.index')
-                ->with('succes', "L'actualité a été supprimée!");
+            ->with('succes', "L'actualité a été supprimée!");
+    }
+
+
+    /**
+     * Affiche la liste des employés
+     *
+     * @return View
+     */
+    public function employes()
+    {
+        return view('admin/employes.index', [
+            "employes" => User::where('role_id', 2)->get()
+        ]);
     }
 }
-

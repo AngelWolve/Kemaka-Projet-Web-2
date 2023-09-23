@@ -121,33 +121,72 @@ Route::get("/admin", [AdminController::class, 'index'])
     ->name('admin.index');
 // ->middleware('auth');
 
+
+//Affiche la liste des activités pour Admin
 Route::get("/admin/activites", [AdminController::class, 'activites'])
     ->name('admin/activites.index');
 // ->middleware('auth');
 
+
+
+
+//Affiche la liste des actualités pour Admin
 Route::get("/admin/actualites", [AdminController::class, 'actualites'])
     ->name('admin/actualites.index');
 // ->middleware('auth');
 
-Route::get('/admin/actualites/create', [AdminController::class, 'create'])
+Route::get('/admin/actualites/create', [AdminController::class, 'createActualites'])
     ->name('admin/actualites.create');
 // ->middleware('auth');
 
-Route::post('/admin/actualites', [AdminController::class, 'store'])
+Route::post('/admin/actualites', [AdminController::class, 'storeActualites'])
     ->name('admin/actualites.store');
 // ->middleware('auth');
 
-Route::get("/admin/actualites/edit/{id}", [AdminController::class, 'edit'])
+Route::get("/admin/actualites/edit/{id}", [AdminController::class, 'editActualites'])
     ->name('admin/actualites.edit');
 // ->middleware('auth');
 
-Route::post("/admin/actualites/update", [AdminController::class, 'update'])
+Route::post("/admin/actualites/update", [AdminController::class, 'updateActualites'])
     ->name('admin/actualites.update');
 // ->middleware('auth');
 
-Route::post("/admin/actualites/destroy", [AdminController::class, 'destroy'])
+Route::post("/admin/actualites/destroy", [AdminController::class, 'destroyActualites'])
     ->name('admin/actualites.destroy');
 // ->middleware('auth');
+
+
+
+//Affiche la liste des employés pour Admin
+Route::get("/admin/employes", [AdminController::class, 'employes'])
+    ->name('admin/employes.index');
+// ->middleware('auth');
+
+Route::get('/admin/employes/create', [AdminController::class, 'createEmployes'])
+    ->name('admin/employes.create');
+// ->middleware('auth');
+
+Route::post('/admin/employes', [AdminController::class, 'storeEmployes'])
+    ->name('admin/employes.store');
+// ->middleware('auth');
+
+Route::get("/admin/employes/edit/{id}", [AdminController::class, 'editEmployes'])
+    ->name('admin/employes.edit');
+// ->middleware('auth');
+
+Route::post("/admin/employes/update", [AdminController::class, 'updateEmployes'])
+    ->name('admin/employes.update');
+// ->middleware('auth');
+
+Route::post("/admin/employes/destroy", [AdminController::class, 'destroyEmployes'])
+    ->name('admin/employes.destroy');
+// ->middleware('auth');
+
+
+
+
+
+
 
 /*****************
  * EMPLOYÉ

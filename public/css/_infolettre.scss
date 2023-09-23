@@ -1,0 +1,46 @@
+/***************
+** INFOLETTRE
+***************/
+
+section#infolettre {
+    max-width: 100%;
+    padding: 2.2em;
+    background: rgb(3, 126, 153);
+    background: linear-gradient(0deg, rgba(3, 126, 153, 1) 0%, rgba(4, 157, 191, 1) 30%, rgba(5, 188, 230, 1) 50%, rgba(4, 157, 191, 1) 70%, rgba(3, 126, 153, 1) 100%);
+
+    div.texte-infolettre {
+        max-width: 1440px;
+        margin: 1.4rem auto 1.7rem;
+    }
+
+    div.formulaire {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            margin-right: 10%;
+        }
+
+        form {
+
+            input {
+                width: 650px;
+                margin-bottom: 0.8rem;
+
+                &:last-child {
+                    margin-bottom: 1.1rem;
+                }
+            }
+
+            div {
+                text-align: right;
+
+                button {
+                    margin-bottom: 1.1rem;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+}

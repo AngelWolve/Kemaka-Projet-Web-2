@@ -17,7 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get("/", [AccueilController::class, 'accueil'])
     ->name('accueil');
 
-
 /*****************
  * ACTUALITÉS
  */
@@ -93,6 +92,28 @@ Route::get("/a_propos", [AproposController::class, 'index'])
     ->name('a_propos');
 
 /*****************
+ * INFOLETTRE
+ */
+Route::post("/infolettre", [InfolettreController::class, 'store'])
+    ->name('infolettre.store');
+
+/*****************
+ * NOUS JOINDRE
+ */
+Route::get('/nous_joindre', [NousJoindreController::class, 'index'])
+    ->name('nous_joindre.index');
+
+Route::post('/nous_joindre/store', [NousJoindreController::class, 'store'])
+    ->name('nous_joindre.store');
+
+/*****************
+ * EMPLOYÉ
+ */
+Route::get("/employe", [EmployeController::class, 'index'])
+    ->name('employe.index');
+// ->middleware('auth');
+
+/*****************
  * CONNEXION ET ENREGISTREMENT
  */
 Route::get("/connexion", [ConnexionController::class, 'create'])
@@ -113,26 +134,4 @@ Route::get("/enregistrement", [EnregistrementController::class, 'create'])
 
 Route::post("/enregistrement", [EnregistrementController::class, 'store'])
     ->name('enregistrement.store');
-    // ->middleware('guest');
-
-
-/*****************
- * NOUS JOINDRE
- */
-
-// Affiche la page nous joindre
-Route::get('/nous_joindre', [NousJoindreController::class, 'index'])
-     ->name('nous_joindre.index');
-
-// Traitement du formulaire de question
-Route::post('/nous_joindre/store', [NousJoindreController::class, 'store'])
-    ->name('nous_joindre.store');
-
-/*****************
- * EMPLOYÉ
- */
-
-//Affiche la page de l'employé
-Route::get("/employe", [EmployeController::class, 'index'])
-    ->name('employe.index');
-    // ->middleware('auth');
+// ->middleware('guest');

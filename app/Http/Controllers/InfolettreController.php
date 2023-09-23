@@ -24,13 +24,12 @@ class InfolettreController extends Controller
             "email.required" => "Le courriel est requis",
             "email.email" => "Le courriel doit avoir un format valide",
             "email.max" => "Le :attribute doit avoir un maximum de :max caractères",
-            "message.required" => "Le message est requis",
         ]);
 
-        $question = new Infolettre();
-        $question->nom = $valides["nom"];
-        $question->email = $valides["email"];
-        $question->save();
+        $infolettre = new Infolettre();
+        $infolettre->nom = $valides["nom"];
+        $infolettre->email = $valides["email"];
+        $infolettre->save();
 
         return redirect()->back();
     }

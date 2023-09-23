@@ -20,6 +20,8 @@
         {{ $slot }}
     </main>
 
+    <x-parts.infolettre />
+
     <x-parts.footer />
 </body>
 

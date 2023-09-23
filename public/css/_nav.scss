@@ -1,10 +1,14 @@
+/***************
+** NAVIGATION
+***************/
+
 nav {
     background-color: $violet;
-    height: 80px;
-    padding: 0 20px 0 20px;
+    padding: 0px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
 
     div.conteneur-liens {
         display: flex;
@@ -16,15 +20,13 @@ nav {
 
             li {
                 margin-left: 40px;
-                list-style-type: none;
-                text-decoration: none;
                 text-align: center;
                 transition: all 0.3s ease-in-out;
 
                 a {
                     color: $rose;
                     font-family: "catseye", sans-serif;
-                    font-weight: 400;
+                    font-weight: 700;
                     font-style: normal;
                     font-size: 1.2rem;
 

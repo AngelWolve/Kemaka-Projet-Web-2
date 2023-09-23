@@ -14,17 +14,13 @@
 </head>
 
 <body>
-    <header>
-
-    </header>
+    <x-parts.nav />
 
     <main>
         {{ $slot }}
     </main>
 
-    <footer>
-
-    </footer>
+    <x-parts.footer />
 </body>
 
 </html>

@@ -9,43 +9,43 @@
 </head>
 
 <body>
-    <h1>Modifier une actualité</h1>
+    <h1>Créer une actualité</h1>
     <div>
-        <form action="{{ route('actualites.update') }}" method="POST">
+        {{-- FORMULAIRE --}}
+        <form action="{{ route('admin/actualites.store') }}" method="POST">
             @csrf
 
-            <input type="hidden" name="id" value="{{ $actualite->id }}">
-
-            {{-- TITRE --}}
             <div>
+                {{-- TITRE --}}
                 <label for="titre">Titre</label>
                 <div>
+
                     <x-forms.erreur champ="titre" />
 
-                    <input id="titre" name="titre" type="text" autofocus
-                        value="{{ old('titre') ?? $actualite->titre }}">
+                    <input id="titre" name="titre" type="text" autofocus value="{{ old('titre') }}">
                 </div>
             </div>
-            {{-- DESCRIPTION --}}
+
             <div>
+                {{-- DESCRIPTION --}}
                 <label for="description">Description</label>
                 <div>
+
                     <x-forms.erreur champ="description" />
 
                     <input id="description" name="description" type="text" autofocus
-                        value="{{ old('description') ?? $actualite->description }}">
+                        value="{{ old('description') }}">
                 </div>
             </div>
-
             {{-- SUBMIT --}}
             <div>
-                <input type="submit"  value="Modifier!">
+                <input type="submit" vlue="Ajouter!">
             </div>
         </form>
 
-        {{-- RETOUR AUX ACTUALITÉS --}}
+        {{-- LIEN RETOUR --}}
         <p>
-            <a href="{{ route('actualites.index') }}">Retour aux actualités</a>
+            <a href="{{ route('admin/actualites.index') }}" class="hover:text-indigo-600">Retour aux actualites</a>
         </p>
     </div>
 </body>

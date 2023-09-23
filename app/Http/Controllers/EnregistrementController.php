@@ -17,9 +17,7 @@ class EnregistrementController extends Controller
      */
     public function create()
     {
-        return view('auth.enregistrement.create',[
-            "roles"=> Role::all()
-        ]);
+        return view('auth.enregistrement.create');
     }
 
     /**
@@ -37,7 +35,6 @@ class EnregistrementController extends Controller
             "email" => "required|email|max:255|unique:users,email",
             "password" => "required|min:8|max:255",
             "password_confirmation" => "required|same:password",
-            "role_id" => "nullable"
         ], [
             "prenom.required" => "Le prénom est requis",
             "prenom.max" => "Le prénom ne doit pas dépasser :max caractères",
@@ -60,7 +57,6 @@ class EnregistrementController extends Controller
         $user->nom = $valides["nom"];
         $user->email = $valides["email"];
         $user->password = Hash::make($valides["password"]);
-        $user->role_id = $valides["role_id"];
 
         // Sauvegarde de l'utilisateur
         $user->save();

@@ -72,26 +72,15 @@
 
                 <div>
                     <div>
-                        <label for="confirm-password">
+                        <label for="password_confirmation">
                             Confirmation du mot de passe
                         </label>
                     </div>
                     <div>
-                        <input id="confirm-password" name="confirmation_password" type="password" required>
+                        <input id="password_confirmation" name="password_confirmation" type="password" required>
 
-                        <x-forms.erreur champ="confirmation_password" />
+                        <x-forms.erreur champ="password_confirmation" />
                     </div>
-
-                </div>
-                <div>
-                    <label for="role_id"> Role </label>
-                    <select name="role_id" id="role_id">
-                        @foreach ($roles as $role)
-                            <option value={{ $role->id }}>
-                                {{ $role->nom }}
-                            </option>
-                        @endforeach
-                    </select>
 
                 </div>
 

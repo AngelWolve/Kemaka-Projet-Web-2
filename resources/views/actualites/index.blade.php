@@ -30,34 +30,6 @@
                         <p>
                             {{ $actualite->created_at }}
                         </p>
-
-                        <div>
-                            <div>
-                                {{-- MODIFICATION --}}
-                                <a href="{{ route('actualites.edit', ['id' => $actualite->id]) }}">
-                                    <span>
-                                        edit
-                                    </span>
-                                </a>
-                                 {{-- CRÉATION --}}
-                                 <a href="{{ route('actualites.create')}}">
-                                    <span>
-                                        créer
-                                    </span>
-                                </a>
-                                 {{-- SUPPRESSION --}}
-                                 <form action="{{ route('actualites.destroy') }}" method="POST">
-                                    @csrf
-
-                                    <input type="hidden" name="id" value="{{ $actualite->id }}">
-                                    <button type="submit">
-                                        <span>
-                                            delete
-                                        </span>
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
                     </li>
                 @endforeach
             </ul>

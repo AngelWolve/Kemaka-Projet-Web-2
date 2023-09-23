@@ -26,25 +26,6 @@ Route::get("/actualites", [ActualiteController::class, 'index'])
     ->name('actualites.index');
 // ->middleware('auth');
 
-Route::get('/actualites/create', [ActualiteController::class, 'create'])
-    ->name('actualites.create')
-    ->middleware('auth');
-
-Route::post('/actualites', [ActualiteController::class, 'store'])
-    ->name('actualites.store')
-    ->middleware('auth');
-
-Route::get("/actualites/edit/{id}", [ActualiteController::class, 'edit'])
-    ->name('actualites.edit')
-    ->middleware('auth');
-
-Route::post("/actualites/update", [ActualiteController::class, 'update'])
-    ->name('actualites.update')
-    ->middleware('auth');
-
-Route::post("/actualites/destroy", [ActualiteController::class, 'destroy'])
-    ->name('actualites.destroy')
-    ->middleware('auth');
 
 /*****************
  * FORFAITS
@@ -144,8 +125,30 @@ Route::get("/admin/activites", [AdminController::class, 'activites'])
     ->name('admin/activites.index');
 // ->middleware('auth');
 
-Route::get("/admin/activites", [AdminController::class, 'activites'])
-    ->name('admin/activites.index');
+//**************************************************************************************************/
+
+Route::get("/admin/actualites", [AdminController::class, 'actualites'])
+    ->name('admin/actualites.index');
+// ->middleware('auth');
+
+Route::get('/admin/actualites/create', [AdminController::class, 'create'])
+    ->name('admin/actualites.create');
+// ->middleware('auth');
+
+Route::post('/admin/actualites', [AdminController::class, 'store'])
+    ->name('admin/actualites.store');
+// ->middleware('auth');
+
+Route::get("/admin/actualites/edit/{id}", [AdminController::class, 'edit'])
+    ->name('admin/actualites.edit');
+// ->middleware('auth');
+
+Route::post("/admin/actualites/update", [AdminController::class, 'update'])
+    ->name('admin/actualites.update');
+// ->middleware('auth');
+
+Route::post("/admin/actualites/destroy", [AdminController::class, 'destroy'])
+    ->name('admin/actualites.destroy');
 // ->middleware('auth');
 
 /*****************

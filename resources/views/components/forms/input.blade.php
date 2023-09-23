@@ -1,19 +1,22 @@
-@props(['name', 'type' => 'text', 'label', 'value' => old($name), 'autocomplete', 'autofocus' => false, 'required' => false, 'min' => null, 'max' => null, 'min_length' => null, 'max_length' => null])
+@props(['name', 'type' => 'text', 'label' => null, 'value' => old($name), 'autocomplete' => null, 'autofocus' => false, 'required' => false, 'min' => null, 'max' => null, 'min_length' => null, 'max_length' => null, 'placeholder' => null])
 
-<div>
+<div class="input">
     <x-forms.erreur champ="{{ $name }}" />
 
-    <label for="{{ $name }}" class="">
-        {{ $label }}
-    </label>
-    <div class="">
+    @if ($label)
+        <label for="{{ $name }}">
+            {{ $label }}
+        </label>
+    @endif
+
+    <div>
         <input id="{{ $name }}" name="{{ $name }}" type="{{ $type }}" value="{{ $value }}"
-            autocomplete="{{ $autocomplete }}" @if ($autofocus) autofocus @endif
-            @if ($required) required @endif
+            @if ($autocomplete) autocomplete="{{ $autocomplete }}" @endif
+            @if ($autofocus) autofocus @endif @if ($required) required @endif
             @if ($min !== null) min="{{ $min }}" @endif
             @if ($max !== null) max="{{ $max }}" @endif
             @if ($min_length !== null) min_length="{{ $min_length }}" @endif
             @if ($max_length !== null) max_length="{{ $max_length }}" @endif
-            class="">
+            @if ($placeholder) placeholder="{{ $placeholder }}" @endif>
     </div>
 </div>

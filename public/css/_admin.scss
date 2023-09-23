@@ -1,3 +1,115 @@
 /***************
 ** ADMINISTRATION
 ***************/
+
+    main.actualite {
+
+        h3 {
+
+            margin-bottom: 2rem;
+        }
+
+        section {
+            max-width: 1200px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            padding: 40px;
+
+            ul {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+
+
+                h4 {
+                    margin: 20px 0;
+                }
+
+                // div{
+                //     max-width: 1200px;
+                //     width: 100%;
+                //     display: flex;
+                //     justify-content: space-between;
+                // }
+
+                // a {
+                //     text-decoration: none;
+                //     padding: 5px 10px;
+                //     background-color: $violet;
+                //     color: $blanc;
+                //     border-radius: 5px;
+                //     font-weight: bold;
+                //     margin-right: 10px;
+
+                //     &:hover {
+                //         background-color: $rose-fonce;
+                //     }
+                // }
+
+                li {
+                    background-color: #f8cfed;
+                    border-radius: 10px;
+                    border: 2px solid $rose;
+                    box-shadow: 0 0 20px #f8cfed;
+                    margin-bottom: 2rem;
+                    padding: 20px;
+                    display: flex;
+                    justify-content:space-around;
+
+                    div{
+                        div {
+
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                        }
+                    }
+
+
+
+                    h4 {
+                        margin: 10px 0;
+                        width: 80%;
+                    }
+
+                    p {
+                        margin: 5px 0;
+                        width: 90%;
+                        line-height: 25px;
+                    }
+
+                    // a {
+                    //     text-decoration: none;
+                    //     padding: 5px 10px;
+                    //     background-color: $violet;
+                    //     color: $blanc;
+                    //     border-radius: 5px;
+                    //     font-weight: bold;
+                    //     margin-right: 10px;
+
+                    //     &:hover {
+                    //         background-color: $rose-fonce;
+                    //     }
+                    // }
+
+                    // form {
+                    //     margin: 0;
+
+                    //     button {
+                    //         background-color: transparent;
+                    //         color: $violet;
+                    //         border: none;
+                    //         cursor: pointer;
+
+                    //         &:hover {
+                    //             color: $rose-fonce;
+                    //         }
+                    //     }
+                    // }
+                }
+            }
+        }
+    }
+

@@ -1,27 +1,27 @@
 <footer>
-    <ul class="liens">
+    <ul class="liens-pages">
         <li>
-            <a href="{{ route('accueil') }}">
+            <a class="lien" href="{{ route('accueil') }}">
                 ACCUEIL
             </a>
         </li>
         <li>
-            <a href="{{ route('accueil') }}">
+            <a class="lien" href="{{ route('accueil') }}">
                 ACTIVITÉS
             </a>
         </li>
         <li>
-            <a href="{{ route('accueil') }}">
+            <a class="lien" href="{{ route('accueil') }}">
                 FORFAITS
             </a>
         </li>
         <li>
-            <a href="{{ route('accueil') }}">
+            <a class="lien" href="{{ route('accueil') }}">
                 À PROPOS
             </a>
         </li>
         <li>
-            <a href="{{ route('accueil') }}">
+            <a class="lien" href="{{ route('accueil') }}">
                 NOUS JOINDRE
             </a>
         </li>
@@ -54,6 +54,6 @@
         </li>
     </ul>
 
-    <p>&copy; 2023 - Tous droits réservés à Asian Quest Festival</p>
+    <p class="tx-sm">&copy; 2023 - Tous droits réservés à Asian Quest Festival</p>
 
 </footer>

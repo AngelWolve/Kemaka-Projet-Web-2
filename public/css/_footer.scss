@@ -6,7 +6,7 @@ footer {
     background-color: $violet;
     padding: 40px 20px 20px;
 
-    ul.liens {
+    ul.liens-pages {
         display: flex;
         justify-content: center;
 
@@ -17,18 +17,6 @@ footer {
 
             &:first-child {
                 margin-left: 0;
-            }
-
-            a {
-                color: $rose;
-                font-family: "catseye", sans-serif;
-                font-weight: 700;
-                font-style: normal;
-                font-size: 1.2rem;
-
-                &:hover {
-                    color: $rose-fonce;
-                }
             }
         }
     }
@@ -57,7 +45,6 @@ footer {
 
     p {
         color: $blanc;
-        font-size: 0.8rem;
         text-align: center;
         margin-top: 30px;
     }

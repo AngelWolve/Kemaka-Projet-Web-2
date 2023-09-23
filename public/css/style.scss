@@ -31,41 +31,59 @@ html {
 
 h1,
 h2,
-h3,
-h4 {
+h3 {
     font-family: "catseye", sans-serif;
     font-weight: 700;
     font-style: normal;
 }
 
 h1 {
-    font-size: 3.5rem;
+    font-size: 3.55rem;
     text-align: center;
 }
 
 h2 {
-    font-size: 3rem;
+    font-size: 2.55rem;
     text-align: center;
 }
 
 h3 {
-    font-size: 2.5rem;
+    font-size: 1.75rem;
     text-align: center;
 }
 
-h4 {
-    font-size: 1.75rem;
+a {
+    text-decoration: none;
+}
+
+.lien {
+    color: $rose;
+    font-family: "catseye", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.2rem;
+
+    &:hover {
+        color: $rose-fonce;
+    }
+}
+
+.tx-sm {
+    font-size: 0.85rem;
+    font-family: "montserrat", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .tx-md {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-family: "montserrat", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
 .tx-lg {
-    font-size: 1.5rem;
+    font-size: 1.45rem;
     font-family: "montserrat", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -78,8 +96,11 @@ h4 {
     font-style: normal;
 }
 
-a {
-    text-decoration: none;
+.tx-xxl {
+    font-size: 2.15rem;
+    font-family: "montserrat", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 @import "_client.scss";

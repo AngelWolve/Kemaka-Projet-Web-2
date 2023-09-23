@@ -21,18 +21,6 @@ nav {
                 margin-left: 40px;
                 text-align: center;
                 transition: all 0.3s ease-in-out;
-
-                a {
-                    color: $rose;
-                    font-family: "catseye", sans-serif;
-                    font-weight: 700;
-                    font-style: normal;
-                    font-size: 1.2rem;
-
-                    &:hover {
-                        color: $rose-fonce;
-                    }
-                }
             }
         }
     }

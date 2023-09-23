@@ -125,8 +125,6 @@ Route::get("/admin/activites", [AdminController::class, 'activites'])
     ->name('admin/activites.index');
 // ->middleware('auth');
 
-//**************************************************************************************************/
-
 Route::get("/admin/actualites", [AdminController::class, 'actualites'])
     ->name('admin/actualites.index');
 // ->middleware('auth');

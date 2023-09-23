@@ -32,14 +32,14 @@
                 <div>
                     <x-forms.erreur champ="description" />
 
-                    <input id="description" name="description" type="text" autofocus
-                        value="{{ old('description') ?? $actualite->description }}">
+                    <textarea name="description" id="description" rows="5" maxlength="500">{{ old('description') ?? $actualite->description }}</textarea>
+
                 </div>
             </div>
 
             {{-- SUBMIT --}}
             <div>
-                <input type="submit"  value="Modifier!">
+                <input type="submit" value="Modifier!">
             </div>
         </form>
 

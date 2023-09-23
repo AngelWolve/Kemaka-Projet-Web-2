@@ -68,8 +68,10 @@ class AdminController extends Controller
         // Ajouter à la BDD
         $actualite = new Actualite();
         $actualite->titre = $valides["titre"];
-        $actualite->titre = $valides["description"];
-        $actualite->user_id = auth()->user()->id = 1;
+        $actualite->description = $valides["description"];
+        // $actualite->user_id = auth()->user()->id ;
+        $actualite->user_id = 1 ;
+
 
         $actualite->save();
 
@@ -117,7 +119,8 @@ class AdminController extends Controller
         $actualite = Actualite::findOrFail($valides["id"]);
         $actualite->titre = $valides["titre"];
         $actualite->description = $valides["description"];
-        $actualite->user_id = auth()->id();
+        // $actualite->user_id = auth()->id();
+        $actualite->user_id = 1 ;
         $actualite->save();
 
         // Rediriger
@@ -135,7 +138,7 @@ class AdminController extends Controller
     public function destroy(Request $request) {
         Actualite::destroy($request->id);
 
-        return redirect()->route('aadmin/actualites.index')
+        return redirect()->route('admin/actualites.index')
                 ->with('succes', "L'actualité a été supprimée!");
     }
 }

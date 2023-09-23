@@ -8,7 +8,6 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-sizing: border-box;
 
     div.conteneur-liens {
         display: flex;
@@ -47,6 +46,7 @@ nav {
             color: $bleu;
             margin-right: 40px;
             cursor: pointer;
+            transition: all 0.3s ease-in-out;
 
             &:hover {
                 color: $bleu-fonce;

@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <x-parts.nav />
+    <x-parts.header titre="{{ $titre }}" />
 
     <main>
         {{ $slot }}

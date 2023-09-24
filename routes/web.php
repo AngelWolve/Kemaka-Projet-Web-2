@@ -122,15 +122,25 @@ Route::get("/admin", [AdminController::class, 'index'])
 // ->middleware('auth');
 
 
-//Affiche la liste des activités pour Admin
+//Affiche la liste des activités
 Route::get("/admin/activites", [AdminController::class, 'activites'])
     ->name('admin/activites.index');
 // ->middleware('auth');
 
 
+//Affiche la liste des clients
+Route::get("/admin/clients", [AdminController::class, 'clients'])
+    ->name('admin/clients.index');
+// ->middleware('auth');
 
 
-//Affiche la liste des actualités pour Admin
+//Affiche la liste des administrateurs
+Route::get("/admin/administrateurs", [AdminController::class, 'administrateurs'])
+    ->name('admin/administrateurs.index');
+// ->middleware('auth');
+
+
+//Affiche la liste des actualités
 Route::get("/admin/actualites", [AdminController::class, 'actualites'])
     ->name('admin/actualites.index');
 // ->middleware('auth');
@@ -157,7 +167,7 @@ Route::post("/admin/actualites/destroy", [AdminController::class, 'destroyActual
 
 
 
-//Affiche la liste des employés pour Admin
+//Affiche la liste des employés
 Route::get("/admin/employes", [AdminController::class, 'employes'])
     ->name('admin/employes.index');
 // ->middleware('auth');

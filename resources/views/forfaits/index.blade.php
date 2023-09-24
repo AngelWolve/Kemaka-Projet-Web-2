@@ -9,7 +9,9 @@
 </head>
 
 <body>
-    <h1>List des forfaits</h1>
+    <div>
+        <h1>Les forfaits</h1>
+    </div>
     @foreach ($forfaits as $forfait)
         <li>
             <h2>

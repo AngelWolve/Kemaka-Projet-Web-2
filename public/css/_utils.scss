@@ -30,14 +30,15 @@
 div.input {
 
     label {
-        display: inline-block;
-        font-size: 20px;
+        display: block;
+        text-align: left;
         font-weight: 700;
-        margin: 0px 0px 5px 5px;
+        margin: 0 0 5px 0;
     }
 
     input {
         box-sizing: border-box;
+        width: 100%;
         background-color: $blanc;
         color: $noir;
         height: 40px;
@@ -51,4 +52,16 @@ div.input {
     input::placeholder {
         opacity: 0.75;
     }
+}
+
+/***************
+** MESSAGES D'ERREURS FORMULAIRES
+***************/
+
+.form-msg-erreur {
+    text-align: left;
+    color: #DC2626;
+    font-weight: 400;
+    font-style: italic;
+    margin: 0px 0px 5px 5px;
 }

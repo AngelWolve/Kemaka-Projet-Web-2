@@ -1,5 +1,5 @@
 @props(['champ'])
 
 @error($champ)
-    <p class="">{{ $message }}</p>
+    <p class="tx-sm form-msg-erreur">{{ $message }}</p>
 @enderror

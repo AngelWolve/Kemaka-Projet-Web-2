@@ -7,7 +7,61 @@
 /***************
 ** ACTIVITÉS
 ***************/
+header {
+    object-fit: contain;
+    background-image: url(../images/image-header.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    height: 450px;
+    width: auto;
 
+    h1 {
+        font-size: 64px;
+        color: $rose-fonce;
+        padding-top: 184px;
+    }
+}
+
+.activites {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 80px auto;
+
+    .activite {
+        display: flex;
+        margin-bottom: 50px;
+
+        .image {
+            max-width: 400px;
+            height: 250px;
+            margin-right: 40px;
+        }
+
+        .texte {
+            display: flex;
+            flex-direction: column;
+            width: 1013px;
+            height: 155px;
+
+            h2 {
+                color: $rose-fonce;
+                font-size: 46px;
+            }
+
+            p {
+                font-size: 22px;
+                padding-top: 15px;
+            }
+        }
+    }
+}
+
+.activites .activite:nth-child(even) {
+    flex-direction: row-reverse;
+}
 
 /***************
 ** FORFAITS
@@ -25,6 +79,94 @@
 ** À PROPOS
 ***************/
 
+.main-apropos {
+    width: 1440px;
+    margin: 80px auto;
+
+    .apropos-top {
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            text-align: center;
+            color: $rose-fonce;
+            font-size: 46px;
+        }
+
+        p {
+            font-size: 22px;
+            margin-top: 40px;
+        }
+    }
+
+    .apropos-textes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 80px auto;
+
+        .apropos-texte1 {
+            display: flex;
+            margin-bottom: 50px;
+
+            .apropos-image {
+                max-width: 400px;
+                height: 250px;
+                margin-left: 40px;
+                order: 1;
+            }
+
+            .texte1 {
+                display: flex;
+                flex-direction: column;
+                width: 1013px;
+                height: 155px;
+                order: 0;
+
+                h2 {
+                    color: $rose-fonce;
+                    font-size: 46px;
+                }
+
+                p {
+                    font-size: 22px;
+                    padding-top: 15px;
+                }
+            }
+        }
+
+        .apropos-texte2 {
+            display: flex;
+            margin-top: 50px;
+
+            .apropos-image {
+                max-width: 400px;
+                height: 250px;
+                margin-right: 40px;
+                order: 0;
+            }
+
+            .texte1 {
+                display: flex;
+                flex-direction: column;
+                width: 1013px;
+                height: 155px;
+                order: 1;
+
+                h2 {
+                    color: $rose-fonce;
+                    font-size: 46px;
+                }
+
+                p {
+                    font-size: 22px;
+                    padding-top: 15px;
+                }
+            }
+        }
+    }
+
+}
 
 
 /***************

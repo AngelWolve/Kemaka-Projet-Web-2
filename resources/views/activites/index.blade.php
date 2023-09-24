@@ -11,23 +11,30 @@
 
 <body>
 
-    <div class="banniere-activite">
-        <h1>
-            Les activités
-        </h1>
-    </div>
+    <header>
+        <h1>Les activités</h1>
+    </header>
 
-    {{-- <div class="main-activite">
-        @foreach ($activites as $activite)
-            <h2 class="activite">
-                {{ $activite->nom }}
-            </h2>
-            <p class="activite">
-                {{ $activite->description }}
-            </p>
-            <img src="{{ asset('images/???.png') }}" alt="image" class="activite">
-        @endforeach
-    </div> --}}
+    <main class="main-acitvites">
+        <section class="activites">
+            @foreach ($activites as $activite)
+                <div class="activite">
+                    <div class="image">
+                        <img src="{{ $activite->image }}" alt="image">
+                    </div>
+                    <div class="texte">
+                        <h2>
+                            {{ $activite->nom }}
+                        </h2>
+                        <p class="tx-lg">
+                            {{ $activite->description }}
+                        </p>
+                    </div>
+                </div>
+            @endforeach
+        </section>
+    </main>
+
 </body>
 
 </html>

@@ -8,7 +8,9 @@ use App\Http\Controllers\ActiviteController;
 use App\Http\Controllers\ConnexionController;
 use App\Http\Controllers\EmployeController;
 use App\Http\Controllers\EnregistrementController;
+use App\Http\Controllers\InfolettreController;
 use App\Http\Controllers\NousJoindreController;
+use App\Http\Controllers\QuestionController;
 use Illuminate\Support\Facades\Route;
 
 /*****************
@@ -103,8 +105,11 @@ Route::post("/infolettre", [InfolettreController::class, 'store'])
 Route::get('/nous_joindre', [NousJoindreController::class, 'index'])
     ->name('nous_joindre.index');
 
-Route::post('/nous_joindre/store', [NousJoindreController::class, 'store'])
-    ->name('nous_joindre.store');
+/*****************
+ * QUESTION
+ */
+Route::post('/question/store', [QuestionController::class, 'store'])
+    ->name('question.store');
 
 /*****************
  * EMPLOYÉ

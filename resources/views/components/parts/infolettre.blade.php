@@ -9,7 +9,7 @@
             inscrivez-vous à notre infolettre et courrez la chance de gagner une paire de billets.
         </p>
     </div>
-    <div class="formulaire">
+    <div class="formulaire-infolettre">
         <img src="{{ asset('images/img-infolettre.png') }}" alt="Image infolettre">
 
         <form action="{{ route('infolettre.store') }}" method="POST">

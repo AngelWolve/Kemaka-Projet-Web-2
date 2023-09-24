@@ -1,5 +1,8 @@
 <x-admin>
 
+    {{-- Message de confirmaiton d'ajout d'une actualité --}}
+    <x-parts.alertes cle="succes" />
+
     <main class="actualite">
 
         @if ($actualites->isEmpty())
@@ -11,21 +14,21 @@
             <section>
                 <ul>
                     <h3>Toutes les actualités</h3>
-                   <div>
-                     {{-- CRÉATION --}}
-                     <a href="{{ route('admin/actualites.create') }}">
-                        <span>
-                            créer
-                        </span>
-                    </a>
-                     {{-- RETOUR --}}
-                     <a href="{{ route('admin.index') }}">
-                        <span>
-                            Retour
-                        </span>
-                    </a>
+                    <div>
+                        {{-- CRÉATION --}}
+                        <a href="{{ route('admin/actualites.create') }}">
+                            <span>
+                                créer
+                            </span>
+                        </a>
+                        {{-- RETOUR --}}
+                        <a href="{{ route('admin.index') }}">
+                            <span>
+                                Retour
+                            </span>
+                        </a>
 
-                   </div>
+                    </div>
 
                     <div>
                         @foreach ($actualites as $actualite)

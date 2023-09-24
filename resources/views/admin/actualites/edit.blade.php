@@ -10,6 +10,11 @@
 
 <body>
     <h1>Modifier une actualité</h1>
+    {{-- MESSAGES --}}
+    @if (session('succes'))
+        <p>
+            {{ session('succes') }}</p>
+    @endif
     <div>
         <form action="{{ route('admin/actualites.update') }}" method="POST">
             @csrf

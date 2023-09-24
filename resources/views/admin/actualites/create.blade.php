@@ -10,6 +10,11 @@
 
 <body>
     <h1>Créer une actualité</h1>
+    {{-- MESSAGES --}}
+    @if (session('succes'))
+        <p>
+            {{ session('succes') }}</p>
+    @endif
     <div>
         {{-- FORMULAIRE --}}
         <form action="{{ route('admin/actualites.store') }}" method="POST">

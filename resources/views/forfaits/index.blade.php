@@ -9,8 +9,9 @@
 </head>
 
 <body>
-    <h1>List des forfaits</h1>
-    @foreach ($forfaits as $forfait)
+    <h1>Liste des forfaits</h1>
+    <ul>
+        @foreach ($forfaits as $forfait)
         <li>
             <h2>
                 {{ $forfait->nom }}
@@ -34,6 +35,8 @@
             </span>
         </a>
     @endforeach
+    </ul>
+
 
 </body>
 

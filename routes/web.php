@@ -144,6 +144,28 @@ Route::get("/employe", [EmployeController::class, 'index'])
     ->name('employe.index');
 // ->middleware('auth');
 
+
+Route::get('/admin/employes/create', [EmployeController::class, 'create'])
+    ->name('admin/employes.create');
+// ->middleware('auth');
+
+Route::post('/admin/employes', [EmployeController::class, 'store'])
+    ->name('admin/employes.store');
+// ->middleware('auth');
+
+Route::get("/admin/employes/edit/{id}", [EmployeController::class, 'edit'])
+    ->name('admin/employes.edit');
+// ->middleware('auth');
+
+Route::post("/admin/employes/update", [EmployeController::class, 'update'])
+    ->name('admin/employes.update');
+// ->middleware('auth');
+
+Route::post("/admin/employes/destroy", [EmployeController::class, 'destroy'])
+    ->name('admin/employes.destroy');
+// ->middleware('auth');
+
+
 /*****************
  * CONNEXION ET ENREGISTREMENT
  */
@@ -166,19 +188,3 @@ Route::get("/enregistrement", [EnregistrementController::class, 'create'])
 Route::post("/enregistrement", [EnregistrementController::class, 'store'])
     ->name('enregistrement.store');
 // ->middleware('guest');
-
-/*****************
- * NOUS JOINDRE
- */
-Route::get('/nous_joindre', [NousJoindreController::class, 'index'])
-    ->name('nous_joindre.index');
-
-Route::post('/nous_joindre/store', [NousJoindreController::class, 'store'])
-    ->name('nous_joindre.store');
-
-/*****************
- * EMPLOYÉ
- */
-Route::get("/employe", [EmployeController::class, 'index'])
-    ->name('employe.index');
-    // ->middleware('auth');

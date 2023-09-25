@@ -54,6 +54,8 @@
         </li>
     </ul>
 
-    <p class="tx-sm">&copy; 2023 - Tous droits réservés à Asian Quest Festival</p>
+    <p class="tx-sm">
+        &copy; 2023 - Tous droits réservés à Asian Quest Festival
+    </p>
 
 </footer>

@@ -1,7 +1,6 @@
 @props(['name', 'type' => 'text', 'label' => null, 'value' => old($name), 'autocomplete' => null, 'autofocus' => false, 'required' => false, 'min' => null, 'max' => null, 'min_length' => null, 'max_length' => null, 'placeholder' => null])
 
 <div class="input">
-    <x-forms.erreur champ="{{ $name }}" />
 
     @if ($label)
         <label for="{{ $name }}">
@@ -10,6 +9,7 @@
     @endif
 
     <div>
+        <x-forms.erreur champ="{{ $name }}" />
         <input id="{{ $name }}" name="{{ $name }}" type="{{ $type }}" value="{{ $value }}"
             @if ($autocomplete) autocomplete="{{ $autocomplete }}" @endif
             @if ($autofocus) autofocus @endif @if ($required) required @endif

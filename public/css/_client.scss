@@ -33,7 +33,8 @@
 ***************/
 .contact {
     padding: 20px;
-    width: 1200px;
+    max-width: 1440px;
+    width: 80%;
     margin: auto;
 
     h2 {
@@ -60,7 +61,8 @@
 
 .adresse {
     padding: 20px;
-    width: 1200px;
+    max-width: 1440px;
+    width: 80%;
     margin: 20px auto;
 
     .contenu-adresse {
@@ -73,6 +75,7 @@
             color: $rose-fonce;
             margin-bottom: 2.2rem;
         }
+
         h4,
         p.tx-lg {
             margin-bottom: 0.5rem;
@@ -84,7 +87,8 @@
     background-color: $bleu;
     padding: 20px;
     border: 1px solid $bleu;
-    width: 1200px;
+    max-width: 1440px;
+    width: 80%;
     margin: 20px auto;
 
     iframe {
@@ -93,4 +97,3 @@
         border: 0;
     }
 }
-

@@ -29,14 +29,13 @@
         </li>
 
         {{-- RÉSERVATION --}}
-        <a href="{{ route('reservations.create', $forfait)}}">
+        <a href="{{ route('reservations.create', $forfait) }}">
             <span>
                 commander
             </span>
         </a>
     @endforeach
     </ul>
-
 
 </body>
 

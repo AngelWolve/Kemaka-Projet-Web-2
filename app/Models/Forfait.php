@@ -8,14 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Forfait extends Model
 {
     use HasFactory;
-     /**
+    /**
      * Retourne les reservations associés à forfait
      *
      * Relation un-à-plusieurs
      *
      * @return HasMany
      */
-    public function reservations() {
+    public function reservations()
+    {
         return $this->belongsToMany(User::class, 'reservations');
     }
 }

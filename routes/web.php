@@ -5,6 +5,7 @@ use App\Http\Controllers\ActualiteController;
 use App\Http\Controllers\ForfaitController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\ActiviteController;
+use App\Http\Controllers\AproposController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ConnexionController;
 use App\Http\Controllers\EmployeController;
@@ -115,7 +116,7 @@ Route::post('/reservations/store', [ReservationController::class, 'store'])
  * À PROPOS
  */
 Route::get("/a_propos", [AproposController::class, 'index'])
-    ->name('a_propos');
+    ->name('a_propos.index');
 
 
 /*****************

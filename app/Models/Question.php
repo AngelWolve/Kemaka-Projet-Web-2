@@ -9,7 +9,8 @@ class Question extends Model
 {
     use HasFactory;
 
-    public function getNomCompletAttribute(){
-        return $this->prenom . " " .$this->nom;
+    public function getNomCompletAttribute()
+    {
+        return $this->prenom . " " . $this->nom;
     }
 }

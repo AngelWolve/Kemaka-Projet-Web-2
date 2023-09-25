@@ -13,6 +13,6 @@ class AproposController extends Controller
      */
     public function index()
     {
-        return view('apropos');
+        return view('a_propos.index');
     }
 }

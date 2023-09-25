@@ -36,7 +36,7 @@ class QuestionController extends Controller
         $question->save();
 
         return redirect()
-            ->route('accueil')
+            ->back()
             ->with('succes', 'Le message a été envoyé avec succès.');
     }
 }

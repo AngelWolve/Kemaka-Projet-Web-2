@@ -1,103 +1,40 @@
-<x-connexion titre="Enregistrement">
-    <h4>
-        Créez votre compte
-    </h4>
-    <section class="form_enregistrer">
-
-        <div>
-            {{-- FORMULAIRE D'ENREGISTREMENT --}}
-
+<x-admin titre="Enregistrement">
+    <section id="enregistrement">
+        <div class="form-enregistrement">
+            <h1>
+                Créez votre compte
+            </h1>
             <form action="{{ route('enregistrement.store') }}" method="POST">
                 @csrf
-                <div class="input_groupe_1">
+                <x-forms.input name="prenom" label="Prénom" autocomplete="given-name" autofocus required max_length="255"
+                    value="{{ old('prenom') }}" />
 
-                    {{-- PRÉNOM --}}
-                    <div>
-                        <label for="prenom">Prénom</label>
-                        <div>
-                            <input id="prenom" name="prenom" type="text" autocomplete="given-name" autofocus required
-                                value="{{ old('prenom') }}">
+                <x-forms.input name="nom" label="Nom" autocomplete="family-name" autofocus required
+                    max_length="255" value="{{ old('nom') }}" />
 
-                            <x-forms.erreur champ="prenom" />
+                <x-forms.input name="email" label="Courriel" autocomplete="email" autofocus required max_length="255"
+                    value="{{ old('email') }}" />
 
-                        </div>
-                    </div>
+                <x-forms.input name="password" label=" Mot de passe" autocomplete="current-password" autofocus required
+                    max_length="255" />
 
-                    {{-- NOM --}}
-                    <div>
-                        <label for="nom">
-                            Nom
-                        </label>
-                        <div>
-                            <input id="nom" name="nom" type="text" value="{{ old('nom') }}"
-                                autocomplete="family-name" required>
+                <x-forms.input name="password_confirmation" label=" Confirmation du mot de passe" autofocus required
+                    max_length="255" />
 
-                            <x-forms.erreur champ="nom" />
-                        </div>
-
-                    </div>
-
-                </div>
-
-                {{-- EMAIL --}}
-                <div>
-                    <label for="email">Courriel</label>
-                    <div>
-                        <input id="email" name="email" type="email" value="{{ old('email') }}"
-                            autocomplete="email" required>
-
-                        <x-forms.erreur champ="email" />
-                    </div>
-
-                </div>
-
-                {{-- PASSWORD --}}
-
-                <div>
-                    <div>
-                        <label for="password">
-                            Mot de passe
-                        </label>
-                    </div>
-
-                    <div>
-                        <input id="password" name="password" type="password" autocomplete="current-password" required>
-
-                        <x-forms.erreur champ="password" />
-                    </div>
-
-                </div>
-
-                {{-- CONFIRM PASSWORD --}}
-
-                <div>
-                    <div>
-                        <label for="password_confirmation">
-                            Confirmation du mot de passe
-                        </label>
-                    </div>
-                    <div>
-                        <input id="password_confirmation" name="password_confirmation" type="password" required>
-
-                        <x-forms.erreur champ="password_confirmation" />
-                    </div>
-
-                </div>
-
-                <div>
-                    <button type="submit">
+                <div class="submit-enregistrement">
+                    <button class="btn-primaire" type="submit">
                         Créez votre compte!
                     </button>
                 </div>
             </form>
+            <p class="compte">
+                Déjà membre?
+
+                <a href="{{ route('connexion.create') }}">
+                    Connectez-vous!
+                </a>
+            </p>
         </div>
+
     </section>
-    <p class="compte">
-        Déjà membre?
-
-        <a href="{{ route('connexion.create') }}">
-            Connectez-vous!
-        </a>
-    </p>
-
-</x-connexion>
+</x-admin>

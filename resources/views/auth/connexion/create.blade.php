@@ -1,55 +1,36 @@
-<x-connexion titre="Connexion">
-    <h4>
-        Connexion à votre compte
-    </h4>
-    <section class="form_connexion">
-
-        @if (session('email'))
-            <p>{{ session('email') }}</p>
-        @endif
-
-        <div>
+<x-admin titre="Connexion">
+    <section id="connexion">
+        <div class="form-connexion">
+            <h1>
+                Connexion à votre compte
+            </h1>
+            @if (session('email'))
+                <p>{{ session('email') }}</p>
+            @endif
             <form action="{{ route('connexion.authentifier') }}" method="POST">
                 @csrf
 
-                <div>
-                    <label for="email">Courriel</label>
+                <x-forms.input name="email" label="Courriel" autocomplete required max_length="255"
+                    placeholder="Entrez votre courriel" />
 
-                    <x-forms.erreur champ="email" />
-                    <div>
-                        <input id="email" name="email" type="email" autocomplete="email" value="{{ old('email') }}"
-                            placeholder="abc@xyz.com" required>
-                    </div>
-                </div>
+                <x-forms.input name="password" label="Mot de passe" required max_length="255"
+                    placeholder="Entrez votre mot de passe" />
 
-                <div>
-                    <div>
-                        <label for="password">
-                            Mot de passe
-                        </label>
-                    </div>
-
-                    <x-forms.erreur champ="password" />
-                    <div>
-                        <input id="password" name="password" type="password" autocomplete="current-password"
-                            placeholder="●●●●●●●●" required>
-                    </div>
-                </div>
-
-                <div>
-                    <button type="submit">
+                <div class="submit-connexion">
+                    <button class="btn-primaire" type="submit">
                         Connectez-vous!
                     </button>
                 </div>
             </form>
+
+            <p class="compte">
+                Pas de compte?
+
+                <a href="{{ route('enregistrement.create') }}">
+                    Enregistrez-vous!
+                </a>
+            </p>
         </div>
+
     </section>
-    <p class="compte">
-        Pas de compte?
-
-        <a href="{{ route('enregistrement.create') }}">
-            Enregistrez-vous!
-        </a>
-    </p>
-
-</x-connexion>
+</x-admin>

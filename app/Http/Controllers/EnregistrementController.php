@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Role;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -34,7 +35,6 @@ class EnregistrementController extends Controller
             "email" => "required|email|max:255|unique:users,email",
             "password" => "required|min:8|max:255",
             "password_confirmation" => "required|same:password",
-            "role_id" => "nullable"
         ], [
             "prenom.required" => "Le prénom est requis",
             "prenom.max" => "Le prénom ne doit pas dépasser :max caractères",
@@ -57,7 +57,6 @@ class EnregistrementController extends Controller
         $user->nom = $valides["nom"];
         $user->email = $valides["email"];
         $user->password = Hash::make($valides["password"]);
-        $user->role_id = $valides["role_id"];
 
         // Sauvegarde de l'utilisateur
         $user->save();
@@ -70,7 +69,7 @@ class EnregistrementController extends Controller
         // Redirection
         if (Auth::user()->role_id == 1) {
             return redirect()
-                ->route('administration.index')
+                ->route('admin.index')
                 ->with('succes', 'Le compte a été créé');
         }
 

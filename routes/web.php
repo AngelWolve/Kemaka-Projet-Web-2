@@ -6,10 +6,13 @@ use App\Http\Controllers\ForfaitController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\ActiviteController;
 use App\Http\Controllers\AproposController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ConnexionController;
 use App\Http\Controllers\EmployeController;
 use App\Http\Controllers\EnregistrementController;
+use App\Http\Controllers\InfolettreController;
 use App\Http\Controllers\NousJoindreController;
+use App\Http\Controllers\QuestionController;
 use Illuminate\Support\Facades\Route;
 
 /*****************
@@ -18,48 +21,55 @@ use Illuminate\Support\Facades\Route;
 Route::get("/", [AccueilController::class, 'accueil'])
     ->name('accueil');
 
+/*****************
+ * ADMIN
+ */
+Route::get("/admin", [AdminController::class, 'index'])
+    ->name('admin.index');
+// ->middleware('auth');
+
+Route::get("/admin/activites", [AdminController::class, 'activites'])
+    ->name('admin/activites.index');
+// ->middleware('auth');
+
+Route::get("/admin/actualites", [AdminController::class, 'actualites'])
+    ->name('admin/actualites.index');
+// ->middleware('auth');
+
+Route::get("/admin/clients", [AdminController::class, 'clients'])
+    ->name('admin/clients.index');
+// ->middleware('auth');
+
+Route::get("/admin/administrateurs", [AdminController::class, 'administrateurs'])
+    ->name('admin/administrateurs.index');
+// ->middleware('auth');
+
+Route::get("/admin/employes", [AdminController::class, 'employes'])
+    ->name('admin/employes.index');
+// ->middleware('auth');
 
 /*****************
  * ACTUALITÉS
  */
-Route::get("/actualites", [ActualiteController::class, 'index'])
-    ->name('actualites.index')
-    ->middleware('auth');
+Route::get('/admin/actualites/create', [ActualiteController::class, 'create'])
+    ->name('admin/actualites.create');
+// ->middleware('auth');
 
-Route::get('/actualites/create', [ActualiteController::class, 'create'])
-    ->name('actualites.create')
-    ->middleware('auth');
+Route::post('/admin/actualites', [ActualiteController::class, 'store'])
+    ->name('admin/actualites.store');
+// ->middleware('auth');
 
-Route::post('/actualites', [ActualiteController::class, 'store'])
-    ->name('actualites.store')
-    ->middleware('auth');
+Route::get("/admin/actualites/edit/{id}", [ActualiteController::class, 'edit'])
+    ->name('admin/actualites.edit');
+// ->middleware('auth');
 
-Route::get("/actualites/edit/{id}", [ActualiteController::class, 'edit'])
-    ->name('actualites.edit')
-    ->middleware('auth');
+Route::post("/admin/actualites/update", [ActualiteController::class, 'update'])
+    ->name('admin/actualites.update');
+// ->middleware('auth');
 
-Route::post("/actualites/update", [ActualiteController::class, 'update'])
-    ->name('actualites.update')
-    ->middleware('auth');
-
-Route::post("/actualites/destroy", [ActualiteController::class, 'destroy'])
-    ->name('actualites.destroy')
-    ->middleware('auth');
-
-/*****************
- * FORFAITS
- */
-Route::get("/forfaits", [ForfaitController::class, 'index'])
-    ->name('forfaits.index');
-
-/*****************
- * RÉSERVATIONS
- */
-Route::get("/reservations/create/{id}", [ReservationController::class, 'create'])
-    ->name('reservations.create');
-
-Route::post('/reservations/store', [ReservationController::class, 'store'])
-    ->name('reservations.store');
+Route::post("/admin/actualites/destroy", [ActualiteController::class, 'destroy'])
+    ->name('admin/actualites.destroy');
+// ->middleware('auth');
 
 /*****************
  * ACTIVITÉS
@@ -88,10 +98,51 @@ Route::post("/activites/destroy", [ActiviteController::class, 'destroy'])
     ->middleware('auth');
 
 /*****************
+ * FORFAITS
+ */
+Route::get("/forfaits", [ForfaitController::class, 'index'])
+    ->name('forfaits.index');
+
+/*****************
+ * RÉSERVATIONS
+ */
+Route::get("/reservations/create/{id}", [ReservationController::class, 'create'])
+    ->name('reservations.create');
+
+Route::post('/reservations/store', [ReservationController::class, 'store'])
+    ->name('reservations.store');
+
+/*****************
  * À PROPOS
  */
 Route::get("/a_propos", [AproposController::class, 'index'])
     ->name('a_propos.index');
+
+
+/*****************
+ * INFOLETTRE
+ */
+Route::post("/infolettre", [InfolettreController::class, 'store'])
+    ->name('infolettre.store');
+
+/*****************
+ * NOUS JOINDRE
+ */
+Route::get('/nous_joindre', [NousJoindreController::class, 'index'])
+    ->name('nous_joindre.index');
+
+/*****************
+ * QUESTION
+ */
+Route::post('/question/store', [QuestionController::class, 'store'])
+    ->name('question.store');
+
+/*****************
+ * EMPLOYÉ
+ */
+Route::get("/employe", [EmployeController::class, 'index'])
+    ->name('employe.index');
+// ->middleware('auth');
 
 /*****************
  * CONNEXION ET ENREGISTREMENT
@@ -116,24 +167,18 @@ Route::post("/enregistrement", [EnregistrementController::class, 'store'])
     ->name('enregistrement.store');
 // ->middleware('guest');
 
-
 /*****************
  * NOUS JOINDRE
  */
-
-// Affiche la page nous joindre
 Route::get('/nous_joindre', [NousJoindreController::class, 'index'])
     ->name('nous_joindre.index');
 
-// Traitement du formulaire de question
 Route::post('/nous_joindre/store', [NousJoindreController::class, 'store'])
     ->name('nous_joindre.store');
 
 /*****************
  * EMPLOYÉ
  */
-
-//Affiche la page de l'employé
 Route::get("/employe", [EmployeController::class, 'index'])
     ->name('employe.index');
     // ->middleware('auth');

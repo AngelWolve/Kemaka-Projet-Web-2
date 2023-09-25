@@ -10,8 +10,13 @@
 
 <body>
     <h1>Modifier une actualité</h1>
+    {{-- MESSAGES --}}
+    @if (session('succes'))
+        <p>
+            {{ session('succes') }}</p>
+    @endif
     <div>
-        <form action="{{ route('actualites.update') }}" method="POST">
+        <form action="{{ route('admin/actualites.update') }}" method="POST">
             @csrf
 
             <input type="hidden" name="id" value="{{ $actualite->id }}">
@@ -32,8 +37,8 @@
                 <div>
                     <x-forms.erreur champ="description" />
 
-                    <input id="description" name="description" type="text" autofocus
-                        value="{{ old('description') ?? $actualite->description }}">
+                    <textarea name="description" id="description" rows="5" maxlength="500">{{ old('description') ?? $actualite->description }}</textarea>
+
                 </div>
             </div>
 
@@ -45,7 +50,7 @@
 
         {{-- RETOUR AUX ACTUALITÉS --}}
         <p>
-            <a href="{{ route('actualites.index') }}">Retour aux actualités</a>
+            <a href="{{ route('admin/actualites.index') }}">Retour aux actualités</a>
         </p>
     </div>
 </body>

@@ -1,30 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-
-<body>
-    <h1>liste des réservation</h1>
+<x-employe titre="Réservations">
+    <h4 class="employe">liste des réservations</h4>
     @if ($reservations->isEmpty())
-        <p>Aucun réservation pour l'instant.</p>
+        <p>Aucune réservation pour l'instant.</p>
     @else
-        <ul>
-            @foreach ($reservations as $reservation)
-                <li>
-                    <strong>Date:</strong> {{ $reservation->created_at }}<br>
-                    <strong>Prénom de client:</strong> {{ $reservation->user->prenom }}<br>
-                    <strong>Nom de client:</strong> {{ $reservation->user->nom }}<br>
-                    <strong>Nom de forfait:</strong> {{ $reservation->forfait->nom }}<br>
-
-                </li>
-            @endforeach
-        </ul>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Nom de client</th>
+                    <th>Nom de forfait</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($reservations as $reservation)
+                    <tr>
+                        <td>{{ $reservation->created_at->format('Y-m-d') }}</td>
+                        <td>{{ $reservation->user->nom_complet }}</td>
+                        <td>{{ $reservation->forfait->nom }}</td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
     @endif
-</body>
-
-</html>
+</x-employe>

@@ -1,0 +1,125 @@
+/***************
+** CONNEXION
+***************/
+body.connexion {
+    background-image: url(../images/pexels-miguel-á-padriñán-255379.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+
+    h4 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: $rose-fonce;
+    }
+}
+
+.form_connexion {
+    background-color: #D9A0C9;
+    padding: 25px 50px;
+    letter-spacing: 0.5px;
+    border: 2px solid $rose-fonce;
+    border-radius: 10px;
+    font-family: 'Lato', sans-serif;
+    width: 400px;
+
+    label {
+        display: block;
+        font-size: 1em;
+        font-weight: bold;
+        margin-top: 2.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    input {
+        display: block;
+        height: 40px;
+        width: 100%;
+        border-radius: 10px;
+        padding: 0 10px;
+        font-size: 14px;
+    }
+
+    button {
+        margin: 25px auto 25px auto;
+        font-weight: bold;
+        border-radius: 10px;
+    }
+}
+
+p.compte a {
+    font-weight: bold;
+    color: $blanc;
+    text-align: center;
+    margin-top: 30px;
+    color: $rose-fonce;
+
+    a {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+            color: $blanc;
+        }
+    }
+}
+
+/***************
+** ENREGISTREMENT
+***************/
+
+.form_enregistrer {
+    background-color: #D9A0C9;
+    padding: 25px 50px;
+    letter-spacing: 0.5px;
+    border: 2px solid $rose-fonce;
+    border-radius: 5px;
+    font-family: 'Lato', sans-serif;
+    width: 500px;
+
+    h4 {
+        color: $rose-fonce;
+        text-align: center;
+    }
+
+    label {
+        display: block;
+        font-size: 1em;
+        font-weight: bold;
+        margin-top: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .input_groupe_1 {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    input {
+        display: block;
+        height: 40px;
+        width: 100%;
+        border-radius: 5px;
+        padding: 0 10px;
+    }
+
+    button {
+        margin: 1rem auto;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+
+    a {
+        text-decoration: none;
+        font-weight: bold;
+        color: white;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

@@ -87,4 +87,8 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Forfait::class, 'reservations');
     }
+
+    public function getNomCompletAttribute(){
+        return $this -> prenom ." ". $this -> nom;
+    }
 }

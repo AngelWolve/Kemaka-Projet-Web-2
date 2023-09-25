@@ -14,8 +14,8 @@
 
         <form action="{{ route('infolettre.store') }}" method="POST">
             @csrf
-            <x-forms.input name="nom" autocomplete required max_length="255" placeholder="Entrez votre nom" />
-            <x-forms.input name="email" type="email" autocomplete required max_length="255"
+            <x-forms.input name="nom" label="Nom" autocomplete required max_length="255" placeholder="Entrez votre nom" />
+            <x-forms.input name="email" type="email" label="Courriel" autocomplete required max_length="255"
                 placeholder="Entrez votre courriel" />
             <div>
                 <button type="submit" class="btn-primaire">

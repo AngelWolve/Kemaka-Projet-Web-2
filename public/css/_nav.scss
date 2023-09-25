@@ -1,0 +1,44 @@
+/***************
+** NAVIGATION
+***************/
+
+nav {
+    background-color: $violet;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    div.conteneur-liens {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        ul {
+            display: flex;
+
+            li {
+                margin-left: 40px;
+                text-align: center;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+
+    div.conteneur-connexion {
+        display: flex;
+        align-items: center;
+
+        i {
+            font-size: 35px;
+            color: $bleu;
+            margin-right: 40px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                color: $bleu-fonce;
+            }
+        }
+    }
+}

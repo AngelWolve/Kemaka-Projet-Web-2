@@ -34,7 +34,7 @@
 .contact {
     padding: 20px;
     max-width: 1440px;
-    width: 80%;
+    width: 75%;
     margin: auto;
 
     h2 {
@@ -52,7 +52,7 @@
 
             h3,
             h4,
-            p.tx-lg {
+            p {
                 margin-bottom: 0.8rem;
             }
         }
@@ -62,7 +62,7 @@
 .adresse {
     padding: 20px;
     max-width: 1440px;
-    width: 80%;
+    width: 75%;
     margin: 20px auto;
 
     .contenu-adresse {
@@ -77,7 +77,7 @@
         }
 
         h4,
-        p.tx-lg {
+        p {
             margin-bottom: 0.5rem;
         }
     }
@@ -88,7 +88,7 @@
     padding: 20px;
     border: 1px solid $bleu;
     max-width: 1440px;
-    width: 80%;
+    width: 75%;
     margin: 20px auto;
 
     iframe {

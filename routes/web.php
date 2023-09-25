@@ -9,7 +9,9 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ConnexionController;
 use App\Http\Controllers\EmployeController;
 use App\Http\Controllers\EnregistrementController;
+use App\Http\Controllers\InfolettreController;
 use App\Http\Controllers\NousJoindreController;
+use App\Http\Controllers\QuestionController;
 use Illuminate\Support\Facades\Route;
 
 /*****************
@@ -18,52 +20,36 @@ use Illuminate\Support\Facades\Route;
 Route::get("/", [AccueilController::class, 'accueil'])
     ->name('accueil');
 
-
-
 /*****************
  * ADMIN
  */
-
-//Affiche la page de l'admin
 Route::get("/admin", [AdminController::class, 'index'])
     ->name('admin.index');
 // ->middleware('auth');
 
-
-//Affiche la liste des activités
 Route::get("/admin/activites", [AdminController::class, 'activites'])
     ->name('admin/activites.index');
 // ->middleware('auth');
 
-//Affiche la liste des actualités
 Route::get("/admin/actualites", [AdminController::class, 'actualites'])
     ->name('admin/actualites.index');
 // ->middleware('auth');
 
-
-//Affiche la liste des clients
 Route::get("/admin/clients", [AdminController::class, 'clients'])
     ->name('admin/clients.index');
 // ->middleware('auth');
 
-
-//Affiche la liste des administrateurs
 Route::get("/admin/administrateurs", [AdminController::class, 'administrateurs'])
     ->name('admin/administrateurs.index');
 // ->middleware('auth');
 
-
-//Affiche la liste des employés
 Route::get("/admin/employes", [AdminController::class, 'employes'])
     ->name('admin/employes.index');
 // ->middleware('auth');
 
-
-
 /*****************
  * ACTUALITÉS
  */
-
 Route::get('/admin/actualites/create', [ActualiteController::class, 'create'])
     ->name('admin/actualites.create');
 // ->middleware('auth');
@@ -83,7 +69,6 @@ Route::post("/admin/actualites/update", [ActualiteController::class, 'update'])
 Route::post("/admin/actualites/destroy", [ActualiteController::class, 'destroy'])
     ->name('admin/actualites.destroy');
 // ->middleware('auth');
-
 
 /*****************
  * ACTIVITÉS
@@ -111,8 +96,6 @@ Route::post("/activites/destroy", [ActiviteController::class, 'destroy'])
     ->name('activites.destroy')
     ->middleware('auth');
 
-
-
 /*****************
  * FORFAITS
  */
@@ -128,13 +111,37 @@ Route::get("/reservations/create/{id}", [ReservationController::class, 'create']
 Route::post('/reservations/store', [ReservationController::class, 'store'])
     ->name('reservations.store');
 
-
 /*****************
  * À PROPOS
  */
 Route::get("/a_propos", [AproposController::class, 'index'])
     ->name('a_propos');
 
+
+/*****************
+ * INFOLETTRE
+ */
+Route::post("/infolettre", [InfolettreController::class, 'store'])
+    ->name('infolettre.store');
+
+/*****************
+ * NOUS JOINDRE
+ */
+Route::get('/nous_joindre', [NousJoindreController::class, 'index'])
+    ->name('nous_joindre.index');
+
+/*****************
+ * QUESTION
+ */
+Route::post('/question/store', [QuestionController::class, 'store'])
+    ->name('question.store');
+
+/*****************
+ * EMPLOYÉ
+ */
+Route::get("/employe", [EmployeController::class, 'index'])
+    ->name('employe.index');
+// ->middleware('auth');
 
 /*****************
  * CONNEXION ET ENREGISTREMENT
@@ -159,27 +166,18 @@ Route::post("/enregistrement", [EnregistrementController::class, 'store'])
     ->name('enregistrement.store');
 // ->middleware('guest');
 
-
-
 /*****************
  * NOUS JOINDRE
  */
-
-// Affiche la page nous joindre
 Route::get('/nous_joindre', [NousJoindreController::class, 'index'])
     ->name('nous_joindre.index');
 
-// Traitement du formulaire de question
 Route::post('/nous_joindre/store', [NousJoindreController::class, 'store'])
     ->name('nous_joindre.store');
-
-
 
 /*****************
  * EMPLOYÉ
  */
-
-//Affiche la page de l'employé
 Route::get("/employe", [EmployeController::class, 'index'])
     ->name('employe.index');
     // ->middleware('auth');

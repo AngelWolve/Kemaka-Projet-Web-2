@@ -41,7 +41,7 @@ class ConnexionController extends Controller
 
             // Vérifier le type d'utilisateur et rediriger
             if (Auth::user()->role_id == 1) {
-                return redirect()->intended(route('administration.index'))
+                return redirect()->intended(route('admin.index'))
                     ->with('succes', "Vous êtes connectés!");
             }
 

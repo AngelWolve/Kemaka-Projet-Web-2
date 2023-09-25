@@ -10,9 +10,14 @@
 
 <body>
     <h1>Créer une actualité</h1>
+    {{-- MESSAGES --}}
+    @if (session('succes'))
+        <p>
+            {{ session('succes') }}</p>
+    @endif
     <div>
         {{-- FORMULAIRE --}}
-        <form action="{{ route('actualites.store') }}" method="POST">
+        <form action="{{ route('admin/actualites.store') }}" method="POST">
             @csrf
 
             <div>
@@ -30,13 +35,13 @@
                 {{-- DESCRIPTION --}}
                 <label for="description">Description</label>
                 <div>
-
                     <x-forms.erreur champ="description" />
 
-                    <input id="description" name="description" type="text" autofocus
-                        value="{{ old('description') }}">
+                    <textarea name="description" id="description" rows="5" maxlength="500">{{ old('description') }}</textarea>
+
                 </div>
             </div>
+
             {{-- SUBMIT --}}
             <div>
                 <input type="submit" vlue="Ajouter!">
@@ -45,7 +50,7 @@
 
         {{-- LIEN RETOUR --}}
         <p>
-            <a href="{{ route('actualites.index') }}" class="hover:text-indigo-600">Retour aux actualites</a>
+            <a href="{{ route('admin/actualites.index') }}" class="hover:text-indigo-600">Retour aux actualites</a>
         </p>
     </div>
 </body>

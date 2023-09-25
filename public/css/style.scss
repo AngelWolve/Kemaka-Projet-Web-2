@@ -118,6 +118,8 @@ section {
     font-style: normal;
 }
 
+@import "_employe.scss";
+@import "_connexion.scss";
 @import "_client.scss";
 @import "_admin.scss";
 @import "_utils.scss";

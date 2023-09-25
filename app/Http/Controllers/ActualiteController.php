@@ -7,34 +7,25 @@ use Illuminate\Http\Request;
 
 class ActualiteController extends Controller
 {
-    /**
-     * Affiche la liste des actualités
-     *
-     * @return View
-     */
-    public function index()
-    {
-        return view('actualites.index', [
-            "actualites" => Actualite::all()
-        ]);
-    }
 
     /**
      * Affiche le formulaire d'ajout
      *
      * @return View
      */
-    public function create() {
+    public function create()
+    {
         return view('actualites.create');
     }
 
- /**
+    /**
      * Traite l'ajout
      *
      * @param Request $request
      * @return RedirectResponse
-    */
-    public function store(Request $request) {
+     */
+    public function store(Request $request)
+    {
         // Valider
         $valides = $request->validate([
             "titre" => "required|min:4|max:150",
@@ -48,15 +39,17 @@ class ActualiteController extends Controller
         // Ajouter à la BDD
         $actualite = new Actualite();
         $actualite->titre = $valides["titre"];
-        $actualite->titre = $valides["description"];
-        $actualite->user_id = auth()->user()->id;
+        $actualite->description = $valides["description"];
+        // $actualite->user_id = auth()->user()->id ;
+        $actualite->user_id = 1;
+
 
         $actualite->save();
 
         // Rediriger
         return redirect()
-                ->route('actualites.index')
-                ->with('succes', "L'actualité a été ajoutée avec succès!");
+            ->route('admin/actualites.index')
+            ->with('succes', "L'actualité a été ajoutée avec succès!");
     }
 
 
@@ -97,25 +90,27 @@ class ActualiteController extends Controller
         $actualite = Actualite::findOrFail($valides["id"]);
         $actualite->titre = $valides["titre"];
         $actualite->description = $valides["description"];
-        $actualite->user_id = auth()->id();
+        // $actualite->user_id = auth()->id();
+        $actualite->user_id = 1;
         $actualite->save();
 
         // Rediriger
         return redirect()
-            ->route('actualites.index')
+            ->route('admin/actualites.index')
             ->with('succes', "L'actualité a été modifiée avec succès!");
     }
 
-     /**
+    /**
      * Traite la suppression
      *
      * @param Request $request
      * @return RedirectResponse
      */
-    public function destroy(Request $request) {
+    public function destroy(Request $request)
+    {
         Actualite::destroy($request->id);
 
-        return redirect()->route('actualites.index')
-                ->with('succes', "L'actualité a été supprimée!");
+        return redirect()->route('admin/actualites.index')
+            ->with('succes', "L'actualité a été supprimée!");
     }
 }

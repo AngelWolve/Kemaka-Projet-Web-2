@@ -1,7 +1,7 @@
 /***************
 ** CONNEXION
 ***************/
-body.connexion{
+body.connexion {
     background-image: url(../images/pexels-miguel-á-padriñán-255379.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -18,7 +18,6 @@ body.connexion{
     }
 }
 
-
 .form_connexion {
     background-color: #D9A0C9;
     padding: 25px 50px;
@@ -33,7 +32,7 @@ body.connexion{
         font-size: 1em;
         font-weight: bold;
         margin-top: 2.2rem;
-        margin-bottom:0.5rem;
+        margin-bottom: 0.5rem;
     }
 
     input {
@@ -51,6 +50,7 @@ body.connexion{
         border-radius: 10px;
     }
 }
+
 p.compte a {
     font-weight: bold;
     color: $blanc;
@@ -68,8 +68,6 @@ p.compte a {
     }
 }
 
-
-
 /***************
 ** ENREGISTREMENT
 ***************/
@@ -84,7 +82,7 @@ p.compte a {
     width: 500px;
 
     h4 {
-       color: $rose-fonce;
+        color: $rose-fonce;
         text-align: center;
     }
 
@@ -93,7 +91,7 @@ p.compte a {
         font-size: 1em;
         font-weight: bold;
         margin-top: 1.2rem;
-        margin-bottom:0.5rem;
+        margin-bottom: 0.5rem;
     }
 
     .input_groupe_1 {

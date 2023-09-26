@@ -21,6 +21,22 @@
                 {{-- Liste des employés --}}
                 <section>
                     <h3>Toutes les employés</h3>
+                    <div>
+                        {{-- CRÉATION --}}
+                        <a href="{{ route('admin/employes.create') }}">
+                            <span>
+                                créer
+                            </span>
+                        </a>
+                        {{-- RETOUR --}}
+                        <a href="{{ route('admin.index') }}">
+                            <span>
+                                Retour
+                            </span>
+                        </a>
+
+                    </div>
+
                     <table>
                         <thead>
                             <tr>

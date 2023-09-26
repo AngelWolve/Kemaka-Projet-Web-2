@@ -6,9 +6,9 @@
     <main class="actualite">
 
         @if ($actualites->isEmpty())
-            <h2>
+            <h1>
                 Aucune actualités actuellement
-            </h2>
+            </h1>
         @else
             {{-- Liste des actualités --}}
             <section>

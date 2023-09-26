@@ -77,25 +77,25 @@ Route::post("/admin/actualites/destroy", [ActualiteController::class, 'destroy']
 Route::get("/activites", [ActiviteController::class, 'index'])
     ->name('activites.index');
 
-Route::get('/activites/create', [ActiviteController::class, 'create'])
-    ->name('activites.create')
-    ->middleware('auth');
+Route::get('/admin/activites/create', [ActiviteController::class, 'create'])
+    ->name('admin/activites.create');
+    // ->middleware('auth');
 
-Route::post('/activites', [ActiviteController::class, 'store'])
-    ->name('activites.store')
-    ->middleware('auth');
+Route::post('/admin/activites', [ActiviteController::class, 'store'])
+    ->name('admin/activites.store');
+    // ->middleware('auth');
 
-Route::get("/activites/edit/{id}", [ActiviteController::class, 'edit'])
-    ->name('activites.edit')
-    ->middleware('auth');
+Route::get("/admin/activites/edit/{id}", [ActiviteController::class, 'edit'])
+    ->name('admin/activites.edit');
+    // ->middleware('auth');
 
-Route::post("/activites/update", [ActiviteController::class, 'update'])
-    ->name('activites.update')
-    ->middleware('auth');
+Route::post("/admin/activites/update", [ActiviteController::class, 'update'])
+    ->name('admin/activites.update');
+    // ->middleware('auth');
 
-Route::post("/activites/destroy", [ActiviteController::class, 'destroy'])
-    ->name('activites.destroy')
-    ->middleware('auth');
+Route::post("/admin/activites/destroy", [ActiviteController::class, 'destroy'])
+    ->name('admin/activites.destroy');
+    // ->middleware('auth');
 
 /*****************
  * FORFAITS

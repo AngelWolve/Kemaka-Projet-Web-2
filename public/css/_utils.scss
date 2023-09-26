@@ -5,8 +5,8 @@
 .btn-primaire {
     color: $rose;
     background-color: $amaranth;
-    width: 255px;
-    padding: 0.5em 0;
+    min-width: 255px;
+    padding: 0.5em 1em;
     border-radius: 7px;
     font-size: 1.2rem;
     font-family: "catseye", sans-serif;

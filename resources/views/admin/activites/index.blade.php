@@ -3,82 +3,68 @@
     {{-- Message de confirmaiton d'ajout d'une activité --}}
     <x-parts.alertes cle="succes" />
 
-    <main class="activite">
+    <section id="admin-activites">
+        <h1>Toutes les activités</h1>
+        {{-- Liste des activités --}}
+        <div class="conteneur-create">
+            {{-- CRÉATION --}}
+            <a href="{{ route('admin/activites.create') }}">
+                <span>
+                    créer
+                </span>
+            </a>
+            {{-- RETOUR --}}
+            <a href="{{ route('admin.index') }}">
+                <span>
+                    Retour
+                </span>
+            </a>
+        </div>
 
         @if ($activites->isEmpty())
-            <h1>
+            <p>
                 Aucune activités actuellement
-            </h1>
+            </p>
         @else
-            {{-- Liste des activités --}}
-            <section>
-                <ul>
-                    <h2>Toutes les activités</h2>
-                    <div>
-                        {{-- CRÉATION --}}
-                        <a href="{{ route('admin/activites.create') }}">
-                            <span>
-                                créer
-                            </span>
-                        </a>
-                        {{-- RETOUR --}}
-                        <a href="{{ route('admin.index') }}">
-                            <span>
-                                Retour
-                            </span>
-                        </a>
 
-                    </div>
+            <ul>
+                @foreach ($activites as $activite)
+                    <li>
+                        <h2>
+                            {{ $activite->nom }}
+                        </h2>
 
-                    <div>
-                        @foreach ($activites as $activite)
-                            <li>
-                                <div>
-                                    <h3>
-                                        {{ $activite->nom }}
-                                    </h3>
+                        <div class="conteneur-activites">
+                            <p>
+                                {{ $activite->description }}
+                            </p>
 
-                                    <div>
-                                        <p>
-                                            {{ $activite->description }}
-                                        </p>
+                            <img src="{{ $activite->image }}" alt="image de activité" width="400" height="250">
+                        </div>
 
-                                        <img src="{{ $activite->image }}" alt="image de activité" width="400"
-                                            height="250">
-                                    </div>
+                        <div class="conteneur-boutons">
+                            {{-- MODIFICATION --}}
+                            <a href="{{ route('admin/activites.edit', ['id' => $activite->id]) }}">
+                                <span>
+                                    edit
+                                </span>
+                            </a>
 
+                            {{-- SUPPRESSION --}}
+                            <form action="{{ route('admin/activites.destroy') }}" method="POST">
+                                @csrf
 
-                                    <div>
-
-                                        {{-- MODIFICATION --}}
-                                        <a href="{{ route('admin/activites.edit', ['id' => $activite->id]) }}">
-                                            <span>
-                                                edit
-                                            </span>
-                                        </a>
-
-                                        {{-- SUPPRESSION --}}
-                                        <form action="{{ route('admin/activites.destroy') }}" method="POST">
-                                            @csrf
-
-                                            <input type="hidden" name="id" value="{{ $activite->id }}">
-                                            <button type="submit">
-                                                <span>
-                                                    delete
-                                                </span>
-                                            </button>
-                                        </form>
-                                    </div>
-
-                                </div>
-
-                            </li>
-                        @endforeach
-                    </div>
-
-                </ul>
-            </section>
-
+                                <input type="hidden" name="id" value="{{ $activite->id }}">
+                                <button type="submit">
+                                    <span>
+                                        delete
+                                    </span>
+                                </button>
+                            </form>
+                        </div>
+                    </li>
+                @endforeach
+            </ul>
         @endif
-    </main>
+    </section>
 </x-admin>

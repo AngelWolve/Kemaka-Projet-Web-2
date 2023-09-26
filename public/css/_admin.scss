@@ -57,6 +57,7 @@ section#admin {
                 margin-top: 0;
                 padding: 0 1.5em 0 1.5em;
                 text-align: center;
+                font-weight: bold;
                 transition: color 0.3s ease;
 
                 &:hover {
@@ -131,63 +132,42 @@ main.actualite {
 
 
 /***************
-** ADMIN/ACTivités
+** ADMIN/Activités
 ***************/
-main.activite {
 
-    h3 {
+section#admin-activites {
+    margin: 1rem auto 0;
+    max-width: 75%;
 
-        margin-bottom: 2rem;
+    h1 {}
+
+    div.conteneur-create {
+        display: flex;
+        justify-content: space-between;
     }
 
-    section {
-        max-width: 1440px;
-        width: 80%;
-        display: flex;
-        flex-direction: column;
-        margin: auto;
-        padding: 40px;
+    p {}
 
-        ul {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
+    ul {
 
+        li {
+            background-color: #f8cfed;
+            border-radius: 10px;
+            border: 2px solid $rose;
+            box-shadow: 0 0 20px #f8cfed;
+            margin-bottom: 2rem;
+            padding: 20px;
 
-            h4 {
-                margin: 20px 0;
+            h2 {}
+
+            div.conteneur-activites {
+                display: flex;
+                justify-content: space-between;
             }
 
-
-            li {
-                background-color: #f8cfed;
-                border-radius: 10px;
-                border: 2px solid $rose;
-                box-shadow: 0 0 20px #f8cfed;
-                margin-bottom: 2rem;
-                padding: 20px;
+            div.conteneur-boutons {
                 display: flex;
-
-                div {
-                    div {
-
-                        display: flex;
-                        align-items: center;
-                        gap: 10px;
-                    }
-                }
-
-                h4 {
-                    margin: 10px 0;
-                    width: 80%;
-                }
-
-                p {
-                    margin: 5px 0;
-                    width: 90%;
-                    line-height: 25px;
-                }
-
+                justify-content: center;
             }
         }
     }

@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Models\Infolettre;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\URL;
 
 class InfolettreController extends Controller
 {
     /**
-     * Traite l'enregistrement de l'infolettre
+     * Traite l'enregistrement à l'infolettre
      *
      * @param Request $request
      * @return RedirectResponse
@@ -31,6 +32,6 @@ class InfolettreController extends Controller
         $infolettre->email = $valides["email"];
         $infolettre->save();
 
-        return redirect()->back();
+        return redirect()->to(URL::previous() . "#infolettre")->with("succes", "Vous êtes maintenant inscrit à l'infolettre");
     }
 }

@@ -13,7 +13,7 @@
             {{-- Liste des activités --}}
             <section>
                 <ul>
-                    <h3>Toutes les activités</h3>
+                    <h2>Toutes les activités</h2>
                     <div>
                         {{-- CRÉATION --}}
                         <a href="{{ route('admin/activites.create') }}">
@@ -34,9 +34,9 @@
                         @foreach ($activites as $activite)
                             <li>
                                 <div>
-                                    <h4>
+                                    <h3>
                                         {{ $activite->nom }}
-                                    </h4>
+                                    </h3>
 
                                     <div>
                                         <p>

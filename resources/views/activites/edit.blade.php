@@ -46,10 +46,10 @@
              <div>
                 <label for="image">Image</label>
                 <div>
+                    <img src="{{$activite->image}}" width="100"  alt="">
                     <x-forms.erreur champ="image" />
 
-                    <input id="image" name="image" type="file" autofocus
-                        value="{{ old('image') ?? $activite->image }}">
+                    <input id="image" name="image" type="file" autofocus >
                 </div>
             </div>
 

@@ -13,7 +13,7 @@
             {{-- Liste des actualités --}}
             <section>
                 <ul>
-                    <h3>Toutes les actualités</h3>
+                    <h2>Toutes les actualités</h2>
                     <div>
                         {{-- CRÉATION --}}
                         <a href="{{ route('admin/actualites.create') }}">
@@ -34,9 +34,9 @@
                         @foreach ($actualites as $actualite)
                             <li>
                                 <div>
-                                    <h4>
+                                    <h3>
                                         {{ $actualite->titre }}
-                                    </h4>
+                                    </h3>
                                     <p>
                                         {{ $actualite->description }}
                                     </p>

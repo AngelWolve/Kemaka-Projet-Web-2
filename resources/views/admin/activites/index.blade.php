@@ -38,12 +38,15 @@
                                         {{ $activite->nom }}
                                     </h4>
 
-                                    <p>
-                                        {{ $activite->description }}
-                                    </p>
+                                    <div>
+                                        <p>
+                                            {{ $activite->description }}
+                                        </p>
 
+                                        <img src="{{ $activite->image }}" alt="image de activité" width="400"
+                                            height="250">
+                                    </div>
 
-                                    <img src="{{ $activite->image }}" alt="image de activité" width="400" height="250">
 
                                     <div>
 

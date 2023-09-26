@@ -7,56 +7,34 @@
 /***************
 ** ACTIVITÉS
 ***************/
-header {
-    object-fit: contain;
-    background-image: url(../images/image-header.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    text-align: center;
-    height: 450px;
-    width: 100%;
 
-    h1 {
-        font-size: 64px;
-        color: $rose-fonce;
-        padding-top: 184px;
-    }
-}
-
-.activites {
+section#activites {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 80px auto;
+    margin: 5rem auto;
     width: 75%;
 
     .activite {
         display: flex;
-        margin-bottom: 50px;
+        margin-bottom: 3rem;
         max-width: 100%;
-        height: 250px;
 
         .image {
-            max-width: 400px;
-            height: 250px;
-            margin-right: 40px;
+            margin-right: 2.5rem;
         }
 
         .texte {
             display: flex;
             flex-direction: column;
-            width: 1013px;
+            max-width: 100%;
 
             h2 {
-                color: $rose-fonce;
-                font-size: 46px;
                 text-align: left;
             }
 
             p {
-                font-size: 22px;
-                padding-top: 15px;
+                padding-top: 0.938em;
             }
         }
     }
@@ -66,7 +44,7 @@ header {
     flex-direction: row-reverse;
 
     .image {
-        margin-left: 40px;
+        margin-left: 2.5rem;
     }
 }
 
@@ -74,6 +52,83 @@ header {
 ** FORFAITS
 ***************/
 
+section#forfaits {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem auto;
+    width: 75%;
+
+    .forfaits-top {
+        max-width: 100%;
+        margin-bottom: 3.75rem;
+
+        .p1 {
+            margin-top: 3rem;
+        }
+
+        .p2 {
+            margin-top: 1.563rem;
+        }
+    }
+
+    .forfait {
+        display: flex;
+        margin-bottom: 3rem;
+        margin-top: 3rem;
+        max-width: 100%;
+        height: 25.313rem;
+        border-radius: 15px;
+        border: 25px solid;
+
+        .details {
+            padding: 2.5em 3.889em 6.667em 2.5em;
+
+            span {
+                font-weight: bold;
+            }
+        }
+
+        &:first-child {
+            background-color: rgba(85, 56, 115, 0.2);
+            border: 25px solid $violet;
+        }
+
+        &:nth-child(2) {
+            background-color: rgba(242, 179, 224, 0.2);
+            border: 25px solid $rose;
+        }
+
+        &:last-child {
+            background-color: rgba(4, 157, 191, 0.2);
+            border: 25px solid $bleu;
+        }
+
+        h3 {
+            text-align: left;
+            margin-bottom: 0.8333rem;
+        }
+
+        .p-description {
+            margin-bottom: 2rem;
+        }
+
+        .duree-p {
+            margin: 0.555rem 0rem 0.555rem 0rem;
+        }
+
+        .commander {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .image {
+            padding: 2.889em 5.278em 7em 0em;
+        }
+
+    }
+
+}
 
 
 /***************
@@ -86,22 +141,19 @@ header {
 ** À PROPOS
 ***************/
 
-.main-apropos {
+section#apropos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem auto;
     width: 75%;
-    margin: 80px auto;
 
     .apropos-top {
-        display: flex;
-        flex-direction: column;
-
-        h2 {
-            color: $rose-fonce;
-            font-size: 46px;
-        }
+        max-width: 100%;
+        margin-bottom: 3.75rem;
 
         p {
-            font-size: 22px;
-            margin-top: 40px;
+            margin-top: 2.5rem;
         }
     }
 
@@ -109,68 +161,53 @@ header {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 80px auto;
+        max-width: 100%;
 
         .apropos-texte1 {
             display: flex;
-            margin-bottom: 50px;
-            max-width: 100%;
+            margin-bottom: 3.125rem;
 
             .apropos-image {
-                max-width: 400px;
-                height: 250px;
-                margin-left: 40px;
+                margin-left: 2.5rem;
                 order: 1;
             }
 
             .texte1 {
                 display: flex;
                 flex-direction: column;
-                width: 1013px;
-                height: 155px;
                 order: 0;
 
                 h2 {
-                    color: $rose-fonce;
-                    font-size: 46px;
                     text-align: left;
                 }
 
                 p {
-                    font-size: 22px;
-                    padding-top: 15px;
+                    padding-top: 0.938em;
                 }
             }
         }
 
         .apropos-texte2 {
             display: flex;
-            margin-top: 50px;
+            margin-top: 3.125rem 0 5rem 0;
             max-width: 100%;
 
             .apropos-image {
-                max-width: 400px;
-                height: 250px;
-                margin-right: 40px;
+                margin-right: 2.5rem;
                 order: 0;
             }
 
             .texte1 {
                 display: flex;
                 flex-direction: column;
-                width: 1013px;
-                height: 155px;
                 order: 1;
 
                 h2 {
-                    color: $rose-fonce;
-                    font-size: 46px;
                     text-align: left;
                 }
 
                 p {
-                    font-size: 22px;
-                    padding-top: 15px;
+                    padding-top: 0.938em;
                 }
             }
         }

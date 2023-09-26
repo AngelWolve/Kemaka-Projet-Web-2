@@ -1,5 +1,5 @@
 @props(['route', 'texte'])
 
-<a class="btn-primaire" href="{{ route($route) }}">
+<a class="btn-primaire" href="{{ $route }}">
     {{ $texte }}
 </a>

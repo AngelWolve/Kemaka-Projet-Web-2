@@ -1,14 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-
-<body>
+<x-client titre="Réservez ici!">
+    <section id="reservation">
+        <h3>
+            {{ $forfait->nom }}
+        </h3>
+        <div class="prix">
+            <p class="prix-p tx-md">
+                <span>
+                    Prix:
+                </span>
+                {{ $forfait->prix }} $
+            </p>
+        </div>
+        <div class="duree">
+            <p class="duree-p tx-md">
+                <span>
+                    Durée:
+                </span>
+                {{ $forfait->duree }}
+            </p>
+    </section>
     <form action="{{ route('reservations.store') }}" method="post">
         @csrf
         <input type="hidden" name="forfait_id" value="{{ $forfait->id }}">
@@ -22,6 +32,4 @@
         <button type="submit">Réserver</button>
     </form>
 
-</body>
-
-</html>
+</x-client>

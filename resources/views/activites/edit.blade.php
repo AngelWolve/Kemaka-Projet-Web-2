@@ -9,26 +9,26 @@
 </head>
 
 <body>
-    <h1>Modifier une actualité</h1>
+    <h1>Modifier une activité</h1>
     {{-- MESSAGES --}}
     @if (session('succes'))
         <p>
             {{ session('succes') }}</p>
     @endif
     <div>
-        <form action="{{ route('admin/actualites.update') }}" method="POST">
+        <form action="{{ route('admin/activites.update') }}" method="POST" enctype="multipart/form-data">
             @csrf
 
-            <input type="hidden" name="id" value="{{ $actualite->id }}">
+            <input type="hidden" name="id" value="{{ $activite->id }}">
 
-            {{-- TITRE --}}
+            {{-- NOM --}}
             <div>
-                <label for="titre">Titre</label>
+                <label for="nom">Nom</label>
                 <div>
-                    <x-forms.erreur champ="titre" />
+                    <x-forms.erreur champ="nom" />
 
-                    <input id="titre" name="titre" type="text" autofocus
-                        value="{{ old('titre') ?? $actualite->titre }}">
+                    <input id="nom" name="nom" type="text" autofocus
+                        value="{{ old('nom') ?? $activite->nom }}">
                 </div>
             </div>
             {{-- DESCRIPTION --}}
@@ -37,8 +37,19 @@
                 <div>
                     <x-forms.erreur champ="description" />
 
-                    <textarea name="description" id="description" rows="5" maxlength="500">{{ old('description') ?? $actualite->description }}</textarea>
+                    <textarea name="description" id="description" rows="5" maxlength="500">{{ old('description') ?? $activite->description }}</textarea>
 
+                </div>
+            </div>
+
+             {{-- IMAGE --}}
+             <div>
+                <label for="image">Image</label>
+                <div>
+                    <x-forms.erreur champ="image" />
+
+                    <input id="image" name="image" type="file" autofocus
+                        value="{{ old('image') ?? $activite->image }}">
                 </div>
             </div>
 
@@ -48,9 +59,9 @@
             </div>
         </form>
 
-        {{-- RETOUR AUX ACTUALITÉS --}}
+        {{-- RETOUR AUX ACTIVITÉS --}}
         <p>
-            <a href="{{ route('admin/actualites.index') }}">Retour aux actualités</a>
+            <a href="{{ route('admin/activites.index') }}">Retour aux activités</a>
         </p>
     </div>
 </body>

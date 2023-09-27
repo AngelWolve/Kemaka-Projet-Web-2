@@ -7,22 +7,6 @@
 /***************
 ** ACTIVITÉS
 ***************/
-header {
-    object-fit: contain;
-    background-image: url(../images/image-header.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    text-align: center;
-    height: 450px;
-    width: 100%;
-
-    h1 {
-        font-size: 64px;
-        color: $rose-fonce;
-        padding-top: 184px;
-    }
-}
 
 .activites {
     display: flex;
@@ -178,10 +162,10 @@ header {
 
 }
 
-
 /***************
 ** NOUS JOINDRE
 ***************/
+
 .contact {
     padding: 20px;
     max-width: 1440px;
@@ -248,3 +232,8 @@ header {
         border: 0;
     }
 }
+
+/***************
+** ERREUR 403
+***************/
+

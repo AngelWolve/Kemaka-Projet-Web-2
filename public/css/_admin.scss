@@ -24,7 +24,7 @@ section#admin {
             justify-content: center;
             align-items: center;
             background-color: #049DBF;
-            animation: growAnimation 2s ease-in-out forwards;
+            animation: growAnimation 1.5s ease-in-out forwards;
 
             @keyframes growAnimation {
                 0% {
@@ -184,7 +184,7 @@ section#admin-create-actualite {
         margin: 0 0 1rem;
     }
 
-    div.actualite-bg {
+    div.actualite-form {
         width: 35vw;
         margin: 0 auto;
 
@@ -256,104 +256,255 @@ section#admin-create-actualite {
 ***************/
 section#admin-create-activite {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin: 5rem auto;
     max-width: 100%;
-    width: 75%;
+    height: 100vh;
+    margin: 0;
+    background-image: url(../images/pexels-miguel-á-padriñán-255379.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 
     h1 {
+        font-size: 2rem;
         margin: 0 0 1rem;
     }
 
-    div.activite-bg {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border-radius: 7px;
-        background: rgb(217, 160, 201);
-        background: linear-gradient(0deg, rgba(217, 160, 201, 1) 0%, rgba(242, 179, 224, 1) 20%, rgba(255, 213, 243, 1) 50%, rgba(242, 179, 224, 1) 80%, rgba(217, 160, 201, 1) 100%);
-        padding: 3em;
-        width: 50%;
+    div.activite-form {
+        width: 35vw;
+        margin: 0 auto;
 
         form {
+            background: rgb(217, 160, 201);
+            background: linear-gradient(0deg, rgba(217, 160, 201, 1) 0%, rgba(242, 179, 224, 1) 20%, rgba(255, 213, 243, 1) 50%, rgba(242, 179, 224, 1) 80%, rgba(217, 160, 201, 1) 100%);
             margin: 0 auto 5px;
             padding: 50px 0;
             border-radius: 7px;
 
+            div.nom,
+            div.description,
+            div.image {
+                width: 75%;
+                margin: 0 auto 0.8rem;
 
+                label {
+                    display: block;
+                    text-align: left;
+                    font-weight: 700;
+                    margin: 0 0 5px 0;
+                }
+
+                input {
+                    width: 100%;
+                    background-color: #fff;
+                    color: #000;
+                    height: 40px;
+                    font-size: 1rem;
+                    border: 1px solid #E0DFE6;
+                    border-radius: 7px;
+                    padding: 10px;
+                    box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.25);
+                }
+
+                textarea {
+                    width: 100%;
+                    background-color: #fff;
+                    color: #000;
+                    font-size: 1rem;
+                    border: 1px solid #E0DFE6;
+                    border-radius: 7px;
+                    padding: 10px;
+                    box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.25);
+                }
+
+            }
+
+            div.submit-create {
+                margin-top: 3rem;
+                text-align: center;
+
+            }
+        }
+
+        p.retour-activite {
+            text-align: center;
+
+            a {
+                text-decoration: underline;
+            }
         }
 
     }
 }
+
 
 /***************
 ** ADMIN/ACTUALITÉS/MODIFIER
 ***************/
 section#admin-modifier-actualite {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin: 5rem auto;
     max-width: 100%;
-    width: 75%;
+    height: 100vh;
+    margin: 0;
+    background-image: url(../images/pexels-miguel-á-padriñán-255379.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 
     h1 {
+        font-size: 2rem;
         margin: 0 0 1rem;
     }
 
-    div.actualite-modifier {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border-radius: 7px;
-        background: rgb(217, 160, 201);
-        background: linear-gradient(0deg, rgba(217, 160, 201, 1) 0%, rgba(242, 179, 224, 1) 20%, rgba(255, 213, 243, 1) 50%, rgba(242, 179, 224, 1) 80%, rgba(217, 160, 201, 1) 100%);
-        padding: 3em;
-        width: 50%;
+    div.modifier-form {
+        width: 35vw;
+        margin: 0 auto;
 
         form {
+            background: rgb(217, 160, 201);
+            background: linear-gradient(0deg, rgba(217, 160, 201, 1) 0%, rgba(242, 179, 224, 1) 20%, rgba(255, 213, 243, 1) 50%, rgba(242, 179, 224, 1) 80%, rgba(217, 160, 201, 1) 100%);
             margin: 0 auto 5px;
             padding: 50px 0;
             border-radius: 7px;
 
+            div.titre,
+            div.description {
+                width: 75%;
+                margin: 0 auto 0.8rem;
 
+                label {
+                    display: block;
+                    text-align: left;
+                    font-weight: 700;
+                    margin: 0 0 5px 0;
+                }
+
+                input {
+                    width: 100%;
+                    background-color: #fff;
+                    color: #000;
+                    height: 40px;
+                    font-size: 1rem;
+                    border: 1px solid #E0DFE6;
+                    border-radius: 7px;
+                    padding: 10px;
+                    box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.25);
+                }
+
+                textarea {
+                    width: 100%;
+                    background-color: #fff;
+                    color: #000;
+                    font-size: 1rem;
+                    border: 1px solid #E0DFE6;
+                    border-radius: 7px;
+                    padding: 10px;
+                    box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.25);
+                }
+
+            }
+
+            div.submit-modifier {
+                margin-top: 3rem;
+                text-align: center;
+
+            }
+        }
+
+        p.retour-actualite {
+            text-align: center;
+
+            a {
+                text-decoration: underline;
+            }
         }
 
     }
 }
+
 
 /***************
 ** ADMIN/ACTIVITÉS/MODIFIER
 ***************/
 section#admin-modifier-activite {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin: 5rem auto;
     max-width: 100%;
-    width: 75%;
+    height: 100vh;
+    margin: 0;
+    background-image: url(../images/pexels-miguel-á-padriñán-255379.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 
     h1 {
+        font-size: 2rem;
         margin: 0 0 1rem;
     }
 
     div.activite-modifier {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border-radius: 7px;
-        background: rgb(217, 160, 201);
-        background: linear-gradient(0deg, rgba(217, 160, 201, 1) 0%, rgba(242, 179, 224, 1) 20%, rgba(255, 213, 243, 1) 50%, rgba(242, 179, 224, 1) 80%, rgba(217, 160, 201, 1) 100%);
-        padding: 3em;
-        width: 50%;
+        width: 35vw;
+        margin: 0 auto;
 
         form {
+            background: rgb(217, 160, 201);
+            background: linear-gradient(0deg, rgba(217, 160, 201, 1) 0%, rgba(242, 179, 224, 1) 20%, rgba(255, 213, 243, 1) 50%, rgba(242, 179, 224, 1) 80%, rgba(217, 160, 201, 1) 100%);
             margin: 0 auto 5px;
             padding: 50px 0;
             border-radius: 7px;
 
+            div.nom,
+            div.description,
+            div.image {
+                width: 75%;
+                margin: 0 auto 0.8rem;
 
+                label {
+                    display: block;
+                    text-align: left;
+                    font-weight: 700;
+                    margin: 0 0 5px 0;
+                }
+
+                input {
+                    width: 100%;
+                    background-color: #fff;
+                    color: #000;
+                    height: 40px;
+                    font-size: 1rem;
+                    border: 1px solid #E0DFE6;
+                    border-radius: 7px;
+                    padding: 10px;
+                    box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.25);
+                }
+
+                textarea {
+                    width: 100%;
+                    background-color: #fff;
+                    color: #000;
+                    font-size: 1rem;
+                    border: 1px solid #E0DFE6;
+                    border-radius: 7px;
+                    padding: 10px;
+                    box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.25);
+                }
+
+            }
+
+            div.submit-modifier {
+                margin-top: 3rem;
+                text-align: center;
+
+            }
+        }
+
+        p.retour-activite {
+            text-align: center;
+
+            a {
+                text-decoration: underline;
+            }
         }
 
     }

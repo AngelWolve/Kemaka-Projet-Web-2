@@ -1,6 +1,6 @@
 <x-admin>
     <section id="admin-create-actualite">
-        <div class="actualite-bg">
+        <div class="actualite-form">
             <h1>Créer une actualité</h1>
             {{-- MESSAGES --}}
             @if (session('succes'))
@@ -11,9 +11,8 @@
             <form action="{{ route('admin/actualites.store') }}" method="POST">
                 @csrf
 
-
+                {{-- TITRE --}}
                 <div class="titre">
-                    {{-- TITRE --}}
                     <label for="titre">Titre</label>
                     <div>
 
@@ -23,8 +22,8 @@
                     </div>
                 </div>
 
+                {{-- DESCRIPTION --}}
                 <div class="description">
-                    {{-- DESCRIPTION --}}
                     <label for="description">Description</label>
                     <div>
                         <x-forms.erreur champ="description" />

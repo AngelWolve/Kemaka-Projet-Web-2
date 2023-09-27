@@ -54,5 +54,4 @@
             @endforeach
         </ul>
     </section>
-
 </x-client>

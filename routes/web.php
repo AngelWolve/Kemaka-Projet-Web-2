@@ -20,14 +20,14 @@ use Illuminate\Support\Facades\Route;
  */
 Route::get("/", [AccueilController::class, 'accueil'])
     ->name('accueil');
-    // ->middleware(['auth', 'admin']);
+// ->middleware(['auth', 'admin']);
 
 /*****************
  * ADMIN
  */
 Route::get("/admin", [AdminController::class, 'index'])
-    ->name('admin.index');
-// ->middleware('auth');
+    ->name('admin.index')
+    ->middleware('admin');
 
 Route::get("/admin/activites", [AdminController::class, 'activites'])
     ->name('admin/activites.index');
@@ -80,23 +80,23 @@ Route::get("/activites", [ActiviteController::class, 'index'])
 
 Route::get('/admin/activites/create', [ActiviteController::class, 'create'])
     ->name('admin/activites.create');
-    // ->middleware('auth');
+// ->middleware('auth');
 
 Route::post('/admin/activites', [ActiviteController::class, 'store'])
     ->name('admin/activites.store');
-    // ->middleware('auth');
+// ->middleware('auth');
 
 Route::get("/admin/activites/edit/{id}", [ActiviteController::class, 'edit'])
     ->name('admin/activites.edit');
-    // ->middleware('auth');
+// ->middleware('auth');
 
 Route::post("/admin/activites/update", [ActiviteController::class, 'update'])
     ->name('admin/activites.update');
-    // ->middleware('auth');
+// ->middleware('auth');
 
 Route::post("/admin/activites/destroy", [ActiviteController::class, 'destroy'])
     ->name('admin/activites.destroy');
-    // ->middleware('auth');
+// ->middleware('auth');
 
 /*****************
  * FORFAITS

@@ -33,6 +33,6 @@
     </div>
     <div class="conteneur-connexion">
         <i class="fa-solid fa-cart-shopping"></i>
-        <x-parts.bouton-primaire route="connexion.create" texte="CONNEXION / S'INSCRIRE" />
+        <x-parts.bouton-primaire route="{{ route('connexion.create') }}" texte="CONNEXION / S'INSCRIRE" />
     </div>
 </nav>

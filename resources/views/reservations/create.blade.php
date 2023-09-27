@@ -1,27 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
+{{-- <x-client titre="Réservez ici!">
+    <section id="reservation">
+        <h3>
+            {{ $forfait->nom }}
+        </h3>
+        <div class="prix">
+            <p class="prix-p tx-md">
+                <span>
+                    Prix:
+                </span>
+                {{ $forfait->prix }} $
+            </p>
+        </div>
+        <div class="duree">
+            <p class="duree-p tx-md">
+                <span>
+                    Durée:
+                </span>
+                {{ $forfait->duree }}
+            </p>
+    </section> --}}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
+{{-- <section id="reservation-form">
+        <form action="{{ route('reservations.store') }}" method="post">
+            @csrf
+            <input type="hidden" name="forfait_id" value="{{ $forfait->id }}">
+            <label for="date_arrivee">Date d'arrivée :</label>
+            <input type="date" name="date_arrivee" required>
+            <label for="date_depart">Date de départ :</label>
+            <input type="date" name="date_depart" required>
+            <button type="submit">Réserver</button>
+        </form>
+    </section> --}}
 
-<body>
-    <form action="{{ route('reservations.store') }}" method="post">
-        @csrf
-        <input type="hidden" name="forfait_id" value="{{ $forfait->id }}">
+<x-client titre="Réservez ici!">
+    <section id="reservations">
 
-        <label for="date_arrivee">Date d'arrivée :</label>
-        <input type="date" name="date_arrivee" required>
+        <div class="infos">
+            <h3>{{ $forfait->nom }}</h3>
+            <p class="prix-p tx-md">
+                <span>Prix:</span> {{ $forfait->prix }} $
+            </p>
+            <p class="duree-p tx-md">
+                <span>Durée:</span> {{ $forfait->duree }}
+            </p>
+        </div>
 
-        <label for="date_depart">Date de départ :</label>
-        <input type="date" name="date_depart" required>
+        <form action="{{ route('reservations.store') }}" method="post">
+            @csrf
+            <div class="date">
+                <label for="date_arrivee">Date d'arrivée :</label>
+                <select name="date_arrivee" id="date_arrivee">
+                    @foreach ($datesDisponibleArrivee as $date)
+                        <option value="{{ $date }}">{{ $date }}</option>
+                    @endforeach
+                </select>
+            </div>
 
-        <button type="submit">Réserver</button>
-    </form>
-
-</body>
-
-</html>
+            <div class="date">
+                <label for="date_depart">Date de départ :</label>
+                <select name="date_depart" id="date_depart">
+                    @foreach ($datesDisponibleDepart as $date)
+                        <option value="{{ $date }}">{{ $date }}</option>
+                    @endforeach
+                </select>
+            </div>
+            <button class="btn-primaire" type="submit">Réserver</button>
+        </form>
+    </section>
+</x-client>

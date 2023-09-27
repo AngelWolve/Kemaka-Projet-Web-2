@@ -17,6 +17,7 @@ class CreateForfaitsTable extends Migration
             $table->id();
             $table->string('nom');
             $table->text('description');
+            $table->integer('duree');
             $table->decimal('prix', 5, 2);
             $table->timestamps();
         });

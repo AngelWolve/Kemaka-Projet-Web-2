@@ -7,6 +7,7 @@
 /***************
 ** ACTIVITÉS
 ***************/
+
 .activites {
     display: flex;
     flex-direction: column;
@@ -161,10 +162,10 @@
 
 }
 
-
 /***************
 ** NOUS JOINDRE
 ***************/
+
 .contact {
     padding: 20px;
     max-width: 1440px;
@@ -233,3 +234,8 @@
         border: 0;
     }
 }
+
+/***************
+** ERREUR 403
+***************/
+

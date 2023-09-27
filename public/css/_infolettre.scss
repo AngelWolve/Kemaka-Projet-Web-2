@@ -23,14 +23,14 @@ section#infolettre {
             div.input {
                 width: 45vw;
                 margin: 0 auto 0.8rem;
-
-                &:last-child {
-                    margin-bottom: 1.1rem;
-                }
             }
 
             div {
                 text-align: right;
+            }
+
+            &>div:last-child {
+                margin-top: 1.1rem;
             }
         }
     }

@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
     /**
-     * Affiche la page Dashboard
+     * Affiche le panneau d'administration
      *
      * @return View
      */
@@ -18,7 +18,6 @@ class AdminController extends Controller
     {
         return view('admin.index');
     }
-
 
     /**
      * Affiche la liste des activités
@@ -32,7 +31,6 @@ class AdminController extends Controller
         ]);
     }
 
-
     /**
      * Affiche la liste des actualités
      *
@@ -42,19 +40,6 @@ class AdminController extends Controller
     {
         return view('admin/actualites.index', [
             "actualites" => Actualite::all()
-        ]);
-    }
-
-
-    /**
-     * Affiche la liste des employés
-     *
-     * @return View
-     */
-    public function employes()
-    {
-        return view('admin/employes.index', [
-            "employes" => User::where('role_id', 2)->get()
         ]);
     }
 }

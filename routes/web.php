@@ -13,6 +13,7 @@ use App\Http\Controllers\EnregistrementController;
 use App\Http\Controllers\InfolettreController;
 use App\Http\Controllers\NousJoindreController;
 use App\Http\Controllers\QuestionController;
+use App\Http\Controllers\UtilisateurController;
 use Illuminate\Support\Facades\Route;
 
 /*****************
@@ -20,57 +21,6 @@ use Illuminate\Support\Facades\Route;
  */
 Route::get("/", [AccueilController::class, 'accueil'])
     ->name('accueil');
-// ->middleware(['auth', 'admin']);
-
-/*****************
- * ADMIN
- */
-Route::get("/admin", [AdminController::class, 'index'])
-    ->name('admin.index')
-    ->middleware('admin');
-
-Route::get("/admin/activites", [AdminController::class, 'activites'])
-    ->name('admin/activites.index');
-// ->middleware('auth');
-
-Route::get("/admin/actualites", [AdminController::class, 'actualites'])
-    ->name('admin/actualites.index');
-// ->middleware('auth');
-
-Route::get("/admin/clients", [AdminController::class, 'clients'])
-    ->name('admin/clients.index');
-// ->middleware('auth');
-
-Route::get("/admin/administrateurs", [AdminController::class, 'administrateurs'])
-    ->name('admin/administrateurs.index');
-// ->middleware('auth');
-
-Route::get("/admin/employes", [AdminController::class, 'employes'])
-    ->name('admin/employes.index');
-// ->middleware('auth');
-
-/*****************
- * ACTUALITÉS
- */
-Route::get('/admin/actualites/create', [ActualiteController::class, 'create'])
-    ->name('admin/actualites.create');
-// ->middleware('auth');
-
-Route::post('/admin/actualites', [ActualiteController::class, 'store'])
-    ->name('admin/actualites.store');
-// ->middleware('auth');
-
-Route::get("/admin/actualites/edit/{id}", [ActualiteController::class, 'edit'])
-    ->name('admin/actualites.edit');
-// ->middleware('auth');
-
-Route::post("/admin/actualites/update", [ActualiteController::class, 'update'])
-    ->name('admin/actualites.update');
-// ->middleware('auth');
-
-Route::post("/admin/actualites/destroy", [ActualiteController::class, 'destroy'])
-    ->name('admin/actualites.destroy');
-// ->middleware('auth');
 
 /*****************
  * ACTIVITÉS
@@ -79,24 +29,24 @@ Route::get("/activites", [ActiviteController::class, 'index'])
     ->name('activites.index');
 
 Route::get('/admin/activites/create', [ActiviteController::class, 'create'])
-    ->name('admin/activites.create');
-// ->middleware('auth');
+    ->name('admin/activites.create')
+    ->middleware('admin');
 
 Route::post('/admin/activites', [ActiviteController::class, 'store'])
-    ->name('admin/activites.store');
-// ->middleware('auth');
+    ->name('admin/activites.store')
+    ->middleware('admin');
 
 Route::get("/admin/activites/edit/{id}", [ActiviteController::class, 'edit'])
-    ->name('admin/activites.edit');
-// ->middleware('auth');
+    ->name('admin/activites.edit')
+    ->middleware('admin');
 
 Route::post("/admin/activites/update", [ActiviteController::class, 'update'])
-    ->name('admin/activites.update');
-// ->middleware('auth');
+    ->name('admin/activites.update')
+    ->middleware('admin');
 
 Route::post("/admin/activites/destroy", [ActiviteController::class, 'destroy'])
-    ->name('admin/activites.destroy');
-// ->middleware('auth');
+    ->name('admin/activites.destroy')
+    ->middleware('admin');
 
 /*****************
  * FORFAITS
@@ -108,23 +58,18 @@ Route::get("/forfaits", [ForfaitController::class, 'index'])
  * RÉSERVATIONS
  */
 Route::get("/reservations/create/{id}", [ReservationController::class, 'create'])
-    ->name('reservations.create');
+    ->name('reservations.create')
+    ->middleware('auth');
 
 Route::post('/reservations/store', [ReservationController::class, 'store'])
-    ->name('reservations.store');
+    ->name('reservations.store')
+    ->middleware('auth');
 
 /*****************
  * À PROPOS
  */
 Route::get("/a_propos", [AproposController::class, 'index'])
     ->name('a_propos.index');
-
-
-/*****************
- * INFOLETTRE
- */
-Route::post("/infolettre", [InfolettreController::class, 'store'])
-    ->name('infolettre.store');
 
 /*****************
  * NOUS JOINDRE
@@ -133,59 +78,115 @@ Route::get('/nous_joindre', [NousJoindreController::class, 'index'])
     ->name('nous_joindre.index');
 
 /*****************
+ * ACTUALITÉS
+ */
+Route::get('/admin/actualites/create', [ActualiteController::class, 'create'])
+    ->name('admin/actualites.create')
+    ->middleware('admin');
+
+Route::post('/admin/actualites', [ActualiteController::class, 'store'])
+    ->name('admin/actualites.store')
+    ->middleware('admin');
+
+Route::get("/admin/actualites/edit/{id}", [ActualiteController::class, 'edit'])
+    ->name('admin/actualites.edit')
+    ->middleware('admin');
+
+Route::post("/admin/actualites/update", [ActualiteController::class, 'update'])
+    ->name('admin/actualites.update')
+    ->middleware('admin');
+
+Route::post("/admin/actualites/destroy", [ActualiteController::class, 'destroy'])
+    ->name('admin/actualites.destroy')
+    ->middleware('admin');
+
+/*****************
+ * INFOLETTRE
+ */
+Route::post("/infolettre", [InfolettreController::class, 'store'])
+    ->name('infolettre.store');
+
+/*****************
  * QUESTION
  */
 Route::post('/question/store', [QuestionController::class, 'store'])
     ->name('question.store');
 
 /*****************
- * EMPLOYÉ
+ * ZONE CLIENT
+ */
+Route::get("/client", [ClientController::class, 'index'])
+    ->name('client.index')
+    ->middleware('client');
+
+/*****************
+ * ZONE EMPLOYÉ
  */
 Route::get("/employe", [EmployeController::class, 'index'])
-    ->name('employe.index');
-// ->middleware('auth');
+    ->name('employe.index')
+    ->middleware('employe');
 
+/*****************
+ * ZONE ADMINISTRATION
+ */
+Route::get("/admin", [AdminController::class, 'index'])
+    ->name('admin.index')
+    ->middleware('admin');
 
-Route::get('/admin/employes/create', [EmployeController::class, 'create'])
-    ->name('admin/employes.create');
-// ->middleware('auth');
+Route::get("/admin/activites", [AdminController::class, 'activites'])
+    ->name('admin/activites.index')
+    ->middleware('admin');
 
-Route::post('/admin/employes', [EmployeController::class, 'store'])
-    ->name('admin/employes.store');
-// ->middleware('auth');
+Route::get("/admin/actualites", [AdminController::class, 'actualites'])
+    ->name('admin/actualites.index')
+    ->middleware('admin');
 
-Route::get("/admin/employes/edit/{id}", [EmployeController::class, 'edit'])
-    ->name('admin/employes.edit');
-// ->middleware('auth');
+/*****************
+ * UTILISATEURS
+ */
+Route::get("/admin/utilisateurs", [UtilisateurController::class, 'index'])
+    ->name('admin/reservations.index')
+    ->middleware('admin');
 
-Route::post("/admin/employes/update", [EmployeController::class, 'update'])
-    ->name('admin/employes.update');
-// ->middleware('auth');
+Route::get('/admin/utilisateurs/create', [UtilisateurController::class, 'create'])
+    ->name('admin/utilisateurs.create')
+    ->middleware('admin');
 
-Route::post("/admin/employes/destroy", [EmployeController::class, 'destroy'])
-    ->name('admin/employes.destroy');
-// ->middleware('auth');
+Route::post('/admin/utilisateurs', [UtilisateurController::class, 'store'])
+    ->name('admin/utilisateurs.store')
+    ->middleware('admin');
 
+Route::get("/admin/utilisateurs/edit/{id}", [UtilisateurController::class, 'edit'])
+    ->name('admin/utilisateurs.edit')
+    ->middleware('admin');
+
+Route::post("/admin/utilisateurs/update", [UtilisateurController::class, 'update'])
+    ->name('admin/utilisateurs.update')
+    ->middleware('admin');
+
+Route::post("/admin/utilisateurs/destroy", [UtilisateurController::class, 'destroy'])
+    ->name('admin/utilisateurs.destroy')
+    ->middleware('admin');
 
 /*****************
  * CONNEXION ET ENREGISTREMENT
  */
 Route::get("/connexion", [ConnexionController::class, 'create'])
-    ->name('connexion.create');
-// ->middleware('guest');
+    ->name('connexion.create')
+    ->middleware('guest');
 
 Route::post("/connexion", [ConnexionController::class, 'authentifier'])
-    ->name('connexion.authentifier');
-// ->middleware('guest');
-
-Route::post("/deconnexion", [ConnexionController::class, 'deconnecter'])
-    ->name('deconnexion');
-// ->middleware('auth');
+    ->name('connexion.authentifier')
+    ->middleware('guest');
 
 Route::get("/enregistrement", [EnregistrementController::class, 'create'])
-    ->name('enregistrement.create');
-// ->middleware('guest');
+    ->name('enregistrement.create')
+    ->middleware('guest');
 
 Route::post("/enregistrement", [EnregistrementController::class, 'store'])
-    ->name('enregistrement.store');
-// ->middleware('guest');
+    ->name('enregistrement.store')
+    ->middleware('guest');
+
+Route::post("/deconnexion", [ConnexionController::class, 'deconnecter'])
+    ->name('deconnexion')
+    ->middleware('auth');

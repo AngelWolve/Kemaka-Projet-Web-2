@@ -12,39 +12,45 @@ section#activites {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 5rem auto;
-    width: 75%;
+    width: 90%;
 
-    .activite {
+    ul {
         display: flex;
-        margin-bottom: 3rem;
-        max-width: 100%;
+        flex-direction: column;
 
-        .image {
-            margin-right: 2.5rem;
-        }
-
-        .texte {
+        li {
             display: flex;
-            flex-direction: column;
-            max-width: 100%;
+            align-items: center;
+            margin-bottom: 2.75rem;
 
-            h2 {
-                text-align: left;
+            img {
+                width: 100%;
+                height: 100%;
+                margin-right: 2.5rem;
             }
 
-            p {
-                padding-top: 0.938em;
+            div {
+                display: flex;
+                flex-direction: column;
+
+                h2 {
+                    text-align: left;
+                }
+
+                p {
+                    margin-top: 0.85rem;
+                }
+            }
+
+            &:nth-child(even) {
+                flex-direction: row-reverse;
+
+                img {
+                    margin-left: 2.5rem;
+                    margin-right: 0;
+                }
             }
         }
-    }
-}
-
-.activites .activite:nth-child(even) {
-    flex-direction: row-reverse;
-
-    .image {
-        margin-left: 2.5rem;
     }
 }
 

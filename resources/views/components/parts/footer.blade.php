@@ -6,22 +6,22 @@
             </a>
         </li>
         <li>
-            <a class="lien" href="{{ route('accueil') }}">
+            <a class="lien" href="{{ route('activites.index') }}">
                 ACTIVITÉS
             </a>
         </li>
         <li>
-            <a class="lien" href="{{ route('accueil') }}">
+            <a class="lien" href="{{ route('forfaits.index') }}">
                 FORFAITS
             </a>
         </li>
         <li>
-            <a class="lien" href="{{ route('accueil') }}">
+            <a class="lien" href="{{ route('a_propos.index') }}">
                 À PROPOS
             </a>
         </li>
         <li>
-            <a class="lien" href="{{ route('accueil') }}">
+            <a class="lien" href="{{ route('nous_joindre.index') }}">
                 NOUS JOINDRE
             </a>
         </li>

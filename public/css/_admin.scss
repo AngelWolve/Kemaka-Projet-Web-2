@@ -76,7 +76,9 @@ section#admin-actualites {
     margin: 1rem auto 0;
     max-width: 75%;
 
-    h1 {}
+    h1 {
+        margin-bottom: 1rem;
+    }
 
     div.conteneur-create {
         display: flex;
@@ -95,7 +97,11 @@ section#admin-actualites {
             margin-bottom: 2rem;
             padding: 20px;
 
-            h2 {}
+            h2 {
+                margin-bottom: 1.5rem;
+                font-size: 1.75rem;
+                color: black;
+            }
 
             div.conteneur-boutons {
                 display: flex;
@@ -133,7 +139,11 @@ section#admin-activites {
             margin-bottom: 2rem;
             padding: 20px;
 
-            h2 {}
+            h2 {
+                margin-bottom: 1.5rem;
+                font-size: 1.75rem;
+                color: black;
+            }
 
             div.conteneur-activites {
                 display: flex;

@@ -1,4 +1,4 @@
-<x-client>
+<x-client titre="Nous joindre">
     <div class="contact">
         <h2>Heures d'ouverture</h2>
         <div class="date">

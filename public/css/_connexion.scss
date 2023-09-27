@@ -25,7 +25,8 @@ section#connexion {
         margin: 0 auto;
 
         form {
-            background-color: #D9A0C9;
+            background: rgb(217, 160, 201);
+            background: linear-gradient(0deg, rgba(217, 160, 201, 1) 0%, rgba(242, 179, 224, 1) 20%, rgba(255, 213, 243, 1) 50%, rgba(242, 179, 224, 1) 80%, rgba(217, 160, 201, 1) 100%);
             margin: 0 auto 5px;
             padding: 50px 0;
             border-radius: 7px;
@@ -76,7 +77,8 @@ section#enregistrement {
         margin: 0 auto;
 
         form {
-            background-color: #D9A0C9;
+            background: rgb(217, 160, 201);
+            background: linear-gradient(0deg, rgba(217, 160, 201, 1) 0%, rgba(242, 179, 224, 1) 20%, rgba(255, 213, 243, 1) 50%, rgba(242, 179, 224, 1) 80%, rgba(217, 160, 201, 1) 100%);
             margin: 0 auto 5px;
             padding: 50px 0;
             border-radius: 7px;

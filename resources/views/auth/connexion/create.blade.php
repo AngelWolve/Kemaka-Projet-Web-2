@@ -13,7 +13,7 @@
                 <x-forms.input name="email" label="Courriel" autocomplete required max_length="255"
                     placeholder="Entrez votre courriel" />
 
-                <x-forms.input name="password" label="Mot de passe" required max_length="255"
+                <x-forms.input name="password" type="password" label="Mot de passe" required max_length="255"
                     placeholder="Entrez votre mot de passe" />
 
                 <div class="submit-connexion">

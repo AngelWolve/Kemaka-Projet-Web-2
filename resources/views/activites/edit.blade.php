@@ -1,21 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-
-<body>
-    <h1>Modifier une activité</h1>
+<x-admin>
+    <section id="admin-modifier-activite">
+        <h1>Modifier une activité</h1>
     {{-- MESSAGES --}}
     @if (session('succes'))
         <p>
             {{ session('succes') }}</p>
     @endif
-    <div>
+    <div class="activite-modifier">
         <form action="{{ route('admin/activites.update') }}" method="POST" enctype="multipart/form-data">
             @csrf
 
@@ -64,7 +55,6 @@
             <a href="{{ route('admin/activites.index') }}">Retour aux activités</a>
         </p>
     </div>
-</body>
+    </section>
 
-</html>
-
+</x-admin>

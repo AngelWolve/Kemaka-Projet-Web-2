@@ -27,9 +27,11 @@
         </li>
     </ul>
 
-    <a class="logo-footer" href="{{ route('accueil') }}">
-        <img src="{{ asset('images/logo.png') }}" alt="Logo Asian Quest">
-    </a>
+    <div class="logo-footer">
+        <a href="{{ route('accueil') }}">
+            <img src="{{ asset('images/logo.png') }}" alt="Logo Asian Quest">
+        </a>
+    </div>
 
     <ul class="liens-sociaux">
         <li>

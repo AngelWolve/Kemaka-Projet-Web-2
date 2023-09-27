@@ -215,10 +215,10 @@ section#apropos {
 
 }
 
-
 /***************
 ** NOUS JOINDRE
 ***************/
+
 .contact {
     padding: 20px;
     max-width: 1440px;
@@ -226,7 +226,6 @@ section#apropos {
     margin: auto;
 
     h2 {
-        color: $rose-fonce;
         margin-bottom: 2.2rem;
     }
 
@@ -239,9 +238,11 @@ section#apropos {
             text-align: center;
 
             h3,
-            h4,
             p {
                 margin-bottom: 0.8rem;
+            }
+            p.tx-lg{
+                font-weight: bold;
             }
         }
     }
@@ -260,13 +261,14 @@ section#apropos {
         text-align: center;
 
         h2 {
-            color: $rose-fonce;
             margin-bottom: 2.2rem;
         }
 
-        h4,
         p {
             margin-bottom: 0.5rem;
+        }
+        p.tx-lg{
+            font-weight: bold;
         }
     }
 }
@@ -285,3 +287,8 @@ section#apropos {
         border: 0;
     }
 }
+
+/***************
+** ERREUR 403
+***************/
+

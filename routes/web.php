@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Route;
  */
 Route::get("/", [AccueilController::class, 'accueil'])
     ->name('accueil');
+    // ->middleware(['auth', 'admin']);
 
 /*****************
  * ADMIN
@@ -77,25 +78,25 @@ Route::post("/admin/actualites/destroy", [ActualiteController::class, 'destroy']
 Route::get("/activites", [ActiviteController::class, 'index'])
     ->name('activites.index');
 
-Route::get('/activites/create', [ActiviteController::class, 'create'])
-    ->name('activites.create')
-    ->middleware('auth');
+Route::get('/admin/activites/create', [ActiviteController::class, 'create'])
+    ->name('admin/activites.create');
+    // ->middleware('auth');
 
-Route::post('/activites', [ActiviteController::class, 'store'])
-    ->name('activites.store')
-    ->middleware('auth');
+Route::post('/admin/activites', [ActiviteController::class, 'store'])
+    ->name('admin/activites.store');
+    // ->middleware('auth');
 
-Route::get("/activites/edit/{id}", [ActiviteController::class, 'edit'])
-    ->name('activites.edit')
-    ->middleware('auth');
+Route::get("/admin/activites/edit/{id}", [ActiviteController::class, 'edit'])
+    ->name('admin/activites.edit');
+    // ->middleware('auth');
 
-Route::post("/activites/update", [ActiviteController::class, 'update'])
-    ->name('activites.update')
-    ->middleware('auth');
+Route::post("/admin/activites/update", [ActiviteController::class, 'update'])
+    ->name('admin/activites.update');
+    // ->middleware('auth');
 
-Route::post("/activites/destroy", [ActiviteController::class, 'destroy'])
-    ->name('activites.destroy')
-    ->middleware('auth');
+Route::post("/admin/activites/destroy", [ActiviteController::class, 'destroy'])
+    ->name('admin/activites.destroy');
+    // ->middleware('auth');
 
 /*****************
  * FORFAITS
@@ -144,6 +145,28 @@ Route::get("/employe", [EmployeController::class, 'index'])
     ->name('employe.index');
 // ->middleware('auth');
 
+
+Route::get('/admin/employes/create', [EmployeController::class, 'create'])
+    ->name('admin/employes.create');
+// ->middleware('auth');
+
+Route::post('/admin/employes', [EmployeController::class, 'store'])
+    ->name('admin/employes.store');
+// ->middleware('auth');
+
+Route::get("/admin/employes/edit/{id}", [EmployeController::class, 'edit'])
+    ->name('admin/employes.edit');
+// ->middleware('auth');
+
+Route::post("/admin/employes/update", [EmployeController::class, 'update'])
+    ->name('admin/employes.update');
+// ->middleware('auth');
+
+Route::post("/admin/employes/destroy", [EmployeController::class, 'destroy'])
+    ->name('admin/employes.destroy');
+// ->middleware('auth');
+
+
 /*****************
  * CONNEXION ET ENREGISTREMENT
  */
@@ -166,19 +189,3 @@ Route::get("/enregistrement", [EnregistrementController::class, 'create'])
 Route::post("/enregistrement", [EnregistrementController::class, 'store'])
     ->name('enregistrement.store');
 // ->middleware('guest');
-
-/*****************
- * NOUS JOINDRE
- */
-Route::get('/nous_joindre', [NousJoindreController::class, 'index'])
-    ->name('nous_joindre.index');
-
-Route::post('/nous_joindre/store', [NousJoindreController::class, 'store'])
-    ->name('nous_joindre.store');
-
-/*****************
- * EMPLOYÉ
- */
-Route::get("/employe", [EmployeController::class, 'index'])
-    ->name('employe.index');
-    // ->middleware('auth');

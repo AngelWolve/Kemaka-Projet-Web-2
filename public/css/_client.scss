@@ -133,7 +133,63 @@ section#forfaits {
 ***************/
 
 section#reservations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem auto;
+    width: 75%;
 
+    .reservations-bg {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 7px;
+        background: rgb(217, 160, 201);
+        background: linear-gradient(0deg, rgba(217, 160, 201, 1) 0%, rgba(242, 179, 224, 1) 20%, rgba(255, 213, 243, 1) 50%, rgba(242, 179, 224, 1) 80%, rgba(217, 160, 201, 1) 100%);
+        padding: 3em;
+        width: 50%;
+
+        .details {
+            margin-bottom: 1.5rem;
+
+            h3 {
+                text-align: left;
+                margin-bottom: 0.8333rem;
+            }
+
+            .duree-p {
+                margin: 0.555rem 0rem 0.555rem 0rem;
+            }
+
+            span {
+                font-weight: bold;
+            }
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+
+            .date {
+                margin-bottom: 20px;
+
+                label {
+                    display: block;
+                    margin-bottom: 5px;
+                    font-weight: bold;
+                    color: $amaranth;
+                }
+
+                select {
+                    width: 100%;
+                    padding: 10px;
+                    border: 1px solid $gris;
+                    border-radius: 5px;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
 }
 
 /***************

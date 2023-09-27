@@ -4,36 +4,36 @@
         <div class="date">
             <div>
                 <h3>19 juillet</h3>
-                <h4>Admissions</h4>
-                <p class="tx-lg">8:00 - 19:00</p>
-                <h4>Horaire</h4>
-                <p class="tx-lg">10:00 - 24:00</p>
+                <p class="tx-lg">Admissions</p>
+                <p class="tx-md">8:00 - 19:00</p>
+                <p class="tx-lg">Horaire</p>
+                <p class="tx-md">10:00 - 24:00</p>
             </div>
             <div>
                 <h3>20 juillet</h3>
-                <h4>Admissions</h4>
-                <p class="tx-lg">8:00 - 19:00</p>
-                <h4>Horaire</h4>
-                <p class="tx-lg">10:00 - 24:00</p>
+                <p class="tx-lg">Admissions</p>
+                <p class="tx-md">8:00 - 19:00</p>
+                <p class="tx-lg">Horaire</p>
+                <p class="tx-md">10:00 - 24:00</p>
             </div>
             <div>
                 <h3>21 juillet</h3>
-                <h4>Admissions</h4>
-                <p class="tx-lg">8:00 - 19:00</h4>
-                <h4>Horaire</h4>
-                <p class="tx-lg">10:00 - 24:00</p>
+                <p class="tx-lg">Admissions</p>
+                <p class="tx-md">8:00 - 19:00</p>
+                <p class="tx-lg">Horaire</p>
+                <p class="tx-md">10:00 - 24:00</p>
             </div>
         </div>
     </div>
     <div class="adresse">
         <div class="contenu-adresse">
             <h2>Coordonnées</h2>
-            <h4>Adresse</h4>
-            <p class="tx-lg">201 Avenue Viger O., Montréal, QC H2Z 1X7</p>
-            <h4>Téléphone</h4>
-            <p class="tx-lg">(514) 123-4567</p>
-            <h4>Courriel</h4>
-            <p class="tx-lg">info@asianquest.qc.ca</p>
+            <p class="tx-lg">Adresse</p>
+            <p class="tx-md">201 Avenue Viger O., Montréal, QC H2Z 1X7</p>
+            <p class="tx-lg">Téléphone</p>
+            <p class="tx-md">(514) 123-4567</p>
+            <p class="tx-lg">Courriel</p>
+            <p class="tx-md">info@asianquest.qc.ca</p>
         </div>
     </div>
     <div class="cart">

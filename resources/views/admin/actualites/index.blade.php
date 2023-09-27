@@ -1,81 +1,64 @@
-<x-admin>
+    <x-admin>
+        {{-- Message de confirmaiton d'ajout d'une activité --}}
+        <x-parts.alertes cle="succes" />
 
-    {{-- Message de confirmaiton d'ajout d'une actualité --}}
-    <x-parts.alertes cle="succes" />
-
-    <main class="actualite">
-
-        @if ($actualites->isEmpty())
-            <h2>
-                Aucune actualités actuellement
-            </h2>
-        @else
+        <section id="admin-actualites">
+            <h1>Toutes les actualités</h1>
             {{-- Liste des actualités --}}
-            <section>
+            <div class="conteneur-create">
+                {{-- CRÉATION --}}
+                <a href="{{ route('admin/actualites.create') }}">
+                    <span>
+                        créer
+                    </span>
+                </a>
+                {{-- RETOUR --}}
+                <a href="{{ route('admin.index') }}">
+                    <span>
+                        Retour
+                    </span>
+                </a>
+            </div>
+
+            @if ($actualites->isEmpty())
+                <p>
+                    Aucune actualités actuellement
+                </p>
+            @else
                 <ul>
-                    <h3>Toutes les actualités</h3>
-                    <div>
-                        {{-- CRÉATION --}}
-                        <a href="{{ route('admin/actualites.create') }}">
-                            <span>
-                                créer
-                            </span>
-                        </a>
-                        {{-- RETOUR --}}
-                        <a href="{{ route('admin.index') }}">
-                            <span>
-                                Retour
-                            </span>
-                        </a>
+                    @foreach ($actualites as $actualite)
+                        <li>
+                            <h2>
+                                {{ $actualite->titre }}
+                            </h2>
 
-                    </div>
+                            <p>
+                                {{ $actualite->description }}
+                            </p>
 
-                    <div>
-                        @foreach ($actualites as $actualite)
-                            <li>
-                                <div>
-                                    <h4>
-                                        {{ $actualite->titre }}
-                                    </h4>
-                                    <p>
-                                        {{ $actualite->description }}
-                                    </p>
+                            <div class="conteneur-boutons">
+                                {{-- MODIFICATION --}}
+                                <a href="{{ route('admin/actualites.edit', ['id' => $actualite->id]) }}">
+                                    <span>
+                                        edit
+                                    </span>
+                                </a>
 
-                                    <p>
-                                        {{ $actualite->created_at }}
-                                    </p>
+                                {{-- SUPPRESSION --}}
+                                <form action="{{ route('admin/actualites.destroy') }}" method="POST">
+                                    @csrf
 
-                                    <div>
-
-                                        {{-- MODIFICATION --}}
-                                        <a href="{{ route('admin/actualites.edit', ['id' => $actualite->id]) }}">
-                                            <span>
-                                                edit
-                                            </span>
-                                        </a>
-
-                                        {{-- SUPPRESSION --}}
-                                        <form action="{{ route('admin/actualites.destroy') }}" method="POST">
-                                            @csrf
-
-                                            <input type="hidden" name="id" value="{{ $actualite->id }}">
-                                            <button type="submit">
-                                                <span>
-                                                    delete
-                                                </span>
-                                            </button>
-                                        </form>
-                                    </div>
-
-                                </div>
-
-                            </li>
-                        @endforeach
-                    </div>
-
+                                    <input type="hidden" name="id" value="{{ $actualite->id }}">
+                                    <button type="submit">
+                                        <span>
+                                            delete
+                                        </span>
+                                    </button>
+                                </form>
+                            </div>
+                        </li>
+                    @endforeach
                 </ul>
-            </section>
-
-        @endif
-    </main>
-</x-admin>
+            @endif
+        </section>
+    </x-admin>

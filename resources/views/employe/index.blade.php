@@ -1,4 +1,4 @@
-<x-employe titre="Réservations">
+<x-admin titre="Réservations">
     <h4 class="employe">liste des réservations</h4>
     @if ($reservations->isEmpty())
         <p>Aucune réservation pour l'instant.</p>
@@ -22,4 +22,4 @@
             </tbody>
         </table>
     @endif
-</x-employe>
+</x-admin>

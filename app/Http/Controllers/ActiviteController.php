@@ -40,22 +40,23 @@ class ActiviteController extends Controller
     {
         // Valider
         $valides = $request->validate([
-            "nom" => "required|min:5|max:150",
+            "nom" => "required|max:255",
             "description" => "required",
             "image" =>  "required|mimes:png,jpg,jpeg",
         ], [
-            "nom.max" => "Le nom a un maximum de maximum caractères",
-            "nom.min" => "Le nom doit avoir un minimum de  caractères",
+            "nom.required" => "Le nom est requis",
+            "nom.max" => "Le :attribute doit avoir un maximum de :max caractères",
             "description.required" => "La description de l'activité est obligatoire",
             "image.required" => "La image de l'activité est obligatoire",
-            "image.mimes" => "L'image de l'activité doit être en format : png,jpg,jpeg",
+            "image.mimes" => "L'image de l'activité doit avoir une des extensions suivantes: PNG, JPG, JPEG",
         ]);
 
         // Ajouter à la BDD
         $activite = new Activite();
         $activite->nom = $valides["nom"];
         $activite->description = $valides["description"];
-        $activite->user_id = auth()->user()->id;
+        // $activite->user_id = auth()->user()->id;
+        $activite->user_id = 1;
 
         // Traitement de l'image
         if ($request->hasFile('image')) {
@@ -69,7 +70,7 @@ class ActiviteController extends Controller
 
         // Rediriger
         return redirect()
-            ->route('activites.index')
+            ->route('admin/activites.index')
             ->with('succes', "L'activité a été ajoutée avec succès!");
     }
 
@@ -112,7 +113,8 @@ class ActiviteController extends Controller
         $activite = Activite::findOrFail($valides["id"]);
         $activite->nom = $valides["nom"];
         $activite->description = $valides["description"];
-        $activite->user_id = auth()->id();
+        // $activite->user_id = auth()->id();
+        $activite->user_id = 1;
 
         // Traitement de l'image
         if ($request->hasFile('image')) {
@@ -126,7 +128,7 @@ class ActiviteController extends Controller
 
         // Rediriger
         return redirect()
-            ->route('activites.index')
+            ->route('admin/activites.index')
             ->with('succes', "L'activité a été modifiée avec succès!");
     }
 
@@ -140,7 +142,7 @@ class ActiviteController extends Controller
     {
         Activite::destroy($request->id);
 
-        return redirect()->route('activites.index')
+        return redirect()->route('admin/activites.index')
             ->with('succes', "L'activité a bien été supprimée!");
     }
 }

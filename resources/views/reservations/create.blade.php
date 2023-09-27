@@ -35,14 +35,26 @@
 <x-client titre="Réservez ici!">
     <section id="reservations">
 
-        <div class="infos">
-            <h3>{{ $forfait->nom }}</h3>
-            <p class="prix-p tx-md">
-                <span>Prix:</span> {{ $forfait->prix }} $
-            </p>
-            <p class="duree-p tx-md">
-                <span>Durée:</span> {{ $forfait->duree }}
-            </p>
+        <div class="details">
+            <h3>
+                {{ $forfait->nom }}
+            </h3>
+            <div class="prix">
+                <p class="prix-p tx-md">
+                    <span>
+                        Prix:
+                    </span>
+                    {{ $forfait->prix }} $
+                </p>
+            </div>
+            <div class="duree">
+                <p class="duree-p tx-md">
+                    <span>
+                        Durée:
+                    </span>
+                    {{ $forfait->duree }}
+                </p>
+            </div>
         </div>
 
         <form action="{{ route('reservations.store') }}" method="post">

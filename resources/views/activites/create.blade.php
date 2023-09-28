@@ -1,18 +1,18 @@
 <x-admin>
     <section id="admin-create-activite">
-        <h1>Créer une activité</h1>
-        {{-- MESSAGES --}}
-        @if (session('succes'))
-            <p>
-                {{ session('succes') }}</p>
-        @endif
-        <div class="activite-bg">
+        <div class="activite-form">
+            <h1>Créer une activité</h1>
+            {{-- MESSAGES --}}
+            @if (session('succes'))
+                <p>
+                    {{ session('succes') }}</p>
+            @endif
             {{-- FORMULAIRE --}}
             <form action="{{ route('admin/activites.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
-                <div>
-                    {{-- NOM --}}
+                {{-- NOM --}}
+                <div class="nom">
                     <label for="nom">Nom</label>
                     <div>
 
@@ -22,8 +22,8 @@
                     </div>
                 </div>
 
-                <div>
-                    {{-- DESCRIPTION --}}
+                {{-- DESCRIPTION --}}
+                <div class="description">
                     <label for="description">Description</label>
                     <div>
                         <x-forms.erreur champ="description" />
@@ -34,7 +34,7 @@
                 </div>
 
                 {{-- IMAGE --}}
-                <div>
+                <div class="image">
                     <label for="image"> Image </label>
                     <div>
                         <input id="image" name="image" type="file">
@@ -45,13 +45,13 @@
                 </div>
 
                 {{-- SUBMIT --}}
-                <div>
-                    <input type="submit" vlue="Ajouter!">
+                <div class="submit-create">
+                    <input class="btn-primaire" type="submit" value="Ajouter!">
                 </div>
             </form>
 
             {{-- LIEN RETOUR --}}
-            <p>
+            <p class="retour-activite">
                 <a href="{{ route('admin/activites.index') }}" class="hover:text-indigo-600">Retour aux activites</a>
             </p>
         </div>

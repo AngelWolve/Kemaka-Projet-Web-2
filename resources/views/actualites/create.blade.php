@@ -1,19 +1,18 @@
 <x-admin>
     <section id="admin-create-actualite">
-        <h1>Créer une actualité</h1>
-        {{-- MESSAGES --}}
-        @if (session('succes'))
-            <p>
-                {{ session('succes') }}</p>
-        @endif
-        <div class="actualite-bg" >
+        <div class="actualite-form">
+            <h1>Créer une actualité</h1>
+            {{-- MESSAGES --}}
+            @if (session('succes'))
+                <p>
+                    {{ session('succes') }}</p>
+            @endif
             {{-- FORMULAIRE --}}
             <form action="{{ route('admin/actualites.store') }}" method="POST">
                 @csrf
 
-
-                <div>
-                    {{-- TITRE --}}
+                {{-- TITRE --}}
+                <div class="titre">
                     <label for="titre">Titre</label>
                     <div>
 
@@ -23,8 +22,8 @@
                     </div>
                 </div>
 
-                <div>
-                    {{-- DESCRIPTION --}}
+                {{-- DESCRIPTION --}}
+                <div class="description">
                     <label for="description">Description</label>
                     <div>
                         <x-forms.erreur champ="description" />
@@ -35,13 +34,13 @@
                 </div>
 
                 {{-- SUBMIT --}}
-                <div>
+                <div class="submit-create">
                     <input class="btn-primaire" type="submit" value="Ajouter!">
                 </div>
             </form>
 
             {{-- LIEN RETOUR --}}
-            <p>
+            <p class="retour-actualite">
                 <a href="{{ route('admin/actualites.index') }}" class="hover:text-indigo-600">Retour aux actualites</a>
             </p>
         </div>

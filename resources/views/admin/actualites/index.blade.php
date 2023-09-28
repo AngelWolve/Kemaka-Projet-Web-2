@@ -7,13 +7,13 @@
             {{-- Liste des actualités --}}
             <div class="conteneur-create">
                 {{-- CRÉATION --}}
-                <a href="{{ route('admin/actualites.create') }}">
+                <a class="btn-create" href="{{ route('admin/actualites.create') }}">
                     <span>
                         créer
                     </span>
                 </a>
                 {{-- RETOUR --}}
-                <a href="{{ route('admin.index') }}">
+                <a class="btn-retour" href="{{ route('admin.index') }}">
                     <span>
                         Retour
                     </span>
@@ -40,7 +40,7 @@
                                 {{-- MODIFICATION --}}
                                 <a href="{{ route('admin/actualites.edit', ['id' => $actualite->id]) }}">
                                     <span>
-                                        edit
+                                        modifier
                                     </span>
                                 </a>
 
@@ -49,9 +49,10 @@
                                     @csrf
 
                                     <input type="hidden" name="id" value="{{ $actualite->id }}">
+
                                     <button type="submit">
                                         <span>
-                                            delete
+                                            supprimer
                                         </span>
                                     </button>
                                 </form>

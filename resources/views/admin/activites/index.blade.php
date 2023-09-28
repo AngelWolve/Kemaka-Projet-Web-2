@@ -8,13 +8,13 @@
         {{-- Liste des activités --}}
         <div class="conteneur-create">
             {{-- CRÉATION --}}
-            <a href="{{ route('admin/activites.create') }}">
+            <a class="btn-create" href="{{ route('admin/activites.create') }}">
                 <span>
                     créer
                 </span>
             </a>
             {{-- RETOUR --}}
-            <a href="{{ route('admin.index') }}">
+            <a class="btn-retour" href="{{ route('admin.index') }}">
                 <span>
                     Retour
                 </span>
@@ -39,14 +39,14 @@
                                 {{ $activite->description }}
                             </p>
 
-                            <img src="{{ $activite->image }}" alt="image de activité" width="400" height="250">
+                            <img src="{{ $activite->image }}" alt="image de activité" width="400" height="220">
                         </div>
 
                         <div class="conteneur-boutons">
                             {{-- MODIFICATION --}}
                             <a href="{{ route('admin/activites.edit', ['id' => $activite->id]) }}">
                                 <span>
-                                    edit
+                                    modifier
                                 </span>
                             </a>
 
@@ -57,7 +57,7 @@
                                 <input type="hidden" name="id" value="{{ $activite->id }}">
                                 <button type="submit">
                                     <span>
-                                        delete
+                                        supprimer
                                     </span>
                                 </button>
                             </form>

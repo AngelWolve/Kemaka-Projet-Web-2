@@ -99,13 +99,12 @@ class ActiviteController extends Controller
             "id" => "required",
             "nom" => "required|min:5|max:150",
             "description" => "required",
-            "image" =>  "required|mimes:png,jpg,jpeg",
+            "image" =>  "nullable|mimes:png,jpg,jpeg",
         ], [
             "id.required" => "L'id de l'activité est obligatoire",
             "nom.max" => "Le nom a un maximum de maximum caractères",
             "nom.min" => "Le nom doit avoir un minimum de 5 caractères",
             "description.required" => "La description de l'activité est obligatoire",
-            "image.required" => "L'image de l'activité est obligatoire",
             "image.mimes" => "L'image de l'activité doit être en format : png,jpg,jpeg",
         ]);
 

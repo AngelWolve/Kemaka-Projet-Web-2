@@ -33,6 +33,17 @@
     </div>
     <div class="conteneur-connexion">
         <i class="fa-solid fa-cart-shopping"></i>
-        <x-parts.bouton-primaire route="{{ route('connexion.create') }}" texte="CONNEXION / S'INSCRIRE" />
+        @if (Auth::check())
+        <form action="{{ route('deconnexion') }}" method="POST">
+            @csrf
+
+            <button type="submit"
+                class="btn-primaire">
+                DÉCONNEXION
+            </button>
+        </form>
+    @else
+            <x-parts.bouton-primaire route="{{ route('connexion.create') }}" texte="CONNEXION / S'INSCRIRE" />
+        @endif
     </div>
 </nav>

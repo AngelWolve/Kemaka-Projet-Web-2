@@ -145,7 +145,7 @@ Route::get("/admin/actualites", [AdminController::class, 'actualites'])
  * UTILISATEURS
  */
 Route::get("/admin/utilisateurs", [UtilisateurController::class, 'index'])
-    ->name('admin/reservations.index')
+    ->name('admin/utilisateurs.index')
     ->middleware('admin');
 
 Route::get('/admin/utilisateurs/create', [UtilisateurController::class, 'create'])

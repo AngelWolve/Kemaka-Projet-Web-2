@@ -31,14 +31,14 @@ class ActiviteController extends Controller
     }
 
     /**
-     * Traite l'ajout
+     * Traite l'ajout d'une activité
      *
      * @param Request $request
      * @return RedirectResponse
      */
     public function store(Request $request)
     {
-        // Valider
+        // Validation
         $valides = $request->validate([
             "nom" => "required|max:255",
             "description" => "required",
@@ -51,24 +51,20 @@ class ActiviteController extends Controller
             "image.mimes" => "L'image de l'activité doit avoir une des extensions suivantes: PNG, JPG, JPEG",
         ]);
 
-        // Ajouter à la BDD
         $activite = new Activite();
         $activite->nom = $valides["nom"];
         $activite->description = $valides["description"];
-        // $activite->user_id = auth()->user()->id;
         $activite->user_id = 1;
 
         // Traitement de l'image
         if ($request->hasFile('image')) {
-            // Déplacer
             Storage::putFile("public/uploads", $request->image);
-            // Sauvegarder le "bon" chemin qui sera inséré dans la BDD et utilisé par le navigateur
             $activite->image = "/storage/uploads/" . $request->image->hashName();
         }
 
         $activite->save();
 
-        // Rediriger
+        // Redirection
         return redirect()
             ->route('admin/activites.index')
             ->with('succes', "L'activité a été ajoutée avec succès!");
@@ -86,15 +82,16 @@ class ActiviteController extends Controller
             "activite" => Activite::findOrFail($id),
         ]);
     }
+
     /**
-     * Traite la modification de l'acivité
+     * Traite la modification d'une activité
      *
-     * @param Request $request Objet qui contient tous les champs reçus dans la requête
+     * @param Request $request
      * @return RedirectResponse
      */
     public function update(Request $request)
     {
-        // Valider
+        // Validation
         $valides = $request->validate([
             "id" => "required",
             "nom" => "required|min:5|max:150",
@@ -108,31 +105,27 @@ class ActiviteController extends Controller
             "image.mimes" => "L'image de l'activité doit être en format : png,jpg,jpeg",
         ]);
 
-        // Récupération de l'activité a modifier, suivi de la modification et sauvegarde
         $activite = Activite::findOrFail($valides["id"]);
         $activite->nom = $valides["nom"];
         $activite->description = $valides["description"];
-        // $activite->user_id = auth()->id();
         $activite->user_id = 1;
 
         // Traitement de l'image
         if ($request->hasFile('image')) {
-            // Déplacer
             Storage::putFile("public/uploads", $request->image);
-            // Sauvegarder le "bon" chemin qui sera inséré dans la BDD et utilisé par le navigateur
             $activite->image = "/storage/uploads/" . $request->image->hashName();
         }
 
         $activite->save();
 
-        // Rediriger
+        // Redirection
         return redirect()
             ->route('admin/activites.index')
             ->with('succes', "L'activité a été modifiée avec succès!");
     }
 
     /**
-     * Traite la suppression de l'activité
+     * Traite la suppression d'une activité
      *
      * @param Request $request
      * @return RedirectResponse

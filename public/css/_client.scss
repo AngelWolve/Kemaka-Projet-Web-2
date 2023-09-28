@@ -12,39 +12,45 @@ section#activites {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 5rem auto;
-    width: 75%;
+    width: 90%;
 
-    .activite {
+    ul {
         display: flex;
-        margin-bottom: 3rem;
-        max-width: 100%;
+        flex-direction: column;
 
-        .image {
-            margin-right: 2.5rem;
-        }
-
-        .texte {
+        li {
             display: flex;
-            flex-direction: column;
-            max-width: 100%;
+            align-items: center;
+            margin-bottom: 2.75rem;
 
-            h2 {
-                text-align: left;
+            img {
+                width: 100%;
+                height: 100%;
+                margin-right: 2.5rem;
             }
 
-            p {
-                padding-top: 0.938em;
+            div {
+                display: flex;
+                flex-direction: column;
+
+                h2 {
+                    text-align: left;
+                }
+
+                p {
+                    margin-top: 0.85rem;
+                }
+            }
+
+            &:nth-child(even) {
+                flex-direction: row-reverse;
+
+                img {
+                    margin-left: 2.5rem;
+                    margin-right: 0;
+                }
             }
         }
-    }
-}
-
-.activites .activite:nth-child(even) {
-    flex-direction: row-reverse;
-
-    .image {
-        margin-left: 2.5rem;
     }
 }
 
@@ -56,74 +62,73 @@ section#forfaits {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 5rem auto;
-    width: 75%;
+    width: 90%;
 
-    .forfaits-top {
-        max-width: 100%;
-        margin-bottom: 3.75rem;
-
-        .p1 {
-            margin-top: 3rem;
+    div.intro {
+        h2 {
+            margin-bottom: 2.75rem;
         }
 
-        .p2 {
-            margin-top: 1.563rem;
+        p {
+            margin-bottom: 1.25rem;
+
+            &:last-child {
+                margin-bottom: 2.75rem;
+            }
         }
     }
 
-    .forfait {
+    ul {
         display: flex;
-        margin-bottom: 3rem;
-        margin-top: 3rem;
-        max-width: 100%;
-        height: 25.313rem;
-        border-radius: 15px;
-        border: 25px solid;
+        flex-direction: column;
 
-        .details {
-            padding: 2.5em 3.889em 6.667em 2.5em;
+        li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 2.75rem;
+            padding: 1.25rem;
+            border: 1.25rem solid;
+            border-radius: 7px;
 
-            span {
-                font-weight: bold;
+            &:first-child {
+                background-color: rgba($violet, 0.2);
+                border-color: $violet;
             }
-        }
 
-        &:first-child {
-            background-color: rgba(85, 56, 115, 0.2);
-            border: 25px solid $violet;
-        }
+            &:nth-child(2) {
+                background-color: rgba($rose, 0.2);
+                border-color: $rose;
+            }
 
-        &:nth-child(2) {
-            background-color: rgba(242, 179, 224, 0.2);
-            border: 25px solid $rose;
-        }
+            &:last-child {
+                background-color: rgba($bleu, 0.2);
+                border-color: $bleu;
+            }
 
-        &:last-child {
-            background-color: rgba(4, 157, 191, 0.2);
-            border: 25px solid $bleu;
-        }
+            div.conteneur {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 1.35rem;
 
-        h3 {
-            text-align: left;
-            margin-bottom: 0.8333rem;
-        }
+                div.details {
+                    margin-right: 3.75rem;
 
-        .p-description {
-            margin-bottom: 2rem;
-        }
+                    h3 {
+                        text-align: left;
+                        margin-bottom: 0.85rem;
+                    }
 
-        .duree-p {
-            margin: 0.555rem 0rem 0.555rem 0rem;
-        }
+                    p {
+                        margin-bottom: 0.55rem;
 
-        .commander {
-            text-align: center;
-            margin-top: 3rem;
-        }
-
-        .image {
-            padding: 2.889em 5.278em 7em 0em;
+                        span {
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -347,3 +352,21 @@ section#apropos {
 /***************
 ** ERREUR 403
 ***************/
+
+section#erreur-403 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 3.5rem;
+    }
+}

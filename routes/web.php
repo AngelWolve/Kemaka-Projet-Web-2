@@ -7,6 +7,7 @@ use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\ActiviteController;
 use App\Http\Controllers\AproposController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ConnexionController;
 use App\Http\Controllers\EmployeController;
 use App\Http\Controllers\EnregistrementController;

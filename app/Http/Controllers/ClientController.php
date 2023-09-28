@@ -15,10 +15,13 @@ class ClientController extends Controller
      */
     public function index()
     {
+
         return view('client.index', [
-            "reservations" => Reservation::with(['user', 'forfait'])
-            ->orderBy('created_at')
-            ->get()
+            "reservations" => Auth::user()
+                ->reservations()
+                ->with('forfait')
+                ->orderBy('created_at')
+                ->get()
         ]);
     }
 }

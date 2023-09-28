@@ -76,17 +76,21 @@ class User extends Authenticatable
         return $this->belongsTo(Role::class);
     }
 
-    /**
-     * Retourne les reservations associés à une utilisateur
-     *
-     * Relation un-à-plusieurs
-     *
-     * @return HasMany
-     */
-    public function reservations()
-    {
-        return $this->belongsToMany(Forfait::class, 'reservations');
+    public function reservations() {
+        return $this->hasMany(Reservation::class);
     }
+
+    // /**
+    //  * Retourne les reservations associés à une utilisateur
+    //  *
+    //  * Relation un-à-plusieurs
+    //  *
+    //  * @return HasMany
+    //  */
+    // public function reservations()
+    // {
+    //     return $this->belongsToMany(Forfait::class, 'reservations');
+    // }
 
     public function getNomCompletAttribute(){
         return $this -> prenom ." ". $this -> nom;

@@ -15,6 +15,6 @@
                 </li>
             @endforeach
         </ul>
-        <x-parts.bouton-primaire route="forfaits.index" texte="Voir nos forfaits" />
+        <x-parts.bouton-primaire route="{{ route('forfaits.index') }}" texte="Voir nos forfaits" />
     </section>
 </x-client>

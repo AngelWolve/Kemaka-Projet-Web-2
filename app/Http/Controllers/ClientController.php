@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Reservation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -15,7 +16,9 @@ class ClientController extends Controller
     public function index()
     {
         return view('client.index', [
-            "forfaits" => Auth::user()->forfaits
+            "reservations" => Reservation::with(['user', 'forfait'])
+            ->orderBy('created_at')
+            ->get()
         ]);
     }
 }

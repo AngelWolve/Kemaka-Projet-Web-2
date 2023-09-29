@@ -85,10 +85,11 @@ class User extends Authenticatable
      */
     public function reservations()
     {
-        return $this->belongsToMany(Forfait::class, 'reservations');
+        return $this->hasMany(Reservation::class);
     }
 
-    public function getNomCompletAttribute(){
-        return $this -> prenom ." ". $this -> nom;
+    public function getNomCompletAttribute()
+    {
+        return $this->prenom . " " . $this->nom;
     }
 }

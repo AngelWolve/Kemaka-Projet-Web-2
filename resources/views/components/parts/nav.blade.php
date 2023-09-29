@@ -32,17 +32,19 @@
         </ul>
     </div>
     <div class="conteneur-connexion">
-        <i class="fa-solid fa-cart-shopping"></i>
-        @if (Auth::check())
-        <form action="{{ route('deconnexion') }}" method="POST">
-            @csrf
+        <a href="{{ route('client.index') }}">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </a>
 
-            <button type="submit"
-                class="btn-primaire">
-                DÉCONNEXION
-            </button>
-        </form>
-    @else
+        @if (Auth::check())
+            <form action="{{ route('deconnexion') }}" method="POST">
+                @csrf
+
+                <button type="submit" class="btn-primaire">
+                    DÉCONNEXION
+                </button>
+            </form>
+        @else
             <x-parts.bouton-primaire route="{{ route('connexion.create') }}" texte="CONNEXION / S'INSCRIRE" />
         @endif
     </div>

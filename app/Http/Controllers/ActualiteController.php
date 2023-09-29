@@ -40,9 +40,7 @@ class ActualiteController extends Controller
         $actualite = new Actualite();
         $actualite->titre = $valides["titre"];
         $actualite->description = $valides["description"];
-        // $actualite->user_id = auth()->user()->id ;
-        $actualite->user_id = 1;
-
+        $actualite->user_id = auth()->user()->id ;
 
         $actualite->save();
 
@@ -90,8 +88,8 @@ class ActualiteController extends Controller
         $actualite = Actualite::findOrFail($valides["id"]);
         $actualite->titre = $valides["titre"];
         $actualite->description = $valides["description"];
-        // $actualite->user_id = auth()->id();
-        $actualite->user_id = 1;
+        $actualite->user_id = auth()->id();
+
         $actualite->save();
 
         // Rediriger

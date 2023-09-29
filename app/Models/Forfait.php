@@ -9,18 +9,16 @@ class Forfait extends Model
 {
     use HasFactory;
 
-    public function reservations() {
+    /**
+     * Retourne les reservations associés à forfait
+     *
+     * Relation un-à-plusieurs
+     *
+     * @return HasMany
+     */
+    public function reservations()
+    {
         return $this->hasMany(Reservation::class);
     }
-    // /**
-    //  * Retourne les reservations associés à forfait
-    //  *
-    //  * Relation un-à-plusieurs
-    //  *
-    //  * @return HasMany
-    //  */
-    // public function reservations()
-    // {
-    //     return $this->belongsToMany(User::class, 'reservations');
-    // }
+
 }

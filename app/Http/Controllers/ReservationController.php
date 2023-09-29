@@ -81,8 +81,7 @@ class ReservationController extends Controller
 
         // Ajoutez à la BDD
         $reservation = new Reservation();
-        // $reservation->user_id = auth()->user()->id; // ou tout autre méthode pour obtenir l'utilisateur connecté
-        $reservation->user_id = 11;
+        $reservation->user_id = auth()->user()->id; // ou tout autre méthode pour obtenir l'utilisateur connecté
         $reservation->forfait_id = $forfait->id;
         $reservation->date_arrivee = $request->input('date_arrivee');
         $reservation->date_depart = $request->input('date_depart');

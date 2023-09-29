@@ -18,7 +18,6 @@ class CreateActualitesTable extends Migration
             $table->string('titre');
             $table->text('description');
             $table->foreignId('user_id')
-                ->default(1)
                 ->constrained()
                 ->onDelete('cascade')
                 ->onUpdate('cascade');

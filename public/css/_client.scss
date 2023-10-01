@@ -2,7 +2,25 @@
 ** ACCUEIL
 ***************/
 
+div.conteneur-accueil {
+    h1 {
+        display: none;
+    }
 
+    section#partenaires {
+
+        div.partenaires {
+            display: flex;
+            justify-content: center;
+            gap: 5rem;
+            margin-top: 2.75rem;
+
+            img {
+                width: 150px;
+            }
+        }
+    }
+}
 
 /***************
 ** ACTIVITÉS

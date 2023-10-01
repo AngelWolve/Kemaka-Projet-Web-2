@@ -54,7 +54,7 @@ class ActiviteController extends Controller
         $activite = new Activite();
         $activite->nom = $valides["nom"];
         $activite->description = $valides["description"];
-        $activite->user_id = 1;
+        $activite->user_id = auth()->id();
 
         // Traitement de l'image
         if ($request->hasFile('image')) {
@@ -108,7 +108,7 @@ class ActiviteController extends Controller
         $activite = Activite::findOrFail($valides["id"]);
         $activite->nom = $valides["nom"];
         $activite->description = $valides["description"];
-        $activite->user_id = 1;
+        $activite->user_id = auth()->id();
 
         // Traitement de l'image
         if ($request->hasFile('image')) {

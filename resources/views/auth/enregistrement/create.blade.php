@@ -15,10 +15,10 @@
                 <x-forms.input name="email" label="Courriel" autocomplete="email" autofocus required max_length="255"
                     value="{{ old('email') }}" />
 
-                <x-forms.input name="password" label=" Mot de passe" autocomplete="current-password" autofocus required
+                <x-forms.input name="password" type="password" label=" Mot de passe" autocomplete="current-password" autofocus required
                     max_length="255" />
 
-                <x-forms.input name="password_confirmation" label=" Confirmation du mot de passe" autofocus required
+                <x-forms.input name="password_confirmation" type="password" label=" Confirmation du mot de passe" autofocus required
                     max_length="255" />
 
                 <div class="submit-enregistrement">

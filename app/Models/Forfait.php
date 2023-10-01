@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Forfait extends Model
 {
     use HasFactory;
+
     /**
      * Retourne les reservations associés à forfait
      *
@@ -17,6 +18,7 @@ class Forfait extends Model
      */
     public function reservations()
     {
-        return $this->belongsToMany(User::class, 'reservations');
+        return $this->hasMany(Reservation::class);
     }
+
 }

@@ -23,6 +23,8 @@
     <x-parts.infolettre />
 
     <x-parts.footer />
+
+    <script src="js/main.js" type="module"></script>
 </body>
 
 </html>

@@ -9,6 +9,7 @@
                     <th>Nom de forfait</th>
                     <th>Date_arrivée</th>
                     <th>Date_départ</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -17,6 +18,17 @@
                         <td>{{ $reservation->forfait->nom }}</td>
                         <td>{{ $reservation->date_arrivee }}</td>
                         <td>{{ $reservation->date_depart }}</td>
+                        <td><form action="{{ route('client.destroy') }}" method="POST">
+                            @csrf
+                            <input type="hidden" name="id" value="{{ $reservation->id }}">
+                            <button type="submit">
+                                <span>
+                                    Annuler
+                                </span>
+                            </button>
+                        </form></td>
+
+
                     </tr>
                 @endforeach
             </tbody>

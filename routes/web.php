@@ -120,6 +120,10 @@ Route::get("/client", [ClientController::class, 'index'])
     ->name('client.index')
     ->middleware('client');
 
+Route::post("/client/destroy", [ClientController::class, 'destroy'])
+    ->name('client.destroy')
+    ->middleware('client');
+
 /*****************
  * ZONE EMPLOYÉ
  */

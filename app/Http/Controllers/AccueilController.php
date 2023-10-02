@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Actualite;
 use Illuminate\Http\Request;
 
 class AccueilController extends Controller
@@ -13,6 +14,8 @@ class AccueilController extends Controller
      */
     public function accueil()
     {
-        return view('accueil');
+        return view('accueil', [
+            'actualites' => Actualite::all()
+        ]);
     }
 }

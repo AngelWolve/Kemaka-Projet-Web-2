@@ -46,6 +46,21 @@
                     </div>
                 </div>
 
+                 {{-- ROLE --}}
+                <div class="role">
+                    <label for="role_id">Role</label>
+                    <div>
+                        <select name="role_id" id="role_id">
+                            @foreach ($roles as $role)
+                                <option value="{{ $role->id }}">
+                                    {{ $role->nom }}
+                                </option>
+                            @endforeach
+                        </select>
+                    </div>
+
+                </div>
+
 
 
                 {{-- SUBMIT --}}

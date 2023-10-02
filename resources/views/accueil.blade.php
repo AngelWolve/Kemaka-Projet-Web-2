@@ -16,26 +16,22 @@
             <h2>
                 Les dernières actualités
             </h2>
-            <ul>
-                <swiper-container navigation="true" slides-per-view="3" speed="500" css-mode="true">
-                    @foreach ($actualites as $actualite)
-                        <swiper-slide>
-                            <li>
-                                <h3>
-                                    {{ $actualite->titre }}
-                                </h3>
-                                <p>
-                                    {{ $actualite->created_at->diffForHumans() }}
-                                </p>
-                                <div class="separation"></div>
-                                <p>
-                                    {{ $actualite->description }}
-                                </p>
-                            </li>
-                        </swiper-slide>
-                    @endforeach
-                </swiper-container>
-            </ul>
+            <swiper-container navigation="true" slides-per-view="3" speed="500" css-mode="true">
+                @foreach ($actualites as $actualite)
+                    <swiper-slide>
+                        <h3>
+                            {{ $actualite->titre }}
+                        </h3>
+                        <p class="date">
+                            {{ $actualite->created_at->diffForHumans() }}
+                        </p>
+                        <div class="separation"></div>
+                        <p class="description">
+                            {{ $actualite->description }}
+                        </p>
+                    </swiper-slide>
+                @endforeach
+            </swiper-container>
         </section>
         <section id="partenaires">
             <h2>

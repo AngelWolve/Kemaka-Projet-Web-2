@@ -13,15 +13,39 @@ div.conteneur-accueil {
         background: rgb(217, 160, 201);
         background: linear-gradient(0deg, rgba(217, 160, 201, 1) 0%, rgba(242, 179, 224, 1) 20%, rgba(255, 213, 243, 1) 50%, rgba(242, 179, 224, 1) 80%, rgba(217, 160, 201, 1) 100%);
 
-        ul {
-            margin: 2.75rem auto;
+        swiper-container {
+            max-width: 1440px;
+            margin-top: 1.75rem;
 
-            swiper-container {
+            swiper-slide {
+                margin-right: 1.75rem;
+                margin-bottom: 0.5rem;
+                padding: 1.35rem;
+                background-color: $blanc;
+                border-radius: 7px;
+                box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
 
-                li {
-                    width: 25%;
-                    padding: 1.35rem;
+                h3 {
+                    color: $noir;
+                    text-align: left;
                 }
+
+                p.date {
+                    margin: 0.55rem 0 0.85rem 0;
+                }
+
+                div.separation {
+                    height: 3px;
+                    background-color: $bleu;
+                }
+
+                p.description {
+                    margin-top: 0.85rem;
+                }
+            }
+
+            &:last-child {
+                margin-right: 0;
             }
         }
     }

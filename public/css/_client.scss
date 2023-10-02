@@ -7,20 +7,40 @@ div.conteneur-accueil {
         display: none;
     }
 
-    section#partenaires {
+    section#carrousel-actualites {
+        max-width: 100%;
+        padding: 2.25rem;
+        background: rgb(217, 160, 201);
+        background: linear-gradient(0deg, rgba(217, 160, 201, 1) 0%, rgba(242, 179, 224, 1) 20%, rgba(255, 213, 243, 1) 50%, rgba(242, 179, 224, 1) 80%, rgba(217, 160, 201, 1) 100%);
 
-        div.partenaires {
-            display: flex;
-            justify-content: center;
-            gap: 5rem;
-            margin-top: 2.75rem;
+        ul {
+            margin: 2.75rem auto;
 
-            img {
-                width: 150px;
+            swiper-container {
+
+                li {
+                    width: 25%;
+                    padding: 1.35rem;
+                }
             }
         }
     }
 }
+
+section#partenaires {
+
+    div.partenaires {
+        display: flex;
+        justify-content: center;
+        gap: 5rem;
+        margin-top: 2.75rem;
+
+        img {
+            width: 150px;
+        }
+    }
+}
+
 
 /***************
 ** ACTIVITÉS

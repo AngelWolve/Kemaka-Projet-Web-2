@@ -16,9 +16,26 @@
             <h2>
                 Les dernières actualités
             </h2>
-            <p>
-                Carrousel d'actualités ICI
-            </p>
+            <ul>
+                <swiper-container navigation="true" slides-per-view="3" speed="500" css-mode="true">
+                    @foreach ($actualites as $actualite)
+                        <swiper-slide>
+                            <li>
+                                <h3>
+                                    {{ $actualite->titre }}
+                                </h3>
+                                <p>
+                                    {{ $actualite->created_at->diffForHumans() }}
+                                </p>
+                                <div class="separation"></div>
+                                <p>
+                                    {{ $actualite->description }}
+                                </p>
+                            </li>
+                        </swiper-slide>
+                    @endforeach
+                </swiper-container>
+            </ul>
         </section>
         <section id="partenaires">
             <h2>

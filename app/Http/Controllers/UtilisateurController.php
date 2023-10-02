@@ -21,8 +21,19 @@ class UtilisateurController extends Controller
         ]);
     }
 
+    /**
+     * Affiche le formulaire de modification
+     *
+     * @param int $id Id de l'utilisateur à modifier
+     * @return View
+     */
+    public function edit($id)
+    {
+        return view('admin/utilisateurs.edit', [
+            "utilisateur" => User::findOrFail($id),
+        ]);
+    }
 
-    // edit
     // update
     // destroy
 }

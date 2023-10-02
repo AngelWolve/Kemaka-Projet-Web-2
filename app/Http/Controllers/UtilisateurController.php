@@ -14,20 +14,15 @@ class UtilisateurController extends Controller
      */
     public function index()
     {
-        return view('utilisateurs.index', [
+        return view('admin/utilisateurs.index', [
             'administrateurs' => User::where('role_id', 1)->get(),
             'employes' => User::where('role_id', 2)->get(),
             'clients' => User::where('role_id', 3)->get()
         ]);
     }
 
-    /**
-     * Affiche le formulaire de création d'un utilisateur
-     *
-     * @return View
-     */
-    public function create()
-    {
-        return view('utilisateurs.create');
-    }
+
+    // edit
+    // update
+    // destroy
 }

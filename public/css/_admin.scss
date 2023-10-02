@@ -665,3 +665,63 @@ section#admin-modifier-activite {
 
     }
 }
+
+/***************
+** ADMIN/UTILISATEURS
+***************/
+section#admin-administrateurs,
+section#admin-employes,
+section#admin-clients{
+
+    h1{
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    div.conteneur-create {
+        display: flex;
+        // width: 70%;
+       justify-content: space-around;
+
+        a.btn-create {
+            display: inline-block;
+            background-color: #007b00;
+            color: #fff;
+            padding: 0.5em 1em;
+            min-width: 140px;
+            text-decoration: none;
+            border: none;
+            border-radius: 7px;
+            font-size: 1.2rem;
+            font-family: "catseye", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            text-align: center;
+        }
+
+        a.btn-retour {
+            display: inline-block;
+            background-color: #f39f0e;
+            color: #fff;
+            padding: 0.5em 1em;
+            min-width: 140px;
+            text-decoration: none;
+            border: none;
+            border-radius: 7px;
+            font-size: 1.2rem;
+            font-family: "catseye", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            text-align: center;
+        }
+    }
+
+}
+
+
+
+
+
+
+
+

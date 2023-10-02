@@ -2,7 +2,7 @@
     {{-- Message de confirmaiton d'ajout d'une utilisateur --}}
     <x-parts.alertes cle="succes" />
     <section id="admin-administrateurs">
-        <h1>Toutes les administrateurs</h1>
+        <h1>Administrateurs</h1>
         {{-- Liste des administrateurs --}}
         <div class="conteneur-create">
             {{-- CRÉATION --}}
@@ -72,7 +72,7 @@
     {{-- Message de confirmaiton d'ajout d'une employé --}}
     <x-parts.alertes cle="succes" />
     <section id="admin-employes">
-        <h1>Toutes les employes</h1>
+        <h1>Employes</h1>
         {{-- Liste des employes --}}
         <div class="conteneur-create">
             {{-- CRÉATION --}}
@@ -142,7 +142,7 @@
     {{-- Message de confirmaiton d'ajout d'une client --}}
     <x-parts.alertes cle="succes" />
     <section id="admin-clients">
-        <h1>Toutes les clients</h1>
+        <h1>Clients</h1>
         {{-- Liste des clients --}}
         <div class="conteneur-create">
             {{-- CRÉATION --}}

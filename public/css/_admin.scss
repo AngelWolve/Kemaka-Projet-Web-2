@@ -711,6 +711,16 @@ section#admin-clients{
         }
     }
 
+    div.conteneur-boutons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        i.fa-trash-alt{
+            color: red;
+        }
+    }
 }
 
 /***************************

@@ -43,9 +43,9 @@
                                 <div class="conteneur-boutons">
 
                                     <a href="{{ route('admin/utilisateurs.edit', ['id' => $administrateur->id]) }}">
-                                        <span>
-                                            modifier
-                                        </span>
+
+                                        <i class="fas fa-edit"></i>
+
                                     </a>
 
 
@@ -55,9 +55,9 @@
                                         <input type="hidden" name="id" value="{{ $administrateur->id }}">
 
                                         <button type="submit">
-                                            <span>
-                                                supprimer
-                                            </span>
+
+                                            <i class="fas fa-trash-alt"></i>
+
                                         </button>
                                     </form>
                                 </div>
@@ -69,8 +69,6 @@
         @endif
     </section>
 
-    {{-- Message de confirmaiton d'ajout d'une employé --}}
-    <x-parts.alertes cle="succes" />
     <section id="admin-employes">
         <h2>Employes</h2>
         {{-- Liste des employes --}}
@@ -113,9 +111,9 @@
                                 <div class="conteneur-boutons">
 
                                     <a href="{{ route('admin/utilisateurs.edit', ['id' => $employe->id]) }}">
-                                        <span>
-                                            modifier
-                                        </span>
+
+                                        <i class="fas fa-edit"></i>
+
                                     </a>
 
 
@@ -125,9 +123,9 @@
                                         <input type="hidden" name="id" value="{{ $employe->id }}">
 
                                         <button type="submit">
-                                            <span>
-                                                supprimer
-                                            </span>
+
+                                            <i class="fas fa-trash-alt"></i>
+
                                         </button>
                                     </form>
                                 </div>
@@ -139,8 +137,6 @@
         @endif
     </section>
 
-    {{-- Message de confirmaiton d'ajout d'une client --}}
-    <x-parts.alertes cle="succes" />
     <section id="admin-clients">
         <h2>Clients</h2>
         {{-- Liste des clients --}}
@@ -183,9 +179,9 @@
                                 <div class="conteneur-boutons">
 
                                     <a href="{{ route('admin/utilisateurs.edit', ['id' => $client->id]) }}">
-                                        <span>
-                                            modifier
-                                        </span>
+
+                                        <i class="fas fa-edit"></i>
+
                                     </a>
 
 
@@ -195,9 +191,9 @@
                                         <input type="hidden" name="id" value="{{ $client->id }}">
 
                                         <button type="submit">
-                                            <span>
-                                                supprimer
-                                            </span>
+
+                                            <i class="fas fa-trash-alt"></i>
+
                                         </button>
                                     </form>
                                 </div>

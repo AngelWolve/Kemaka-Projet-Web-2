@@ -1,53 +1,62 @@
 <x-client>
 
     <section id="accueil">
+
+        <div id="countdown">
+            <div>
+                <span id="jours">00</span>
+                <p>Jours</p>
+            </div>
+            <div>
+                <span id="heures">00</span>
+                <p>Heures</p>
+            </div>
+            <div>
+                <span id="minutes">00</span>
+                <p>Minutes</p>
+            </div>
+            <div>
+                <span id="secondes">00</span>
+                <p>Secondes</p>
+            </div>
+        </div>
+
         <h2>Notre galerie Instagram</h2>
 
-        <div class="imgBox"><img src="images/insta_img1.png" alt=""></div>
+        <div class="imgBoite"><img src="images/insta_img1.png" alt=""></div>
 
-        <ul class="thumbnails">
+        <ul class="miniatures">
             <li>
-                <a href="images/insta_img1.png" target="imgBox">
-                    <img src="images/insta_img1.png" alt="" width="184">
+                <a href="images/insta_img1.png" target="imgBoite">
+                    <img src="images/insta_img1.png" alt="">
                 </a>
             </li>
             <li>
-                <a href="images/insta_img2.png" target="imgBox">
-                    <img src="images/insta_img2.png" alt="" width="184">
+                <a href="images/insta_img2.png" target="imgBoite">
+                    <img src="images/insta_img2.png" alt="">
                 </a>
             </li>
             <li>
-                <a href="images/insta_img3.png" target="imgBox">
-                    <img src="images/insta_img3.png" alt="" width="184">
+                <a href="images/insta_img3.png" target="imgBoite">
+                    <img src="images/insta_img3.png" alt="">
                 </a>
             </li>
             <li>
-                <a href="images/insta_img4.png" target="imgBox">
-                    <img src="images/insta_img4.png" alt="" width="184">
+                <a href="images/insta_img4.png" target="imgBoite">
+                    <img src="images/insta_img4.png" alt="">
                 </a>
             </li>
             <li>
-                <a href="images/insta_img5.png" target="imgBox">
-                    <img src="images/insta_img5.png" alt="" width="184">
+                <a href="images/insta_img5.png" target="imgBoite">
+                    <img src="images/insta_img5.png" alt="">
                 </a>
             </li>
             <li>
-                <a href="images/insta_img6.png" target="imgBox">
-                    <img src="images/insta_img6.png" alt="" width="184">
+                <a href="images/insta_img6.png" target="imgBoite">
+                    <img src="images/insta_img6.png" alt="">
                 </a>
             </li>
         </ul>
     </section>
-
-
-    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('.thumbnails a').click(function(e) {
-                e.preventDefault();
-                $('.imgBox img').attr("src", $(this).attr("href"))
-            })
-        })
-    </script>
 
 </x-client>

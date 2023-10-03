@@ -321,9 +321,9 @@ section#admin-activites {
     }
 }
 
-/***************
+/************************
 ** ADMIN/ACTUALITÉS/CREATE
-***************/
+*************************/
 section#admin-create-actualite {
     display: flex;
     justify-content: center;
@@ -407,9 +407,9 @@ section#admin-create-actualite {
 }
 
 
-/***************
+/***********************
 ** ADMIN/ACTIVITÉS/CREATE
-***************/
+************************/
 section#admin-create-activite {
     display: flex;
     justify-content: center;
@@ -494,9 +494,9 @@ section#admin-create-activite {
 }
 
 
-/***************
+/**************************
 ** ADMIN/ACTUALITÉS/MODIFIER
-***************/
+***************************/
 section#admin-modifier-actualite {
     display: flex;
     justify-content: center;
@@ -580,9 +580,9 @@ section#admin-modifier-actualite {
 }
 
 
-/***************
+/*************************
 ** ADMIN/ACTIVITÉS/MODIFIER
-***************/
+**************************/
 section#admin-modifier-activite {
     display: flex;
     justify-content: center;
@@ -673,11 +673,6 @@ section#admin-administrateurs,
 section#admin-employes,
 section#admin-clients{
 
-    h1{
-        font-size: 3rem;
-        margin-bottom: 2rem;
-    }
-
     div.conteneur-create {
         display: flex;
         // width: 70%;
@@ -718,6 +713,81 @@ section#admin-clients{
 
 }
 
+/***************************
+** ADMIN/UTILISATEUR/MODIFIER
+****************************/
+section#admin-modifier-utilisateur {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-image: url(../images/bg-formulaire.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    h1 {
+        font-size: 2rem;
+        margin: 0 0 1rem;
+    }
+
+    div.modifier-form {
+        width: 35vw;
+        margin: 0 auto;
+
+        form {
+            background: rgb(217, 160, 201);
+            background: linear-gradient(0deg, rgba(217, 160, 201, 1) 0%, rgba(242, 179, 224, 1) 20%, rgba(255, 213, 243, 1) 50%, rgba(242, 179, 224, 1) 80%, rgba(217, 160, 201, 1) 100%);
+            margin: 0 auto 5px;
+            padding: 50px 0;
+            border-radius: 7px;
+
+            div.prenom,
+            div.nom,
+            div.courriel,
+            div.role {
+                width: 75%;
+                margin: 0 auto 0.8rem;
+
+                label {
+                    display: block;
+                    text-align: left;
+                    font-weight: 700;
+                    margin: 0 0 5px 0;
+                }
+
+                input {
+                    width: 100%;
+                    background-color: #fff;
+                    color: #000;
+                    height: 40px;
+                    font-size: 1rem;
+                    border: 1px solid #E0DFE6;
+                    border-radius: 7px;
+                    padding: 10px;
+                    box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.25);
+                }
+
+            }
+
+            div.submit-modifier {
+                margin-top: 3rem;
+                text-align: center;
+
+            }
+        }
+
+        p.retour-admin {
+            text-align: center;
+
+            a {
+                text-decoration: underline;
+            }
+        }
+
+    }
+}
 
 
 

@@ -92,6 +92,13 @@ section#enregistrement {
                 width: 75%;
                 margin: 0 auto 0.8rem;
 
+                label {
+                    display: block;
+                    text-align: left;
+                    font-weight: 700;
+                    margin: 0 0 5px 0;
+                }
+
             }
 
             div.submit-enregistrement {

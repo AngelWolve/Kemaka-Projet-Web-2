@@ -1,9 +1,9 @@
 <x-admin>
-    <section id="admin-modifier-administrateur">
-        <div class="modifier-form">
-            <h1>Modifier une administrateur</h1>
+    <section id="admin-modifier-utilisateur">
+        <div class="">
+            <h1>Modifier une utilisateur</h1>
             {{-- MESSAGES --}}
-            @if (session('succes'))
+        modifier-form    @if (session('succes'))
                 <p>
                     {{ session('succes') }}</p>
             @endif
@@ -60,8 +60,6 @@
                     </div>
 
                 </div>
-
-
 
                 {{-- SUBMIT --}}
                 <div class="submit-modifier">

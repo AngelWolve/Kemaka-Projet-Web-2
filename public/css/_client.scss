@@ -1,6 +1,11 @@
 /***************
 ** ACCUEIL
 ***************/
+section#accueil {
+
+    .imgBoite {
+        width: 83.33%;
+        margin: 50px auto 20px;
 
 div.conteneur-accueil {
     h1 {
@@ -65,6 +70,38 @@ section#partenaires {
     }
 }
 
+
+        img {
+            width: 100%;
+            border-radius: 7px;
+            box-shadow: 5px 5px 25px rgba(0, 0, 0, .5);
+        }
+    }
+
+    ul {
+        margin: 0rem auto;
+        padding: 0em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 83.33%;
+
+        li {
+            list-style: none;
+            margin-right: 1rem;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        img {
+            width: 100%;
+            border-radius: 7px;
+            box-shadow: 5px 5px 25px rgba(0, 0, 0, .5);
+        }
+    }
+}
 
 /***************
 ** ACTIVITÉS

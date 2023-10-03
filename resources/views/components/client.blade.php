@@ -16,7 +16,9 @@
 
 <body>
     <x-parts.nav />
-    @if ($titre != 'Accueil')
+    @if ($titre == 'Accueil')
+        <x-parts.header-accueil />
+    @else
         <x-parts.header titre="{{ $titre }}" />
     @endif
 

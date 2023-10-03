@@ -5,25 +5,6 @@
             Accueil
         </h1>
 
-        <section id="countdown">
-            <div>
-                <span id="jours">00</span>
-                <p>Jours</p>
-            </div>
-            <div>
-                <span id="heures">00</span>
-                <p>Heures</p>
-            </div>
-            <div>
-                <span id="minutes">00</span>
-                <p>Minutes</p>
-            </div>
-            <div>
-                <span id="secondes">00</span>
-                <p>Secondes</p>
-            </div>
-        </section>
-
         <section id="carrousel-images">
             <h2>
                 Notre galerie Instagram

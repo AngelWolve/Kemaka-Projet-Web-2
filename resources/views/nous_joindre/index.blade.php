@@ -3,21 +3,21 @@
         <h2>Heures d'ouverture</h2>
         <div class="date">
             <div>
-                <h3>19 juillet</h3>
+                <h3>14 juin</h3>
                 <p class="tx-lg">Admissions</p>
                 <p class="tx-md">8:00 - 19:00</p>
                 <p class="tx-lg">Horaire</p>
                 <p class="tx-md">10:00 - 24:00</p>
             </div>
             <div>
-                <h3>20 juillet</h3>
+                <h3>15 juin</h3>
                 <p class="tx-lg">Admissions</p>
                 <p class="tx-md">8:00 - 19:00</p>
                 <p class="tx-lg">Horaire</p>
                 <p class="tx-md">10:00 - 24:00</p>
             </div>
             <div>
-                <h3>21 juillet</h3>
+                <h3>16 juin</h3>
                 <p class="tx-lg">Admissions</p>
                 <p class="tx-md">8:00 - 19:00</p>
                 <p class="tx-lg">Horaire</p>

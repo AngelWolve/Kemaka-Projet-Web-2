@@ -52,9 +52,11 @@
                     <div>
                         <select name="role_id" id="role_id">
                             @foreach ($roles as $role)
-                                <option value="{{ $role->id }}">
-                                    {{ $role->nom }}
-                                </option>
+                            <option value="{{  $role->id }}" @if ($role->id == (old('role_id') ?? $utilisateur->role_id))
+                                selected
+                                @endif>
+                                {{ $role->nom }}
+                            </option>
                             @endforeach
                         </select>
                     </div>

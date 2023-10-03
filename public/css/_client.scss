@@ -1,104 +1,106 @@
 /***************
 ** ACCUEIL
 ***************/
-section#accueil {
-
-    .imgBoite {
-        width: 83.33%;
-        margin: 50px auto 20px;
 
 div.conteneur-accueil {
     h1 {
         display: none;
     }
 
-    section#carrousel-actualites {
-        max-width: 100%;
-        padding: 2.25rem;
-        background: rgb(217, 160, 201);
-        background: linear-gradient(0deg, rgba(217, 160, 201, 1) 0%, rgba(242, 179, 224, 1) 20%, rgba(255, 213, 243, 1) 50%, rgba(242, 179, 224, 1) 80%, rgba(217, 160, 201, 1) 100%);
+    section#countdown {}
 
-        swiper-container {
-            max-width: 1440px;
-            margin-top: 1.75rem;
+    section#carrousel-images {
 
-            swiper-slide {
-                margin-right: 1.75rem;
-                margin-bottom: 0.5rem;
-                padding: 1.35rem;
-                background-color: $blanc;
+        .imgBoite {
+            width: 83.33%;
+            margin: 2.75rem auto 1rem;
+
+            img {
+                width: 100%;
                 border-radius: 7px;
-                box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
-
-                h3 {
-                    color: $noir;
-                    text-align: left;
-                }
-
-                p.date {
-                    margin: 0.55rem 0 0.85rem 0;
-                }
-
-                div.separation {
-                    height: 3px;
-                    background-color: $bleu;
-                }
-
-                p.description {
-                    margin-top: 0.85rem;
-                }
-            }
-
-            &:last-child {
-                margin-right: 0;
-            }
-        }
-    }
-}
-
-section#partenaires {
-
-    div.partenaires {
-        display: flex;
-        justify-content: center;
-        gap: 5rem;
-        margin-top: 2.75rem;
-
-        img {
-            width: 150px;
-        }
-    }
-}
-
-
-        img {
-            width: 100%;
-            border-radius: 7px;
-            box-shadow: 5px 5px 25px rgba(0, 0, 0, .5);
-        }
-    }
-
-    ul {
-        margin: 0rem auto;
-        padding: 0em;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 83.33%;
-
-        li {
-            list-style: none;
-            margin-right: 1rem;
-
-            &:last-child {
-                margin-right: 0;
+                box-shadow: 5px 5px 25px rgba(0, 0, 0, .5);
             }
         }
 
-        img {
-            width: 100%;
-            border-radius: 7px;
-            box-shadow: 5px 5px 25px rgba(0, 0, 0, .5);
+        ul {
+            margin: 0rem auto;
+            padding: 0em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 83.33%;
+
+            li {
+                list-style: none;
+                margin-right: 1rem;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+
+            img {
+                width: 100%;
+                border-radius: 7px;
+                box-shadow: 5px 5px 25px rgba(0, 0, 0, .5);
+            }
+        }
+
+        section#carrousel-actualites {
+            max-width: 100%;
+            padding: 2.25rem;
+            background: rgb(217, 160, 201);
+            background: linear-gradient(0deg, rgba(217, 160, 201, 1) 0%, rgba(242, 179, 224, 1) 20%, rgba(255, 213, 243, 1) 50%, rgba(242, 179, 224, 1) 80%, rgba(217, 160, 201, 1) 100%);
+
+            swiper-container {
+                max-width: 1440px;
+                margin-top: 1.75rem;
+
+                swiper-slide {
+                    margin-right: 1.75rem;
+                    margin-bottom: 0.5rem;
+                    padding: 1.35rem;
+                    background-color: $blanc;
+                    border-radius: 7px;
+                    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+
+                    h3 {
+                        color: $noir;
+                        text-align: left;
+                    }
+
+                    p.date {
+                        margin: 0.55rem 0 0.85rem 0;
+                    }
+
+                    div.separation {
+                        height: 3px;
+                        background-color: $bleu;
+                    }
+
+                    p.description {
+                        margin-top: 0.85rem;
+                    }
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    section#partenaires {
+
+        div.partenaires {
+            display: flex;
+            justify-content: center;
+            gap: 5rem;
+            margin-top: 2.75rem;
+
+            img {
+                width: 150px;
+            }
         }
     }
 }

@@ -189,8 +189,8 @@ Route::get("/enregistrement", [EnregistrementController::class, 'create'])
     // ->middleware('guest');
 
 Route::post("/enregistrement", [EnregistrementController::class, 'store'])
-    ->name('enregistrement.store')
-    ->middleware('guest');
+    ->name('enregistrement.store');
+
 
 Route::post("/deconnexion", [ConnexionController::class, 'deconnecter'])
     ->name('deconnexion')

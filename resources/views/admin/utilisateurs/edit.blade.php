@@ -1,9 +1,9 @@
 <x-admin>
     <section id="admin-modifier-utilisateur">
-        <div class="">
+        <div class=" modifier-form ">
             <h1>Modifier une utilisateur</h1>
             {{-- MESSAGES --}}
-        modifier-form    @if (session('succes'))
+            @if (session('succes'))
                 <p>
                     {{ session('succes') }}</p>
             @endif
@@ -46,7 +46,7 @@
                     </div>
                 </div>
 
-                 {{-- ROLE --}}
+                {{-- ROLE --}}
                 <div class="role">
                     <label for="role_id">Role</label>
                     <div>

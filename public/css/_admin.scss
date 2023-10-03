@@ -675,8 +675,8 @@ section#admin-clients{
 
     div.conteneur-create {
         display: flex;
-        // width: 70%;
-       justify-content: space-around;
+       justify-content:center;
+       gap: 50%;
 
         a.btn-create {
             display: inline-block;

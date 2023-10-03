@@ -1,5 +1,4 @@
 <x-admin>
-
     {{-- Message de confirmaiton d'ajout d'une activité --}}
     <x-parts.alertes cle="succes" />
 
@@ -26,7 +25,6 @@
                 Aucune activités actuellement
             </p>
         @else
-
             <ul>
                 @foreach ($activites as $activite)
                     <li>
@@ -40,6 +38,7 @@
                             </p>
 
                             <img src="{{ $activite->image }}" alt="image de activité" width="400" height="220">
+
                         </div>
 
                         <div class="conteneur-boutons">

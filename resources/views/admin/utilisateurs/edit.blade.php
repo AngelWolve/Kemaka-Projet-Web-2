@@ -1,7 +1,7 @@
 <x-admin>
     <section id="admin-modifier-utilisateur">
         <div class=" modifier-form ">
-            <h1>Modifier une utilisateur</h1>
+            <h1>Modifier un utilisateur</h1>
             {{-- MESSAGES --}}
             @if (session('succes'))
                 <p>
@@ -52,11 +52,9 @@
                     <div>
                         <select name="role_id" id="role_id">
                             @foreach ($roles as $role)
-                            <option value="{{  $role->id }}" @if ($role->id == (old('role_id') ?? $utilisateur->role_id))
-                                selected
-                                @endif>
-                                {{ $role->nom }}
-                            </option>
+                                <option value="{{ $role->id }}" @if ($role->id == (old('role_id') ?? $utilisateur->role_id)) selected @endif>
+                                    {{ $role->nom }}
+                                </option>
                             @endforeach
                         </select>
                     </div>

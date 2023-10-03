@@ -1,5 +1,5 @@
 <x-admin titre="Réservations">
-    <h1 class="employe">liste des réservations</h1>
+    <h1>liste des réservations</h1>
     @if ($reservations->isEmpty())
         <p>Aucune réservation pour l'instant.</p>
     @else

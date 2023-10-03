@@ -9,6 +9,7 @@ $noir: #000;
 $gris: #E0DFE6;
 $violet: #553873;
 $rose: #F2B3E0;
+$rose-pale: #FFEBF6;
 $rose-fonce: darken($rose, 10%);
 $amaranth: #A54177;
 $amaranth-fonce: darken($amaranth, 10%);
@@ -22,7 +23,7 @@ html {
     font-style: normal;
     line-height: 1.5;
     color: $noir;
-    background-color: $blanc;
+    background-color: $rose-pale;
     box-sizing: border-box;
 }
 

@@ -16,26 +16,42 @@
             <h2>
                 Les dernières actualités
             </h2>
-            <ul>
-                <swiper-container navigation="true" slides-per-view="3" speed="500" css-mode="true">
-                    @foreach ($actualites as $actualite)
-                        <swiper-slide>
-                            <li>
-                                <h3>
-                                    {{ $actualite->titre }}
-                                </h3>
-                                <p>
-                                    {{ $actualite->created_at->diffForHumans() }}
-                                </p>
-                                <div class="separation"></div>
-                                <p>
-                                    {{ $actualite->description }}
-                                </p>
-                            </li>
-                        </swiper-slide>
-                    @endforeach
-                </swiper-container>
-            </ul>
+
+            <!-- Slider main container -->
+<div class="swiper-container" style="position: relative;">
+    <div class="swiper" style="width:80%;">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          @foreach ($actualites as $actualite)
+            <div class="swiper-slide">
+                <h3>
+                    {{ $actualite->titre }}
+                </h3>
+                <p>
+                    {{ $actualite->created_at->diffForHumans() }}
+                </p>
+                <div class="separation"></div>
+                <p>
+                    {{ $actualite->description }}
+                </p>
+            </div>
+          @endforeach
+
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+      </div>
+
+      {{-- Les flèches de navigation doivent être à l'extérieur du carroussel pour être visible --}}
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+</div>
+
+
         </section>
         <section id="partenaires">
             <h2>
@@ -48,4 +64,15 @@
             </div>
         </section>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script type="module">
+        const swiper = new Swiper('.swiper', {
+            spaceBetween: 75,
+            slidesPerView: 3,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            }
+        })
+      </script>
 </x-client>

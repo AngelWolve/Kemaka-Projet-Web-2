@@ -1,6 +1,11 @@
 <x-admin titre="Réservations">
     <section id="employes">
         <h1>liste des réservations</h1>
+        <a class="btn-retour" href="{{ route('accueil') }}">
+            <span>
+                Retour
+            </span>
+        </a>
         @if ($reservations->isEmpty())
             <p>Aucune réservation pour l'instant.</p>
         @else

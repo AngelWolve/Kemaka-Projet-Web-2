@@ -629,6 +629,7 @@ section#erreur-403 {
 ** PANIER
 ***************/
 section#panier {
+    width: 60%;
 
     h1 {
         margin-bottom: 1.1rem;
@@ -637,12 +638,7 @@ section#panier {
         text-align: center;
     }
 
-    div.btn {
-        display: flex;
-        justify-content: center;
-
         a.btn-retour {
-            display: inline-block;
             background-color: #f39f0e;
             color: #fff;
             padding: 0.5em 1em;
@@ -656,9 +652,8 @@ section#panier {
             font-weight: 700;
             font-style: normal;
             text-align: center;
+            float: right;
         }
-
-    }
 
 
     p.message {
@@ -667,7 +662,7 @@ section#panier {
     }
 
     table {
-        width: 70%;
+        width: 100%;
         border-collapse: collapse;
         margin: 1.1rem auto;
         font-size: 1rem;

@@ -747,6 +747,10 @@ section#admin-clients {
             color: $blanc;
         }
 
+        tr:nth-child(even) {
+            background-color: $gris;
+        }
+
         tr:hover{
             background-color: $rose-fonce;
         }

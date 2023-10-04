@@ -549,6 +549,7 @@ section#nous-joindre {
                 h3,
                 p {
                     margin-bottom: 0.8rem;
+                    color: $noir;
                 }
 
                 p.tx-lg {
@@ -632,15 +633,16 @@ section#panier {
     width: 60%;
 
     h1 {
+        font-size: 3rem;
         margin-bottom: 1.1rem;
         margin-top: 1.1rem;
         color: $rose-fonce;
         text-align: center;
     }
 
-        a.btn-retour {
-            float: right;
-        }
+    div {
+        text-align: right;
+    }
 
 
     p.message {
@@ -651,9 +653,10 @@ section#panier {
     table {
         width: 100%;
         border-collapse: collapse;
-        margin: 1.1rem auto;
+        margin: 0.8rem auto;
         font-size: 1rem;
         text-align: center;
+
 
         th,
         td {

@@ -93,7 +93,7 @@ section#admin-actualites {
     }
 
     ul {
-
+        margin-top: 0.8rem;
         li {
             background-color: #f8cfed;
             border-radius: 10px;
@@ -181,6 +181,7 @@ section#admin-activites {
     }
 
     ul {
+        margin-top: 0.8rem;
 
         li {
             background-color: #f8cfed;
@@ -638,7 +639,7 @@ section#admin-clients {
 
         th,
         td{
-            border: 1px solid rgb(212, 195, 195);
+            border: 1px solid #ccc;
             padding: 10px;
         }
 

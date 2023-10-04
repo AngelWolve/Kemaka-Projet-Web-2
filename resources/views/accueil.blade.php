@@ -52,8 +52,8 @@
                 Les dernières actualités
             </h2>
             <!-- Slider main container -->
-            <div class="swiper-container" style="position: relative;">
-                <div class="swiper" style="width:80%;">
+            <div class="swiper-container">
+                <div class="swiper">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->
@@ -62,11 +62,11 @@
                                 <h3>
                                     {{ $actualite->titre }}
                                 </h3>
-                                <p>
+                                <p class="date">
                                     {{ $actualite->created_at->diffForHumans() }}
                                 </p>
                                 <div class="separation"></div>
-                                <p>
+                                <p class="description">
                                     {{ $actualite->description }}
                                 </p>
                             </div>

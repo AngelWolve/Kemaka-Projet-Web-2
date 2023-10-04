@@ -9,28 +9,31 @@
         <section id="countdown">
             <div>
                 <div>
-                    <span id="jours" class="tx-xxl">000</span>
+                    <span id="jours" class="tx-xxl">-</span>
                 </div>
                 <p class="tx-md">Jours</p>
             </div>
             <div>
                 <div>
-                    <span id="heures" class="tx-xxl">00</span>
+                    <span id="heures" class="tx-xxl">-</span>
                 </div>
                 <p class="tx-md">Heures</p>
             </div>
             <div>
                 <div>
-                    <span id="minutes" class="tx-xxl">00</span>
+                    <span id="minutes" class="tx-xxl">-</span>
                 </div>
                 <p class="tx-md">Minutes</p>
             </div>
             <div>
                 <div>
-                    <span id="secondes" class="tx-xxl">00</span>
+                    <span id="secondes" class="tx-xxl">-</span>
                 </div>
                 <p class="tx-md">Secondes</p>
             </div>
         </section>
+        <div class="call-to-action">
+            <x-parts.bouton-primaire route="{{ route('activites.index') }}" texte="Voir nos activités" />
+        </div>
     </div>
 </header>

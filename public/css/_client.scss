@@ -2,71 +2,6 @@
 ** ACCUEIL
 ***************/
 
-header#header-accueil {
-    position: relative;
-    width: 100%;
-    height: 100%;
-
-    img {
-        max-width: 100%;
-        display: block;
-    }
-
-    div.conteneur-header {
-        position: absolute;
-        top: 70%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        margin: 0;
-
-        h2 {
-            color: $amaranth;
-
-        }
-
-        section#countdown {
-            display: flex;
-            justify-content: center;
-            margin-top: 1rem;
-
-            &>div {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                margin-right: 1.35rem;
-
-                &:last-child {
-                    margin-right: 0;
-                }
-
-                &>div {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    width: 110px;
-                    padding: 0.5em 0;
-                    border: 3px solid $rose-fonce;
-                    border-radius: 7px;
-                    background-color: $rose-pale;
-
-                    span {
-                        font-weight: 600;
-                    }
-                }
-
-                p {
-                    font-family: "catseye", sans-serif;
-                    font-weight: 700;
-                    font-style: normal;
-                    margin-top: 0.55rem;
-                }
-            }
-        }
-    }
-}
-
 div.conteneur-accueil {
 
     h1 {
@@ -82,7 +17,7 @@ div.conteneur-accueil {
             img {
                 width: 100%;
                 border-radius: 7px;
-                box-shadow: 5px 5px 25px rgba(0, 0, 0, .5);
+                box-shadow: 5px 5px 15px rgba(0, 0, 0, .5);
             }
         }
 
@@ -106,112 +41,55 @@ div.conteneur-accueil {
             img {
                 width: 100%;
                 border-radius: 7px;
-                box-shadow: 5px 5px 25px rgba(0, 0, 0, .5);
-            }
-        }
-
-        section#carrousel-actualites {
-            max-width: 100%;
-            padding: 2.25rem;
-            background: rgb(217, 160, 201);
-            background: linear-gradient(0deg, rgba(217, 160, 201, 1) 0%, rgba(242, 179, 224, 1) 20%, rgba(255, 213, 243, 1) 50%, rgba(242, 179, 224, 1) 80%, rgba(217, 160, 201, 1) 100%);
-
-            swiper-container {
-                max-width: 1440px;
-                margin-top: 1.75rem;
-
-                swiper-slide {
-                    margin-right: 1.75rem;
-                    margin-bottom: 0.5rem;
-                    padding: 1.35rem;
-                    background-color: $blanc;
-                    border-radius: 7px;
-                    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
-
-                    h3 {
-                        color: $noir;
-                        text-align: left;
-                    }
-
-                    p.date {
-                        margin: 0.55rem 0 0.85rem 0;
-                    }
-
-                    div.separation {
-                        height: 3px;
-                        background-color: $bleu;
-                    }
-
-                    p.description {
-                        margin-top: 0.85rem;
-                    }
-                }
-
-                &:last-child {
-                    margin-right: 0;
-                }
+                box-shadow: 5px 5px 15px rgba(0, 0, 0, .5);
             }
         }
     }
 
-    section#partenaires {
+    section#carrousel-actualites {
+        max-width: 100%;
+        padding: 2.25rem;
+        background: rgb(217, 160, 201);
+        background: linear-gradient(0deg, rgba(217, 160, 201, 1) 0%, rgba(242, 179, 224, 1) 20%, rgba(255, 213, 243, 1) 50%, rgba(242, 179, 224, 1) 80%, rgba(217, 160, 201, 1) 100%);
 
-        div.partenaires {
-            display: flex;
-            justify-content: center;
-            gap: 5rem;
-            margin-top: 2.75rem;
-
-            img {
-                width: 150px;
-            }
-        }
-    }
-
-    div.conteneur-accueil {
-        h1 {
-            display: none;
+        h2 {
+            margin-bottom: 1.75rem;
         }
 
-        section#carrousel-actualites {
-            max-width: 100%;
-            padding: 2.25rem;
-            background: rgb(217, 160, 201);
-            background: linear-gradient(0deg, rgba(217, 160, 201, 1) 0%, rgba(242, 179, 224, 1) 20%, rgba(255, 213, 243, 1) 50%, rgba(242, 179, 224, 1) 80%, rgba(217, 160, 201, 1) 100%);
+        div.swiper-container {
+            position: relative;
 
-            swiper-container {
-                max-width: 1440px;
-                margin-top: 1.75rem;
+            div.swiper {
+                width: 90%;
+                padding: 1.1em;
 
-                swiper-slide {
-                    margin-right: 1.75rem;
-                    margin-bottom: 0.5rem;
-                    padding: 1.35rem;
-                    background-color: $blanc;
-                    border-radius: 7px;
-                    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+                div.swiper-wrapper {
 
-                    h3 {
-                        color: $noir;
-                        text-align: left;
+                    div.swiper-slide {
+                        box-sizing: border-box;
+                        height: auto;
+                        background-color: $rose-pale;
+                        margin: 1.1rem auto;
+                        padding: 1.35em;
+                        border-radius: 7px;
+                        box-shadow: 5px 5px 15px rgba(0, 0, 0, .5);
+
+                        h3 {
+                            text-align: left;
+                            margin-bottom: 0.55rem;
+                        }
+
+                        p.date {
+                            font-size: 0.85rem;
+                            margin-bottom: 0.55rem;
+                        }
+
+                        div.separation {
+                            height: 3px;
+                            margin-bottom: 0.55rem;
+                            background-color: $bleu;
+                        }
                     }
-
-                    p.date {
-                        margin: 0.55rem 0 0.85rem 0;
-                    }
-
-                    div.separation {
-                        height: 3px;
-                        background-color: $bleu;
-                    }
-
-                    p.description {
-                        margin-top: 0.85rem;
-                    }
-                }
-
-                &:last-child {
-                    margin-right: 0;
                 }
             }
         }
@@ -229,13 +107,6 @@ div.conteneur-accueil {
                 width: 150px;
             }
         }
-    }
-
-
-    img {
-        width: 100%;
-        border-radius: 7px;
-        box-shadow: 5px 5px 25px rgba(0, 0, 0, .5);
     }
 }
 
@@ -434,7 +305,6 @@ section#reservations {
                 width: 50%;
             }
         }
-
     }
 }
 
@@ -692,7 +562,5 @@ section#panier {
             font-style: normal;
             text-align: center;
         }
-
     }
-
 }

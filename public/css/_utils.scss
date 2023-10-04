@@ -14,13 +14,11 @@
     font-weight: 700;
     font-style: normal;
     text-align: center;
-    box-shadow: inset 0 -33px 33px #80325B;
     transition: all 0.3s ease-in-out;
 
     &:hover {
         color: $rose-fonce;
         background-color: $amaranth-fonce;
-        box-shadow: inset 0 -33px 33px darken(#80325B, 10%);
     }
 }
 

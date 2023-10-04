@@ -1,0 +1,77 @@
+/***************
+** HEADER ACCUEIL
+***************/
+
+header#header-accueil {
+    position: relative;
+    min-height: 575px;
+
+    img {
+        max-width: 100%;
+        display: block;
+    }
+
+    div.conteneur-header {
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        margin: 0;
+
+        h2 {
+            color: $amaranth;
+
+        }
+
+        section#countdown {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+
+            &>div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-right: 1.35rem;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &>div {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 110px;
+                    padding: 0.5em 0;
+                    border: 3px solid $rose-fonce;
+                    border-radius: 7px;
+                    background-color: $rose-pale;
+
+                    span {
+                        font-weight: 600;
+                    }
+                }
+
+                p {
+                    font-family: "catseye", sans-serif;
+                    font-weight: 700;
+                    font-style: normal;
+                    margin-top: 0.55rem;
+                }
+            }
+        }
+
+        div.call-to-action {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+
+            a {
+                font-size: 1rem;
+            }
+        }
+    }
+}

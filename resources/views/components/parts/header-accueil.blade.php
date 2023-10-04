@@ -32,5 +32,8 @@
                 <p class="tx-md">Secondes</p>
             </div>
         </section>
+        <div class="call-to-action">
+            <x-parts.bouton-primaire route="{{ route('activites.index') }}" texte="Voir nos activités" />
+        </div>
     </div>
 </header>

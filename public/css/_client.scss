@@ -61,6 +61,7 @@ div.conteneur-accueil {
 
             div.swiper {
                 width: 90%;
+                padding: 1.1em;
 
                 div.swiper-wrapper {
 
@@ -68,7 +69,7 @@ div.conteneur-accueil {
                         box-sizing: border-box;
                         height: auto;
                         background-color: $rose-pale;
-                        margin-bottom: 1rem;
+                        margin: 1.1rem auto;
                         padding: 1.35em;
                         border-radius: 7px;
                         box-shadow: 5px 5px 15px rgba(0, 0, 0, .5);

@@ -22,6 +22,45 @@
     }
 }
 
+a.btn-create {
+    background-color: #3caf3c;
+    color: #fff;
+    padding: 0.5em 1em;
+    min-width: 140px;
+    text-decoration: none;
+    border: none;
+    border-radius: 7px;
+    font-size: 1.2rem;
+    font-family: "catseye", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+
+    &:hover{
+        background-color: darken(#3caf3c, 10%);
+    }
+}
+
+a.btn-retour {
+    display: inline-block;
+    background-color: #f39f0e;
+    color: #fff;
+    padding: 0.5em 1em;
+    min-width: 140px;
+    text-decoration: none;
+    border: none;
+    border-radius: 7px;
+    font-size: 1.2rem;
+    font-family: "catseye", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+
+    &:hover{
+        background-color: darken(#f39f0e, 10%);
+    }
+}
+
 /***************
 ** INPUTS
 ***************/

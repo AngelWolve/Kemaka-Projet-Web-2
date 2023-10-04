@@ -153,14 +153,6 @@ Route::get("/admin/utilisateurs", [UtilisateurController::class, 'index'])
     ->name('admin/utilisateurs.index')
     ->middleware('admin');
 
-// Route::get('/admin/utilisateurs/create', [UtilisateurController::class, 'create'])
-//     ->name('admin/utilisateurs.create')
-//     ->middleware('admin');
-
-// Route::post('/admin/utilisateurs', [UtilisateurController::class, 'store'])
-//     ->name('admin/utilisateurs.store')
-//     ->middleware('admin');
-
 Route::get("/admin/utilisateurs/edit/{id}", [UtilisateurController::class, 'edit'])
     ->name('admin/utilisateurs.edit')
     ->middleware('admin');

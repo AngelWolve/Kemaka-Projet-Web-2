@@ -1,14 +1,12 @@
 <x-admin>
     <section id="panier">
-        <h1>liste des réservations</h1>
-        {{-- RETOUR --}}
-        <div class="btn">
+        <h1>Liste des réservations</h1>
+        <div>
             <a class="btn-retour" href="{{ route('accueil') }}">
-                <span>
-                    Retour
-                </span>
+                Retour
             </a>
         </div>
+
 
         @if ($reservations->isEmpty())
             <p class="message">Aucune réservation pour l'instant.</p>

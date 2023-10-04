@@ -41,7 +41,7 @@
 
             {{-- LIEN RETOUR --}}
             <p class="retour-actualite">
-                <a href="{{ route('admin/actualites.index') }}" class="hover:text-indigo-600">Retour aux actualites</a>
+                <a href="{{ route('admin/actualites.index') }}" class="hover:text-indigo-600">Retour aux actualités</a>
             </p>
         </div>
     </section>

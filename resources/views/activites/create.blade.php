@@ -52,7 +52,7 @@
 
             {{-- LIEN RETOUR --}}
             <p class="retour-activite">
-                <a href="{{ route('admin/activites.index') }}" class="hover:text-indigo-600">Retour aux activites</a>
+                <a href="{{ route('admin/activites.index') }}" class="hover:text-indigo-600">Retour aux activités</a>
             </p>
         </div>
     </section>

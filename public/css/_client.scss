@@ -1,34 +1,170 @@
 /***************
 ** ACCUEIL
 ***************/
-section#accueil {
 
-    .imgBoite {
-        width: 83.33%;
-        margin: 50px auto 20px;
+header#header-accueil {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    img {
+        max-width: 100%;
+        display: block;
     }
 
-    ul {
-        margin: 0rem auto;
-        padding: 0em;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 80.33%;
+    div.conteneur-header {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        margin: 0;
 
-        li {
-            list-style: none;
-            margin-right: 1rem;
+        h2 {
+            color: $amaranth;
 
-            &:last-child {
-                margin-right: 0;
+        }
+
+        section#countdown {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+
+            &>div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-right: 1.35rem;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &>div {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 110px;
+                    padding: 0.5em 0;
+                    border: 3px solid $rose-fonce;
+                    border-radius: 7px;
+                    background-color: $rose-pale;
+
+                    span {
+                        font-weight: 600;
+                    }
+                }
+
+                p {
+                    font-family: "catseye", sans-serif;
+                    font-weight: 700;
+                    font-style: normal;
+                    margin-top: 0.55rem;
+                }
+            }
+        }
+    }
+}
+
+div.conteneur-accueil {
+
+    h1 {
+        display: none;
+    }
+
+    section#carrousel-images {
+
+        .imgBoite {
+            width: 83.33%;
+            margin: 2.75rem auto 1rem;
+
+            img {
+                width: 100%;
+                border-radius: 7px;
+                box-shadow: 5px 5px 25px rgba(0, 0, 0, .5);
             }
         }
 
-        img {
-            width: 100%;
-            border-radius: 7px;
-            box-shadow: 5px 5px 25px rgba(0, 0, 0, .5);
+        ul {
+            margin: 0rem auto;
+            padding: 0em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 83.33%;
+
+            li {
+                list-style: none;
+                margin-right: 1rem;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+
+            img {
+                width: 100%;
+                border-radius: 7px;
+                box-shadow: 5px 5px 25px rgba(0, 0, 0, .5);
+            }
+        }
+
+        section#carrousel-actualites {
+            max-width: 100%;
+            padding: 2.25rem;
+            background: rgb(217, 160, 201);
+            background: linear-gradient(0deg, rgba(217, 160, 201, 1) 0%, rgba(242, 179, 224, 1) 20%, rgba(255, 213, 243, 1) 50%, rgba(242, 179, 224, 1) 80%, rgba(217, 160, 201, 1) 100%);
+
+            swiper-container {
+                max-width: 1440px;
+                margin-top: 1.75rem;
+
+                swiper-slide {
+                    margin-right: 1.75rem;
+                    margin-bottom: 0.5rem;
+                    padding: 1.35rem;
+                    background-color: $blanc;
+                    border-radius: 7px;
+                    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+
+                    h3 {
+                        color: $noir;
+                        text-align: left;
+                    }
+
+                    p.date {
+                        margin: 0.55rem 0 0.85rem 0;
+                    }
+
+                    div.separation {
+                        height: 3px;
+                        background-color: $bleu;
+                    }
+
+                    p.description {
+                        margin-top: 0.85rem;
+                    }
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    section#partenaires {
+
+        div.partenaires {
+            display: flex;
+            justify-content: center;
+            gap: 5rem;
+            margin-top: 2.75rem;
+
+            img {
+                width: 150px;
+            }
         }
     }
 

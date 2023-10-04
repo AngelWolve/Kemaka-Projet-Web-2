@@ -50,12 +50,12 @@
                         Connectez-vous!
                     </a>
                 </p>
-                @else
-                <a class="btn-retour" href="{{ route('admin.index') }}">
-                    <span>
+            @else
+                <div class="retour">
+                    <a class="btn-retour" href="{{ route('admin/utilisateurs.index') }}">
                         Retour
-                    </span>
-                </a>
+                    </a>
+                </div>
             @endif
 
         </div>

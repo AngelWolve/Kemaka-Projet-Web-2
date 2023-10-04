@@ -32,9 +32,16 @@
         </ul>
     </div>
     <div class="conteneur-connexion">
-        <a href="{{ route('client.index') }}">
-            <i class="fa-solid fa-cart-shopping"></i>
-        </a>
+        @if (Auth::check())
+            <a href="{{ route('client.index') }}">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+        @else
+            <a href="{{ route('connexion.create') }}">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+        @endif
+
 
         @if (Auth::check())
             <form action="{{ route('deconnexion') }}" method="POST">

@@ -29,7 +29,7 @@
                     <tr>
                         <th>Prénom</th>
                         <th>Nom</th>
-                        <th>Email</th>
+                        <th>Courriel</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -96,7 +96,7 @@
                     <tr>
                         <th>Prénom</th>
                         <th>Nom</th>
-                        <th>Email</th>
+                        <th>Courriel</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -163,7 +163,7 @@
                     <tr>
                         <th>Prénom</th>
                         <th>Nom</th>
-                        <th>Email</th>
+                        <th>Courriel</th>
                         <th>Action</th>
                     </tr>
                 </thead>

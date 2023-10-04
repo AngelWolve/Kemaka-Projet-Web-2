@@ -85,40 +85,6 @@ section#admin-actualites {
     div.conteneur-create {
         display: flex;
         justify-content: space-between;
-
-        a.btn-create {
-            display: inline-block;
-            background-color: #007b00;
-            color: #fff;
-            padding: 0.5em 1em;
-            margin-bottom: 0.8rem;
-            min-width: 140px;
-            text-decoration: none;
-            border: none;
-            border-radius: 7px;
-            font-size: 1.2rem;
-            font-family: "catseye", sans-serif;
-            font-weight: 700;
-            font-style: normal;
-            text-align: center;
-        }
-
-        a.btn-retour {
-            display: inline-block;
-            background-color: #f39f0e;
-            color: #fff;
-            padding: 0.5em 1em;
-            margin-bottom: 0.8rem;
-            min-width: 140px;
-            text-decoration: none;
-            border: none;
-            border-radius: 7px;
-            font-size: 1.2rem;
-            font-family: "catseye", sans-serif;
-            font-weight: 700;
-            font-style: normal;
-            text-align: center;
-        }
     }
 
     p {
@@ -206,40 +172,6 @@ section#admin-activites {
     div.conteneur-create {
         display: flex;
         justify-content: space-between;
-
-        a.btn-create {
-            display: inline-block;
-            background-color: #007b00;
-            color: #fff;
-            padding: 0.5em 1em;
-            margin-bottom: 0.8rem;
-            min-width: 140px;
-            text-decoration: none;
-            border: none;
-            border-radius: 7px;
-            font-size: 1.2rem;
-            font-family: "catseye", sans-serif;
-            font-weight: 700;
-            font-style: normal;
-            text-align: center;
-        }
-
-        a.btn-retour {
-            display: inline-block;
-            background-color: #f39f0e;
-            color: #fff;
-            padding: 0.5em 1em;
-            margin-bottom: 0.8rem;
-            min-width: 140px;
-            text-decoration: none;
-            border: none;
-            border-radius: 7px;
-            font-size: 1.2rem;
-            font-family: "catseye", sans-serif;
-            font-weight: 700;
-            font-style: normal;
-            text-align: center;
-        }
     }
 
     p {
@@ -686,38 +618,6 @@ section#admin-clients {
         display: flex;
         justify-content: center;
         gap: 50%;
-
-        a.btn-create {
-            display: inline-block;
-            background-color: #007b00;
-            color: #fff;
-            padding: 0.5em 1em;
-            min-width: 140px;
-            text-decoration: none;
-            border: none;
-            border-radius: 7px;
-            font-size: 1.2rem;
-            font-family: "catseye", sans-serif;
-            font-weight: 700;
-            font-style: normal;
-            text-align: center;
-        }
-
-        a.btn-retour {
-            display: inline-block;
-            background-color: #f39f0e;
-            color: #fff;
-            padding: 0.5em 1em;
-            min-width: 140px;
-            text-decoration: none;
-            border: none;
-            border-radius: 7px;
-            font-size: 1.2rem;
-            font-family: "catseye", sans-serif;
-            font-weight: 700;
-            font-style: normal;
-            text-align: center;
-        }
     }
 
     div.conteneur-boutons {

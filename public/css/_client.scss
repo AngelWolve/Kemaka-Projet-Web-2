@@ -6,76 +6,6 @@ section#accueil {
     .imgBoite {
         width: 83.33%;
         margin: 50px auto 20px;
-
-div.conteneur-accueil {
-    h1 {
-        display: none;
-    }
-
-    section#carrousel-actualites {
-        max-width: 100%;
-        padding: 2.25rem;
-        background: rgb(217, 160, 201);
-        background: linear-gradient(0deg, rgba(217, 160, 201, 1) 0%, rgba(242, 179, 224, 1) 20%, rgba(255, 213, 243, 1) 50%, rgba(242, 179, 224, 1) 80%, rgba(217, 160, 201, 1) 100%);
-
-        swiper-container {
-            max-width: 1440px;
-            margin-top: 1.75rem;
-
-            swiper-slide {
-                margin-right: 1.75rem;
-                margin-bottom: 0.5rem;
-                padding: 1.35rem;
-                background-color: $blanc;
-                border-radius: 7px;
-                box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
-
-                h3 {
-                    color: $noir;
-                    text-align: left;
-                }
-
-                p.date {
-                    margin: 0.55rem 0 0.85rem 0;
-                }
-
-                div.separation {
-                    height: 3px;
-                    background-color: $bleu;
-                }
-
-                p.description {
-                    margin-top: 0.85rem;
-                }
-            }
-
-            &:last-child {
-                margin-right: 0;
-            }
-        }
-    }
-}
-
-section#partenaires {
-
-    div.partenaires {
-        display: flex;
-        justify-content: center;
-        gap: 5rem;
-        margin-top: 2.75rem;
-
-        img {
-            width: 150px;
-        }
-    }
-}
-
-
-        img {
-            width: 100%;
-            border-radius: 7px;
-            box-shadow: 5px 5px 25px rgba(0, 0, 0, .5);
-        }
     }
 
     ul {
@@ -84,7 +14,7 @@ section#partenaires {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 83.33%;
+        width: 80.33%;
 
         li {
             list-style: none;
@@ -100,6 +30,76 @@ section#partenaires {
             border-radius: 7px;
             box-shadow: 5px 5px 25px rgba(0, 0, 0, .5);
         }
+    }
+
+    div.conteneur-accueil {
+        h1 {
+            display: none;
+        }
+
+        section#carrousel-actualites {
+            max-width: 100%;
+            padding: 2.25rem;
+            background: rgb(217, 160, 201);
+            background: linear-gradient(0deg, rgba(217, 160, 201, 1) 0%, rgba(242, 179, 224, 1) 20%, rgba(255, 213, 243, 1) 50%, rgba(242, 179, 224, 1) 80%, rgba(217, 160, 201, 1) 100%);
+
+            swiper-container {
+                max-width: 1440px;
+                margin-top: 1.75rem;
+
+                swiper-slide {
+                    margin-right: 1.75rem;
+                    margin-bottom: 0.5rem;
+                    padding: 1.35rem;
+                    background-color: $blanc;
+                    border-radius: 7px;
+                    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+
+                    h3 {
+                        color: $noir;
+                        text-align: left;
+                    }
+
+                    p.date {
+                        margin: 0.55rem 0 0.85rem 0;
+                    }
+
+                    div.separation {
+                        height: 3px;
+                        background-color: $bleu;
+                    }
+
+                    p.description {
+                        margin-top: 0.85rem;
+                    }
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    section#partenaires {
+
+        div.partenaires {
+            display: flex;
+            justify-content: center;
+            gap: 5rem;
+            margin-top: 2.75rem;
+
+            img {
+                width: 150px;
+            }
+        }
+    }
+
+
+    img {
+        width: 100%;
+        border-radius: 7px;
+        box-shadow: 5px 5px 25px rgba(0, 0, 0, .5);
     }
 }
 
@@ -126,6 +126,7 @@ section#activites {
                 width: 100%;
                 height: 100%;
                 margin-right: 2.5rem;
+                border-radius: 7px;
             }
 
             div {
@@ -271,28 +272,33 @@ section#reservations {
         }
 
         form {
-            max-width: 400px;
+            width: 50%;
             margin: 0 auto;
 
             .date {
-                margin-bottom: 20px;
+                margin-bottom: 1.11rem;
 
                 label {
                     display: block;
-                    margin-bottom: 5px;
+                    margin-bottom: 0.27rem;
                     font-weight: bold;
                     color: $amaranth;
                 }
 
                 select {
                     width: 100%;
-                    padding: 10px;
+                    padding: 0.55em;
                     border: 1px solid $gris;
-                    border-radius: 5px;
+                    border-radius: 7px;
                     font-size: 1rem;
                 }
             }
+
+            button .btn-primaire {
+                width: 50%;
+            }
         }
+
     }
 }
 
@@ -329,6 +335,10 @@ section#apropos {
             .apropos-image {
                 margin-left: 2.5rem;
                 order: 1;
+
+                img {
+                    border-radius: 7px;
+                }
             }
 
             .texte1 {
@@ -354,6 +364,10 @@ section#apropos {
             .apropos-image {
                 margin-right: 2.5rem;
                 order: 0;
+
+                img {
+                    border-radius: 7px;
+                }
             }
 
             .texte1 {

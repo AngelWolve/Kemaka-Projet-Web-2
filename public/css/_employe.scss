@@ -1,35 +1,38 @@
-    h1 {
-        font-size: 2.5rem;
-        margin-bottom: 1.1rem;
-        margin-top: 1.1rem;
-        color: $rose-fonce;
-        text-align: center;
-    }
+   section#employes {
 
-    table {
-        width: 70%;
-        border-collapse: collapse;
-        margin: 1.1rem auto;
-        font-size: 1rem;
-        text-align: center;
+       h1 {
+           font-size: 2.5rem;
+           margin-bottom: 1.1rem;
+           margin-top: 1.1rem;
+           color: $rose-fonce;
+           text-align: center;
+       }
 
-        th,
-        td {
-            border: 1px solid #ccc;
-            padding: 10px;
-        }
+       table {
+           width: 70%;
+           border-collapse: collapse;
+           margin: 1.1rem auto;
+           font-size: 1rem;
+           text-align: center;
 
-        th {
-            background-color: $violet;
-            color: $blanc;
-            font-weight: bold;
-        }
+           th,
+           td {
+               border: 1px solid #ccc;
+               padding: 10px;
+           }
 
-        tr:nth-child(even) {
-            background-color: $gris;
-        }
+           th {
+               background-color: $violet;
+               color: $blanc;
+               font-weight: bold;
+           }
 
-        tr:hover {
-            background-color: $rose-fonce;
-        }
-    }
+           tr:nth-child(even) {
+               background-color: $gris;
+           }
+
+           tr:hover {
+               background-color: $rose-fonce;
+           }
+       }
+   }

@@ -645,12 +645,13 @@ section#admin-modifier-activite {
                     padding: 10px;
                     box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.25);
                 }
-                div.image-contenu{
+
+                div.image-contenu {
                     display: flex;
                     justify-content: center;
                     align-items: center;
 
-                    img{
+                    img {
                         border-radius: 7px;
                     }
                 }
@@ -679,12 +680,12 @@ section#admin-modifier-activite {
 ***************/
 section#admin-administrateurs,
 section#admin-employes,
-section#admin-clients{
+section#admin-clients {
 
     div.conteneur-create {
         display: flex;
-       justify-content:center;
-       gap: 50%;
+        justify-content: center;
+        gap: 50%;
 
         a.btn-create {
             display: inline-block;
@@ -719,14 +720,35 @@ section#admin-clients{
         }
     }
 
-    div.conteneur-boutons{
+    div.conteneur-boutons {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 20px;
 
-        i.fa-trash-alt{
+        i.fa-trash-alt {
             color: red;
+        }
+    }
+    table{
+        width: 70%;
+        border-collapse: collapse;
+        text-align: center;
+        margin: 1rem auto;
+
+        th,
+        td{
+            border: 1px solid rgb(212, 195, 195);
+            padding: 10px;
+        }
+
+        th{
+            background-color: $violet;
+            color: $blanc;
+        }
+
+        tr:hover{
+            background-color: $rose-fonce;
         }
     }
 }
@@ -806,10 +828,3 @@ section#admin-modifier-utilisateur {
 
     }
 }
-
-
-
-
-
-
-

@@ -255,7 +255,7 @@ section#activites {
 
         li {
             display: flex;
-            align-items: center;
+            align-items: self-start;
             margin-bottom: 2.75rem;
 
             img {
@@ -275,6 +275,7 @@ section#activites {
 
                 p {
                     margin-top: 0.85rem;
+                    line-height: 1.5;
                 }
             }
 
@@ -284,6 +285,53 @@ section#activites {
                 img {
                     margin-left: 2.5rem;
                     margin-right: 0;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 430px) {
+    section#activites {
+        margin: auto;
+        margin-top: 4rem;
+
+        ul {
+            margin: 0 auto 1.33rem auto;
+
+            li {
+                flex-direction: column;
+
+                img {
+                    order: 2;
+                    width: 90%;
+                    height: 90%;
+                    margin-top: 1.11rem;
+                }
+                div {
+                    order: 1;
+                    margin-right: 2.5rem;
+                    text-align: left;
+
+                    h2 {
+                        text-align: left;
+                        font-size: 18px;
+                    }
+
+                    p {
+                        margin-top: 0.85rem;
+                        line-height: 1.5;
+                        font-size: 12px;
+                    }
+                }
+
+                &:nth-child(even) {
+                    flex-direction: column;
+
+                    img {
+                        margin: 1.11rem 0 0 0;
+                    }
                 }
             }
         }
@@ -455,6 +503,7 @@ section#apropos {
 
         p {
             margin-top: 2.5rem;
+            line-height: 1.5;
         }
     }
 
@@ -488,6 +537,7 @@ section#apropos {
 
                 p {
                     padding-top: 0.938em;
+                    line-height: 1.5;
                 }
             }
         }
@@ -517,6 +567,7 @@ section#apropos {
 
                 p {
                     padding-top: 0.938em;
+                    line-height: 1.5;
                 }
             }
         }

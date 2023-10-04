@@ -48,7 +48,6 @@
 
                                     </a>
 
-
                                     <form action="{{ route('admin/utilisateurs.destroy') }}" method="POST">
                                         @csrf
 
@@ -70,7 +69,7 @@
     </section>
 
     <section id="admin-employes">
-        <h2>Employes</h2>
+        <h2>Employés</h2>
         {{-- Liste des employes --}}
         <div class="conteneur-create">
             {{-- CRÉATION --}}
@@ -89,7 +88,7 @@
 
         @if ($employes->isEmpty())
             <p>
-                Aucune employes actuellement
+                Aucune employés actuellement
             </p>
         @else
             <table>
@@ -115,7 +114,6 @@
                                         <i class="fas fa-edit"></i>
 
                                     </a>
-
 
                                     <form action="{{ route('admin/utilisateurs.destroy') }}" method="POST">
                                         @csrf
@@ -183,7 +181,6 @@
                                         <i class="fas fa-edit"></i>
 
                                     </a>
-
 
                                     <form action="{{ route('admin/utilisateurs.destroy') }}" method="POST">
                                         @csrf

@@ -527,27 +527,55 @@ section#apropos {
 ** NOUS JOINDRE
 ***************/
 
-.contact {
-    padding: 20px;
-    max-width: 1440px;
-    width: 75%;
-    margin: auto;
+section#nous-joindre {
+    .contact {
+        padding: 20px;
+        max-width: 1440px;
+        width: 75%;
+        margin: auto;
 
-    h2 {
-        margin-bottom: 2.2rem;
+        h2 {
+            margin-bottom: 2.2rem;
+        }
+
+        .date {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-around;
+
+            div {
+                text-align: center;
+
+                h3,
+                p {
+                    margin-bottom: 0.8rem;
+                }
+
+                p.tx-lg {
+                    font-weight: bold;
+                }
+            }
+        }
     }
 
-    .date {
-        margin-top: 10px;
-        display: flex;
-        justify-content: space-around;
+    .adresse {
+        padding: 20px;
+        max-width: 1440px;
+        width: 75%;
+        margin: 20px auto;
 
-        div {
+        .contenu-adresse {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
 
-            h3,
+            h2 {
+                margin-bottom: 2.2rem;
+            }
+
             p {
-                margin-bottom: 0.8rem;
+                margin-bottom: 0.5rem;
             }
 
             p.tx-lg {
@@ -555,48 +583,24 @@ section#apropos {
             }
         }
     }
-}
 
-.adresse {
-    padding: 20px;
-    max-width: 1440px;
-    width: 75%;
-    margin: 20px auto;
+    .carte {
+        background-color: $bleu;
+        padding: 20px;
+        border: 1px solid $bleu;
+        border-radius: 7px;
+        max-width: 1440px;
+        width: 75%;
+        margin: 20px auto;
 
-    .contenu-adresse {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-
-        h2 {
-            margin-bottom: 2.2rem;
-        }
-
-        p {
-            margin-bottom: 0.5rem;
-        }
-
-        p.tx-lg {
-            font-weight: bold;
+        iframe {
+            width: 100%;
+            height: 450px;
         }
     }
 }
 
-.carte {
-    background-color: $bleu;
-    padding: 20px;
-    border: 1px solid $bleu;
-    border-radius: 7px;
-    max-width: 1440px;
-    width: 75%;
-    margin: 20px auto;
 
-    iframe {
-        width: 100%;
-        height: 450px;
-    }
-}
 
 /***************
 ** ERREUR 403
@@ -624,43 +628,86 @@ section#erreur-403 {
 /***************
 ** PANIER
 ***************/
+section#panier {
 
-h1.client {
-    font-size: 2rem;
-    margin-bottom: 1.1rem;
-    margin-top: 1.1rem;
-    color: $rose-fonce;
-    text-align: center;
-}
-
-p.message {
-    text-align: center;
-}
-
-table {
-    width: 70%;
-    border-collapse: collapse;
-    margin: 1.1rem auto;
-    font-size: 1rem;
-    text-align: center;
-
-    th,
-    td {
-        border: 1px solid #ccc;
-        padding: 10px;
+    h1 {
+        margin-bottom: 1.1rem;
+        margin-top: 1.1rem;
+        color: $rose-fonce;
+        text-align: center;
     }
 
-    th {
-        background-color: $violet;
-        color: $blanc;
-        font-weight: bold;
+    div.btn {
+        display: flex;
+        justify-content: center;
+
+        a.btn-retour {
+            display: inline-block;
+            background-color: #f39f0e;
+            color: #fff;
+            padding: 0.5em 1em;
+            margin-bottom: 0.8rem;
+            min-width: 140px;
+            text-decoration: none;
+            border: none;
+            border-radius: 7px;
+            font-size: 1.2rem;
+            font-family: "catseye", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            text-align: center;
+        }
+
     }
 
-    tr:nth-child(even) {
-        background-color: $gris;
+
+    p.message {
+        text-align: center;
+        margin-top: 1rem;
     }
 
-    tr:hover {
-        background-color: $rose-fonce;
+    table {
+        width: 70%;
+        border-collapse: collapse;
+        margin: 1.1rem auto;
+        font-size: 1rem;
+        text-align: center;
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        th {
+            background-color: $violet;
+            color: $blanc;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: $gris;
+        }
+
+        tr:hover {
+            background-color: $rose-fonce;
+        }
+
+        button.btn-annuler {
+            display: inline-block;
+            background-color: #dc3545;
+            color: #fff;
+            padding: 0.5em 0.5em;
+            text-decoration: none;
+            border: none;
+            border-radius: 7px;
+            font-size: 0.8rem;
+            font-family: "catseye", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            text-align: center;
+        }
+
     }
+
 }

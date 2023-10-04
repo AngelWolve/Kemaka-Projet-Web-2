@@ -38,7 +38,7 @@
                 {{-- IMAGE --}}
                 <div class="image">
                     <label for="image">Image</label>
-                    <div>
+                    <div class="image-contenu">
                         <img src="{{ $activite->image }}" width="100" alt="">
                         <x-forms.erreur champ="image" />
 

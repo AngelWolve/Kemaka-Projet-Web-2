@@ -32,16 +32,24 @@
         </ul>
     </div>
     <div class="conteneur-connexion">
-        @if (Auth::check())
-            <a href="{{ route('client.index') }}">
-                <i class="fa-solid fa-cart-shopping"></i>
-            </a>
-        @else
-            <a href="{{ route('connexion.create') }}">
-                <i class="fa-solid fa-cart-shopping"></i>
+
+        @if (Auth::check() && Auth()->user()->role_id == 1)
+            <a title="Administration" href="{{ route('admin.index') }}">
+                <i class="fa-solid fa-computer"></i>
             </a>
         @endif
 
+        @if (Auth::check() && Auth()->user()->role_id == 2)
+            <a title="Administration" href="{{ route('employe.index') }}">
+                <i class="fa-solid fa-computer"></i>
+            </a>
+        @endif
+
+        @if (Auth::check() && Auth()->user()->role_id == 3)
+            <a title="Panier d'achat" href="{{ route('client.index') }}">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+        @endif
 
         @if (Auth::check())
             <form action="{{ route('deconnexion') }}" method="POST">

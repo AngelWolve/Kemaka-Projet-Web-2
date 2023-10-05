@@ -17,14 +17,6 @@ class EnregistrementController extends Controller
      */
     public function create()
     {
-        if (Auth::check() && Auth::user()->role_id != 1) {
-            if (Auth::user()->role_id == 2) {
-                return redirect()->route('employe.index');
-            } else {
-                return redirect()->route('accueil');
-            }
-        }
-
         return view('auth.enregistrement.create', [
             "roles" => Role::all()
         ]);
@@ -38,14 +30,6 @@ class EnregistrementController extends Controller
      */
     public function store(Request $request)
     {
-        if (Auth::check() && Auth::user()->role_id != 1) {
-            if (Auth::user()->role_id == 2) {
-                return redirect()->route('employe.index');
-            } else {
-                return redirect()->route('accueil');
-            }
-        }
-
         // Validation
         $valides = $request->validate([
             "prenom" => "required|max:255",

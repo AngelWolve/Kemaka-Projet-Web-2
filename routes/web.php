@@ -15,6 +15,7 @@ use App\Http\Controllers\InfolettreController;
 use App\Http\Controllers\NousJoindreController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\UtilisateurController;
+use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Route;
 
 /*****************
@@ -177,8 +178,8 @@ Route::post("/connexion", [ConnexionController::class, 'authentifier'])
     ->middleware('guest');
 
 Route::get("/enregistrement", [EnregistrementController::class, 'create'])
-    ->name('enregistrement.create');
-    // ->middleware('guest');
+    ->name('enregistrement.create')
+    ->middleware('compte');
 
 Route::post("/enregistrement", [EnregistrementController::class, 'store'])
     ->name('enregistrement.store');

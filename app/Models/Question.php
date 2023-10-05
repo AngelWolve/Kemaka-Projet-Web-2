@@ -8,9 +8,4 @@ use Illuminate\Database\Eloquent\Model;
 class Question extends Model
 {
     use HasFactory;
-
-    public function getNomCompletAttribute()
-    {
-        return $this->prenom . " " . $this->nom;
-    }
 }

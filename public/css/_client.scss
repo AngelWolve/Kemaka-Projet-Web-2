@@ -1,7 +1,6 @@
 /***************
 ** ACCUEIL
 ***************/
-
 div.conteneur-accueil {
 
     h1 {
@@ -113,7 +112,6 @@ div.conteneur-accueil {
 /***************
 ** ACTIVITÉS
 ***************/
-
 section#activites {
     display: flex;
     flex-direction: column;
@@ -160,7 +158,6 @@ section#activites {
             }
         }
     }
-
 }
 
 @media screen and (max-width: 430px) {
@@ -180,6 +177,7 @@ section#activites {
                     height: 90%;
                     margin-top: 1.11rem;
                 }
+
                 div {
                     order: 1;
                     margin-right: 2.5rem;
@@ -212,7 +210,6 @@ section#activites {
 /***************
 ** FORFAITS
 ***************/
-
 section#forfaits {
     display: flex;
     flex-direction: column;
@@ -291,7 +288,6 @@ section#forfaits {
 /***************
 ** RÉSERVATIONS
 ***************/
-
 section#reservations {
     display: flex;
     flex-direction: column;
@@ -359,7 +355,6 @@ section#reservations {
 /***************
 ** À PROPOS
 ***************/
-
 section#apropos {
     display: flex;
     flex-direction: column;
@@ -447,8 +442,8 @@ section#apropos {
 /***************
 ** NOUS JOINDRE
 ***************/
-
 section#nous-joindre {
+
     .contact {
         padding: 20px;
         max-width: 1440px;
@@ -522,31 +517,6 @@ section#nous-joindre {
     }
 }
 
-
-
-/***************
-** ERREUR 403
-***************/
-
-section#erreur-403 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
-
-    h1 {
-        font-size: 3rem;
-        margin-bottom: 2.5rem;
-    }
-
-    h2 {
-        font-size: 2rem;
-        margin-bottom: 3.5rem;
-    }
-}
-
-
 /***************
 ** PANIER
 ***************/
@@ -613,5 +583,26 @@ section#panier {
             font-style: normal;
             text-align: center;
         }
+    }
+}
+
+/***************
+** ERREUR 403
+***************/
+section#erreur-403 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 3.5rem;
     }
 }

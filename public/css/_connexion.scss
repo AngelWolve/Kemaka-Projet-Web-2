@@ -1,7 +1,6 @@
 /***************
 ** CONNEXION
 ***************/
-
 section#connexion {
     display: flex;
     justify-content: center;
@@ -13,11 +12,9 @@ section#connexion {
     background-size: cover;
     background-repeat: no-repeat;
 
-
     h1 {
         font-size: 1.75rem;
         margin: 0 0 1rem;
-
     }
 
     div.form-connexion {
@@ -51,7 +48,6 @@ section#connexion {
         }
     }
 }
-
 
 /***************
 ** ENREGISTREMENT
@@ -98,7 +94,6 @@ section#enregistrement {
                     font-weight: 700;
                     margin: 0 0 5px 0;
                 }
-
             }
 
             div.submit-enregistrement {
@@ -115,7 +110,7 @@ section#enregistrement {
             }
         }
 
-        div.retour{
+        div.retour {
             text-align: center;
         }
     }

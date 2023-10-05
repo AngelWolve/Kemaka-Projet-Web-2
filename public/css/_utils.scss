@@ -1,7 +1,6 @@
 /***************
 ** BOUTONS
 ***************/
-
 .btn-primaire {
     color: $rose;
     background-color: $amaranth;
@@ -36,7 +35,7 @@ a.btn-create {
     font-style: normal;
     text-align: center;
 
-    &:hover{
+    &:hover {
         background-color: darken(#3caf3c, 10%);
     }
 }
@@ -56,7 +55,7 @@ a.btn-retour {
     font-style: normal;
     text-align: center;
 
-    &:hover{
+    &:hover {
         background-color: darken(#f39f0e, 10%);
     }
 }
@@ -64,7 +63,6 @@ a.btn-retour {
 /***************
 ** INPUTS
 ***************/
-
 div.input {
 
     label {
@@ -94,7 +92,6 @@ div.input {
 /***************
 ** MESSAGES D'ERREURS FORMULAIRES
 ***************/
-
 .form-msg-erreur {
     text-align: left;
     color: #DC2626;

@@ -8,8 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Actualite extends Model
 {
     use HasFactory;
+
     /**
-     * Retourne utilisateur associé a une actualité
+     * Retourne l'utilisateur associé a une actualité
      *
      * @return BelongsTo
      */

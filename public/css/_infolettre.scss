@@ -1,7 +1,6 @@
 /***************
 ** INFOLETTRE
 ***************/
-
 section#infolettre {
     max-width: 100%;
     padding: 2.2em;
@@ -31,6 +30,10 @@ section#infolettre {
 
             &>div:last-child {
                 margin-top: 1.1rem;
+            }
+
+            button {
+                cursor: pointer;
             }
         }
     }

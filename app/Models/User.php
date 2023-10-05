@@ -43,9 +43,7 @@ class User extends Authenticatable
     ];
 
     /**
-     * Retourne les activités associés à utilisateur
-     *
-     * Relation un-à-plusieurs
+     * Retourne les activités associés à l'utilisateur
      *
      * @return HasMany
      */
@@ -55,9 +53,7 @@ class User extends Authenticatable
     }
 
     /**
-     * Retourne les actualité associés à utilisateur
-     *
-     * Relation un-à-plusieurs
+     * Retourne les actualités associés à l'utilisateur
      *
      * @return HasMany
      */
@@ -67,7 +63,7 @@ class User extends Authenticatable
     }
 
     /**
-     * Retourne la role  associé a utilisateur
+     * Retourne le rôle associé à l'utilisateur
      *
      * @return BelongsTo
      */
@@ -77,19 +73,12 @@ class User extends Authenticatable
     }
 
     /**
-     * Retourne les reservations associés à une utilisateur
-     *
-     * Relation un-à-plusieurs
+     * Retourne les reservations associés à l'utilisateur
      *
      * @return HasMany
      */
     public function reservations()
     {
         return $this->hasMany(Reservation::class);
-    }
-
-    public function getNomCompletAttribute()
-    {
-        return $this->prenom . " " . $this->nom;
     }
 }

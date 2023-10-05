@@ -48,11 +48,11 @@
                 @csrf
 
                 <button type="submit" class="btn-primaire">
-                    DÉCONNEXION
+                    Déconnexion
                 </button>
             </form>
         @else
-            <x-parts.bouton-primaire route="{{ route('connexion.create') }}" texte="CONNEXION / S'INSCRIRE" />
+            <x-parts.bouton-primaire route="{{ route('connexion.create') }}" texte="Connexion/S'inscrire" />
         @endif
     </div>
 </nav>

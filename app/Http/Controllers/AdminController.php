@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Activite;
 use App\Models\Actualite;
-use App\Models\User;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller

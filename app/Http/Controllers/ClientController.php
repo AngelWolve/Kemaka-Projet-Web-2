@@ -36,7 +36,6 @@ class ClientController extends Controller
         $reservation = Reservation::findOrFail($request->id);
 
         if ($reservation->date_depart <= now()) {
-
             return redirect()->route('client.index')->with('echec', 'Vous ne pouvez pas annuler une réservation passée.');
         }
 

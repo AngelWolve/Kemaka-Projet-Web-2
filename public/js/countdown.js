@@ -1,7 +1,6 @@
 /***************
 ** COMPTE A REBOURS
 ***************/
-
 let endDate = new Date("2024-06-14T23:59:59").getTime()
 
 let countdown = setInterval(function () {
@@ -23,34 +22,3 @@ let countdown = setInterval(function () {
         document.querySelector('#secondes').textContent = String(secondes).padStart(2, '0');
     }
 }, 1000)
-
-/***************
-** CARROUSEL D'IMAGES
-***************/
-
-let miniatures = document.querySelectorAll('.miniatures li a')
-
-let imgBoiteImage = document.querySelector('.imgBoite img')
-
-miniatures.forEach(miniature => {
-    miniature.addEventListener('click', (e) => {
-        e.preventDefault()
-
-        const imgSrc = miniature.getAttribute('href')
-
-        imgBoiteImage.setAttribute('src', imgSrc)
-    })
-})
-
-/***************
-** CARROUSEL D'ACTUALITÉS
-***************/
-
-const swiper = new Swiper('.swiper', {
-    spaceBetween: 75,
-    slidesPerView: 3,
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-    }
-})

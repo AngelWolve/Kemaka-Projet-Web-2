@@ -325,6 +325,7 @@ section#admin-create-actualite {
 
         p.retour-actualite {
             text-align: center;
+            margin-top: 0.8rem;
 
             a {
                 text-decoration: underline;
@@ -408,6 +409,7 @@ section#admin-create-activite {
 
         p.retour-activite {
             text-align: center;
+            margin-top: 0.8rem;
 
             a {
                 text-decoration: underline;
@@ -490,6 +492,7 @@ section#admin-modifier-actualite {
 
         p.retour-actualite {
             text-align: center;
+            margin-top: 0.8rem;
 
             a {
                 text-decoration: underline;
@@ -583,6 +586,7 @@ section#admin-modifier-activite {
 
         p.retour-activite {
             text-align: center;
+            margin-top: 0.8rem;
 
             a {
                 text-decoration: underline;
@@ -598,10 +602,12 @@ section#admin-administrateurs,
 section#admin-employes,
 section#admin-clients {
 
+    width: 90%;
+    max-width: 1440px;
+
     div.conteneur-create {
         display: flex;
-        justify-content: center;
-        gap: 50%;
+        justify-content: space-between;
     }
 
     div.conteneur-boutons {
@@ -612,14 +618,16 @@ section#admin-clients {
 
         i.fa-trash-alt {
             color: red;
+            cursor: pointer;
         }
     }
 
     table {
-        width: 70%;
+        width: 100%;
         border-collapse: collapse;
+        margin: 0.8rem auto;
+        font-size: 1rem;
         text-align: center;
-        margin: 1rem auto;
 
         th,
         td {
@@ -707,6 +715,7 @@ section#admin-modifier-utilisateur {
 
         p.retour-admin {
             text-align: center;
+            margin-top: 0.8rem;
 
             a {
                 text-decoration: underline;

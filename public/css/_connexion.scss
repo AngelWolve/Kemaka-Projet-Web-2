@@ -41,10 +41,16 @@ section#connexion {
 
         p.compte {
             text-align: center;
+            margin-top: 0.8rem;
 
             a {
                 text-decoration: underline;
             }
+        }
+
+        div.retour {
+            text-align: center;
+            margin-top: 1rem;
         }
     }
 }
@@ -104,14 +110,20 @@ section#enregistrement {
 
         p.compte {
             text-align: center;
+            margin-top: 0.8rem;
 
             a {
                 text-decoration: underline;
             }
         }
 
-        div.retour {
+        p.retour-admin {
             text-align: center;
+            margin-top: 0.8rem;
+
+            a {
+                text-decoration: underline;
+            }
         }
     }
 }

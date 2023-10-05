@@ -1,4 +1,6 @@
 <x-admin titre="Réservations">
+    {{-- Message de confirmation --}}
+    <x-parts.alertes cle="succes" />
     <section id="employes">
         <h1>Liste des réservations</h1>
         <div>

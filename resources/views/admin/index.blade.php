@@ -1,4 +1,6 @@
 <x-admin>
+    {{-- Message de confirmation --}}
+    <x-parts.alertes cle="succes" />
     <section id="admin">
         <div class="container">
             <div class="item"> <a href="{{ route('admin/utilisateurs.index') }}">Liste des utilisateurs</a> </div>

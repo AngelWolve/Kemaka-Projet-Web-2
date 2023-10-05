@@ -30,6 +30,12 @@
                     Enregistrez-vous!
                 </a>
             </p>
+
+            <div class="retour">
+                <a class="btn-retour" href="{{ route('accueil') }}">
+                    Retour
+                </a>
+            </div>
         </div>
 
     </section>

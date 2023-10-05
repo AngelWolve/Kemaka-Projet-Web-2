@@ -43,11 +43,10 @@
                 </div>
             </form>
             @if (Auth::check() && Auth()->user()->role_id == 1)
-                <div class="retour">
-                    <a class="btn-retour" href="{{ route('admin/utilisateurs.index') }}">
-                        Retour
-                    </a>
-                </div>
+
+                <p class="retour-admin">
+                    <a href="{{ route('admin/utilisateurs.index') }}">Retour à la Liste</a>
+                </p>
             @else
                 <p class="compte">
                     Déjà membre?

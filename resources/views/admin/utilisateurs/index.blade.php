@@ -1,5 +1,5 @@
 <x-admin>
-    {{-- Message de confirmaiton d'ajout d'une utilisateur --}}
+    {{-- Message de confirmation --}}
     <x-parts.alertes cle="succes" />
     <section id="admin-administrateurs">
         <h2>Administrateurs</h2>
@@ -7,15 +7,11 @@
         <div class="conteneur-create">
             {{-- CRÉATION --}}
             <a class="btn-create" href="{{ route('enregistrement.create') }}">
-                <span>
-                    créer
-                </span>
+                créer
             </a>
             {{-- RETOUR --}}
             <a class="btn-retour" href="{{ route('admin.index') }}">
-                <span>
-                    Retour
-                </span>
+                Retour
             </a>
         </div>
 
@@ -74,15 +70,11 @@
         <div class="conteneur-create">
             {{-- CRÉATION --}}
             <a class="btn-create" href="{{ route('enregistrement.create') }}">
-                <span>
-                    créer
-                </span>
+                créer
             </a>
             {{-- RETOUR --}}
             <a class="btn-retour" href="{{ route('admin.index') }}">
-                <span>
-                    Retour
-                </span>
+                Retour
             </a>
         </div>
 
@@ -141,15 +133,11 @@
         <div class="conteneur-create">
             {{-- CRÉATION --}}
             <a class="btn-create" href="{{ route('enregistrement.create') }}">
-                <span>
-                    créer
-                </span>
+                créer
             </a>
             {{-- RETOUR --}}
             <a class="btn-retour" href="{{ route('admin.index') }}">
-                <span>
-                    Retour
-                </span>
+                Retour
             </a>
         </div>
 

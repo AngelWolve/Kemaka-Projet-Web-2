@@ -132,6 +132,7 @@ section#admin-actualites {
                     justify-content: center;
                     align-items: center;
                 }
+
             }
 
             form {
@@ -630,6 +631,7 @@ section#admin-clients {
 
         i.fa-trash-alt {
             color: red;
+            cursor: pointer;
         }
     }
 

@@ -16,7 +16,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // Ajout des rôles
+        /**
+         * Ajout des rôles
+         */
         Role::factory()->create([
             "nom" => "administrateur"
         ]);
@@ -29,7 +31,9 @@ class DatabaseSeeder extends Seeder
             "nom" => "client"
         ]);
 
-        // Ajout des utilisateurs fixes
+        /**
+         * Ajout des utilisateurs
+         */
         User::factory()->create([
             "prenom" => "Kevin",
             "nom" => "Levesque-Aubut",
@@ -65,7 +69,9 @@ class DatabaseSeeder extends Seeder
             "role_id" => 1,
         ]);
 
-        // Ajout de forfaits
+        /**
+         * Ajout des forfaits
+         */
         Forfait::factory()->create([
             "nom" => "Forfait Légendaire",
             "description" => "L'Expérience Otaku Ultime vous attend avec le Forfait Légendaire. Accès illimité aux trois jours du festival, deux nuitées dans un hôtel de qualité supérieure, des cadeaux exclusifs comme des éditions limitées de mangas, des accès prioritaires aux dédicaces, et bien plus encore. L'ultime aventure Otaku vous attend!",

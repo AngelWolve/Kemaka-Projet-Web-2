@@ -73,7 +73,6 @@ section#admin {
 /***************
 ** ADMIN/ACTUALITÉS
 ***************/
-
 section#admin-actualites {
     margin: 1rem auto 0;
     max-width: 75%;
@@ -94,6 +93,7 @@ section#admin-actualites {
 
     ul {
         margin-top: 0.8rem;
+
         li {
             background-color: #f8cfed;
             border-radius: 10px;
@@ -160,11 +160,9 @@ section#admin-actualites {
     }
 }
 
-
 /***************
 ** ADMIN/ACTIVITÉS
 ***************/
-
 section#admin-activites {
     margin: 1rem auto 0;
     max-width: 75%;
@@ -177,7 +175,6 @@ section#admin-activites {
     p {
         padding: 50px 24px 50px 24px;
         line-height: 25px;
-
     }
 
     ul {
@@ -223,7 +220,6 @@ section#admin-activites {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-
                 }
             }
 
@@ -318,7 +314,6 @@ section#admin-create-actualite {
                     padding: 10px;
                     box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.25);
                 }
-
             }
 
             div.submit-create {
@@ -335,10 +330,8 @@ section#admin-create-actualite {
                 text-decoration: underline;
             }
         }
-
     }
 }
-
 
 /***********************
 ** ADMIN/ACTIVITÉS/CREATE
@@ -405,13 +398,11 @@ section#admin-create-activite {
                     padding: 10px;
                     box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.25);
                 }
-
             }
 
             div.submit-create {
                 margin-top: 3rem;
                 text-align: center;
-
             }
         }
 
@@ -422,10 +413,8 @@ section#admin-create-activite {
                 text-decoration: underline;
             }
         }
-
     }
 }
-
 
 /**************************
 ** ADMIN/ACTUALITÉS/MODIFIER
@@ -491,13 +480,11 @@ section#admin-modifier-actualite {
                     padding: 10px;
                     box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.25);
                 }
-
             }
 
             div.submit-modifier {
                 margin-top: 3rem;
                 text-align: center;
-
             }
         }
 
@@ -508,10 +495,8 @@ section#admin-modifier-actualite {
                 text-decoration: underline;
             }
         }
-
     }
 }
-
 
 /*************************
 ** ADMIN/ACTIVITÉS/MODIFIER
@@ -593,7 +578,6 @@ section#admin-modifier-activite {
             div.submit-modifier {
                 margin-top: 3rem;
                 text-align: center;
-
             }
         }
 
@@ -604,7 +588,6 @@ section#admin-modifier-activite {
                 text-decoration: underline;
             }
         }
-
     }
 }
 
@@ -631,19 +614,20 @@ section#admin-clients {
             color: red;
         }
     }
-    table{
+
+    table {
         width: 70%;
         border-collapse: collapse;
         text-align: center;
         margin: 1rem auto;
 
         th,
-        td{
+        td {
             border: 1px solid #ccc;
             padding: 10px;
         }
 
-        th{
+        th {
             background-color: $violet;
             color: $blanc;
         }
@@ -652,7 +636,7 @@ section#admin-clients {
             background-color: $gris;
         }
 
-        tr:hover{
+        tr:hover {
             background-color: $rose-fonce;
         }
     }
@@ -713,13 +697,11 @@ section#admin-modifier-utilisateur {
                     padding: 10px;
                     box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.25);
                 }
-
             }
 
             div.submit-modifier {
                 margin-top: 3rem;
                 text-align: center;
-
             }
         }
 
@@ -730,6 +712,5 @@ section#admin-modifier-utilisateur {
                 text-decoration: underline;
             }
         }
-
     }
 }

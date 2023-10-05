@@ -10,9 +10,7 @@ class Forfait extends Model
     use HasFactory;
 
     /**
-     * Retourne les reservations associés à forfait
-     *
-     * Relation un-à-plusieurs
+     * Retourne les reservations associés à un forfait
      *
      * @return HasMany
      */
@@ -20,5 +18,4 @@ class Forfait extends Model
     {
         return $this->hasMany(Reservation::class);
     }
-
 }

@@ -8,10 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Role extends Model
 {
     use HasFactory;
+
     /**
      * Retourne les utilisateurs associés à role
-     *
-     * Relation un-à-plusieurs
      *
      * @return HasMany
      */

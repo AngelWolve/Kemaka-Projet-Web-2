@@ -8,8 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Reservation extends Model
 {
     use HasFactory;
+
     /**
-     * Retourne utilisateur associé a une réservation
+     * Retourne l'utilisateur associé a une réservation
      *
      * @return BelongsTo
      */
@@ -19,7 +20,7 @@ class Reservation extends Model
     }
 
     /**
-     * Retourne utilisateur associé a une forfait
+     * Retourne le forfait associé a une réservation
      *
      * @return BelongsTo
      */

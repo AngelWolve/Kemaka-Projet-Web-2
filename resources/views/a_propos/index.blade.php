@@ -1,5 +1,6 @@
 <x-client titre="À propos">
-
+    {{-- Message de confirmation --}}
+    <x-parts.alertes cle="succes" />
     <section id="apropos">
         <div class="apropos-top">
             <h2>

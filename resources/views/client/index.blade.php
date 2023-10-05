@@ -1,4 +1,7 @@
 <x-admin>
+    {{-- Message de confirmation --}}
+    <x-parts.alertes cle="succes" />
+    <x-parts.alertes cle="echec" />
     <section id="panier">
         <h1>Liste des réservations</h1>
         <div>
@@ -6,7 +9,6 @@
                 Retour
             </a>
         </div>
-
 
         @if ($reservations->isEmpty())
             <p class="message">Aucune réservation pour l'instant.</p>
@@ -27,7 +29,7 @@
                             <td>{{ $reservation->date_arrivee }}</td>
                             <td>{{ $reservation->date_depart }}</td>
                             <td>
-                                <form action="{{ route('client.destroy') }}" method="POST">
+                                <form action="{{ route('reservations.destroy') }}" method="POST">
                                     @csrf
                                     <input type="hidden" name="id" value="{{ $reservation->id }}">
                                     <button class="btn-annuler" type="submit">
@@ -43,5 +45,4 @@
             </table>
         @endif
     </section>
-
 </x-admin>

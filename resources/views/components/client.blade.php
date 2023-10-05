@@ -31,6 +31,11 @@
     <x-parts.footer />
 
     <script src="{{ asset('js/hamburger.js') }}"></script>
+    @if ($titre == 'Accueil')
+        <script src="{{ asset('js/countdown.js') }}"></script>
+        <script src="{{ asset('js/imageCarrousel.js') }}"></script>
+        <script src="{{ asset('js/swiper.js') }}"></script>
+    @endif
 </body>
 
 </html>

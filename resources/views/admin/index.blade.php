@@ -1,10 +1,33 @@
 <x-admin>
+    {{-- Message de confirmation --}}
+    <x-parts.alertes cle="succes" />
     <section id="admin">
         <div class="container">
-            <div class="item"> <a href="{{ route('admin/utilisateurs.index') }}">Liste des utilisateurs</a> </div>
-            <div class="item"> <a href="{{ route('admin/activites.index') }}">Liste des activités</a> </div>
-            <div class="item"> <a href="{{ route('admin/actualites.index') }}">Liste des actualités</a> </div>
-            <div class="item"> <a href="{{ route('accueil') }}">Accueil</a> </div>
+            <div class="item">
+                <a href="{{ route('admin/utilisateurs.index') }}">
+                    Liste des utilisateurs
+                </a>
+            </div>
+            <div class="item">
+                <a href="{{ route('admin/activites.index') }}">
+                    Liste des activités
+                </a>
+            </div>
+            <div class="item">
+                <a href="{{ route('admin/actualites.index') }}">
+                    Liste des actualités
+                </a>
+            </div>
+            <div class="item">
+                <a href="{{ route('reservations.index') }}">
+                    Liste des réservations
+                </a>
+            </div>
+            <div class="item">
+                <a href="{{ route('accueil') }}">
+                    Accueil
+                </a>
+            </div>
         </div>
     </section>
 </x-admin>

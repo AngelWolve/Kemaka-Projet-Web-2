@@ -16,22 +16,27 @@ class InfolettreController extends Controller
      */
     public function store(Request $request)
     {
+        // Validation
         $valides = $request->validate([
             "nom" => "required|max:255",
             "email" => "required|email|max:255",
         ], [
             "nom.required" => "Le nom est requis",
-            "nom.max" => "Le :attribute doit avoir un maximum de :max caractères",
+            "nom.max" => "Le nom doit avoir un maximum de :max caractères",
             "email.required" => "Le courriel est requis",
-            "email.email" => "Le courriel doit avoir un format valide",
-            "email.max" => "Le :attribute doit avoir un maximum de :max caractères",
+            "email.email" => "Le courriel doit être valide",
+            "email.max" => "Le courriel doit avoir un maximum de :max caractères",
         ]);
 
+        // Création de l'infolettre
         $infolettre = new Infolettre();
         $infolettre->nom = $valides["nom"];
         $infolettre->email = $valides["email"];
         $infolettre->save();
 
-        return redirect()->to(URL::previous() . "#infolettre")->with("succes", "Vous êtes maintenant inscrit à l'infolettre");
+        // Redirection
+        return redirect()
+            ->to(URL::previous() . "#infolettre")
+            ->with("succes", "Vous êtes maintenant inscrit à l'infolettre");
     }
 }

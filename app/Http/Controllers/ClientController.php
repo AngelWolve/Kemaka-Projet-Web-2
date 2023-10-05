@@ -15,7 +15,6 @@ class ClientController extends Controller
      */
     public function index()
     {
-
         return view('client.index', [
             "reservations" => Auth::user()
                 ->reservations()
@@ -23,26 +22,5 @@ class ClientController extends Controller
                 ->orderBy('created_at')
                 ->get()
         ]);
-    }
-
-    /**
-     * Traite l'annulation d'une réservation
-     *
-     * @param Request $request
-     * @return RedirectResponse
-     */
-    public function destroy(Request $request)
-    {
-        $reservation = Reservation::findOrFail($request->id);
-
-        if ($reservation->date_depart <= now()) {
-
-            return redirect()->route('client.index')->with('error', 'Vous ne pouvez pas annuler une réservation passée.');
-        }
-
-        Reservation::destroy($request->id);
-
-        return redirect()->route('client.index')
-            ->with('succes', "La réservation a bien été annulée!");
     }
 }

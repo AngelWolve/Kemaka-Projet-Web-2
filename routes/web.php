@@ -15,6 +15,8 @@ use App\Http\Controllers\InfolettreController;
 use App\Http\Controllers\NousJoindreController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\UtilisateurController;
+use App\Models\Reservation;
+use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Route;
 
 /*****************
@@ -58,6 +60,10 @@ Route::get("/forfaits", [ForfaitController::class, 'index'])
 /*****************
  * RÉSERVATIONS
  */
+Route::get("/reservations", [ReservationController::class, 'index'])
+    ->name('reservations.index');
+// ->middleware('admin');
+
 Route::get("/reservations/create/{id}", [ReservationController::class, 'create'])
     ->name('reservations.create')
     ->middleware('auth');
@@ -65,6 +71,10 @@ Route::get("/reservations/create/{id}", [ReservationController::class, 'create']
 Route::post('/reservations/store', [ReservationController::class, 'store'])
     ->name('reservations.store')
     ->middleware('auth');
+
+Route::post("/reservations/destroy", [ReservationController::class, 'destroy'])
+    ->name('reservations.destroy');
+// ->middleware('client');
 
 /*****************
  * À PROPOS
@@ -120,10 +130,6 @@ Route::get("/client", [ClientController::class, 'index'])
     ->name('client.index')
     ->middleware('client');
 
-Route::post("/client/destroy", [ClientController::class, 'destroy'])
-    ->name('client.destroy')
-    ->middleware('client');
-
 /*****************
  * ZONE EMPLOYÉ
  */
@@ -177,8 +183,8 @@ Route::post("/connexion", [ConnexionController::class, 'authentifier'])
     ->middleware('guest');
 
 Route::get("/enregistrement", [EnregistrementController::class, 'create'])
-    ->name('enregistrement.create');
-    // ->middleware('guest');
+    ->name('enregistrement.create')
+    ->middleware('compte');
 
 Route::post("/enregistrement", [EnregistrementController::class, 'store'])
     ->name('enregistrement.store');

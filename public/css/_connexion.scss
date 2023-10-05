@@ -1,7 +1,6 @@
 /***************
 ** CONNEXION
 ***************/
-
 section#connexion {
     display: flex;
     justify-content: center;
@@ -13,11 +12,9 @@ section#connexion {
     background-size: cover;
     background-repeat: no-repeat;
 
-
     h1 {
         font-size: 1.75rem;
         margin: 0 0 1rem;
-
     }
 
     div.form-connexion {
@@ -44,14 +41,19 @@ section#connexion {
 
         p.compte {
             text-align: center;
+            margin-top: 0.8rem;
 
             a {
                 text-decoration: underline;
             }
         }
+
+        div.retour {
+            text-align: center;
+            margin-top: 1rem;
+        }
     }
 }
-
 
 /***************
 ** ENREGISTREMENT
@@ -98,7 +100,6 @@ section#enregistrement {
                     font-weight: 700;
                     margin: 0 0 5px 0;
                 }
-
             }
 
             div.submit-enregistrement {
@@ -109,14 +110,20 @@ section#enregistrement {
 
         p.compte {
             text-align: center;
+            margin-top: 0.8rem;
 
             a {
                 text-decoration: underline;
             }
         }
 
-        div.retour{
+        p.retour-admin {
             text-align: center;
+            margin-top: 0.8rem;
+
+            a {
+                text-decoration: underline;
+            }
         }
     }
 }

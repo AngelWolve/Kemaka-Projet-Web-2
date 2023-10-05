@@ -1,10 +1,11 @@
 <x-admin titre="Réservations">
     {{-- Message de confirmation --}}
     <x-parts.alertes cle="succes" />
-    <section id="employes">
+    <x-parts.alertes cle="echec" />
+    <section id="admin-reservations">
         <h1>Liste des réservations</h1>
         <div>
-            <a class="btn-retour" href="{{ route('accueil') }}">
+            <a class="btn-retour" href="{{ route('admin.index') }}">
                 Retour
             </a>
         </div>
@@ -15,8 +16,9 @@
                 <thead>
                     <tr>
                         <th>Date</th>
-                        <th>Nom de client</th>
-                        <th>Nom de forfait</th>
+                        <th>Nom du client</th>
+                        <th>Nom du forfait</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -25,6 +27,17 @@
                             <td>{{ $reservation->created_at->format('Y-m-d') }}</td>
                             <td>{{ $reservation->user->nom_complet }}</td>
                             <td>{{ $reservation->forfait->nom }}</td>
+                            <td>
+                                <form action="{{ route('reservations.destroy') }}" method="POST">
+                                    @csrf
+                                    <input type="hidden" name="id" value="{{ $reservation->id }}">
+                                    <button class="btn-annuler" type="submit">
+                                        <span>
+                                            Annuler
+                                        </span>
+                                    </button>
+                                </form>
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>

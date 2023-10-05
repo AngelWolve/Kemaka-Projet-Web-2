@@ -1,4 +1,6 @@
 <x-client titre="Nous joindre">
+    {{-- Message de confirmation --}}
+    <x-parts.alertes cle="succes" />
     <section id="nous-joindre">
         <div class="contact">
             <h2>Heures d'ouverture</h2>

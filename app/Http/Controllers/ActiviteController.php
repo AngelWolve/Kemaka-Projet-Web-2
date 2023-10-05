@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Storage;
 class ActiviteController extends Controller
 {
     /**
-     * Affiche la liste des activités
+     * Affiche la page des activités
      *
      * @return View
      */
@@ -40,17 +40,19 @@ class ActiviteController extends Controller
     {
         // Validation
         $valides = $request->validate([
-            "nom" => "required|max:255",
-            "description" => "required",
-            "image" =>  "required|mimes:png,jpg,jpeg",
+            "nom" => "required|max:75",
+            "description" => "required|max:500",
+            "image" => "required|mimes:png,jpg,jpeg",
         ], [
             "nom.required" => "Le nom est requis",
-            "nom.max" => "Le :attribute doit avoir un maximum de :max caractères",
-            "description.required" => "La description de l'activité est obligatoire",
-            "image.required" => "La image de l'activité est obligatoire",
-            "image.mimes" => "L'image de l'activité doit avoir une des extensions suivantes: PNG, JPG, JPEG",
+            "nom.max" => "Le nom doit avoir un maximum de :max caractères",
+            "description.required" => "La description est obligatoire",
+            "description.max" => "La description doit avoir un maximum de :max caractères",
+            "image.required" => "L'image est obligatoire",
+            "image.mimes" => "L'image doit avoir une des extensions suivantes: PNG, JPG, JPEG",
         ]);
 
+        // Création de l'activité
         $activite = new Activite();
         $activite->nom = $valides["nom"];
         $activite->description = $valides["description"];
@@ -94,17 +96,19 @@ class ActiviteController extends Controller
         // Validation
         $valides = $request->validate([
             "id" => "required",
-            "nom" => "required|min:5|max:150",
-            "description" => "required",
+            "nom" => "required|max:75",
+            "description" => "required|max:500",
             "image" =>  "nullable|mimes:png,jpg,jpeg",
         ], [
-            "id.required" => "L'id de l'activité est obligatoire",
-            "nom.max" => "Le nom a un maximum de maximum caractères",
-            "nom.min" => "Le nom doit avoir un minimum de 5 caractères",
-            "description.required" => "La description de l'activité est obligatoire",
-            "image.mimes" => "L'image de l'activité doit être en format : png,jpg,jpeg",
+            "id.required" => "L'id est requis",
+            "nom.required" => "Le nom est requis",
+            "nom.max" => "Le nom doit avoir un maximum de :max caractères",
+            "description.required" => "La description est obligatoire",
+            "description.max" => "La description doit avoir un maximum de :max caractères",
+            "image.mimes" => "L'image doit avoir une des extensions suivantes: PNG, JPG, JPEG",
         ]);
 
+        // Modification de l'activité
         $activite = Activite::findOrFail($valides["id"]);
         $activite->nom = $valides["nom"];
         $activite->description = $valides["description"];
@@ -135,6 +139,6 @@ class ActiviteController extends Controller
         Activite::destroy($request->id);
 
         return redirect()->route('admin/activites.index')
-            ->with('succes', "L'activité a bien été supprimée!");
+            ->with('succes', "L'activité a été supprimée!");
     }
 }

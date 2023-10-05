@@ -1,4 +1,6 @@
 <x-client titre="Nos forfaits">
+    {{-- Message de confirmation --}}
+    <x-parts.alertes cle="succes" />
     <section id="forfaits">
         <div class="intro">
             <h2>

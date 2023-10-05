@@ -73,7 +73,6 @@ section#admin {
 /***************
 ** ADMIN/ACTUALITÉS
 ***************/
-
 section#admin-actualites {
     margin: 1rem auto 0;
     max-width: 75%;
@@ -94,6 +93,7 @@ section#admin-actualites {
 
     ul {
         margin-top: 0.8rem;
+
         li {
             background-color: #f8cfed;
             border-radius: 10px;
@@ -160,11 +160,9 @@ section#admin-actualites {
     }
 }
 
-
 /***************
 ** ADMIN/ACTIVITÉS
 ***************/
-
 section#admin-activites {
     margin: 1rem auto 0;
     max-width: 75%;
@@ -177,7 +175,6 @@ section#admin-activites {
     p {
         padding: 50px 24px 50px 24px;
         line-height: 25px;
-
     }
 
     ul {
@@ -223,7 +220,6 @@ section#admin-activites {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-
                 }
             }
 
@@ -318,7 +314,6 @@ section#admin-create-actualite {
                     padding: 10px;
                     box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.25);
                 }
-
             }
 
             div.submit-create {
@@ -330,15 +325,14 @@ section#admin-create-actualite {
 
         p.retour-actualite {
             text-align: center;
+            margin-top: 0.8rem;
 
             a {
                 text-decoration: underline;
             }
         }
-
     }
 }
-
 
 /***********************
 ** ADMIN/ACTIVITÉS/CREATE
@@ -405,27 +399,24 @@ section#admin-create-activite {
                     padding: 10px;
                     box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.25);
                 }
-
             }
 
             div.submit-create {
                 margin-top: 3rem;
                 text-align: center;
-
             }
         }
 
         p.retour-activite {
             text-align: center;
+            margin-top: 0.8rem;
 
             a {
                 text-decoration: underline;
             }
         }
-
     }
 }
-
 
 /**************************
 ** ADMIN/ACTUALITÉS/MODIFIER
@@ -491,27 +482,24 @@ section#admin-modifier-actualite {
                     padding: 10px;
                     box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.25);
                 }
-
             }
 
             div.submit-modifier {
                 margin-top: 3rem;
                 text-align: center;
-
             }
         }
 
         p.retour-actualite {
             text-align: center;
+            margin-top: 0.8rem;
 
             a {
                 text-decoration: underline;
             }
         }
-
     }
 }
-
 
 /*************************
 ** ADMIN/ACTIVITÉS/MODIFIER
@@ -593,18 +581,17 @@ section#admin-modifier-activite {
             div.submit-modifier {
                 margin-top: 3rem;
                 text-align: center;
-
             }
         }
 
         p.retour-activite {
             text-align: center;
+            margin-top: 0.8rem;
 
             a {
                 text-decoration: underline;
             }
         }
-
     }
 }
 
@@ -615,10 +602,12 @@ section#admin-administrateurs,
 section#admin-employes,
 section#admin-clients {
 
+    width: 90%;
+    max-width: 1440px;
+
     div.conteneur-create {
         display: flex;
-        justify-content: center;
-        gap: 50%;
+        justify-content: space-between;
     }
 
     div.conteneur-boutons {
@@ -629,21 +618,24 @@ section#admin-clients {
 
         i.fa-trash-alt {
             color: red;
+            cursor: pointer;
         }
     }
-    table{
-        width: 70%;
+
+    table {
+        width: 100%;
         border-collapse: collapse;
+        margin: 0.8rem auto;
+        font-size: 1rem;
         text-align: center;
-        margin: 1rem auto;
 
         th,
-        td{
+        td {
             border: 1px solid #ccc;
             padding: 10px;
         }
 
-        th{
+        th {
             background-color: $violet;
             color: $blanc;
         }
@@ -652,7 +644,7 @@ section#admin-clients {
             background-color: $gris;
         }
 
-        tr:hover{
+        tr:hover {
             background-color: $rose-fonce;
         }
     }
@@ -713,23 +705,94 @@ section#admin-modifier-utilisateur {
                     padding: 10px;
                     box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.25);
                 }
-
             }
 
             div.submit-modifier {
                 margin-top: 3rem;
                 text-align: center;
-
             }
         }
 
         p.retour-admin {
             text-align: center;
+            margin-top: 0.8rem;
 
             a {
                 text-decoration: underline;
             }
         }
+    }
+}
 
+/***************
+** ADMIN/RÉSERVATIONS
+***************/
+section#admin-reservations {
+    width: 90%;
+    max-width: 1440px;
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 1.1rem;
+        margin-top: 1.1rem;
+        color: $rose-fonce;
+        text-align: center;
+    }
+
+    div {
+        text-align: right;
+    }
+
+    p.message {
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 0.8rem auto;
+        font-size: 1rem;
+        text-align: center;
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        th {
+            background-color: $violet;
+            color: $blanc;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: $gris;
+        }
+
+        tr:hover {
+            background-color: $rose-fonce;
+        }
+
+        button.btn-annuler {
+            display: inline-block;
+            background-color: #dc3545;
+            color: #fff;
+            padding: 0.5em 0.5em;
+            text-decoration: none;
+            border: none;
+            border-radius: 7px;
+            font-size: 0.8rem;
+            font-family: "catseye", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            text-align: center;
+            cursor: pointer;
+
+            &:hover {
+                background-color: darken(#dc3545, 10%);
+            }
+        }
     }
 }

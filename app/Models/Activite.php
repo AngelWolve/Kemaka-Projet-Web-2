@@ -8,8 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Activite extends Model
 {
     use HasFactory;
+
     /**
-     * Retourne utilisateur associé a une activité
+     * Retourne l'utilisateur associé a une activité
      *
      * @return BelongsTo
      */

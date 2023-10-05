@@ -1,4 +1,6 @@
 <x-client titre="Nos activités">
+    {{-- Message de confirmation --}}
+    <x-parts.alertes cle="succes" />
     <section id="activites">
         <ul>
             @foreach ($activites as $activite)

@@ -537,7 +537,6 @@ section#panier {
         text-align: right;
     }
 
-
     p.message {
         text-align: center;
         margin-top: 1rem;
@@ -549,7 +548,6 @@ section#panier {
         margin: 0.8rem auto;
         font-size: 1rem;
         text-align: center;
-
 
         th,
         td {
@@ -584,6 +582,11 @@ section#panier {
             font-weight: 700;
             font-style: normal;
             text-align: center;
+            cursor: pointer;
+
+            &:hover {
+                background-color: darken(#dc3545, 10%);
+            }
         }
     }
 }

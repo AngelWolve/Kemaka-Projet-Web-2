@@ -48,3 +48,46 @@ footer {
         margin-top: 30px;
     }
 }
+
+@media screen and (max-width: 430px) {
+    footer {
+
+        ul.liens-pages {
+
+            li {
+                margin-left: 24px;
+
+                a.lien {
+                    font-size: 12px;
+                }
+
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+        }
+
+
+        .logo {
+            width: 90%;
+            height: 90%;
+        }
+
+        ul.liens-sociaux {
+
+            li {
+                margin-left: 24px;
+
+                img {
+                    width: 65%;
+                    height: 65%;
+                }
+            }
+        }
+
+        p.tx-sm {
+            font-size: 9px;
+            margin-top: 24px;
+        }
+    }
+}

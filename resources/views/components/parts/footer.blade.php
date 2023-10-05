@@ -29,7 +29,7 @@
 
     <div class="logo-footer">
         <a href="{{ route('accueil') }}">
-            <img src="{{ asset('images/logo.png') }}" alt="Logo Asian Quest">
+            <img src="{{ asset('images/logo.png') }}" alt="Logo Asian Quest" class="logo">
         </a>
     </div>
 

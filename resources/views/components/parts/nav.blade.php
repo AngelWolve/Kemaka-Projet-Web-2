@@ -1,9 +1,9 @@
 <nav>
     <div class="conteneur-liens">
         <a class="lien" href="{{ route('accueil') }}">
-            <img src="{{ asset('images/logo.png') }}" alt="Logo Asian Quest">
+            <img src="{{ asset('images/logo.png') }}" alt="Logo Asian Quest" class="logo-mobile">
         </a>
-        <ul>
+        <ul class="menu-liste">
             <li>
                 <a class="lien" href="{{ route('accueil') }}">
                     ACCUEIL
@@ -30,6 +30,11 @@
                 </a>
             </li>
         </ul>
+        <div class="hamburger">
+            <div class="barre"></div>
+            <div class="barre"></div>
+            <div class="barre"></div>
+        </div>
     </div>
     <div class="conteneur-connexion">
 
@@ -51,16 +56,17 @@
             </a>
         @endif
 
-        @if (Auth::check())
-            <form action="{{ route('deconnexion') }}" method="POST">
-                @csrf
+    @if (Auth::check())
+        <form action="{{ route('deconnexion') }}" method="POST">
+            @csrf
+            <button type="submit" class="btn-primaire">
+                DÉCONNEXION
+            </button>
+        </form>
+    @else
+        <i class="fa-solid fa-user" id="icon-user"></i>
+        <x-parts.bouton-primaire route="{{ route('connexion.create') }}" texte="CONNEXION / S'INSCRIRE" />
+    @endif
 
-                <button type="submit" class="btn-primaire">
-                    Déconnexion
-                </button>
-            </form>
-        @else
-            <x-parts.bouton-primaire route="{{ route('connexion.create') }}" texte="Connexion/S'inscrire" />
-        @endif
     </div>
 </nav>

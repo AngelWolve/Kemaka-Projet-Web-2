@@ -4,8 +4,8 @@
             <h1>
                 Connexion à votre compte
             </h1>
-            @if (session('succes'))
-                <p>{{ session('succes') }}</p>
+            @if (session('email'))
+                <p>{{ session('email') }}</p>
             @endif
             <form action="{{ route('connexion.authentifier') }}" method="POST">
                 @csrf

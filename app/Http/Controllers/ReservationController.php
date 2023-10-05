@@ -90,6 +90,6 @@ class ReservationController extends Controller
         // Rediriger
         return redirect()
             ->route('forfaits.index')
-            ->with('success', 'Réservation a été créée avec succès.');
+            ->with('succes', 'Réservation a été créée avec succès.');
     }
 }

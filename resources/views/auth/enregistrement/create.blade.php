@@ -42,7 +42,13 @@
                     </button>
                 </div>
             </form>
-            @if (Auth()->user()->role_id != 1)
+            @if (Auth::check() && Auth()->user()->role_id == 1)
+                <div class="retour">
+                    <a class="btn-retour" href="{{ route('admin/utilisateurs.index') }}">
+                        Retour
+                    </a>
+                </div>
+            @else
                 <p class="compte">
                     Déjà membre?
 
@@ -50,12 +56,6 @@
                         Connectez-vous!
                     </a>
                 </p>
-            @else
-                <div class="retour">
-                    <a class="btn-retour" href="{{ route('admin/utilisateurs.index') }}">
-                        Retour
-                    </a>
-                </div>
             @endif
 
         </div>

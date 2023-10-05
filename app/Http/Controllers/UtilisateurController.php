@@ -23,7 +23,7 @@ class UtilisateurController extends Controller
     }
 
     /**
-     * Affiche le formulaire de modification
+     * Affiche le formulaire de modification d'un utilisateur
      *
      * @param int $id Id de l'utilisateur à modifier
      * @return View
@@ -37,14 +37,14 @@ class UtilisateurController extends Controller
     }
 
     /**
-     * Traite la modification
+     * Traite la modification d'un utilisateur
      *
-     * @param Request $request Objet qui contient tous les champs reçus dans la requête
+     * @param Request $request
      * @return RedirectResponse
      */
     public function update(Request $request)
     {
-        // Valider
+        // Validation
         $valides = $request->validate([
             "id" => "required",
             "prenom" => "required|max:255",
@@ -53,27 +53,27 @@ class UtilisateurController extends Controller
             "password" => "nullable",
             "role_id" => "required"
         ], [
-            "id.required" => "L'id de l'utilisateur est obligatoire",
+            "id.required" => "L'id est requis",
             "prenom.required" => "Le prénom est requis",
-            "prenom.max" => "Le prénom ne doit pas dépasser :max caractères",
+            "prenom.max" => "Le prénom doit avoir un maximum de :max caractères",
             "nom.required" => "Le nom est requis",
-            "nom.max" => "Le nom ne doit pas dépasser :max caractères",
+            "nom.max" => "Le nom doit avoir un maximum de :max caractères",
             "email.required" => "Le courriel est requis",
-            "email.max" => "Le courriel ne doit pas dépasser :max caractères",
-            "email.email" => "Le courriel doit avoir un format valide",
-            "role_id.required" => "Le role_id est requis"
+            "email.email" => "Le courriel doit être valide",
+            "email.max" => "Le courriel doit avoir un maximum de :max caractères",
+            "password.required" => "Le mot de passe est requis",
+            "role_id.required" => "Le rôle est requis"
         ]);
 
-        // Récupération de l'utilisateur à modifier, suivi de la modification et sauvegarde
+        // Modification de l'utilisateur
         $utilisateur = User::findOrFail($valides["id"]);
         $utilisateur->prenom = $valides["prenom"];
         $utilisateur->nom = $valides["nom"];
         $utilisateur->email = $valides["email"];
         $utilisateur->role_id = $valides["role_id"];
-
         $utilisateur->save();
 
-        // Rediriger
+        // Redirection
         return redirect()
             ->route('admin/utilisateurs.index')
             ->with('succes', "L'utilisateur a été modifiée avec succès!");

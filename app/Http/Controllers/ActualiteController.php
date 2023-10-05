@@ -7,9 +7,8 @@ use Illuminate\Http\Request;
 
 class ActualiteController extends Controller
 {
-
     /**
-     * Affiche le formulaire d'ajout
+     * Affiche le formulaire d'ajout d'une actualité
      *
      * @return View
      */
@@ -19,40 +18,39 @@ class ActualiteController extends Controller
     }
 
     /**
-     * Traite l'ajout
+     * Traite l'ajout d'une actualité
      *
      * @param Request $request
      * @return RedirectResponse
      */
     public function store(Request $request)
     {
-        // Valider
+        // Validation
         $valides = $request->validate([
-            "titre" => "required|min:4|max:150",
-            "description" => "required"
+            "titre" => "required|max:50",
+            "description" => "required|max:750"
         ], [
+            "titre.required" => "Le titre est requis",
             "titre.max" => "Le titre doit avoir un maximum de :max caractères",
-            "titre.min" => "Le titre doit avoir un minimum de :min caractères",
-            "description.required" => "La description de l'actualité est obligatoire"
+            "description.required" => "La description est obligatoire",
+            "description.max" => "La description doit avoir un maximum de :max caractères"
         ]);
 
-        // Ajouter à la BDD
+        // Création de l'actualité
         $actualite = new Actualite();
         $actualite->titre = $valides["titre"];
         $actualite->description = $valides["description"];
-        $actualite->user_id = auth()->user()->id ;
-
+        $actualite->user_id = auth()->user()->id;
         $actualite->save();
 
-        // Rediriger
+        // Redirirection
         return redirect()
             ->route('admin/actualites.index')
             ->with('succes', "L'actualité a été ajoutée avec succès!");
     }
 
-
     /**
-     * Affiche le formulaire de modification
+     * Affiche le formulaire de modification d'une actualité
      *
      * @param int $id Id de l'actualité à modifier
      * @return View
@@ -65,41 +63,41 @@ class ActualiteController extends Controller
     }
 
     /**
-     * Traite la modification
+     * Traite la modification d'une actualité
      *
-     * @param Request $request Objet qui contient tous les champs reçus dans la requête
+     * @param Request $request
      * @return RedirectResponse
      */
     public function update(Request $request)
     {
-        // Valider
+        // Validation
         $valides = $request->validate([
             "id" => "required",
-            "titre" => "required|min:4|max:150",
-            "description" => "required"
+            "titre" => "required|max:50",
+            "description" => "required|max:750"
         ], [
-            "id.required" => "L'id de l'actualité est obligatoire",
+            "id.required" => "L'id est requis",
+            "titre.required" => "Le titre est requis",
             "titre.max" => "Le titre doit avoir un maximum de :max caractères",
-            "titre.min" => "Le titre doit avoir un minimum de :min caractères",
-            "description.required" => "La description de l'actualité est obligatoire"
+            "description.required" => "La description est obligatoire",
+            "description.max" => "La description de l'actualité doit avoir un maximum de :max caractères"
         ]);
 
-        // Récupération de l'actualité à modifier, suivi de la modification et sauvegarde
+        // Modification de l'actualité
         $actualite = Actualite::findOrFail($valides["id"]);
         $actualite->titre = $valides["titre"];
         $actualite->description = $valides["description"];
         $actualite->user_id = auth()->id();
-
         $actualite->save();
 
-        // Rediriger
+        // Redirection
         return redirect()
             ->route('admin/actualites.index')
             ->with('succes', "L'actualité a été modifiée avec succès!");
     }
 
     /**
-     * Traite la suppression
+     * Traite la suppression d'une actualité
      *
      * @param Request $request
      * @return RedirectResponse

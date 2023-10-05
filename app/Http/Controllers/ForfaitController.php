@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class ForfaitController extends Controller
 {
     /**
-     * Affiche la liste des forfaits
+     * Affiche la page des forfaits
      *
      * @return View
      */

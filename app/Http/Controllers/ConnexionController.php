@@ -56,7 +56,7 @@ class ConnexionController extends Controller
             }
         }
 
-        // Redirection avec erreurs
+        // Redirection
         return back()
             ->withErrors([
                 "email" => "Les informations fournies ne sont pas valides"

@@ -17,8 +17,8 @@ class EnregistrementController extends Controller
      */
     public function create()
     {
-        if(Auth::check() && Auth::user()->role_id != 1){
-            if(Auth::user()->role_id == 2){
+        if (Auth::check() && Auth::user()->role_id != 1) {
+            if (Auth::user()->role_id == 2) {
                 return redirect()->route('employe.index');
             } else {
                 return redirect()->route('accueil');
@@ -38,13 +38,14 @@ class EnregistrementController extends Controller
      */
     public function store(Request $request)
     {
-        if(Auth::check() && Auth::user()->role_id != 1){
-            if(Auth::user()->role_id == 2){
+        if (Auth::check() && Auth::user()->role_id != 1) {
+            if (Auth::user()->role_id == 2) {
                 return redirect()->route('employe.index');
             } else {
                 return redirect()->route('accueil');
             }
         }
+
         // Validation
         $valides = $request->validate([
             "prenom" => "required|max:255",
@@ -55,18 +56,18 @@ class EnregistrementController extends Controller
             "role_id" => "nullable"
         ], [
             "prenom.required" => "Le prénom est requis",
-            "prenom.max" => "Le prénom ne doit pas dépasser :max caractères",
+            "prenom.max" => "Le prénom doit avoir un maximum de :max caractères",
             "nom.required" => "Le nom est requis",
-            "nom.max" => "Le nom ne doit pas dépasser :max caractères",
+            "nom.max" => "Le nom doit avoir un maximum de :max caractères",
             "email.required" => "Le courriel est requis",
-            "email.max" => "Le courriel ne doit pas dépasser :max caractères",
-            "email.email" => "Le courriel doit avoir un format valide",
-            "email.unique" => "Ce courriel ne peut pas être utilisé",
+            "email.email" => "Le courriel doit être valide",
+            "email.max" => "Le courriel doit avoir un maximum de :max caractères",
+            "email.unique" => "Le courriel est déjà utilisé",
             "password.required" => "Le mot de passe est requis",
-            "password.min" => "Le mot de passe doit avoir une longueur minimum de :min caractères",
-            "password.max" => "Le mot de passe ne doit pas dépasser :max caractères",
+            "password.min" => "Le mot de passe doit avoir un minimum de :min caractères",
+            "password.max" => "Le mot de passe doit avoir un maximum de :max caractères",
             "password_confirmation.required" => "La confirmation du mot de passe est requise",
-            "password_confirmation.same" => "Le mot de passe n'a pu être confirmé"
+            "password_confirmation.same" => "La confirmation du mot de passe doit être identique au mot de passe",
         ]);
 
         // Création de l'utilisateur
@@ -75,11 +76,9 @@ class EnregistrementController extends Controller
         $user->nom = $valides["nom"];
         $user->email = $valides["email"];
         $user->password = Hash::make($valides["password"]);
-
-        // Sauvegarde de l'utilisateur
         $user->save();
 
-        // Connexion de l'utilisateur
+        // Connexion de l'utilisateur s'il y a lieu
         if (!Auth::check()) {
             Auth::login($user);
         }

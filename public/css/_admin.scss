@@ -94,6 +94,7 @@ section#admin-actualites {
 
     ul {
         margin-top: 0.8rem;
+
         li {
             background-color: #f8cfed;
             border-radius: 10px;
@@ -614,11 +615,11 @@ section#admin-modifier-activite {
 section#admin-administrateurs,
 section#admin-employes,
 section#admin-clients {
+    width: 60%;
 
     div.conteneur-create {
         display: flex;
-        justify-content: center;
-        gap: 50%;
+        justify-content: space-between;
     }
 
     div.conteneur-boutons {
@@ -631,19 +632,20 @@ section#admin-clients {
             color: red;
         }
     }
-    table{
-        width: 70%;
+
+    table {
+        width: 100%;
         border-collapse: collapse;
         text-align: center;
         margin: 1rem auto;
 
         th,
-        td{
+        td {
             border: 1px solid #ccc;
             padding: 10px;
         }
 
-        th{
+        th {
             background-color: $violet;
             color: $blanc;
         }
@@ -652,7 +654,7 @@ section#admin-clients {
             background-color: $gris;
         }
 
-        tr:hover{
+        tr:hover {
             background-color: $rose-fonce;
         }
     }

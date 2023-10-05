@@ -1,33 +1,32 @@
-<x-admin>
+<x-admin titre="Réservations">
     {{-- Message de confirmation --}}
     <x-parts.alertes cle="succes" />
     <x-parts.alertes cle="echec" />
-    <section id="panier">
+    <section id="admin-reservations">
         <h1>Liste des réservations</h1>
         <div>
-            <a class="btn-retour" href="{{ route('accueil') }}">
+            <a class="btn-retour" href="{{ route('admin.index') }}">
                 Retour
             </a>
         </div>
-
         @if ($reservations->isEmpty())
-            <p class="message">Aucune réservation pour l'instant.</p>
+            <p>Aucune réservation pour l'instant.</p>
         @else
             <table>
                 <thead>
                     <tr>
-                        <th>Nom de forfait</th>
-                        <th>Date_arrivée</th>
-                        <th>Date_départ</th>
+                        <th>Date</th>
+                        <th>Nom du client</th>
+                        <th>Nom du forfait</th>
                         <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($reservations as $reservation)
                         <tr>
+                            <td>{{ $reservation->created_at->format('Y-m-d') }}</td>
+                            <td>{{ $reservation->user->nom_complet }}</td>
                             <td>{{ $reservation->forfait->nom }}</td>
-                            <td>{{ $reservation->date_arrivee }}</td>
-                            <td>{{ $reservation->date_depart }}</td>
                             <td>
                                 <form action="{{ route('reservations.destroy') }}" method="POST">
                                     @csrf

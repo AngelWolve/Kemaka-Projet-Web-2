@@ -5,9 +5,24 @@ namespace App\Http\Controllers;
 use App\Models\Forfait;
 use App\Models\Reservation;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ReservationController extends Controller
 {
+    /**
+     * Affiche la liste des reservations
+     *
+     * @return View
+     */
+    public function index()
+    {
+        return view('reservations.index', [
+            "reservations" => Reservation::with(['user', 'forfait'])
+                ->orderBy('created_at')
+                ->get()
+        ]);
+    }
+
     /**
      * Affiche le formulaire d'ajout d'une réservation
      *
@@ -39,6 +54,12 @@ class ReservationController extends Controller
         ]);
     }
 
+    /**
+     * Traite l'ajout d'une réservation
+     *
+     * @param Request $request
+     * @return RedirectResponse
+     */
     public function store(Request $request)
     {
         // Validation
@@ -95,5 +116,49 @@ class ReservationController extends Controller
         return redirect()
             ->route('forfaits.index')
             ->with('succes', 'La réservation a été créée avec succès!');
+    }
+
+    /**
+     * Traite l'annulation d'une réservation
+     *
+     * @param Request $request
+     * @return RedirectResponse
+     */
+    public function destroy(Request $request)
+    {
+        // Validation
+        if (Auth::user()->role_id == 1) {
+            // Suppression de la réservation
+            Reservation::destroy($request->id);
+
+            // Redirection
+            return redirect()
+                ->route('reservations.index')
+                ->with('succes', "La réservation a bien été annulée!");
+        }
+
+        // Validation
+        if (Auth::user()->role_id == 3) {
+            if (Reservation::findOrFail($request->id)->date_depart <= now()) {
+
+                // Redirection
+                return redirect()
+                    ->route('client.index')
+                    ->with('echec', 'Vous ne pouvez plus annuler cette réservation.');
+            }
+
+            // Suppression de la réservation
+            Reservation::destroy($request->id);
+
+            // Redirection
+            return redirect()
+                ->route('client.index')
+                ->with('succes', "La réservation a bien été annulée!");
+        }
+
+        // Redirection
+        return redirect()
+            ->route('accueil')
+            ->with('echec', "Vous n'avez pas les droits pour annuler cette réservation.");
     }
 }

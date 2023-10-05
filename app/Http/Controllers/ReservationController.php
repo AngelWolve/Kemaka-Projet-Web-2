@@ -78,7 +78,9 @@ class ReservationController extends Controller
 
         // Aucune date de festival n'est incluse dans la réservation
         if (!isset($date_festival)) {
-            return redirect()->back()->with('error', 'Les dates de réservation ne sont pas valides pour ce forfait.');
+            return redirect()
+                ->back()
+                ->with('echec', 'Les dates de réservation ne sont pas valides pour ce forfait.');
         }
 
         // Creéation de la réservation
@@ -92,6 +94,6 @@ class ReservationController extends Controller
         // Redirection
         return redirect()
             ->route('forfaits.index')
-            ->with('success', 'La réservation a été créée avec succès!');
+            ->with('succes', 'La réservation a été créée avec succès!');
     }
 }

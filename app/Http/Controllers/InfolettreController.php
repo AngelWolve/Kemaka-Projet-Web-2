@@ -35,6 +35,8 @@ class InfolettreController extends Controller
         $infolettre->save();
 
         // Redirection
-        return redirect()->to(URL::previous() . "#infolettre")->with("succes", "Vous êtes maintenant inscrit à l'infolettre");
+        return redirect()
+            ->to(URL::previous() . "#infolettre")
+            ->with("succes", "Vous êtes maintenant inscrit à l'infolettre");
     }
 }

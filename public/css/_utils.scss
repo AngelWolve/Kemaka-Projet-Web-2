@@ -99,3 +99,68 @@ div.input {
     font-style: italic;
     margin: 0px 0px 5px 5px;
 }
+
+/***************
+** MESSAGES SUCCÈS ET ÉCHECS
+***************/
+div.conteneur-alerte {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    animation: popUp 2s ease-in-out, fadeOut 1s 4s forwards;
+
+    @keyframes popUp {
+        0% {
+            transform: scale(0.5);
+            opacity: 0;
+        }
+
+        50% {
+            transform: scale(1.05);
+            opacity: 1;
+        }
+
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeOut {
+        0% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+            display: none;
+        }
+    }
+
+    div.alerte {
+        max-width: 28rem;
+        padding: 0.25rem;
+        border-radius: 7px;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+        p.texte-alerte {
+            padding: 0.25rem;
+        }
+    }
+
+    .succes {
+        background-color: #6ee7b7;
+        color: #047857;
+    }
+
+    .echec {
+        background-color: #fc8181;
+        color: #972c25;
+    }
+}

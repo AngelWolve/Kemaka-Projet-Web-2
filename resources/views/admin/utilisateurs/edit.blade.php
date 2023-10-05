@@ -69,7 +69,7 @@
 
             {{-- RETOUR AUX LISTE --}}
             <p class="retour-admin">
-                <a href="{{ route('admin/utilisateurs.index') }}">Retour aux Liste</a>
+                <a href="{{ route('admin/utilisateurs.index') }}">Retour à la Liste</a>
             </p>
         </div>
     </section>

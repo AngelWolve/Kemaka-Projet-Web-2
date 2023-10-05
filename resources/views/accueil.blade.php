@@ -1,4 +1,5 @@
 <x-client titre="Accueil">
+    <x-parts.alertes cle="succes" />
     <div class="conteneur-accueil">
 
         <h1>

@@ -598,10 +598,12 @@ section#admin-administrateurs,
 section#admin-employes,
 section#admin-clients {
 
+    width: 90%;
+    max-width: 1440px;
+
     div.conteneur-create {
         display: flex;
-        justify-content: center;
-        gap: 50%;
+        justify-content: space-between;
     }
 
     div.conteneur-boutons {
@@ -612,14 +614,16 @@ section#admin-clients {
 
         i.fa-trash-alt {
             color: red;
+            cursor: pointer;
         }
     }
 
     table {
-        width: 70%;
+        width: 100%;
         border-collapse: collapse;
+        margin: 0.8rem auto;
+        font-size: 1rem;
         text-align: center;
-        margin: 1rem auto;
 
         th,
         td {

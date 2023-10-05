@@ -1,4 +1,6 @@
 <x-client titre="Accueil">
+    {{-- Message de confirmation --}}
+    <x-parts.alertes cle="succes" />
     <div class="conteneur-accueil">
 
         <h1>

@@ -1,5 +1,5 @@
     <x-admin>
-        {{-- Message de confirmaiton d'ajout d'une activité --}}
+        {{-- Message de confirmation --}}
         <x-parts.alertes cle="succes" />
 
         <section id="admin-actualites">

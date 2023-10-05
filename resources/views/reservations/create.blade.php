@@ -1,6 +1,7 @@
 <x-client titre="Réservez ici!">
+    {{-- Message de confirmation --}}
+    <x-parts.alertes cle="echec" />
     <section id="reservations">
-
         <div class="reservations-bg">
             <div class="details">
                 <h3>

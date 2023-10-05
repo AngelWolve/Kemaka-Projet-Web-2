@@ -31,6 +31,10 @@ section#infolettre {
             &>div:last-child {
                 margin-top: 1.1rem;
             }
+
+            button {
+                cursor: pointer;
+            }
         }
     }
 }

@@ -30,7 +30,7 @@
 
     <x-parts.footer />
 
-    <script src="{{ asset('js/main.js') }}"></script>
+    <script src="{{ asset('js/hamburger.js') }}"></script>
 </body>
 
 </html>

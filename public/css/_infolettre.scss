@@ -35,3 +35,24 @@ section#infolettre {
         }
     }
 }
+
+@media screen and (max-width: 430px) {
+    section#infolettre {
+        h2 {
+            font-size: 18px;
+        }
+
+        div.texte-infolettre p {
+            font-size: 12px;
+            max-width: 100%;
+            margin: 0.75rem auto 0.85rem;
+        }
+
+        div.formulaire-infolettre {
+
+            img {
+                display: none;
+            }
+        }
+    }
+}

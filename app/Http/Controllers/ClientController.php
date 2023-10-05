@@ -37,7 +37,7 @@ class ClientController extends Controller
 
         if ($reservation->date_depart <= now()) {
 
-            return redirect()->route('client.index')->with('error', 'Vous ne pouvez pas annuler une réservation passée.');
+            return redirect()->route('client.index')->with('echec', 'Vous ne pouvez pas annuler une réservation passée.');
         }
 
         Reservation::destroy($request->id);

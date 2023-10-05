@@ -42,7 +42,7 @@
                     </button>
                 </div>
             </form>
-            @if (Auth()->user()->role_id != 1)
+            {{-- @if (Auth()->user()->role_id != 1)
                 <p class="compte">
                     Déjà membre?
 
@@ -56,7 +56,7 @@
                         Retour
                     </a>
                 </div>
-            @endif
+            @endif --}}
 
         </div>
 

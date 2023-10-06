@@ -29,7 +29,7 @@
                 <div class="date">
                     <label for="date_arrivee">Date d'arrivée :</label>
                     <select name="date_arrivee" id="date_arrivee">
-                        @foreach ($datesDisponibleArrivee as $date)
+                        @foreach ($dates_disponibles_arrivee as $date)
                             <option value="{{ $date }}">{{ $date }}</option>
                         @endforeach
                     </select>
@@ -37,7 +37,7 @@
                 <div class="date">
                     <label for="date_depart">Date de départ :</label>
                     <select name="date_depart" id="date_depart">
-                        @foreach ($datesDisponibleDepart as $date)
+                        @foreach ($dates_disponibles_arrivee as $date)
                             <option value="{{ $date }}">{{ $date }}</option>
                         @endforeach
                     </select>

@@ -51,22 +51,26 @@
         @endif
 
         @if (Auth::check() && Auth()->user()->role_id == 3)
-            <a title="Panier d'achat" href="{{ route('client.index') }}">
+            <a class="shopping-cart" title="Panier d'achat" href="{{ route('client.index') }}">
                 <i class="fa-solid fa-cart-shopping"></i>
             </a>
         @endif
 
-    @if (Auth::check())
-        <form action="{{ route('deconnexion') }}" method="POST">
-            @csrf
-            <button type="submit" class="btn-primaire">
-                DÉCONNEXION
-            </button>
-        </form>
-    @else
-        <i class="fa-solid fa-user" id="icon-user"></i>
-        <x-parts.bouton-primaire route="{{ route('connexion.create') }}" texte="CONNEXION / S'INSCRIRE" />
-    @endif
+        @if (Auth::check())
+            <form action="{{ route('deconnexion') }}" method="POST">
+                @csrf
+
+                <button type="submit" class="icon-user">
+                    <i class="fa-solid fa-user" id="icon-user"></i>
+                </button>
+                <button type="submit" class="btn-primaire">
+                    DÉCONNEXION
+                </button>
+            </form>
+        @else
+            <i class="fa-solid fa-user" id="icon-user"></i>
+            <x-parts.bouton-primaire route="{{ route('connexion.create') }}" texte="CONNEXION / S'INSCRIRE" />
+        @endif
 
     </div>
 </nav>

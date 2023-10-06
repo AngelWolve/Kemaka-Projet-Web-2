@@ -1,9 +1,10 @@
 /***************
 ** NAVIGATION
 ***************/
+
 nav {
     background-color: $violet;
-    padding: 0px 20px;
+    padding: 0em 1.11em;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -18,7 +19,7 @@ nav {
             display: flex;
 
             li {
-                margin-left: 30px;
+                margin-left: 1.66rem;
                 text-align: center;
                 transition: all 0.3s ease-in-out;
             }
@@ -35,7 +36,6 @@ nav {
             font-size: 35px;
             color: $bleu;
             margin-right: 1.25rem;
-            cursor: pointer;
             transition: all 0.3s ease-in-out;
 
             &:hover {
@@ -60,27 +60,23 @@ nav {
 
 @media screen and (max-width: 430px) {
     nav {
-        padding: 0px 10px;
 
         .conteneur-liens {
 
             .logo-mobile {
-                width: 80px;
+                width: 4.55rem;
                 height: auto;
-                margin-right: 12px;
+                padding: 0.33em 0em 0.33em 0em;
+                margin-right: 0.66rem;
             }
 
             .hamburger {
-                background: none;
-                border: none;
                 cursor: pointer;
                 display: flex;
                 flex-direction: column;
-                align-items: flex-end;
                 justify-content: space-between;
-                min-width: 20px;
-                height: 20px;
-                padding: 0;
+                min-width: 1.12rem;
+                height: 1.12rem;
 
                 .barre {
                     width: 100%;
@@ -98,7 +94,6 @@ nav {
             /* Transformer les barres en "X" lorsque le menu est ouvert */
             .hamburger.active .barre:nth-child(1) {
                 transform: translateY(5px) rotate(45deg);
-
             }
 
             .hamburger.active .barre:nth-child(2) {
@@ -115,7 +110,7 @@ nav {
                 flex-direction: column;
                 position: absolute;
                 top: 36px;
-                right: 0;
+                right: 0px;
                 background-color: $violet;
                 opacity: 95%;
                 height: auto;
@@ -128,7 +123,7 @@ nav {
                     margin: 0 auto;
 
                     a.lien {
-                        font-size: 12px;
+                        font-size: 0.66rem;
                     }
                 }
             }
@@ -139,11 +134,11 @@ nav {
             width: 100%;
             display: flex;
             justify-content: flex-end;
+            padding-right: 0em;
 
             i.fa-solid.fa-cart-shopping {
-                font-size: 24px;
+                font-size: 1.33rem;
                 color: $bleu;
-                margin: 0 40px 0 24px;
                 cursor: pointer;
                 transition: all 0.3s ease-in-out;
             }
@@ -152,11 +147,18 @@ nav {
                 display: none;
             }
 
+            .icon-user{
+                background-color: $violet;
+                border: none;
+            }
+
             #icon-user {
-                display: block;
+                display: inline-block;
                 font-size: 24px;
                 color: $bleu;
                 cursor: pointer;
+                margin: 0rem;
+                padding: 0em;
             }
         }
     }

@@ -3,19 +3,19 @@
 ***************/
 footer {
     background-color: $violet;
-    padding: 40px 20px 20px;
+    padding: 2.22em 1.11em 1.11em;
 
     ul.liens-pages {
         display: flex;
         justify-content: center;
 
         li {
-            margin-left: 40px;
+            margin-left: 2.22rem;
             text-align: center;
             transition: all 0.3s ease-in-out;
 
             &:first-child {
-                margin-left: 0;
+                margin-left: 0rem;
             }
         }
     }
@@ -24,20 +24,20 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 30px;
+        margin-top: 1.66rem;
     }
 
     ul.liens-sociaux {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 30px;
+        margin-top: 1.66rem;
 
         li {
-            margin-left: 40px;
+            margin-left: 2.22rem;
 
             &:first-child {
-                margin-left: 0;
+                margin-left: 0rem;
             }
         }
     }
@@ -45,7 +45,7 @@ footer {
     p {
         color: $blanc;
         text-align: center;
-        margin-top: 30px;
+        margin-top: 1.66rem;
     }
 }
 
@@ -55,18 +55,17 @@ footer {
         ul.liens-pages {
 
             li {
-                margin-left: 24px;
+                margin-left: 1.33rem;
 
                 a.lien {
-                    font-size: 12px;
+                    font-size: 0.66rem;
                 }
 
                 &:first-child {
-                    margin-left: 0;
+                    margin-left: 0rem;
                 }
             }
         }
-
 
         .logo {
             width: 90%;
@@ -76,7 +75,7 @@ footer {
         ul.liens-sociaux {
 
             li {
-                margin-left: 24px;
+                margin-left: 1.33rem;
 
                 img {
                     width: 65%;
@@ -86,8 +85,8 @@ footer {
         }
 
         p.tx-sm {
-            font-size: 9px;
-            margin-top: 24px;
+            font-size: 0.5rem;
+            margin-top: 1.33rem;
         }
     }
 }

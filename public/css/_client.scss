@@ -164,36 +164,33 @@ section#activites {
 
 @media screen and (max-width: 430px) {
     section#activites {
-        margin: auto;
-        margin-top: 4rem;
+        margin-top: 3.4rem;
 
         ul {
-            margin: 0 auto 1.33rem auto;
+            width: 80%;
 
             li {
                 flex-direction: column;
 
                 img {
                     order: 2;
-                    width: 90%;
-                    height: 90%;
-                    margin-top: 1.11rem;
+                    margin: 1.11rem 0rem 0rem 0rem;
                 }
 
                 div {
                     order: 1;
-                    margin-right: 2.5rem;
+                    margin-right: 0rem 2.5rem 0rem 0rem;
                     text-align: left;
 
                     h2 {
                         text-align: left;
-                        font-size: 18px;
+                        font-size: 1rem;
                     }
 
                     p {
                         margin-top: 0.85rem;
                         line-height: 1.5;
-                        font-size: 12px;
+                        font-size: 0.66rem;
                     }
                 }
 
@@ -208,7 +205,7 @@ section#activites {
         }
 
         a.btn-primaire {
-            min-width: 70%;
+            min-width: 62%;
         }
     }
 }

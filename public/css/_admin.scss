@@ -14,17 +14,28 @@ section#admin {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        gap: 60px;
+        gap: 2rem;
         height: 100%;
 
-        div.item {
-            border-radius: 25%;
-            border: 3px solid $amaranth;
+        .item {
             display: flex;
             justify-content: center;
             align-items: center;
+            text-align: center;
+            color: $noir;
             background-color: #049DBF;
+            padding: 0 1em;
+            font-size: 1.2rem;
+            font-family: "catseye", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            border: 3px solid $amaranth;
+            border-radius: 15px;
             animation: growAnimation 1.5s ease-in-out forwards;
+
+            &:hover {
+                background-color: darken(#049DBF, 10%);
+            }
 
             @keyframes growAnimation {
                 0% {
@@ -41,29 +52,12 @@ section#admin {
                 }
 
                 100% {
-                    width: 200px;
-                    height: 200px;
+                    width: 275px;
+                    height: 275px;
                     opacity: 1;
                     transform: scale(1) rotate(360deg);
                     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
                     opacity: 1;
-                }
-            }
-
-            a {
-                text-decoration: none;
-                color: #333;
-                margin-top: 0;
-                padding: 0 1.5em;
-                text-align: center;
-                font-size: 1.2rem;
-                font-family: "catseye", sans-serif;
-                font-weight: 700;
-                font-style: normal;
-                transition: color 0.3s ease;
-
-                &:hover {
-                    color: white;
                 }
             }
         }
@@ -270,7 +264,7 @@ section#admin-create-actualite {
     }
 
     div.actualite-form {
-        width: 35vw;
+        width: 50%;
         margin: 0 auto;
 
         form {
@@ -354,7 +348,7 @@ section#admin-create-activite {
     }
 
     div.activite-form {
-        width: 35vw;
+        width: 50%;
         margin: 0 auto;
 
         form {
@@ -438,7 +432,7 @@ section#admin-modifier-actualite {
     }
 
     div.modifier-form {
-        width: 35vw;
+        width: 50%;
         margin: 0 auto;
 
         form {
@@ -521,7 +515,7 @@ section#admin-modifier-activite {
     }
 
     div.activite-modifier {
-        width: 35vw;
+        width: 50%;
         margin: 0 auto;
 
         form {
@@ -670,7 +664,7 @@ section#admin-modifier-utilisateur {
     }
 
     div.modifier-form {
-        width: 35vw;
+        width: 50%;
         margin: 0 auto;
 
         form {

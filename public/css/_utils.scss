@@ -14,6 +14,7 @@
     font-style: normal;
     text-align: center;
     transition: all 0.3s ease-in-out;
+    cursor: pointer;
 
     &:hover {
         color: $rose-fonce;
@@ -34,6 +35,7 @@ a.btn-create {
     font-weight: 700;
     font-style: normal;
     text-align: center;
+    cursor: pointer;
 
     &:hover {
         background-color: darken(#3caf3c, 10%);
@@ -54,6 +56,7 @@ a.btn-retour {
     font-weight: 700;
     font-style: normal;
     text-align: center;
+    cursor: pointer;
 
     &:hover {
         background-color: darken(#f39f0e, 10%);

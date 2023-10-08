@@ -32,10 +32,15 @@ nav {
         padding: 10px 20px;
         position: relative;
 
+        button {
+            cursor: pointer;
+        }
+
         i {
             font-size: 35px;
             color: $bleu;
             margin-right: 1.25rem;
+            cursor: pointer;
             transition: all 0.3s ease-in-out;
 
             &:hover {
@@ -43,11 +48,15 @@ nav {
             }
         }
 
-        button {
-            cursor: pointer;
+        a.btn-user {
+            display: none;
         }
 
-        #icon-user {
+        button.icone-deconnect {
+            display: none;
+        }
+
+        i.icone-x {
             display: none;
         }
     }
@@ -57,17 +66,13 @@ nav {
     }
 }
 
-
 @media screen and (max-width: 430px) {
     nav {
 
         .conteneur-liens {
 
-            .logo-mobile {
-                width: 4.55rem;
-                height: auto;
-                padding: 0.33em 0em 0.33em 0em;
-                margin-right: 0.66rem;
+            a img {
+                display: none;
             }
 
             .hamburger {
@@ -136,29 +141,24 @@ nav {
             justify-content: flex-end;
             padding-right: 0em;
 
-            i.fa-solid.fa-cart-shopping {
+            i {
                 font-size: 1.33rem;
-                color: $bleu;
-                cursor: pointer;
-                transition: all 0.3s ease-in-out;
+                margin-right: 0;
+            }
+
+            a.btn-user {
+                display: inline-block;
             }
 
             .btn-primaire {
                 display: none;
             }
 
-            .icon-user{
+            button.icone-deconnect {
+                display: block;
+                margin-left: 1rem;
                 background-color: $violet;
                 border: none;
-            }
-
-            #icon-user {
-                display: inline-block;
-                font-size: 24px;
-                color: $bleu;
-                cursor: pointer;
-                margin: 0rem;
-                padding: 0em;
             }
         }
     }

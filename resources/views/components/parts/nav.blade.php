@@ -1,7 +1,7 @@
 <nav>
     <div class="conteneur-liens">
         <a class="lien" href="{{ route('accueil') }}">
-            <img src="{{ asset('images/logo.png') }}" alt="Logo Asian Quest" class="logo-mobile">
+            <img src="{{ asset('images/logo.png') }}" alt="Logo Asian Quest">
         </a>
         <ul class="menu-liste">
             <li>
@@ -30,7 +30,7 @@
                 </a>
             </li>
         </ul>
-        <div class="hamburger">
+        <div title="Menu" class="hamburger">
             <div class="barre"></div>
             <div class="barre"></div>
             <div class="barre"></div>
@@ -45,8 +45,8 @@
         @endif
 
         @if (Auth::check() && Auth()->user()->role_id == 2)
-            <a title="Administration" href="{{ route('employe.index') }}">
-                <i class="fa-solid fa-computer"></i>
+            <a title="Réservations" href="{{ route('employe.index') }}">
+                <i class="fa-solid fa-clipboard"></i>
             </a>
         @endif
 
@@ -60,17 +60,19 @@
             <form action="{{ route('deconnexion') }}" method="POST">
                 @csrf
 
-                <button type="submit" class="icon-user">
-                    <i class="fa-solid fa-user" id="icon-user"></i>
+                <button title="Déconnexion" class="icone-deconnect">
+                    <i type="submit" class="fa-solid fa-xmark"></i>
                 </button>
+
                 <button type="submit" class="btn-primaire">
                     DÉCONNEXION
                 </button>
             </form>
         @else
-            <i class="fa-solid fa-user" id="icon-user"></i>
+            <a class="btn-user" title="Connexion/S'inscrire" href="{{ route('connexion.create') }}">
+                <i class="fa-solid fa-user"></i>
+            </a>
             <x-parts.bouton-primaire route="{{ route('connexion.create') }}" texte="CONNEXION / S'INSCRIRE" />
         @endif
-
     </div>
 </nav>

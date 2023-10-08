@@ -60,7 +60,7 @@
                             <form action="{{ route('admin/activites.destroy') }}" method="POST">
                                 @csrf
 
-                                <input type="hidden" name="id" value="{{ $activite->id }}">
+                                <input type="hidden" name="id" value="{{ $activite->id }}" required>
                                 <button type="submit">
                                     <span>
                                         supprimer

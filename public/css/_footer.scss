@@ -51,6 +51,7 @@ footer {
 
 @media screen and (max-width: 430px) {
     footer {
+        padding: 1.5em 0.55em 0.55em;
 
         ul.liens-pages {
 
@@ -67,15 +68,10 @@ footer {
             }
         }
 
-        .logo {
-            width: 90%;
-            height: 90%;
-        }
-
         ul.liens-sociaux {
 
             li {
-                margin-left: 1.33rem;
+                margin-left: 0.75rem;
 
                 img {
                     width: 65%;

@@ -2,13 +2,6 @@
     {{-- Section modifier une actualité --}}
     <section id="admin-modifier-actualite">
 
-        {{-- Message de confirmation --}}
-        @if (session('succes'))
-            <p>
-                {{ session('succes') }}
-            </p>
-        @endif
-
         <div class="modifier-actualite">
             <h1>Modifier une actualité</h1>
 

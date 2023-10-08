@@ -2,13 +2,6 @@
     {{-- Section création d'activité --}}
     <section id="admin-create-activite">
 
-        {{-- Message de confirmation --}}
-        @if (session('succes'))
-            <p>
-                {{ session('succes') }}
-            </p>
-        @endif
-
         <div class="ajouter-activite">
             <h1>
                 Créer une activité

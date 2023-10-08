@@ -149,20 +149,9 @@ section#admin-modifier-utilisateur {
             padding: 3em 0;
             border-radius: 7px;
 
-            div.input,
-            div.textarea {
+            div.input {
                 width: 75%;
                 margin: 0 auto 0.8rem;
-            }
-
-            div.img-activite {
-                display: flex;
-                align-items: center;
-
-                img {
-                    width: 100px;
-                    margin-right: 1rem;
-                }
             }
 
             div.submit {

@@ -2,13 +2,6 @@
     {{-- Section modification utilisateur --}}
     <section id="admin-modifier-utilisateur">
 
-        {{-- Message de confirmation --}}
-        @if (session('succes'))
-            <p>
-                {{ session('succes') }}
-            </p>
-        @endif
-
         <div class="modifier-utilisateur">
             <h1>Modifier un utilisateur</h1>
 

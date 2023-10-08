@@ -1,63 +1,116 @@
 <x-admin titre="Enregistrement">
+    {{-- Section enregistrement --}}
     <section id="enregistrement">
+
         <div class="form-enregistrement">
             <h1>
                 Créez votre compte
             </h1>
+
+            {{-- Formulaire d'enregistrement --}}
             <form action="{{ route('enregistrement.store') }}" method="POST">
                 @csrf
-                <x-forms.input name="prenom" label="Prénom" autocomplete="given-name" autofocus required max_length="255"
-                    value="{{ old('prenom') }}" />
 
-                <x-forms.input name="nom" label="Nom" autocomplete="family-name" autofocus required
-                    max_length="255" value="{{ old('nom') }}" />
+                {{-- Prénom --}}
+                <div class="input">
+                    <label for="prenom">
+                        Prénom
+                    </label>
+                    <div>
+                        <x-forms.erreur champ="prenom" />
+                        <input id="prenom" name="prenom" type="text" autofocus maxlength="255"
+                            value="{{ old('prenom') }}" required>
+                    </div>
+                </div>
 
-                <x-forms.input name="email" label="Courriel" autocomplete="email" autofocus required max_length="255"
-                    value="{{ old('email') }}" />
+                {{-- Nom --}}
+                <div class="input">
+                    <label for="nom">
+                        Nom
+                    </label>
+                    <div>
+                        <x-forms.erreur champ="nom" />
+                        <input id="nom" name="nom" type="text" maxlength="255" value="{{ old('nom') }}"
+                            required>
+                    </div>
+                </div>
 
-                <x-forms.input name="password" type="password" label=" Mot de passe" autocomplete="current-password"
-                    autofocus required max_length="255" />
+                {{-- Courriel --}}
+                <div class="input">
+                    <label for="email">
+                        Courriel
+                    </label>
+                    <div>
+                        <x-forms.erreur champ="email" />
+                        <input id="email" name="email" type="email" maxlength="255" value="{{ old('email') }}"
+                            required>
+                    </div>
+                </div>
 
-                <x-forms.input name="password_confirmation" type="password" label=" Confirmation du mot de passe"
-                    autofocus required max_length="255" />
+                {{-- Mot de passe --}}
+                <div class="input">
+                    <label for="password">
+                        Mot de passe
+                    </label>
+                    <div>
+                        <x-forms.erreur champ="password" />
+                        <input id="password" name="password" type="password" maxlength="255" required>
+                    </div>
+                </div>
 
+                {{-- Confirmation du mot de passe --}}
+                <div class="input">
+                    <label for="password_confirmation">
+                        Confirmation du mot de passe
+                    </label>
+                    <div>
+                        <x-forms.erreur champ="password_confirmation" />
+                        <input id="password_confirmation" name="password_confirmation" type="password" maxlength="255"
+                            required>
+                    </div>
+                </div>
+
+                {{-- Choix du rôle si administrateur --}}
                 @if (Auth::check() && Auth()->user()->role_id == 1)
-                    <div class="role">
-                        <label for="role_id">Role</label>
+                    <div class="input">
+                        <label for="role_id">
+                            Rôle
+                        </label>
                         <div>
-                            <select name="role_id" id="role_id">
+                            <x-forms.erreur champ="role_id" />
+                            <select name="role_id" id="role_id" required>
                                 @foreach ($roles as $role)
                                     <option value="{{ $role->id }}">
-                                        {{ $role->nom }}
+                                        {{ ucfirst($role->nom) }}
                                     </option>
                                 @endforeach
                             </select>
                         </div>
-
                     </div>
                 @endif
-                <div class="submit-enregistrement">
-                    <button class="btn-primaire" type="submit">
-                        Créez votre compte!
-                    </button>
-                </div>
-            </form>
-            @if (Auth::check() && Auth()->user()->role_id == 1)
 
-                <p class="retour-admin">
+                {{-- Soumission --}}
+                <div class="submit">
+                    <input class="btn-primaire" type="submit" value="Créez votre compte">
+                </div>
+
+            </form> {{-- Fin du formulaire d'enregistrement --}}
+
+            {{-- Retour --}}
+            @if (Auth::check() && Auth()->user()->role_id == 1)
+                <div class="retour">
                     <a href="{{ route('admin/utilisateurs.index') }}">Retour à la Liste</a>
-                </p>
+                </div>
             @else
-                <p class="compte">
+                <div class="retour">
                     Déjà membre?
 
                     <a href="{{ route('connexion.create') }}">
                         Connectez-vous!
                     </a>
-                </p>
+                </div>
             @endif
 
         </div>
-
-    </section>
+    </section> {{-- Fin de la section enregistrement --}}
 </x-admin>

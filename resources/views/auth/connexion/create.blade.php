@@ -1,13 +1,9 @@
 <x-admin titre="Connexion">
+    {{-- Message d'échec --}}
+    <x-parts.alertes cle="echec" />
+
     {{-- Section connexion --}}
     <section id="connexion">
-
-        {{-- Message d'erreur --}}
-        @if (session('echec'))
-            <p>
-                {{ session('echec') }}
-            </p>
-        @endif
 
         <div class="form-connexion">
             <h1>

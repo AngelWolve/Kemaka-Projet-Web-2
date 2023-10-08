@@ -2,13 +2,6 @@
     {{-- Section modification d'activité --}}
     <section id="admin-modifier-activite">
 
-        {{-- Message de confirmation --}}
-        @if (session('succes'))
-            <p>
-                {{ session('succes') }}
-            </p>
-        @endif
-
         <div class="modifier-activite">
             <h1>
                 Modifier une activité

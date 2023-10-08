@@ -2,13 +2,6 @@
     {{-- Section création d'actualité --}}
     <section id="admin-create-actualite">
 
-        {{-- Message de confirmation --}}
-        @if (session('succes'))
-            <p>
-                {{ session('succes') }}
-            </p>
-        @endif
-
         <div class="ajouter-actualite">
             <h1>Créer une actualité</h1>
 

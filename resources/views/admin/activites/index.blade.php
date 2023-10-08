@@ -2,17 +2,20 @@
     {{-- Message de confirmation --}}
     <x-parts.alertes cle="succes" />
 
+    {{-- Section admin activité --}}
     <section id="admin-activites">
         <h1>Toutes les activités</h1>
-        {{-- Liste des activités --}}
+
         <div class="conteneur-create">
-            {{-- CRÉATION --}}
+
+            {{-- Création --}}
             <a class="btn-create" href="{{ route('admin/activites.create') }}">
                 <span>
                     créer
                 </span>
             </a>
-            {{-- RETOUR --}}
+
+            {{-- Retour --}}
             <a class="btn-retour" href="{{ route('admin.index') }}">
                 <span>
                     Retour
@@ -20,12 +23,15 @@
             </a>
         </div>
 
+        {{-- Aucune activité --}}
         @if ($activites->isEmpty())
             <p>
                 Aucune activités actuellement
             </p>
         @else
+            {{-- Liste des activités --}}
             <ul>
+
                 @foreach ($activites as $activite)
                     <li>
                         <h2>
@@ -42,14 +48,15 @@
                         </div>
 
                         <div class="conteneur-boutons">
-                            {{-- MODIFICATION --}}
+
+                            {{-- Modification --}}
                             <a href="{{ route('admin/activites.edit', ['id' => $activite->id]) }}">
                                 <span>
                                     modifier
                                 </span>
                             </a>
 
-                            {{-- SUPPRESSION --}}
+                            {{-- Suppression --}}
                             <form action="{{ route('admin/activites.destroy') }}" method="POST">
                                 @csrf
 
@@ -60,10 +67,11 @@
                                     </span>
                                 </button>
                             </form>
+
                         </div>
                     </li>
                 @endforeach
-            </ul>
+            </ul> {{-- Fin de la liste des activités --}}
         @endif
-    </section>
+    </section> {{-- Fin de la section admin activité --}}
 </x-admin>

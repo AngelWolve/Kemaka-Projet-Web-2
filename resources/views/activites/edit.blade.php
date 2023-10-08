@@ -1,62 +1,71 @@
 <x-admin>
+    {{-- Section modification d'activité --}}
     <section id="admin-modifier-activite">
-        <div class="activite-modifier">
+
+        {{-- Message de confirmation --}}
+        @if (session('succes'))
+            <p>
+                {{ session('succes') }}</p>
+        @endif
+
+        {{-- Formulaire de modification --}}
+        <div class="modifier-activite">
             <h1>Modifier une activité</h1>
-            {{-- MESSAGES --}}
-            @if (session('succes'))
-                <p>
-                    {{ session('succes') }}</p>
-            @endif
-            {{-- FORMULAIRE --}}
+
             <form action="{{ route('admin/activites.update') }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
+                {{-- Champ caché pour l'id --}}
                 <input type="hidden" name="id" value="{{ $activite->id }}">
 
-                {{-- NOM --}}
-                <div class="nom">
-                    <label for="nom">Nom</label>
+                {{-- Nom --}}
+                <div class="input">
+                    <label for="nom">
+                        Nom
+                    </label>
                     <div>
                         <x-forms.erreur champ="nom" />
-
-                        <input id="nom" name="nom" type="text" autofocus
-                            value="{{ old('nom') ?? $activite->nom }}">
+                        <input id="nom" name="nom" type="text" autofocus maxlength="75"
+                            value="{{ old('nom') ?? $activite->nom }}" required>
                     </div>
                 </div>
 
-                {{-- DESCRIPTION --}}
-                <div class="description">
-                    <label for="description">Description</label>
+                {{-- Description --}}
+                <div class="textarea">
+                    <label for="description">
+                        Description
+                    </label>
                     <div>
                         <x-forms.erreur champ="description" />
-
-                        <textarea name="description" id="description" rows="5" maxlength="500">{{ old('description') ?? $activite->description }}</textarea>
-
+                        <textarea id="description" name="description" rows="10" maxlength="500" required>{{ old('description') ?? $activite->description }}</textarea>
                     </div>
                 </div>
 
-                {{-- IMAGE --}}
-                <div class="image">
-                    <label for="image">Image</label>
-                    <div class="image-contenu">
-                        <img src="{{ $activite->image }}" width="100" alt="">
+                {{-- Image --}}
+                <div class="input">
+                    <label for="image">
+                        Image
+                    </label>
+                    <div>
                         <x-forms.erreur champ="image" />
-
-                        <input id="image" name="image" type="file" autofocus>
+                        <div class="img-activite">
+                            <img src="{{ $activite->image }}" width="100" alt="Image de l'activité">
+                            <input id="image" name="image" type="file">
+                        </div>
                     </div>
                 </div>
 
-                {{-- SUBMIT --}}
-                <div class="submit-modifier">
-                    <input class="btn-primaire" type="submit" value="Modifier!">
+                {{-- Soumission --}}
+                <div class="submit">
+                    <input class="btn-primaire" type="submit" value="Modifier">
                 </div>
             </form>
 
-            {{-- RETOUR AUX ACTIVITÉS --}}
-            <p class="retour-activite">
+            {{-- Retour --}}
+            <div class="retour">
                 <a href="{{ route('admin/activites.index') }}">Retour aux activités</a>
-            </p>
-        </div>
-    </section>
+            </div>
 
+        </div> {{-- Fin du formulaire de modification --}}
+    </section> {{-- Fin de la section modification d'activité --}}
 </x-admin>

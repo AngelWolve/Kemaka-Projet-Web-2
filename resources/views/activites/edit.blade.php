@@ -1,4 +1,4 @@
-<x-admin>
+<x-admin titre="Modification d'activité">
     {{-- Section modification d'activité --}}
     <section id="admin-modifier-activite">
 

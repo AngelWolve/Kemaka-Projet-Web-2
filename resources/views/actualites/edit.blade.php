@@ -1,4 +1,4 @@
-<x-admin>
+<x-admin titre="Modification d'actualité">
     {{-- Section modifier une actualité --}}
     <section id="admin-modifier-actualite">
 

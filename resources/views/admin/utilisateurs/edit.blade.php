@@ -1,4 +1,4 @@
-<x-admin>
+<x-admin titre="Modification d'utilisateur">
     {{-- Section modification utilisateur --}}
     <section id="admin-modifier-utilisateur">
 

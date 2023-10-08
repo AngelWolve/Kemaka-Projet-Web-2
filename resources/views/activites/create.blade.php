@@ -1,4 +1,4 @@
-<x-admin>
+<x-admin titre="Ajout d'activité">
     {{-- Section création d'activité --}}
     <section id="admin-create-activite">
 

@@ -1,4 +1,4 @@
-<x-admin>
+<x-admin titre="Liste d'activités">
     {{-- Message de confirmation --}}
     <x-parts.alertes cle="succes" />
 

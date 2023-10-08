@@ -65,15 +65,140 @@ section#admin {
 }
 
 /***************
-** ADMIN/ACTUALITÉS
+** ADMIN/UTILISATEURS
 ***************/
-section#admin-actualites {
-    margin: 1rem auto 0;
-    max-width: 75%;
+section#admin-administrateurs,
+section#admin-employes,
+section#admin-clients {
+
+    width: 90%;
+    max-width: 1440px;
+
+    div.conteneur-create {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    div.conteneur-boutons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        i.fa-trash-alt {
+            color: red;
+            cursor: pointer;
+        }
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 0.8rem auto;
+        font-size: 1rem;
+        text-align: center;
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        th {
+            background-color: $violet;
+            color: $blanc;
+        }
+
+        tr:nth-child(even) {
+            background-color: $gris;
+        }
+
+        tr:hover {
+            background-color: $rose-fonce;
+        }
+    }
+}
+
+/***************************
+** ADMIN/UTILISATEUR/MODIFIER
+****************************/
+section#admin-modifier-utilisateur {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-image: url(../images/bg-formulaire.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 
     h1 {
-        margin-bottom: 1rem;
+        font-size: 2rem;
+        margin: 0 0 1rem;
     }
+
+    div.modifier-form {
+        width: 50%;
+        margin: 0 auto;
+
+        form {
+            background: rgb(217, 160, 201);
+            background: linear-gradient(0deg, rgba(217, 160, 201, 1) 0%, rgba(242, 179, 224, 1) 20%, rgba(255, 213, 243, 1) 50%, rgba(242, 179, 224, 1) 80%, rgba(217, 160, 201, 1) 100%);
+            margin: 0 auto 5px;
+            padding: 50px 0;
+            border-radius: 7px;
+
+            div.prenom,
+            div.nom,
+            div.courriel,
+            div.role {
+                width: 75%;
+                margin: 0 auto 0.8rem;
+
+                label {
+                    display: block;
+                    text-align: left;
+                    font-weight: 700;
+                    margin: 0 0 5px 0;
+                }
+
+                input {
+                    width: 100%;
+                    background-color: #fff;
+                    color: #000;
+                    height: 40px;
+                    font-size: 1rem;
+                    border: 1px solid #E0DFE6;
+                    border-radius: 7px;
+                    padding: 10px;
+                    box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.25);
+                }
+            }
+
+            div.submit-modifier {
+                margin-top: 3rem;
+                text-align: center;
+            }
+        }
+
+        p.retour-admin {
+            text-align: center;
+            margin-top: 0.8rem;
+
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+/***************
+** ADMIN/ACTIVITÉS
+***************/
+section#admin-activites {
+    margin: 1rem auto 0;
+    max-width: 75%;
 
     div.conteneur-create {
         display: flex;
@@ -81,7 +206,7 @@ section#admin-actualites {
     }
 
     p {
-        padding: 40px 24px 40px 24px;
+        padding: 50px 24px 50px 24px;
         line-height: 25px;
     }
 
@@ -102,10 +227,14 @@ section#admin-actualites {
                 color: black;
             }
 
+            div.conteneur-activites {
+                display: flex;
+                justify-content: space-between;
+            }
+
             div.conteneur-boutons {
                 display: flex;
                 justify-content: center;
-                gap: 20px;
 
                 a {
                     background-color: #007bff;
@@ -154,12 +283,163 @@ section#admin-actualites {
     }
 }
 
+/***********************
+** ADMIN/ACTIVITÉS/CREATE
+************************/
+section#admin-create-activite {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-image: url(../images/bg-formulaire.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    h1 {
+        font-size: 2rem;
+        margin: 0 0 1rem;
+    }
+
+    div.activite-form {
+        width: 50%;
+        margin: 0 auto;
+
+        form {
+            background: rgb(217, 160, 201);
+            background: linear-gradient(0deg, rgba(217, 160, 201, 1) 0%, rgba(242, 179, 224, 1) 20%, rgba(255, 213, 243, 1) 50%, rgba(242, 179, 224, 1) 80%, rgba(217, 160, 201, 1) 100%);
+            margin: 0 auto 5px;
+            padding: 50px 0;
+            border-radius: 7px;
+
+            div.input,
+            div.textarea {
+                width: 75%;
+                margin: 0 auto 0.8rem;
+            }
+
+            div.submit {
+                margin-top: 3rem;
+                text-align: center;
+            }
+        }
+
+        p.retour {
+            text-align: center;
+            margin-top: 0.8rem;
+
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+/*************************
+** ADMIN/ACTIVITÉS/MODIFIER
+**************************/
+section#admin-modifier-activite {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-image: url(../images/bg-formulaire.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    h1 {
+        font-size: 2rem;
+        margin: 0 0 1rem;
+    }
+
+    div.activite-modifier {
+        width: 50%;
+        margin: 0 auto;
+
+        form {
+            background: rgb(217, 160, 201);
+            background: linear-gradient(0deg, rgba(217, 160, 201, 1) 0%, rgba(242, 179, 224, 1) 20%, rgba(255, 213, 243, 1) 50%, rgba(242, 179, 224, 1) 80%, rgba(217, 160, 201, 1) 100%);
+            margin: 0 auto 5px;
+            padding: 50px 0;
+            border-radius: 7px;
+
+            div.nom,
+            div.description,
+            div.image {
+                width: 75%;
+                margin: 0 auto 0.8rem;
+
+                label {
+                    display: block;
+                    text-align: left;
+                    font-weight: 700;
+                    margin: 0 0 5px 0;
+                }
+
+                input {
+                    width: 100%;
+                    background-color: #fff;
+                    color: #000;
+                    height: 40px;
+                    font-size: 1rem;
+                    border: 1px solid #E0DFE6;
+                    border-radius: 7px;
+                    padding: 10px;
+                    box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.25);
+                }
+
+                textarea {
+                    width: 100%;
+                    background-color: #fff;
+                    color: #000;
+                    font-size: 1rem;
+                    border: 1px solid #E0DFE6;
+                    border-radius: 7px;
+                    padding: 10px;
+                    box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.25);
+                }
+
+                div.image-contenu {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        border-radius: 7px;
+                    }
+                }
+            }
+
+            div.submit-modifier {
+                margin-top: 3rem;
+                text-align: center;
+            }
+        }
+
+        p.retour-activite {
+            text-align: center;
+            margin-top: 0.8rem;
+
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
 /***************
-** ADMIN/ACTIVITÉS
+** ADMIN/ACTUALITÉS
 ***************/
-section#admin-activites {
+section#admin-actualites {
     margin: 1rem auto 0;
     max-width: 75%;
+
+    h1 {
+        margin-bottom: 1rem;
+    }
 
     div.conteneur-create {
         display: flex;
@@ -167,7 +447,7 @@ section#admin-activites {
     }
 
     p {
-        padding: 50px 24px 50px 24px;
+        padding: 40px 24px 40px 24px;
         line-height: 25px;
     }
 
@@ -188,14 +468,10 @@ section#admin-activites {
                 color: black;
             }
 
-            div.conteneur-activites {
-                display: flex;
-                justify-content: space-between;
-            }
-
             div.conteneur-boutons {
                 display: flex;
                 justify-content: center;
+                gap: 20px;
 
                 a {
                     background-color: #007bff;
@@ -328,90 +604,6 @@ section#admin-create-actualite {
     }
 }
 
-/***********************
-** ADMIN/ACTIVITÉS/CREATE
-************************/
-section#admin-create-activite {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
-    height: 100vh;
-    margin: 0;
-    background-image: url(../images/bg-formulaire.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    h1 {
-        font-size: 2rem;
-        margin: 0 0 1rem;
-    }
-
-    div.activite-form {
-        width: 50%;
-        margin: 0 auto;
-
-        form {
-            background: rgb(217, 160, 201);
-            background: linear-gradient(0deg, rgba(217, 160, 201, 1) 0%, rgba(242, 179, 224, 1) 20%, rgba(255, 213, 243, 1) 50%, rgba(242, 179, 224, 1) 80%, rgba(217, 160, 201, 1) 100%);
-            margin: 0 auto 5px;
-            padding: 50px 0;
-            border-radius: 7px;
-
-            div.nom,
-            div.description,
-            div.image {
-                width: 75%;
-                margin: 0 auto 0.8rem;
-
-                label {
-                    display: block;
-                    text-align: left;
-                    font-weight: 700;
-                    margin: 0 0 5px 0;
-                }
-
-                input {
-                    width: 100%;
-                    background-color: #fff;
-                    color: #000;
-                    height: 40px;
-                    font-size: 1rem;
-                    border: 1px solid #E0DFE6;
-                    border-radius: 7px;
-                    padding: 10px;
-                    box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.25);
-                }
-
-                textarea {
-                    width: 100%;
-                    background-color: #fff;
-                    color: #000;
-                    font-size: 1rem;
-                    border: 1px solid #E0DFE6;
-                    border-radius: 7px;
-                    padding: 10px;
-                    box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.25);
-                }
-            }
-
-            div.submit-create {
-                margin-top: 3rem;
-                text-align: center;
-            }
-        }
-
-        p.retour-activite {
-            text-align: center;
-            margin-top: 0.8rem;
-
-            a {
-                text-decoration: underline;
-            }
-        }
-    }
-}
-
 /**************************
 ** ADMIN/ACTUALITÉS/MODIFIER
 ***************************/
@@ -485,229 +677,6 @@ section#admin-modifier-actualite {
         }
 
         p.retour-actualite {
-            text-align: center;
-            margin-top: 0.8rem;
-
-            a {
-                text-decoration: underline;
-            }
-        }
-    }
-}
-
-/*************************
-** ADMIN/ACTIVITÉS/MODIFIER
-**************************/
-section#admin-modifier-activite {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
-    height: 100vh;
-    margin: 0;
-    background-image: url(../images/bg-formulaire.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    h1 {
-        font-size: 2rem;
-        margin: 0 0 1rem;
-    }
-
-    div.activite-modifier {
-        width: 50%;
-        margin: 0 auto;
-
-        form {
-            background: rgb(217, 160, 201);
-            background: linear-gradient(0deg, rgba(217, 160, 201, 1) 0%, rgba(242, 179, 224, 1) 20%, rgba(255, 213, 243, 1) 50%, rgba(242, 179, 224, 1) 80%, rgba(217, 160, 201, 1) 100%);
-            margin: 0 auto 5px;
-            padding: 50px 0;
-            border-radius: 7px;
-
-            div.nom,
-            div.description,
-            div.image {
-                width: 75%;
-                margin: 0 auto 0.8rem;
-
-                label {
-                    display: block;
-                    text-align: left;
-                    font-weight: 700;
-                    margin: 0 0 5px 0;
-                }
-
-                input {
-                    width: 100%;
-                    background-color: #fff;
-                    color: #000;
-                    height: 40px;
-                    font-size: 1rem;
-                    border: 1px solid #E0DFE6;
-                    border-radius: 7px;
-                    padding: 10px;
-                    box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.25);
-                }
-
-                textarea {
-                    width: 100%;
-                    background-color: #fff;
-                    color: #000;
-                    font-size: 1rem;
-                    border: 1px solid #E0DFE6;
-                    border-radius: 7px;
-                    padding: 10px;
-                    box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.25);
-                }
-
-                div.image-contenu {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-
-                    img {
-                        border-radius: 7px;
-                    }
-                }
-            }
-
-            div.submit-modifier {
-                margin-top: 3rem;
-                text-align: center;
-            }
-        }
-
-        p.retour-activite {
-            text-align: center;
-            margin-top: 0.8rem;
-
-            a {
-                text-decoration: underline;
-            }
-        }
-    }
-}
-
-/***************
-** ADMIN/UTILISATEURS
-***************/
-section#admin-administrateurs,
-section#admin-employes,
-section#admin-clients {
-
-    width: 90%;
-    max-width: 1440px;
-
-    div.conteneur-create {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    div.conteneur-boutons {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-
-        i.fa-trash-alt {
-            color: red;
-            cursor: pointer;
-        }
-    }
-
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 0.8rem auto;
-        font-size: 1rem;
-        text-align: center;
-
-        th,
-        td {
-            border: 1px solid #ccc;
-            padding: 10px;
-        }
-
-        th {
-            background-color: $violet;
-            color: $blanc;
-        }
-
-        tr:nth-child(even) {
-            background-color: $gris;
-        }
-
-        tr:hover {
-            background-color: $rose-fonce;
-        }
-    }
-}
-
-/***************************
-** ADMIN/UTILISATEUR/MODIFIER
-****************************/
-section#admin-modifier-utilisateur {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
-    height: 100vh;
-    margin: 0;
-    background-image: url(../images/bg-formulaire.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    h1 {
-        font-size: 2rem;
-        margin: 0 0 1rem;
-    }
-
-    div.modifier-form {
-        width: 50%;
-        margin: 0 auto;
-
-        form {
-            background: rgb(217, 160, 201);
-            background: linear-gradient(0deg, rgba(217, 160, 201, 1) 0%, rgba(242, 179, 224, 1) 20%, rgba(255, 213, 243, 1) 50%, rgba(242, 179, 224, 1) 80%, rgba(217, 160, 201, 1) 100%);
-            margin: 0 auto 5px;
-            padding: 50px 0;
-            border-radius: 7px;
-
-            div.prenom,
-            div.nom,
-            div.courriel,
-            div.role {
-                width: 75%;
-                margin: 0 auto 0.8rem;
-
-                label {
-                    display: block;
-                    text-align: left;
-                    font-weight: 700;
-                    margin: 0 0 5px 0;
-                }
-
-                input {
-                    width: 100%;
-                    background-color: #fff;
-                    color: #000;
-                    height: 40px;
-                    font-size: 1rem;
-                    border: 1px solid #E0DFE6;
-                    border-radius: 7px;
-                    padding: 10px;
-                    box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.25);
-                }
-            }
-
-            div.submit-modifier {
-                margin-top: 3rem;
-                text-align: center;
-            }
-        }
-
-        p.retour-admin {
             text-align: center;
             margin-top: 0.8rem;
 

@@ -59,7 +59,7 @@ class ConnexionController extends Controller
         // Redirection
         return back()
             ->withErrors([
-                "email" => "Les informations fournies ne sont pas valides"
+                "echec" => "Les informations fournies ne sont pas valides"
             ])
             ->onlyInput('email');
     }

@@ -10,7 +10,9 @@
         @endif
 
         <div class="ajouter-activite">
-            <h1>Créer une activité</h1>
+            <h1>
+                Créer une activité
+            </h1>
 
             {{-- Formulaire d'ajout --}}
             <form action="{{ route('admin/activites.store') }}" method="POST" enctype="multipart/form-data">

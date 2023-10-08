@@ -13,19 +13,19 @@ section#connexion {
     background-repeat: no-repeat;
 
     h1 {
-        font-size: 1.75rem;
+        font-size: 2rem;
         margin: 0 0 1rem;
     }
 
     div.form-connexion {
-        width: 35vw;
+        width: 40%;
         margin: 0 auto;
 
         form {
             background: rgb(217, 160, 201);
             background: linear-gradient(0deg, rgba(217, 160, 201, 1) 0%, rgba(242, 179, 224, 1) 20%, rgba(255, 213, 243, 1) 50%, rgba(242, 179, 224, 1) 80%, rgba(217, 160, 201, 1) 100%);
             margin: 0 auto 5px;
-            padding: 50px 0;
+            padding: 3em 0;
             border-radius: 7px;
 
             div.input {
@@ -33,8 +33,8 @@ section#connexion {
                 margin: 0 auto 0.8rem;
             }
 
-            div.submit-connexion {
-                margin-top: 3rem;
+            div.submit {
+                margin-top: 2rem;
                 text-align: center;
 
                 button {

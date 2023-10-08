@@ -34,7 +34,9 @@
 
                 {{-- Nom --}}
                 <div class="input">
-                    <label for="nom">Nom</label>
+                    <label for="nom">
+                        Nom
+                    </label>
                     <div>
                         <x-forms.erreur champ="nom" />
                         <input id="nom" name="nom" type="text" autofocus maxlength="255"
@@ -44,17 +46,21 @@
 
                 {{-- Courriel --}}
                 <div class="input">
-                    <label for="email">Courriel</label>
+                    <label for="email">
+                        Courriel
+                    </label>
                     <div>
                         <x-forms.erreur champ="email" />
-                        <input id="email" name="email" type="text" autofocus maxlength="255"
+                        <input id="email" name="email" type="email" autofocus maxlength="255"
                             value="{{ old('email') ?? $utilisateur->email }}" required>
                     </div>
                 </div>
 
                 {{-- Rôle --}}
                 <div class="input">
-                    <label for="role_id">Role</label>
+                    <label for="role_id">
+                        Rôle
+                    </label>
                     <div>
                         <x-forms.erreur champ="role_id" />
                         <select name="role_id" id="role_id" required>

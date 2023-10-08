@@ -10,7 +10,9 @@
         @endif
 
         <div class="modifier-activite">
-            <h1>Modifier une activité</h1>
+            <h1>
+                Modifier une activité
+            </h1>
 
             {{-- Formulaire de modification --}}
             <form action="{{ route('admin/activites.update') }}" method="POST" enctype="multipart/form-data">

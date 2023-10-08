@@ -5,13 +5,14 @@
         {{-- Message de confirmation --}}
         @if (session('succes'))
             <p>
-                {{ session('succes') }}</p>
+                {{ session('succes') }}
+            </p>
         @endif
 
-        {{-- Formulaire d'ajout --}}
         <div class="ajouter-activite">
             <h1>Créer une activité</h1>
 
+            {{-- Formulaire d'ajout --}}
             <form action="{{ route('admin/activites.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
@@ -53,7 +54,8 @@
                 <div class="submit">
                     <input class="btn-primaire" type="submit" value="Ajouter">
                 </div>
-            </form>
+
+            </form> {{-- Fin du formulaire d'ajout --}}
 
             {{-- Retour --}}
             <div class="retour">
@@ -62,6 +64,6 @@
                 </a>
             </div>
 
-        </div> {{-- Fin du formulaire d'ajout --}}
+        </div>
     </section> {{-- Fin de la section création d'activité --}}
 </x-admin>

@@ -5,18 +5,20 @@
         {{-- Message de confirmation --}}
         @if (session('succes'))
             <p>
-                {{ session('succes') }}</p>
+                {{ session('succes') }}
+            </p>
         @endif
 
-        {{-- Formulaire de modification --}}
         <div class="modifier-activite">
             <h1>Modifier une activité</h1>
 
+            {{-- Formulaire de modification --}}
             <form action="{{ route('admin/activites.update') }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
                 {{-- Champ caché pour l'id --}}
-                <input type="hidden" name="id" value="{{ $activite->id }}">
+                <x-forms.erreur champ="id" />
+                <input type="hidden" name="id" value="{{ $activite->id }}" required>
 
                 {{-- Nom --}}
                 <div class="input">
@@ -59,13 +61,16 @@
                 <div class="submit">
                     <input class="btn-primaire" type="submit" value="Modifier">
                 </div>
-            </form>
+
+            </form> {{-- Fin du formulaire de modification --}}
 
             {{-- Retour --}}
             <div class="retour">
-                <a href="{{ route('admin/activites.index') }}">Retour aux activités</a>
+                <a href="{{ route('admin/activites.index') }}">
+                    Retour aux activités
+                </a>
             </div>
 
-        </div> {{-- Fin du formulaire de modification --}}
+        </div>
     </section> {{-- Fin de la section modification d'activité --}}
 </x-admin>

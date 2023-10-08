@@ -23,7 +23,7 @@
 
         </ul>
 
-        {{-- Bouton pour voir les forfaits --}}}
+        {{-- Bouton pour voir les forfaits --}}
         <x-parts.bouton-primaire route="{{ route('forfaits.index') }}" texte="Voir nos forfaits" />
 
     </section> {{-- Fin de la section activités --}}

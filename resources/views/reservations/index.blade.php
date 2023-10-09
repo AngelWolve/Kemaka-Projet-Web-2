@@ -18,7 +18,7 @@
         @if ($reservations->isEmpty())
             <p>Aucune réservation pour l'instant.</p>
         @else
-            {{-- Tableau des réservations --}}}
+            {{-- Tableau des réservations --}}
             <table>
 
                 <thead>
@@ -39,7 +39,7 @@
                             <td>{{ $reservation->forfait->nom }}</td>
                             <td>
 
-                                {{-- Annuler la réservation --}}}
+                                {{-- Annuler la réservation --}}
                                 <form action="{{ route('reservations.destroy') }}" method="POST">
                                     @csrf
                                     <input type="hidden" name="id" value="{{ $reservation->id }}">

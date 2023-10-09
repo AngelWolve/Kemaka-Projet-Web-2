@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class Employe
 {
@@ -16,7 +17,7 @@ class Employe
      */
     public function handle(Request $request, Closure $next)
     {
-        if (auth()->user()->role_id == '2') {
+        if (Auth::check() && Auth::user()->role_id == 2) {
             return $next($request);
         }
 

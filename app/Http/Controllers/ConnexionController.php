@@ -51,7 +51,7 @@ class ConnexionController extends Controller
             }
 
             if (Auth::user()->role_id == 3) {
-                return redirect()->intended(route('accueil'))
+                return redirect()->intended(route('client.index'))
                     ->with('succes', "Vous êtes connectés!");
             }
         }

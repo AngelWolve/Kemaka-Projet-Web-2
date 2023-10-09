@@ -18,11 +18,7 @@ class Compte
     public function handle(Request $request, Closure $next)
     {
         if (Auth::check() && Auth::user()->role_id != 1) {
-            if (Auth::user()->role_id == 2) {
-                return redirect()->route('employe.index');
-            } else {
-                return redirect()->route('accueil');
-            }
+            return abort(403, "Vous n'avez pas les droits pour accéder à cette page.");
         }
 
         return $next($request);

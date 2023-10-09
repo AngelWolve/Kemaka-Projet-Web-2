@@ -15,8 +15,6 @@ use App\Http\Controllers\InfolettreController;
 use App\Http\Controllers\NousJoindreController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\UtilisateurController;
-use App\Models\Reservation;
-use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Route;
 
 /*****************
@@ -61,8 +59,8 @@ Route::get("/forfaits", [ForfaitController::class, 'index'])
  * RÉSERVATIONS
  */
 Route::get("/reservations", [ReservationController::class, 'index'])
-    ->name('reservations.index');
-// ->middleware('admin');
+    ->name('reservations.index')
+    ->middleware('admin');
 
 Route::get("/reservations/create/{id}", [ReservationController::class, 'create'])
     ->name('reservations.create')
@@ -73,8 +71,8 @@ Route::post('/reservations/store', [ReservationController::class, 'store'])
     ->middleware('auth');
 
 Route::post("/reservations/destroy", [ReservationController::class, 'destroy'])
-    ->name('reservations.destroy');
-// ->middleware('client');
+    ->name('reservations.destroy')
+    ->middleware('admin');
 
 /*****************
  * À PROPOS
@@ -187,7 +185,8 @@ Route::get("/enregistrement", [EnregistrementController::class, 'create'])
     ->middleware('compte');
 
 Route::post("/enregistrement", [EnregistrementController::class, 'store'])
-    ->name('enregistrement.store');
+    ->name('enregistrement.store')
+    ->middleware('compte');
 
 
 Route::post("/deconnexion", [ConnexionController::class, 'deconnecter'])

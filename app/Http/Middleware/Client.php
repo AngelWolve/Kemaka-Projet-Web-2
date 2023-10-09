@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class Client
 {
@@ -16,8 +17,7 @@ class Client
      */
     public function handle(Request $request, Closure $next)
     {
-
-        if (auth()->user()->role_id == '3') {
+        if (Auth::check() && Auth::user()->role_id == 3) {
             return $next($request);
         }
 

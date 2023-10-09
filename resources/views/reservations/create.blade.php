@@ -1,7 +1,10 @@
 <x-client titre="Réservez ici!">
     {{-- Message de confirmation --}}
     <x-parts.alertes cle="echec" />
+
+    {{-- Section réservation --}}
     <section id="reservations">
+
         <div class="reservations-bg">
             <div class="details">
                 <h3>
@@ -24,8 +27,12 @@
                     </p>
                 </div>
             </div>
+
+            {{-- Formulaire de réservation --}}
             <form action="{{ route('reservations.store') }}" method="post">
                 @csrf
+
+                {{-- Date d'arrivée --}}
                 <div class="date">
                     <label for="date_arrivee">Date d'arrivée :</label>
                     <select name="date_arrivee" id="date_arrivee">
@@ -34,6 +41,8 @@
                         @endforeach
                     </select>
                 </div>
+
+                {{-- Date de départ --}}
                 <div class="date">
                     <label for="date_depart">Date de départ :</label>
                     <select name="date_depart" id="date_depart">
@@ -42,9 +51,14 @@
                         @endforeach
                     </select>
                 </div>
+
+                {{-- Id du forfait caché --}}
                 <input type="hidden" name="forfait_id" value="{{ $forfait->id }}">
+
+                {{-- Soumission --}}
                 <button class="btn-primaire" type="submit">Réserver</button>
-            </form>
+            </form> {{-- Fin formulaire de réservation --}}
         </div>
-    </section>
+
+    </section> {{-- Fin section réservation --}}
 </x-client>

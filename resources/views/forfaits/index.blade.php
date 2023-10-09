@@ -1,7 +1,10 @@
 <x-client titre="Nos forfaits">
     {{-- Message de confirmation --}}
     <x-parts.alertes cle="succes" />
+
+    {{-- Section forfaits --}}
     <section id="forfaits">
+
         <div class="intro">
             <h2>
                 Bienvenue dans le Monde des Forfaits Asian Quest
@@ -17,9 +20,13 @@
                 préparez-vous à l'aventure !
             </p>
         </div>
+
+        {{-- Liste des forfaits --}}
         <ul>
+
             @foreach ($forfaits as $forfait)
                 <li>
+
                     <div class="conteneur">
                         <div class="details">
                             <h3>
@@ -43,11 +50,14 @@
                         </div>
                         <img src="images/img-forfaits1.png" alt="image forfait 1">
                     </div>
-                    {{-- RÉSERVATION --}}
+
+                    {{-- Réserver --}}
                     <x-parts.bouton-primaire route="{{ route('reservations.create', ['id' => $forfait]) }}"
                         texte="Commander" />
                 </li>
             @endforeach
-        </ul>
-    </section>
+
+        </ul> {{-- Fin liste des forfaits --}}
+
+    </section> {{-- Fin section forfaits --}}
 </x-client>

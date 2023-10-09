@@ -1,8 +1,13 @@
 <x-client titre="Nous joindre">
     {{-- Message de confirmation --}}
     <x-parts.alertes cle="succes" />
+
+    {{-- Section nous joindre --}}
     <section id="nous-joindre">
+
         <div class="contact">
+
+            {{-- Heures d'ouverture --}}
             <h2>Heures d'ouverture</h2>
             <div class="date">
                 <div>
@@ -27,7 +32,10 @@
                     <p class="tx-md">10:00 - 24:00</p>
                 </div>
             </div>
+
         </div>
+
+        {{-- Adresse et carte --}}
         <div class="adresse">
             <div class="contenu-adresse">
                 <h2>Coordonnées</h2>
@@ -39,12 +47,16 @@
                 <p class="tx-md">info@asianquest.qc.ca</p>
             </div>
         </div>
+
         <div class="carte">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d357264.0014157304!2d-74.1116398966804!3d45.60813172715947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a5a66841509%3A0x6434041e124a4c53!2sPalais%20des%20congr%C3%A8s%20de%20Montr%C3%A9al!5e0!3m2!1sfr!2sca!4v1695309596571!5m2!1sfr!2sca"
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
+
+        {{-- Formulaire de question --}}
         <x-parts.question />
-    </section>
+
+    </section> {{-- Fin section nous joindre --}}
 </x-client>

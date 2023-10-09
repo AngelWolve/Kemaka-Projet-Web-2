@@ -40,7 +40,8 @@
                             <td>
 
                                 {{-- Annuler la réservation --}}
-                                <form action="{{ route('reservations.destroy') }}" method="POST">
+                                <form action="{{ route('reservations.destroy') }}" method="POST"
+                                    onclick="return confirm('Êtes-vous certain de vouloir annuler cette réservation?')">
                                     @csrf
                                     <input type="hidden" name="id" value="{{ $reservation->id }}">
                                     <button class="btn-annuler" type="submit">

@@ -72,7 +72,7 @@ Route::post('/reservations/store', [ReservationController::class, 'store'])
 
 Route::post("/reservations/destroy", [ReservationController::class, 'destroy'])
     ->name('reservations.destroy')
-    ->middleware('admin');
+    ->middleware('reservation');
 
 /*****************
  * À PROPOS
@@ -187,7 +187,6 @@ Route::get("/enregistrement", [EnregistrementController::class, 'create'])
 Route::post("/enregistrement", [EnregistrementController::class, 'store'])
     ->name('enregistrement.store')
     ->middleware('compte');
-
 
 Route::post("/deconnexion", [ConnexionController::class, 'deconnecter'])
     ->name('deconnexion')

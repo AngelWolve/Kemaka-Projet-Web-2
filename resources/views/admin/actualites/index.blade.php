@@ -52,7 +52,8 @@
                                 </a>
 
                                 {{-- Suppression --}}
-                                <form action="{{ route('admin/actualites.destroy') }}" method="POST">
+                                <form action="{{ route('admin/actualites.destroy') }}" method="POST"
+                                    onclick="return confirm('Êtes-vous certain de vouloir supprimer cette actualité?')">
                                     @csrf
 
                                     <input type="hidden" name="id" value="{{ $actualite->id }}" required>

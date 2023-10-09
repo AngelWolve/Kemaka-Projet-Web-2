@@ -1,7 +1,10 @@
 <x-client titre="À propos">
     {{-- Message de confirmation --}}
     <x-parts.alertes cle="succes" />
+
+    {{-- Section À propos --}}
     <section id="apropos">
+
         <div class="apropos-top">
             <h2>
                 Qui sommes-nous ?
@@ -31,6 +34,7 @@
                     <img src="images/mission.png" alt="image-notre-mission">
                 </div>
             </div>
+
             <div class="apropos-texte2">
                 <div class="texte1">
                     <h2>
@@ -49,8 +53,7 @@
                     <img src="images/equipe.png" alt="image-notre-equipe">
                 </div>
             </div>
+
         </div>
-
-    </section>
-
+    </section> {{-- Fin de la section À propos --}}
 </x-client>

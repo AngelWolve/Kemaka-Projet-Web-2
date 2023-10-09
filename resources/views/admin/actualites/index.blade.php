@@ -1,18 +1,21 @@
-    <x-admin>
+    <x-admin titre="Liste d'actualités">
         {{-- Message de confirmation --}}
         <x-parts.alertes cle="succes" />
 
+        {{-- Section admin actualités --}}
         <section id="admin-actualites">
             <h1>Toutes les actualités</h1>
-            {{-- Liste des actualités --}}
+
             <div class="conteneur-create">
-                {{-- CRÉATION --}}
+
+                {{-- Création --}}
                 <a class="btn-create" href="{{ route('admin/actualites.create') }}">
                     <span>
                         créer
                     </span>
                 </a>
-                {{-- RETOUR --}}
+
+                {{-- Retour --}}
                 <a class="btn-retour" href="{{ route('admin.index') }}">
                     <span>
                         Retour
@@ -20,12 +23,15 @@
                 </a>
             </div>
 
+            {{-- Aucune actualité --}}
             @if ($actualites->isEmpty())
                 <p>
                     Aucune actualités actuellement
                 </p>
             @else
+                {{-- Liste des actualités --}}
                 <ul>
+
                     @foreach ($actualites as $actualite)
                         <li>
                             <h2>
@@ -37,29 +43,30 @@
                             </p>
 
                             <div class="conteneur-boutons">
-                                {{-- MODIFICATION --}}
+
+                                {{-- Modification --}}
                                 <a href="{{ route('admin/actualites.edit', ['id' => $actualite->id]) }}">
                                     <span>
                                         modifier
                                     </span>
                                 </a>
 
-                                {{-- SUPPRESSION --}}
+                                {{-- Suppression --}}
                                 <form action="{{ route('admin/actualites.destroy') }}" method="POST">
                                     @csrf
 
-                                    <input type="hidden" name="id" value="{{ $actualite->id }}">
-
+                                    <input type="hidden" name="id" value="{{ $actualite->id }}" required>
                                     <button type="submit">
                                         <span>
                                             supprimer
                                         </span>
                                     </button>
                                 </form>
+
                             </div>
                         </li>
                     @endforeach
-                </ul>
+                </ul> {{-- Fin de la liste des actualités --}}
             @endif
-        </section>
+        </section> {{-- Fin de la section admin actualités --}}
     </x-admin>

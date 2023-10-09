@@ -17,7 +17,7 @@ class CreateQuestionsTable extends Migration
             $table->id();
             $table->string('nom');
             $table->string('email');
-            $table->text('message');
+            $table->text('question');
             $table->timestamps();
         });
     }

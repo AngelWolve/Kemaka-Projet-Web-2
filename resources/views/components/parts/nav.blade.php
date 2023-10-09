@@ -1,8 +1,11 @@
 <nav>
     <div class="conteneur-liens">
+        {{-- Logo --}}
         <a class="lien" href="{{ route('accueil') }}">
             <img src="{{ asset('images/logo.png') }}" alt="Logo Asian Quest">
         </a>
+
+        {{-- Liste des liens --}}
         <ul class="menu-liste">
             <li>
                 <a class="lien" href="{{ route('accueil') }}">
@@ -29,27 +32,33 @@
                     NOUS JOINDRE
                 </a>
             </li>
-        </ul>
+        </ul> {{-- Fin liste des liens --}}
+
+        {{-- Menu hamburger --}}
         <div title="Menu" class="hamburger">
             <div class="barre"></div>
             <div class="barre"></div>
             <div class="barre"></div>
         </div>
     </div>
+
     <div class="conteneur-connexion">
 
+        {{-- Icône vers administration | administrateur --}}
         @if (Auth::check() && Auth()->user()->role_id == 1)
             <a title="Administration" href="{{ route('admin.index') }}">
                 <i class="fa-solid fa-computer"></i>
             </a>
         @endif
 
+        {{-- Icône vers les réservations | employé --}}
         @if (Auth::check() && Auth()->user()->role_id == 2)
             <a title="Réservations" href="{{ route('employe.index') }}">
                 <i class="fa-solid fa-clipboard"></i>
             </a>
         @endif
 
+        {{-- Icône vers les réservations | client --}}
         @if (Auth::check() && Auth()->user()->role_id == 3)
             <a class="shopping-cart" title="Panier d'achat" href="{{ route('client.index') }}">
                 <i class="fa-solid fa-cart-shopping"></i>
@@ -57,6 +66,7 @@
         @endif
 
         @if (Auth::check())
+            {{-- Déconnexion --}}
             <form action="{{ route('deconnexion') }}" method="POST">
                 @csrf
 
@@ -69,10 +79,12 @@
                 </button>
             </form>
         @else
+            {{-- Connexion --}}
             <a class="btn-user" title="Connexion/S'inscrire" href="{{ route('connexion.create') }}">
                 <i class="fa-solid fa-user"></i>
             </a>
             <x-parts.bouton-primaire route="{{ route('connexion.create') }}" texte="CONNEXION / S'INSCRIRE" />
         @endif
+
     </div>
 </nav>

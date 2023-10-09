@@ -1,28 +1,50 @@
 <x-admin titre="Connexion">
+    {{-- Message d'échec --}}
+    <x-parts.alertes cle="echec" />
+
+    {{-- Section connexion --}}
     <section id="connexion">
+
         <div class="form-connexion">
             <h1>
                 Connexion à votre compte
             </h1>
-            @if (session('email'))
-                <p>{{ session('email') }}</p>
-            @endif
+
+            {{-- Formulaire de connexion --}}
             <form action="{{ route('connexion.authentifier') }}" method="POST">
                 @csrf
 
-                <x-forms.input name="email" label="Courriel" autocomplete required max_length="255"
-                    placeholder="Entrez votre courriel" />
-
-                <x-forms.input name="password" type="password" label="Mot de passe" required max_length="255"
-                    placeholder="Entrez votre mot de passe" />
-
-                <div class="submit-connexion">
-                    <button class="btn-primaire" type="submit">
-                        Connectez-vous!
-                    </button>
+                {{-- Courriel --}}
+                <div class="input">
+                    <label for="email">
+                        Courriel
+                    </label>
+                    <div>
+                        <x-forms.erreur champ="email" />
+                        <input id="email" name="email" type="email" autofocus maxlength="255"
+                            value="{{ old('nom') }}" autocomplete required>
+                    </div>
                 </div>
-            </form>
 
+                {{-- Mot de passe --}}
+                <div class="input">
+                    <label for="password">
+                        Mot de passe
+                    </label>
+                    <div>
+                        <x-forms.erreur champ="password" />
+                        <input id="password" name="password" type="password" maxlength="255" required>
+                    </div>
+                </div>
+
+                {{-- Soummission --}}
+                <div class="submit">
+                    <input class="btn-primaire" type="submit" value="Connexion">
+                </div>
+
+            </form> {{-- Fin du formulaire de connexion --}}
+
+            {{-- Création de compte --}}
             <p class="compte">
                 Pas de compte?
 
@@ -31,12 +53,14 @@
                 </a>
             </p>
 
+            {{-- Retour --}}
             <div class="retour">
                 <a class="btn-retour" href="{{ route('accueil') }}">
                     Retour
                 </a>
             </div>
+
         </div>
 
-    </section>
+    </section> {{-- Fin de la section connexion --}}
 </x-admin>

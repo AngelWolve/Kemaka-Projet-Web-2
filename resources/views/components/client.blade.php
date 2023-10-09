@@ -1,4 +1,4 @@
-@props(['titre' => 'Asian Quest'])
+@props(['titre'])
 
 <!DOCTYPE html>
 <html lang="en">

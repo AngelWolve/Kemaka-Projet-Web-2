@@ -31,6 +31,7 @@ section#admin {
             font-style: normal;
             border: 3px solid $amaranth;
             border-radius: 15px;
+            cursor: pointer;
             animation: growAnimation 1.5s ease-in-out forwards;
 
             &:hover {
@@ -65,90 +66,107 @@ section#admin {
 }
 
 /***************
-** ADMIN/ACTUALITÉS
+** ADMIN/UTILISATEURS
 ***************/
-section#admin-actualites {
-    margin: 1rem auto 0;
-    max-width: 75%;
+section#admin-administrateurs,
+section#admin-employes,
+section#admin-clients {
 
-    h1 {
-        margin-bottom: 1rem;
-    }
+    width: 90%;
+    max-width: 1440px;
 
     div.conteneur-create {
         display: flex;
         justify-content: space-between;
     }
 
-    p {
-        padding: 40px 24px 40px 24px;
-        line-height: 25px;
+    div.conteneur-boutons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        i.fa-trash-alt {
+            color: red;
+            cursor: pointer;
+        }
     }
 
-    ul {
-        margin-top: 0.8rem;
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 0.8rem auto;
+        font-size: 1rem;
+        text-align: center;
 
-        li {
-            background-color: #f8cfed;
-            border-radius: 10px;
-            border: 2px solid $rose;
-            box-shadow: 0 0 20px #f8cfed;
-            margin-bottom: 2rem;
-            padding: 20px;
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
 
-            h2 {
-                margin-bottom: 1.5rem;
-                font-size: 1.75rem;
-                color: black;
+        th {
+            background-color: $violet;
+            color: $blanc;
+        }
+
+        tr:nth-child(even) {
+            background-color: $gris;
+        }
+
+        tr:hover {
+            background-color: $rose-fonce;
+        }
+    }
+}
+
+/***************************
+** ADMIN/UTILISATEUR/MODIFIER
+****************************/
+section#admin-modifier-utilisateur {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-image: url(../images/bg-formulaire.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    h1 {
+        font-size: 2rem;
+        margin: 0 0 1rem;
+    }
+
+    div.modifier-utilisateur {
+        width: 50%;
+        margin: 0 auto;
+
+        form {
+            background: rgb(217, 160, 201);
+            background: linear-gradient(0deg, rgba(217, 160, 201, 1) 0%, rgba(242, 179, 224, 1) 20%, rgba(255, 213, 243, 1) 50%, rgba(242, 179, 224, 1) 80%, rgba(217, 160, 201, 1) 100%);
+            margin: 0 auto 5px;
+            padding: 3em 0;
+            border-radius: 7px;
+
+            div.input {
+                width: 75%;
+                margin: 0 auto 0.8rem;
             }
 
-            div.conteneur-boutons {
-                display: flex;
-                justify-content: center;
-                gap: 20px;
-
-                a {
-                    background-color: #007bff;
-                    color: #fff;
-                    padding: 0.5em 1em;
-                    margin-right: 10px;
-                    min-width: 140px;
-                    text-decoration: none;
-                    border: none;
-                    border-radius: 7px;
-                    font-size: 1.2rem;
-                    font-family: "catseye", sans-serif;
-                    font-weight: 700;
-                    font-style: normal;
-                    text-align: center;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
+            div.submit {
+                margin-top: 2rem;
+                text-align: center;
             }
+        }
 
-            form {
-                display: inline-block;
-                margin: 0;
+        div.retour {
+            text-align: center;
+            margin-top: 0.8rem;
 
-                button {
-                    background-color: #dc3545;
-                    color: #fff;
-                    padding: 0.5em 1em;
-                    text-decoration: none;
-                    min-width: 140px;
-                    border: none;
-                    border-radius: 7px;
-                    font-size: 1.2rem;
-                    font-family: "catseye", sans-serif;
-                    font-weight: 700;
-                    font-style: normal;
-                    text-align: center;
-                    cursor: pointer;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
+            a {
+                text-decoration: underline;
             }
         }
     }
@@ -244,90 +262,6 @@ section#admin-activites {
     }
 }
 
-/************************
-** ADMIN/ACTUALITÉS/CREATE
-*************************/
-section#admin-create-actualite {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
-    height: 100vh;
-    margin: 0;
-    background-image: url(../images/bg-formulaire.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    h1 {
-        font-size: 2rem;
-        margin: 0 0 1rem;
-    }
-
-    div.actualite-form {
-        width: 50%;
-        margin: 0 auto;
-
-        form {
-            background: rgb(217, 160, 201);
-            background: linear-gradient(0deg, rgba(217, 160, 201, 1) 0%, rgba(242, 179, 224, 1) 20%, rgba(255, 213, 243, 1) 50%, rgba(242, 179, 224, 1) 80%, rgba(217, 160, 201, 1) 100%);
-            margin: 0 auto 5px;
-            padding: 50px 0;
-            border-radius: 7px;
-
-            div.titre,
-            div.description {
-                width: 75%;
-                margin: 0 auto 0.8rem;
-
-                label {
-                    display: block;
-                    text-align: left;
-                    font-weight: 700;
-                    margin: 0 0 5px 0;
-                }
-
-                input {
-                    width: 100%;
-                    background-color: #fff;
-                    color: #000;
-                    height: 40px;
-                    font-size: 1rem;
-                    border: 1px solid #E0DFE6;
-                    border-radius: 7px;
-                    padding: 10px;
-                    box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.25);
-                }
-
-                textarea {
-                    width: 100%;
-                    background-color: #fff;
-                    color: #000;
-                    font-size: 1rem;
-                    border: 1px solid #E0DFE6;
-                    border-radius: 7px;
-                    padding: 10px;
-                    box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.25);
-                }
-            }
-
-            div.submit-create {
-                margin-top: 3rem;
-                text-align: center;
-
-            }
-        }
-
-        p.retour-actualite {
-            text-align: center;
-            margin-top: 0.8rem;
-
-            a {
-                text-decoration: underline;
-            }
-        }
-    }
-}
-
 /***********************
 ** ADMIN/ACTIVITÉS/CREATE
 ************************/
@@ -347,7 +281,7 @@ section#admin-create-activite {
         margin: 0 0 1rem;
     }
 
-    div.activite-form {
+    div.ajouter-activite {
         width: 50%;
         margin: 0 auto;
 
@@ -355,136 +289,22 @@ section#admin-create-activite {
             background: rgb(217, 160, 201);
             background: linear-gradient(0deg, rgba(217, 160, 201, 1) 0%, rgba(242, 179, 224, 1) 20%, rgba(255, 213, 243, 1) 50%, rgba(242, 179, 224, 1) 80%, rgba(217, 160, 201, 1) 100%);
             margin: 0 auto 5px;
-            padding: 50px 0;
+            padding: 3em 0;
             border-radius: 7px;
 
-            div.nom,
-            div.description,
-            div.image {
+            div.input,
+            div.textarea {
                 width: 75%;
                 margin: 0 auto 0.8rem;
-
-                label {
-                    display: block;
-                    text-align: left;
-                    font-weight: 700;
-                    margin: 0 0 5px 0;
-                }
-
-                input {
-                    width: 100%;
-                    background-color: #fff;
-                    color: #000;
-                    height: 40px;
-                    font-size: 1rem;
-                    border: 1px solid #E0DFE6;
-                    border-radius: 7px;
-                    padding: 10px;
-                    box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.25);
-                }
-
-                textarea {
-                    width: 100%;
-                    background-color: #fff;
-                    color: #000;
-                    font-size: 1rem;
-                    border: 1px solid #E0DFE6;
-                    border-radius: 7px;
-                    padding: 10px;
-                    box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.25);
-                }
             }
 
-            div.submit-create {
-                margin-top: 3rem;
+            div.submit {
+                margin-top: 2rem;
                 text-align: center;
             }
         }
 
-        p.retour-activite {
-            text-align: center;
-            margin-top: 0.8rem;
-
-            a {
-                text-decoration: underline;
-            }
-        }
-    }
-}
-
-/**************************
-** ADMIN/ACTUALITÉS/MODIFIER
-***************************/
-section#admin-modifier-actualite {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
-    height: 100vh;
-    margin: 0;
-    background-image: url(../images/bg-formulaire.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    h1 {
-        font-size: 2rem;
-        margin: 0 0 1rem;
-    }
-
-    div.modifier-form {
-        width: 50%;
-        margin: 0 auto;
-
-        form {
-            background: rgb(217, 160, 201);
-            background: linear-gradient(0deg, rgba(217, 160, 201, 1) 0%, rgba(242, 179, 224, 1) 20%, rgba(255, 213, 243, 1) 50%, rgba(242, 179, 224, 1) 80%, rgba(217, 160, 201, 1) 100%);
-            margin: 0 auto 5px;
-            padding: 50px 0;
-            border-radius: 7px;
-
-            div.titre,
-            div.description {
-                width: 75%;
-                margin: 0 auto 0.8rem;
-
-                label {
-                    display: block;
-                    text-align: left;
-                    font-weight: 700;
-                    margin: 0 0 5px 0;
-                }
-
-                input {
-                    width: 100%;
-                    background-color: #fff;
-                    color: #000;
-                    height: 40px;
-                    font-size: 1rem;
-                    border: 1px solid #E0DFE6;
-                    border-radius: 7px;
-                    padding: 10px;
-                    box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.25);
-                }
-
-                textarea {
-                    width: 100%;
-                    background-color: #fff;
-                    color: #000;
-                    font-size: 1rem;
-                    border: 1px solid #E0DFE6;
-                    border-radius: 7px;
-                    padding: 10px;
-                    box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.25);
-                }
-            }
-
-            div.submit-modifier {
-                margin-top: 3rem;
-                text-align: center;
-            }
-        }
-
-        p.retour-actualite {
+        div.retour {
             text-align: center;
             margin-top: 0.8rem;
 
@@ -514,7 +334,7 @@ section#admin-modifier-activite {
         margin: 0 0 1rem;
     }
 
-    div.activite-modifier {
+    div.modifier-activite {
         width: 50%;
         margin: 0 auto;
 
@@ -522,63 +342,32 @@ section#admin-modifier-activite {
             background: rgb(217, 160, 201);
             background: linear-gradient(0deg, rgba(217, 160, 201, 1) 0%, rgba(242, 179, 224, 1) 20%, rgba(255, 213, 243, 1) 50%, rgba(242, 179, 224, 1) 80%, rgba(217, 160, 201, 1) 100%);
             margin: 0 auto 5px;
-            padding: 50px 0;
+            padding: 3em 0;
             border-radius: 7px;
 
-            div.nom,
-            div.description,
-            div.image {
+            div.input,
+            div.textarea {
                 width: 75%;
                 margin: 0 auto 0.8rem;
+            }
 
-                label {
-                    display: block;
-                    text-align: left;
-                    font-weight: 700;
-                    margin: 0 0 5px 0;
-                }
+            div.img-activite {
+                display: flex;
+                align-items: center;
 
-                input {
-                    width: 100%;
-                    background-color: #fff;
-                    color: #000;
-                    height: 40px;
-                    font-size: 1rem;
-                    border: 1px solid #E0DFE6;
-                    border-radius: 7px;
-                    padding: 10px;
-                    box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.25);
-                }
-
-                textarea {
-                    width: 100%;
-                    background-color: #fff;
-                    color: #000;
-                    font-size: 1rem;
-                    border: 1px solid #E0DFE6;
-                    border-radius: 7px;
-                    padding: 10px;
-                    box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.25);
-                }
-
-                div.image-contenu {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-
-                    img {
-                        border-radius: 7px;
-                    }
+                img {
+                    width: 100px;
+                    margin-right: 1rem;
                 }
             }
 
-            div.submit-modifier {
-                margin-top: 3rem;
+            div.submit {
+                margin-top: 2rem;
                 text-align: center;
             }
         }
 
-        p.retour-activite {
+        div.retour {
             text-align: center;
             margin-top: 0.8rem;
 
@@ -590,64 +379,99 @@ section#admin-modifier-activite {
 }
 
 /***************
-** ADMIN/UTILISATEURS
+** ADMIN/ACTUALITÉS
 ***************/
-section#admin-administrateurs,
-section#admin-employes,
-section#admin-clients {
+section#admin-actualites {
+    margin: 1rem auto 0;
+    max-width: 75%;
 
-    width: 90%;
-    max-width: 1440px;
+    h1 {
+        margin-bottom: 1rem;
+    }
 
     div.conteneur-create {
         display: flex;
         justify-content: space-between;
     }
 
-    div.conteneur-boutons {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-
-        i.fa-trash-alt {
-            color: red;
-            cursor: pointer;
-        }
+    p {
+        padding: 40px 24px 40px 24px;
+        line-height: 25px;
     }
 
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 0.8rem auto;
-        font-size: 1rem;
-        text-align: center;
+    ul {
+        margin-top: 0.8rem;
 
-        th,
-        td {
-            border: 1px solid #ccc;
-            padding: 10px;
-        }
+        li {
+            background-color: #f8cfed;
+            border-radius: 10px;
+            border: 2px solid $rose;
+            box-shadow: 0 0 20px #f8cfed;
+            margin-bottom: 2rem;
+            padding: 20px;
 
-        th {
-            background-color: $violet;
-            color: $blanc;
-        }
+            h2 {
+                margin-bottom: 1.5rem;
+                font-size: 1.75rem;
+                color: black;
+            }
 
-        tr:nth-child(even) {
-            background-color: $gris;
-        }
+            div.conteneur-boutons {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
 
-        tr:hover {
-            background-color: $rose-fonce;
+                a {
+                    background-color: #007bff;
+                    color: #fff;
+                    padding: 0.5em 1em;
+                    margin-right: 10px;
+                    min-width: 140px;
+                    text-decoration: none;
+                    border: none;
+                    border-radius: 7px;
+                    font-size: 1.2rem;
+                    font-family: "catseye", sans-serif;
+                    font-weight: 700;
+                    font-style: normal;
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+            form {
+                display: inline-block;
+                margin: 0;
+
+                button {
+                    background-color: #dc3545;
+                    color: #fff;
+                    padding: 0.5em 1em;
+                    text-decoration: none;
+                    min-width: 140px;
+                    border: none;
+                    border-radius: 7px;
+                    font-size: 1.2rem;
+                    font-family: "catseye", sans-serif;
+                    font-weight: 700;
+                    font-style: normal;
+                    text-align: center;
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
         }
     }
 }
 
-/***************************
-** ADMIN/UTILISATEUR/MODIFIER
-****************************/
-section#admin-modifier-utilisateur {
+/************************
+** ADMIN/ACTUALITÉS/CREATE
+*************************/
+section#admin-create-actualite {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -663,7 +487,7 @@ section#admin-modifier-utilisateur {
         margin: 0 0 1rem;
     }
 
-    div.modifier-form {
+    div.ajouter-actualite {
         width: 50%;
         margin: 0 auto;
 
@@ -671,43 +495,75 @@ section#admin-modifier-utilisateur {
             background: rgb(217, 160, 201);
             background: linear-gradient(0deg, rgba(217, 160, 201, 1) 0%, rgba(242, 179, 224, 1) 20%, rgba(255, 213, 243, 1) 50%, rgba(242, 179, 224, 1) 80%, rgba(217, 160, 201, 1) 100%);
             margin: 0 auto 5px;
-            padding: 50px 0;
+            padding: 3em 0;
             border-radius: 7px;
 
-            div.prenom,
-            div.nom,
-            div.courriel,
-            div.role {
+            div.input,
+            div.textarea {
                 width: 75%;
                 margin: 0 auto 0.8rem;
-
-                label {
-                    display: block;
-                    text-align: left;
-                    font-weight: 700;
-                    margin: 0 0 5px 0;
-                }
-
-                input {
-                    width: 100%;
-                    background-color: #fff;
-                    color: #000;
-                    height: 40px;
-                    font-size: 1rem;
-                    border: 1px solid #E0DFE6;
-                    border-radius: 7px;
-                    padding: 10px;
-                    box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.25);
-                }
             }
 
-            div.submit-modifier {
-                margin-top: 3rem;
+            div.submit {
+                margin-top: 2rem;
                 text-align: center;
             }
         }
 
-        p.retour-admin {
+        div.retour {
+            text-align: center;
+            margin-top: 0.8rem;
+
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+/**************************
+** ADMIN/ACTUALITÉS/MODIFIER
+***************************/
+section#admin-modifier-actualite {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-image: url(../images/bg-formulaire.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    h1 {
+        font-size: 2rem;
+        margin: 0 0 1rem;
+    }
+
+    div.modifier-actualite {
+        width: 50%;
+        margin: 0 auto;
+
+        form {
+            background: rgb(217, 160, 201);
+            background: linear-gradient(0deg, rgba(217, 160, 201, 1) 0%, rgba(242, 179, 224, 1) 20%, rgba(255, 213, 243, 1) 50%, rgba(242, 179, 224, 1) 80%, rgba(217, 160, 201, 1) 100%);
+            margin: 0 auto 5px;
+            padding: 3em 0;
+            border-radius: 7px;
+
+            div.input,
+            div.textarea {
+                width: 75%;
+                margin: 0 auto 0.8rem;
+            }
+
+            div.submit {
+                margin-top: 2rem;
+                text-align: center;
+            }
+        }
+
+        div.retour {
             text-align: center;
             margin-top: 0.8rem;
 

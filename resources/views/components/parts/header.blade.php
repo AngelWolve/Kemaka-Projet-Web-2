@@ -2,7 +2,8 @@
 
 <header>
     <div class="image-container">
-        <img src="{{ asset('images/header.png') }}" alt="">
+        {{-- Image du header --}}
+        <img src="{{ asset('images/header.png') }}" alt="Image header">
         <h1>
             {{ $titre }}
         </h1>

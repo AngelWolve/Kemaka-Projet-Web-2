@@ -1,4 +1,5 @@
 <footer>
+    {{-- Liste des liens --}}
     <ul class="liens-pages">
         <li>
             <a class="lien" href="{{ route('accueil') }}">
@@ -25,14 +26,16 @@
                 NOUS JOINDRE
             </a>
         </li>
-    </ul>
+    </ul> {{-- Fin de la liste des liens --}}
 
+    {{-- Logo --}}
     <div class="logo-footer">
         <a href="{{ route('accueil') }}">
             <img src="{{ asset('images/logo.png') }}" alt="Logo Asian Quest">
         </a>
     </div>
 
+    {{-- Liste des liens sociaux --}}
     <ul class="liens-sociaux">
         <li>
             <a href="https://www.facebook.com/" target="_blank">
@@ -54,8 +57,9 @@
                 <img src="{{ asset('images/youtube.png') }}" alt="Youtube">
             </a>
         </li>
-    </ul>
+    </ul> {{-- Fin de la liste des liens sociaux --}}
 
+    {{-- Droits d'auteur --}}
     <p class="tx-sm">
         &copy; 2023 - Tous droits réservés à Asian Quest Festival
     </p>

@@ -16,39 +16,39 @@
             </h2>
 
             <div class="imgBoite">
-                <img src="images/insta_img1.png" alt="">
+                <img src="images/insta_img1.png" alt="Image">
             </div>
 
             {{-- Liste des images miniatures --}}
             <ul class="miniatures">
                 <li>
                     <a href="images/insta_img1.png" target="imgBoite">
-                        <img src="images/insta_img1.png" alt="">
+                        <img src="images/insta_img1.png" alt="Image">
                     </a>
                 </li>
                 <li>
                     <a href="images/insta_img2.png" target="imgBoite">
-                        <img src="images/insta_img2.png" alt="">
+                        <img src="images/insta_img2.png" alt="Image">
                     </a>
                 </li>
                 <li>
                     <a href="images/insta_img3.png" target="imgBoite">
-                        <img src="images/insta_img3.png" alt="">
+                        <img src="images/insta_img3.png" alt="Image">
                     </a>
                 </li>
                 <li>
                     <a href="images/insta_img4.png" target="imgBoite">
-                        <img src="images/insta_img4.png" alt="">
+                        <img src="images/insta_img4.png" alt="Image">
                     </a>
                 </li>
                 <li>
                     <a href="images/insta_img5.png" target="imgBoite">
-                        <img src="images/insta_img5.png" alt="">
+                        <img src="images/insta_img5.png" alt="Image">
                     </a>
                 </li>
                 <li>
                     <a href="images/insta_img6.png" target="imgBoite">
-                        <img src="images/insta_img6.png" alt="">
+                        <img src="images/insta_img6.png" alt="Image">
                     </a>
                 </li>
             </ul>

@@ -48,7 +48,7 @@
                                 {{ $forfait->description }}
                             </p>
                         </div>
-                        <img src="images/img-forfaits1.png" alt="image forfait 1">
+                        <img src="images/img-forfaits1.png" alt="image forfait">
                     </div>
 
                     {{-- Réserver --}}

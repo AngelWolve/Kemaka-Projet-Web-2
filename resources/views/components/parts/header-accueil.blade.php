@@ -1,7 +1,7 @@
 <header id="header-accueil">
 
     {{-- Image du header --}}
-    <img src="{{ asset('images/header-accueil.png') }}" alt="">
+    <img src="{{ asset('images/header-accueil.png') }}" alt="Image header">
 
     <div class="conteneur-header">
         <h2>

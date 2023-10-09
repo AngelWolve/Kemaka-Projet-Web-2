@@ -56,7 +56,9 @@
                 <input type="hidden" name="forfait_id" value="{{ $forfait->id }}">
 
                 {{-- Soumission --}}
-                <button class="btn-primaire" type="submit">Réserver</button>
+                <button class="btn-primaire" type="submit" onclick="return confirm('Êtes-vous certain de vouloir acheter ce forfait?')">
+                    Réserver
+                </button>
             </form> {{-- Fin formulaire de réservation --}}
         </div>
 

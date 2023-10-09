@@ -57,7 +57,8 @@
                             </a>
 
                             {{-- Suppression --}}
-                            <form action="{{ route('admin/activites.destroy') }}" method="POST">
+                            <form action="{{ route('admin/activites.destroy') }}" method="POST"
+                                onclick="return confirm('Êtes-vous certain de vouloir supprimer cette activité?')">
                                 @csrf
 
                                 <input type="hidden" name="id" value="{{ $activite->id }}" required>

@@ -53,7 +53,8 @@
                                     </a>
 
                                     {{-- Suppression --}}
-                                    <form action="{{ route('admin/utilisateurs.destroy') }}" method="POST">
+                                    <form action="{{ route('admin/utilisateurs.destroy') }}" method="POST"
+                                        onclick="return confirm('Êtes-vous certain de vouloir supprimer cet utilisateur?')">
                                         @csrf
 
                                         <input type="hidden" name="id" value="{{ $administrateur->id }}">
@@ -122,7 +123,8 @@
                                     </a>
 
                                     {{-- Suppression --}}
-                                    <form action="{{ route('admin/utilisateurs.destroy') }}" method="POST">
+                                    <form action="{{ route('admin/utilisateurs.destroy') }}" method="POST"
+                                        onclick="return confirm('Êtes-vous certain de vouloir supprimer cet utilisateur?')">
                                         @csrf
 
                                         <input type="hidden" name="id" value="{{ $employe->id }}">
@@ -191,7 +193,8 @@
                                     </a>
 
                                     {{-- Suppression --}}
-                                    <form action="{{ route('admin/utilisateurs.destroy') }}" method="POST">
+                                    <form action="{{ route('admin/utilisateurs.destroy') }}" method="POST"
+                                        onclick="return confirm('Êtes-vous certain de vouloir supprimer cette utilisateur?')">
                                         @csrf
 
                                         <input type="hidden" name="id" value="{{ $client->id }}">

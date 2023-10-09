@@ -58,10 +58,7 @@ class ConnexionController extends Controller
 
         // Redirection
         return back()
-            ->withErrors([
-                "echec" => "Les informations fournies ne sont pas valides"
-            ])
-            ->onlyInput('email');
+            ->with('echec', 'Les informations fournies ne sont pas valides');
     }
 
     /**

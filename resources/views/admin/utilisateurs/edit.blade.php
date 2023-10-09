@@ -32,7 +32,7 @@
                     </label>
                     <div>
                         <x-forms.erreur champ="nom" />
-                        <input id="nom" name="nom" type="text" autofocus maxlength="255"
+                        <input id="nom" name="nom" type="text" maxlength="255"
                             value="{{ old('nom') ?? $utilisateur->nom }}" required>
                     </div>
                 </div>
@@ -44,7 +44,7 @@
                     </label>
                     <div>
                         <x-forms.erreur champ="email" />
-                        <input id="email" name="email" type="email" autofocus maxlength="255"
+                        <input id="email" name="email" type="email" maxlength="255"
                             value="{{ old('email') ?? $utilisateur->email }}" required>
                     </div>
                 </div>

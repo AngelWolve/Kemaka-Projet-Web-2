@@ -31,6 +31,7 @@ section#admin {
             font-style: normal;
             border: 3px solid $amaranth;
             border-radius: 15px;
+            cursor: pointer;
             animation: growAnimation 1.5s ease-in-out forwards;
 
             &:hover {

@@ -25,6 +25,15 @@
             <a class="item" href="{{ route('accueil') }}">
                 Accueil
             </a>
+
+            <form action="{{ route('deconnexion') }}" method="POST">
+                @csrf
+
+                <button type="submit" class="item">
+                    Déconnexion
+                </button>
+            </form>
+
         </div>
     </section> {{-- Fin de la section administration --}}
 </x-admin>

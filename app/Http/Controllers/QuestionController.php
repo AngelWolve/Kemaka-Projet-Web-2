@@ -34,7 +34,7 @@ class QuestionController extends Controller
         $question = new Question();
         $question->nom = $valides["nom"];
         $question->email = $valides["email"];
-        $question->message = $valides["question"];
+        $question->question = $valides["question"];
         $question->save();
 
         // Redirection

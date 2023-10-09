@@ -16,7 +16,7 @@ class QuestionFactory extends Factory
         return [
             'nom' => $this->faker->firstName() . ' ' . $this->faker->lastName(),
             'email' => $this->faker->unique()->safeEmail(),
-            'message' => $this->faker->text(500),
+            'question' => $this->faker->text(750),
         ];
     }
 }

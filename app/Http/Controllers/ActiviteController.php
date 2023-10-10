@@ -60,8 +60,8 @@ class ActiviteController extends Controller
 
         // Traitement de l'image
         if ($request->hasFile('image')) {
-            Storage::putFile("public/uploads", $request->image);
-            $activite->image = "/storage/uploads/" . $request->image->hashName();
+            Storage::putFile("public/images", $request->image);
+            $activite->image = "/storage/images/" . $request->image->hashName();
         }
 
         $activite->save();

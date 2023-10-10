@@ -43,7 +43,7 @@
                                 {{ $activite->description }}
                             </p>
 
-                            <img src="{{ $activite->image }}" alt="image d'activité" width="400" height="220">
+                            <img src="{{ asset($activite->image) }}" alt="image d'activité" width="400" height="220">
 
                         </div>
 

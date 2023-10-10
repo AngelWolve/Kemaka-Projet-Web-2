@@ -21,10 +21,10 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->foreignId('role_id')
-            ->default(3)
-            ->constrained()
-            ->onDelete('cascade')
-            ->onUpdate('cascade');
+                ->default(3)
+                ->constrained()
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
             $table->rememberToken();
             $table->timestamps();
         });

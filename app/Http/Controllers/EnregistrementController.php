@@ -60,6 +60,11 @@ class EnregistrementController extends Controller
         $user->nom = $valides["nom"];
         $user->email = $valides["email"];
         $user->password = Hash::make($valides["password"]);
+        if (Auth::check() && Auth::user()->role_id == 1) {
+            $user->role_id = $valides["role_id"];
+        } else {
+            $user->role_id = 3;
+        }
         $user->save();
 
         // Connexion de l'utilisateur s'il y a lieu

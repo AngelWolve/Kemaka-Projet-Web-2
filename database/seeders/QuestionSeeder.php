@@ -13,7 +13,7 @@ class QuestionSeeder extends Seeder
      */
     public function run()
     {
-        // // Ajout de questions fictives
-        // \App\Models\Question::factory(5)->create();
+        // Ajout de questions fictives
+        \App\Models\Question::factory(5)->create();
     }
 }

@@ -15,8 +15,8 @@ class ActualiteFactory extends Factory
     public function definition()
     {
         return [
-            'titre' => $this->faker->sentence(10),
-            'description' => $this->faker->text(500),
+            'titre' => $this->faker->sentence(5),
+            'description' => $this->faker->text(750),
             'user_id' => User::inRandomOrder()->first()->id,
         ];
     }

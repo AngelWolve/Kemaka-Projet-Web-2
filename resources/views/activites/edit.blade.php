@@ -46,7 +46,7 @@
                     <div>
                         <x-forms.erreur champ="image" />
                         <div class="img-activite">
-                            <img src="{{ $activite->image }}" width="100" alt="Image de l'activité">
+                            <img src="{{ asset($activite->image) }}" width="100" alt="Image de l'activité">
                             <input id="image" name="image" type="file">
                         </div>
                     </div>

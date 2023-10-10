@@ -9,7 +9,7 @@
             {{-- Boucles des activités --}}
             @foreach ($activites as $activite)
                 <li>
-                    <img src="{{ $activite->image }}" alt="image d'activité">
+                    <img src="{{ asset($activite->image) }}" alt="image d'activité">
                     <div>
                         <h2>
                             {{ $activite->nom }}
